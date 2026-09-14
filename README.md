@@ -11,7 +11,10 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:4321. Run `npm run check` for Astro/TypeScript validation and `npm run build` to generate the static site in `dist/`. `npm run preview` serves that build locally.
+Open http://localhost:4321.  
+Run `npm run check` for Astro/TypeScript validation  
+Run `npm run build` to generate the static site in `dist/`.  
+`npm run preview` serves that build locally.
 
 ## Pages
 
@@ -23,19 +26,23 @@ Open http://localhost:4321. Run `npm run check` for Astro/TypeScript validation 
 
 ## Content
 
-The initial three stories and twelve Stars are **fictional samples**, not actual interviews or award recipients. Initial artwork uses abstract initials, not real portraits. Replace sample entries before publishing; the intended annual gallery contains 52 confirmed people. The gallery count and year options come from its data.
+The three interviews remain **fictional samples**.
+
+Each Stars collection contains the 52 Star GitHub usernames, with public display names and bios retrieved from GitHub on 2026-09-14. Profile text is stored locally; builds do not call the GitHub API.
 
 ### Stories
 
-Add Markdown files to `src/content/stories/`. The filename becomes the URL slug. Frontmatter fields:
+Add Markdown files to `src/content/stories/`. The filename becomes the URL slug.
+
+Frontmatter fields:
 
 ```yaml
 ---
-title: A personal story headline
+title: A story headline
 name: Interview subject
-description: A short introduction to the story.
+description: A short introduction to the story
 category: Community & belonging
-color: '#797d67'
+color: "#797d67"
 initials: IS
 order: 0
 sample: false
@@ -46,27 +53,29 @@ Write the approved article beneath the frontmatter. The lowest `order` is featur
 
 ### Stars
 
-Add one JSON file per person and year in `src/content/stars/`. For example, `2026-person-name.json`:
+Add one JSON file per person inside `src/content/stars/<year>/`. For example, `2025/benjie.json` and `2026/benjie.json` are independent entries with their own bios, contribution text, and TSC flags.
 
 ```json
 {
   "name": "Person Name",
   "initials": "PN",
   "year": 2026,
-  "contribution": "A brief, verified description of their contribution.",
+  "bio": "Their public GitHub bio.",
+  "contribution": "An optional, verified description of their contribution.",
   "color": "#7e8868",
   "github": "github-username",
-  "avatar": "https://example.org/approved-portrait.jpg",
-  "sample": false
+  "avatar": "https://github.com/github-username.png"
 }
 ```
 
-`github` and `avatar` are optional. With no avatar the profile displays initials. Each year needs its own entry for returning contributors. The year selector automatically expands when additional years are added. Remove the sample-gallery notice when replacing the samples with verified entries.
+`github`, `avatar`, `bio`, and `contribution` are optional. GitHub avatars are hotlinked using `https://github.com/<username>.png`, lazy-loaded, and cropped into circles. They reflect the current GitHub avatar and depend on GitHub availability; missing or failed images display initials. Names, usernames, and bios appear inside expandable profiles. Search matches names, usernames, bios, and any contribution text. No contribution claims have been inferred from GitHub bios. Each year needs its own entry for returning contributors; the year selector automatically expands when additional years are added.
 
 Schemas are in `src/content.config.ts`, shared styles in `src/styles/global.css`, and the shared shell in `src/layouts/Layout.astro`. Stories and Stars use separate Astro content collections: https://docs.astro.build/en/guides/content-collections/.
 
 ## Design and hosting
 
-Warm paper colours and large serif headlines prioritise stories; the Stars gallery uses a separate dark green palette. Native disclosure elements keep profiles usable without JavaScript. Search and year switching use a small client-side script. Google Fonts provides DM Sans and Libre Caslon Display with system fallbacks; self-host fonts if preferred.
+The theme follows the current GraphQL website: locally hosted Host Grotesk and Commit Mono, Rhodamine pink accents, white editorial pages, and a near-black Stars gallery. The header and footer use the unmodified official GraphQL wordmark; the favicon uses the official hexagraph. Asset provenance and font licences are documented in `public/brand/README.md`. Native disclosure elements keep profiles usable without JavaScript. Search and year switching use a small client-side script.
 
-The site builds as static HTML and can be deployed to any static host. No hosting provider or domain is configured yet. The design takes its editorial direction from the brief; it does not reproduce or republish GitHub ReadME content.
+TSC members are marked with `"tsc": true` on their annual Stars entry and receive a gold `#FFD700` avatar border. Membership is based on any overlap between their term and September 1 of the preceding year through August 31 of the class year (inclusive). Lee Byron’s chair role has no fixed term and qualifies for all three cohorts. Terms were checked against https://handbooks.graphql.org/tsc/members and its canonical source https://github.com/graphql/graphql-wg/blob/main/GraphQL-TSC.md on 2026-09-14.
+
+The Stars loader reads year folders recursively. A person’s entry in one year is independent of their entry in another year. The initial 2024 and 2025 bios are current public GitHub bios, not historical snapshots; replace them with year-specific content when ready.

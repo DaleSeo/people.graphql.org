@@ -1,0 +1,11 @@
+{
+  "name": "Michael Staib",
+  "initials": "MS",
+  "year": 2026,
+  "color": "#50534a",
+  "github": "michaelstaib",
+  "avatar": "https://github.com/michaelstaib.png",
+  "sample": false,
+  "bio": "GraphQL Technical Steering Committee | Microsoft MVP | Author of Hot Chocolate | https://twitter.com/michael_staib",
+  "tsc": true
+}

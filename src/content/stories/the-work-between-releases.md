@@ -3,7 +3,7 @@ title: "The work between the releases."
 name: "Sam Rivera"
 description: "Looking beyond the changelog at the care and curiosity that keep a project moving."
 category: "THE MAINTAINER\u2019S JOURNEY"
-color: "#a67c64"
+color: "#676b60"
 initials: "SR"
 order: 1
 sample: true

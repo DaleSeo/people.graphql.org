@@ -1,0 +1,11 @@
+{
+  "name": "Donna",
+  "initials": "DO",
+  "year": 2024,
+  "color": "#50534a",
+  "github": "dondonz",
+  "avatar": "https://github.com/dondonz.png",
+  "sample": false,
+  "tsc": false,
+  "bio": "Software Engineer at Lorikeet, author of 'GraphQL with Java and Spring'"
+}

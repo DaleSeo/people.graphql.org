@@ -3,7 +3,7 @@ title: "Finding a way in. And leaving the door open."
 name: "Alex Morgan"
 description: "A story about first contributions, finding confidence, and making room for the next person."
 category: "COMMUNITY & BELONGING"
-color: "#797d67"
+color: "#50534a"
 initials: "AM"
 order: 0
 sample: true

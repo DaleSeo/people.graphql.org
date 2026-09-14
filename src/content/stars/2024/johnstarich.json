@@ -1,0 +1,11 @@
+{
+  "name": "John Starich",
+  "initials": "JS",
+  "year": 2024,
+  "color": "#50534a",
+  "github": "johnstarich",
+  "avatar": "https://github.com/johnstarich.png",
+  "sample": false,
+  "tsc": false,
+  "bio": "API & CLI Lead Engineer – IBM Cloud Kubernetes Service.\r\n\r\nLove open source, avid hiker"
+}

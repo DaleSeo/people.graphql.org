@@ -1,0 +1,10 @@
+{
+  "name": "Erik Wrede",
+  "initials": "EW",
+  "year": 2025,
+  "color": "#50534a",
+  "github": "erikwrede",
+  "avatar": "https://github.com/erikwrede.png",
+  "sample": false,
+  "bio": "Software engineer and GraphQL expert, passionate about building performant and scalable applications.\r\nGraphQL-Python Maintainer-Team & Strawberry Core Dev"
+}

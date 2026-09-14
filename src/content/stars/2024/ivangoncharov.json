@@ -1,0 +1,11 @@
+{
+  "name": "Ivan Goncharov",
+  "initials": "IG",
+  "year": 2024,
+  "color": "#50534a",
+  "github": "ivangoncharov",
+  "avatar": "https://github.com/ivangoncharov.png",
+  "sample": false,
+  "tsc": true,
+  "bio": "GraphQL TSC member and graphql-js maintainer🇺🇦"
+}
