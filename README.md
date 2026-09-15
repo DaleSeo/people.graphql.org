@@ -21,7 +21,8 @@ Run `npm run build` to generate the static site in `dist/`.
 - `/`: editorial homepage with a featured story and Stars introduction.
 - `/stories/`: interview archive.
 - `/stories/[id]/`: individual Markdown stories.
-- `/stars/`: year selection, search, and expandable contributor profiles.
+- `/stars/`: default Stars destination, opening the 2026 gallery with year selection, search, and expandable contributor profiles.
+- `/stars/about/`: background on GraphQL Stars and the official GraphQLConf 2024 launch keynote. Linked from the gallery without replacing it as the main Stars destination.
 - `/about/`: project introduction.
 
 ## Content
@@ -78,4 +79,4 @@ The theme follows the current GraphQL website: locally hosted Host Grotesk and C
 
 TSC members are marked with `"tsc": true` on their annual Stars entry and receive a gold `#FFD700` avatar border. Membership is based on any overlap between their term and September 1 of the preceding year through August 31 of the class year (inclusive). Lee Byron’s chair role has no fixed term and qualifies for all three cohorts. Terms were checked against https://handbooks.graphql.org/tsc/members and its canonical source https://github.com/graphql/graphql-wg/blob/main/GraphQL-TSC.md on 2026-09-14.
 
-The Stars loader reads year folders recursively. A person’s entry in one year is independent of their entry in another year. The initial 2024 and 2025 bios are current public GitHub bios, not historical snapshots; replace them with year-specific content when ready.
+The Stars loader reads year folders recursively. A person’s entry in one year is independent of their entry in another year.

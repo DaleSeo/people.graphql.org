@@ -4,7 +4,54 @@ import { getCollection } from 'astro:content';
 const stars = (await getCollection('stars')).sort((a,b)=>a.data.name.localeCompare(b.data.name));
 const years = [...new Set(stars.map(s=>s.data.year))].sort((a,b)=>b-a);
 ---
-<Layout title="GraphQL Stars · People of GraphQL" dark><section class="wrap page-intro stars-intro"><p class="eyebrow">THE PEOPLE WHO MOVE US FORWARD</p><h1>Small contributions.<br /><em>Brilliant impact.</em></h1><div class="intro-bottom"><p>Meet the GraphQL Stars. A celebration of 52 people<br />shaping the future of our community, every year.</p><label class="year-label">Class of <select id="year" aria-label="Choose a year">{years.map(year=><option value={year}>{year}</option>)}</select></label></div></section><section class="wrap gallery-section"><div class="gallery-toolbar"><p><span id="count">{stars.filter(s=>s.data.year===years[0]).length}</span> people to discover</p><label class="search-label"><span class="sr-only">Search contributors</span><input id="search" type="search" placeholder="Find a name or GitHub username…" /></label></div><div class="stars-grid">{stars.map(star => <details class="star-card" data-year={star.data.year} data-search={`${star.data.name} ${star.data.github ?? ''} ${star.data.contribution ?? ''} ${star.data.bio ?? ''}`.toLowerCase()} hidden={star.data.year!==years[0]}><summary aria-label={`About ${star.data.name}`}><div class:list={['avatar', { tsc: star.data.tsc }]}><span class="avatar-fallback" aria-hidden="true">{star.data.initials}</span>{star.data.avatar && <img src={star.data.avatar} alt="" loading="lazy" decoding="async" width="240" height="240" />}</div></summary><div class="star-bio"><h2>{star.data.name}</h2>{star.data.tsc && <p class="tsc-label">Technical Steering Committee · {star.data.year - 1}–{String(star.data.year).slice(-2)}</p>}{star.data.github && <a href={`https://github.com/${star.data.github}`}>@{star.data.github} ↗</a>}{star.data.bio && <p>{star.data.bio}</p>}{star.data.contribution && <p>{star.data.contribution}</p>}</div></details>)}</div><p id="empty" hidden>No people match your search. Try a different name or contribution.</p><p class="gallery-end">Every contribution has a person behind it. <img src="/brand/graphql-white.svg" width="28" height="28" alt="" /></p></section></Layout>
+<Layout title="GraphQL Stars" dark>
+  <section class="wrap page-intro stars-intro">
+    <p class="eyebrow">GRAPHQL STARS</p>
+    <h1>A universe shaped<br /><em>by contributors.</em></h1>
+    <div class="intro-bottom">
+      <p>GraphQL Stars celebrates 52 people each year<br />whose work across the GraphQL GitHub repositories moves the project forward.</p>
+      <label class="year-label">Class of <select id="year" aria-label="Choose a year">{years.map(year=><option value={year}>{year}</option>)}</select></label>
+    </div>
+    <a class="stars-about-link" href="/stars/about/">About GraphQL Stars</a>
+  </section>
+  <section class="wrap gallery-section">
+    <div class="gallery-toolbar">
+      <p><span id="count">{stars.filter(s=>s.data.year===years[0]).length}</span> people to discover</p>
+      <label class="search-label"><span class="sr-only">Search contributors</span><input id="search" type="search" placeholder="Find a name or GitHub username…" /></label>
+    </div>
+    <div class="stars-grid">{stars.map(star => 
+      <div class="star-card" data-year={star.data.year} data-search={`${star.data.name} ${star.data.github ?? ''} ${star.data.contribution ?? ''} ${star.data.bio ?? ''}`.toLowerCase()} hidden={star.data.year!==years[0]}>
+        <button class="star-trigger" type="button" aria-haspopup="dialog" aria-label={`View ${star.data.name}, class of ${star.data.year}`}>
+         <div class:list={['avatar', { tsc: star.data.tsc }]}><span class="avatar-fallback" aria-hidden="true">{star.data.initials}</span>{star.data.avatar && <img src={star.data.avatar} alt="" loading="lazy" decoding="async" width="240" height="240" />}</div>
+       </button>
+       <template>
+          <div class="star-dialog-profile">
+            <p class="eyebrow">GRAPHQL STARS · {star.data.year}</p>
+            <h2 id="star-dialog-name">{star.data.name}</h2>
+          
+            {star.data.tsc && (
+              <p class="tsc-label">
+                Technical Steering Committee · {star.data.year - 1}–{String(star.data.year).slice(-2)}
+              </p>
+            )}
+  
+            {star.data.github && (
+              <a
+                href={`https://github.com/${star.data.github}`}
+                set:text={`@${star.data.github} ↗`}
+              />
+            )}
+          </div>
+        </template>
+      </div>)}
+    </div>
+    <p id="empty" hidden>No people match your search. Try another name or username.</p>
+  </section>
+  <dialog class="star-dialog" aria-labelledby="star-dialog-name">
+    <button class="star-dialog-close" type="button" aria-label="Close profile" autofocus>×</button>
+    <div class="star-dialog-content"></div>
+  </dialog>
+</Layout>
 <script>
 for (const avatar of document.querySelectorAll<HTMLImageElement>('.avatar img')) {
   const showFallback = () => { avatar.hidden = true; };
@@ -13,7 +60,7 @@ for (const avatar of document.querySelectorAll<HTMLImageElement>('.avatar img'))
 }
 const search = document.querySelector<HTMLInputElement>('#search')!;
 const year = document.querySelector<HTMLSelectElement>('#year')!;
-const cards = [...document.querySelectorAll<HTMLDetailsElement>('.star-card')];
+const cards = [...document.querySelectorAll<HTMLDivElement>('.star-card')];
 // Fisher–Yates runs in the browser so each page load gets a fresh order.
 for (let i = cards.length - 1; i > 0; i--) {
   const j = Math.floor(Math.random() * (i + 1));
@@ -26,23 +73,25 @@ function filter() {
   let count = 0;
   for (const card of cards) {
     card.hidden = card.dataset.year !== year.value || !card.dataset.search?.includes(search.value.trim().toLowerCase());
-    if (!card.hidden) count++; else card.open = false;
+    if (!card.hidden) count++;
   }
   document.querySelector('#count')!.textContent = String(count);
   document.querySelector<HTMLElement>('#empty')!.hidden = count > 0;
 }
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') {
-    const openCard = cards.find(card => card.open);
-    if (openCard) {
-      openCard.open = false;
-      openCard.querySelector('summary')?.focus();
-    }
-  }
-});
 search.addEventListener('input', filter);
 year.addEventListener('change', filter);
-for (const card of cards) card.addEventListener('toggle', () => {
-  if (card.open) for (const other of cards) if (other !== card) other.open = false;
+const dialog = document.querySelector<HTMLDialogElement>('.star-dialog')!;
+const content = dialog.querySelector<HTMLElement>('.star-dialog-content')!;
+for (const card of cards) {
+  card.querySelector<HTMLButtonElement>('.star-trigger')!.addEventListener('click', () => {
+    content.replaceChildren(card.querySelector('template')!.content.cloneNode(true));
+    dialog.showModal();
+  });
+}
+dialog.querySelector('button')!.addEventListener('click', () => dialog.close());
+dialog.addEventListener('click', event => {
+  const bounds = dialog.getBoundingClientRect();
+  if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
 });
+dialog.addEventListener('close', () => content.replaceChildren());
 </script>
