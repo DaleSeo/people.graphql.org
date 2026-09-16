@@ -2,11 +2,9 @@
 title: "Learning in the open."
 name: "Jordan Ellis"
 description: "On asking better questions, sharing unfinished ideas, and growing together."
-category: "IDEAS & PERSPECTIVES"
 color: "#44473d"
 initials: "JE"
-order: 2
-sample: true
+publishedAt: 2026-09-14
 ---
 
 ## Every journey starts somewhere

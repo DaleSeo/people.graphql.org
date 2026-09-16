@@ -16,6 +16,20 @@ Run `npm run check` for Astro/TypeScript validation
 Run `npm run build` to generate the static site in `dist/`.  
 `npm run preview` serves that build locally.
 
+## Clear the local cache
+
+If you make changes but they aren't reflected on a server restart, clear the cache:
+
+```sh
+npm run dev --force
+```
+
+or while running the server:
+
+```sh
+npx astro sync --force
+```
+
 ## Pages
 
 - `/`: editorial homepage with a featured story and Stars introduction.
@@ -42,15 +56,23 @@ Frontmatter fields:
 title: A story headline
 name: Interview subject
 description: A short introduction to the story
-category: Community & belonging
 color: "#797d67"
 initials: IS
-order: 0
-sample: false
+publishedAt: 2026-09-16
+location: London, UK
+links:
+  - label: Personal website
+    url: https://example.com
+hero:
+  src: /stories/your-photo.jpg
+  alt: Describe the photograph
+  caption: Photo caption and credit
 ---
 ```
 
-Write the approved article beneath the frontmatter. The lowest `order` is featured on the homepage. The current visual templates use initials artwork; replace this with approved portrait photography when available. Remove preview wording and placeholder reading times in the homepage/archive/article templates when preparing actual publication.
+Write the approved article beneath the frontmatter. Stories are sorted by `publishedAt` (newest first), with the newest featured on the homepage. Use a publication date in `YYYY-MM-DD` format; dates are displayed in UTC. The existing fictional drafts use placeholder dates of September 14–16, 2026 to preserve their previous order. `location`, `links`, and `hero` are optional. Article pages use the hero photograph when supplied, with initials artwork as a fallback; homepage and archive cards still use initials artwork. Remove preview wording and placeholder reading times in the homepage/archive/article templates when preparing actual publication.
+
+Article text uses a narrow reading column beside a project introduction. Markdown blockquotes (`> Quote text`) become large pull quotes. For a photograph spanning the article width within the body, use `<figure class="story-photo">` with an `<img>` (including descriptive `alt`, dimensions, and `loading="lazy"`) and a `<figcaption>` for its caption and credit. Store photographs locally in `public/stories/`. The longer `finding-a-way-in.md` sample demonstrates these elements with repeated preview text and clearly labelled stock photography; source details are in `public/stories/README.md`.
 
 ### Stars
 

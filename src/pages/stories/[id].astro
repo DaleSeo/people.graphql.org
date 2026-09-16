@@ -3,6 +3,50 @@ import Layout from '../../layouts/Layout.astro';
 import { getCollection, render } from 'astro:content';
 export async function getStaticPaths() { return (await getCollection('stories')).map(story => ({ params: { id: story.id }, props: { story } })); }
 const { story } = Astro.props;
+const links = story.data.links ?? [];
 const { Content } = await render(story);
 ---
-<Layout title={`${story.data.title} · People of GraphQL`} description={story.data.description}><article class="wrap article"><a class="back" href="/stories/">← All stories</a><header class="article-header"><p class="eyebrow">{story.data.category}</p><h1>{story.data.title}</h1><p class="standfirst">{story.data.description}</p><p>{story.data.name} <span class="muted"> / Editorial preview</span></p></header><div class="portrait article-art" style={`--portrait:${story.data.color}`}><span class="art-orbit"></span><span class="portrait-initials">{story.data.initials}</span></div><div class="article-body">{story.data.sample && <p class="notice">This is sample editorial content with a fictional subject, not a published interview.</p>}<Content /><a class="back" href="/stories/">Explore more stories</a></div></article></Layout>
+<Layout title={`${story.data.title} · People of GraphQL`} description={story.data.description}>
+  <article class="story-feature">
+    <a class="back" href="/stories/">← All stories</a>
+    <header class="story-feature-header">
+      <p class="eyebrow"><time datetime={story.data.publishedAt.toISOString().slice(0, 10)}>{story.data.publishedAt.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })}</time></p>
+      <h1>{story.data.title}</h1>
+      <div class="story-introduction">
+        <div>
+          <p class="story-person">{story.data.name}</p>
+          <p class="story-deck">{story.data.description}</p>
+        </div>
+        {(story.data.location || links.length > 0) && (
+          <aside class="story-person-details" aria-label="About the contributor">
+            {story.data.location && <><p class="eyebrow">Based in</p><p>{story.data.location}</p></>}
+            {links.length > 0 && <><p class="eyebrow">Find them online</p><ul>{links.map(link => <li><a href={link.url}>{link.label} ↗</a></li>)}</ul></>}
+          </aside>
+        )}
+      </div>
+    </header>
+    {story.data.hero ? (
+      <figure class="story-photo story-hero">
+        <div class="story-hero-image">
+          <img src={story.data.hero.src} alt={story.data.hero.alt} width="1800" height="1200" fetchpriority="high" />
+          <span class="story-hero-stripes" aria-hidden="true"></span>
+        </div>
+        <figcaption>{story.data.hero.caption}</figcaption>
+      </figure>
+    ) : (
+      <div class="portrait story-hero-art" style={`--portrait:${story.data.color}`} aria-label={`Illustration for ${story.data.name}`}>
+        <span class="art-orbit"></span><span class="portrait-initials">{story.data.initials}</span>
+      </div>
+    )}
+    <div class="story-reading-layout">
+      <aside class="story-project-note" aria-label="About People of GraphQL">
+        <p class="eyebrow">People of GraphQL</p>
+        <h2>A community is made of people.</h2>
+        <p>Personal stories from the people building, maintaining, and finding their place in the GraphQL community.</p>
+        <a href="/about/">About the project ↗</a>
+      </aside>
+      <Content />
+      <a class="back story-end" href="/stories/">Explore more stories →</a>
+    </div>
+  </article>
+</Layout>

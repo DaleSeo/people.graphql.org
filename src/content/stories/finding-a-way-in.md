@@ -2,14 +2,24 @@
 title: "Finding a way in. And leaving the door open."
 name: "Alex Morgan"
 description: "A story about first contributions, finding confidence, and making room for the next person."
-category: "COMMUNITY & BELONGING"
 color: "#50534a"
 initials: "AM"
-order: 0
-sample: true
+publishedAt: 2026-09-16
+location: "London, UK · sample location"
+links:
+  - label: "Personal website (example)"
+    url: "https://example.com"
+hero:
+  src: "/stories/shared-workspace.jpg"
+  alt: "A bright shared workspace with long tables, chairs, and plants."
+  caption: "Space to come together. Stock photography from Unsplash; illustrative, not the interview subject’s workspace."
 ---
 
 ## Every journey starts somewhere
+
+A first contribution can be a small thing: a question in a discussion, a correction to a guide, or a test that helps someone understand an unexpected result. What makes it meaningful is the conversation that follows.
+
+This preview explores the kind of personal story we want to tell — the path into a community, the people encountered along the way, and the small moments that make someone want to stay.
 
 A first contribution can be a small thing: a question in a discussion, a correction to a guide, or a test that helps someone understand an unexpected result. What makes it meaningful is the conversation that follows.
 
@@ -22,6 +32,33 @@ The finished interview will make space for more than technical milestones. What 
 > Every contribution has a person behind it.
 
 That is the idea at the heart of People of GraphQL: time to step back from the tools and listen to the people who make them possible.
+
+This preview explores the kind of personal story we want to tell — the path into a community, the people encountered along the way, and the small moments that make someone want to stay.
+
+A first contribution can be a small thing: a question in a discussion, a correction to a guide, or a test that helps someone understand an unexpected result. What makes it meaningful is the conversation that follows.
+
+<figure class="story-photo">
+  <img src="/stories/working-notes.jpg" alt="An open notebook, laptop, and coffee on a wooden desk." width="1800" height="1200" loading="lazy" decoding="async" />
+  <figcaption>The work between conversations. Stock photography from Unsplash, used as a layout placeholder.</figcaption>
+</figure>
+
+## Finding confidence in the conversation
+
+A first contribution can be a small thing: a question in a discussion, a correction to a guide, or a test that helps someone understand an unexpected result. What makes it meaningful is the conversation that follows.
+
+This preview explores the kind of personal story we want to tell — the path into a community, the people encountered along the way, and the small moments that make someone want to stay.
+
+A first contribution can be a small thing: a question in a discussion, a correction to a guide, or a test that helps someone understand an unexpected result. What makes it meaningful is the conversation that follows.
+
+> What makes it meaningful is the conversation that follows.
+
+This preview explores the kind of personal story we want to tell — the path into a community, the people encountered along the way, and the small moments that make someone want to stay.
+
+## Leaving the door open
+
+A first contribution can be a small thing: a question in a discussion, a correction to a guide, or a test that helps someone understand an unexpected result. What makes it meaningful is the conversation that follows.
+
+This preview explores the kind of personal story we want to tell — the path into a community, the people encountered along the way, and the small moments that make someone want to stay.
 
 ## Making room for what comes next
 
