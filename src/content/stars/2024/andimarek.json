@@ -2,10 +2,7 @@
   "name": "Andreas Marek",
   "initials": "AM",
   "year": 2024,
-  "color": "#50534a",
   "github": "andimarek",
   "avatar": "https://github.com/andimarek.png",
-  "sample": false,
-  "tsc": true,
-  "bio": "@graphql-java founder."
+  "tsc": true
 }

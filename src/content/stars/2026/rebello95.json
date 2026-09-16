@@ -2,9 +2,6 @@
   "name": "Michael Rebello",
   "initials": "MR",
   "year": 2026,
-  "color": "#50534a",
   "github": "rebello95",
-  "avatar": "https://github.com/rebello95.png",
-  "sample": false,
-  "bio": "Staff (iOS) Engineer @ Airbnb"
+  "avatar": "https://github.com/rebello95.png"
 }

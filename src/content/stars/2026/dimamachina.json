@@ -2,9 +2,6 @@
   "name": "Dimitri POSTOLOV",
   "initials": "DP",
   "year": 2026,
-  "color": "#50534a",
   "github": "dimamachina",
-  "avatar": "https://github.com/dimamachina.png",
-  "sample": false,
-  "bio": "Inkeep Agent Framework maintainer.\r\nprev Nextra / GraphiQL / GraphQL-ESLint maintainer. prev @the-guild-org."
+  "avatar": "https://github.com/dimamachina.png"
 }

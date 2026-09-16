@@ -30,7 +30,7 @@ const years = [...new Set(stars.map(s=>s.data.year))].sort((a,b)=>b-a);
       <label class="search-label"><span class="sr-only">Search contributors</span><input id="search" type="search" placeholder="Find a name or GitHub username…" /></label>
     </div>
     <div class="stars-grid">{stars.map(star => 
-      <div class="star-card" data-year={star.data.year} data-search={`${star.data.name} ${star.data.github ?? ''} ${star.data.contribution ?? ''} ${star.data.bio ?? ''}`.toLowerCase()} hidden={star.data.year!==years[0]}>
+      <div class="star-card" data-year={star.data.year} data-search={`${star.data.name} ${star.data.github ?? ''}`.toLowerCase()} hidden={star.data.year!==years[0]}>
         <button class="star-trigger" type="button" aria-haspopup="dialog" aria-label={`View ${star.data.name}, class of ${star.data.year}`}>
          <div class:list={['avatar', { tsc: star.data.tsc }]}><span class="avatar-fallback" aria-hidden="true">{star.data.initials}</span>{star.data.avatar && <img src={star.data.avatar} alt="" loading="lazy" decoding="async" width="240" height="240" />}</div>
        </button>

@@ -29,7 +29,7 @@ Run `npm run build` to generate the static site in `dist/`.
 
 The three interviews remain **fictional samples**.
 
-Each Stars collection contains the 52 Star GitHub usernames, with public display names and bios retrieved from GitHub on 2026-09-14. Profile text is stored locally; builds do not call the GitHub API.
+Each Stars collection contains the 52 Star GitHub usernames, with public display names retrieved from GitHub on 2026-09-14. Profile text is stored locally; builds do not call the GitHub API.
 
 ### Stories
 
@@ -54,22 +54,20 @@ Write the approved article beneath the frontmatter. The lowest `order` is featur
 
 ### Stars
 
-Add one JSON file per person inside `src/content/stars/<year>/`. For example, `2025/benjie.json` and `2026/benjie.json` are independent entries with their own bios, contribution text, and TSC flags.
+Add one JSON file per person inside `src/content/stars/<year>/`. For example, `2025/benjie.json` and `2026/benjie.json` are independent entries with their own contribution text and TSC flags.
 
 ```json
 {
   "name": "Person Name",
   "initials": "PN",
   "year": 2026,
-  "bio": "Their public GitHub bio.",
   "contribution": "An optional, verified description of their contribution.",
-  "color": "#7e8868",
   "github": "github-username",
   "avatar": "https://github.com/github-username.png"
 }
 ```
 
-`github`, `avatar`, `bio`, and `contribution` are optional. GitHub avatars are hotlinked using `https://github.com/<username>.png`, lazy-loaded, and cropped into circles. They reflect the current GitHub avatar and depend on GitHub availability; missing or failed images display initials. Names, usernames, and bios appear inside expandable profiles. Search matches names, usernames, bios, and any contribution text. No contribution claims have been inferred from GitHub bios. Each year needs its own entry for returning contributors; the year selector automatically expands when additional years are added.
+`github`, `avatar`, and `contribution` are optional. GitHub avatars are hotlinked using `https://github.com/<username>.png`, lazy-loaded, and cropped into circles. They reflect the current GitHub avatar and depend on GitHub availability; missing or failed images display initials. Names and usernames appear inside expandable profiles. Search matches only names and GitHub usernames, ignoring capitalisation, within the selected year. Each year needs its own entry for returning contributors; the year selector automatically expands when additional years are added.
 
 Schemas are in `src/content.config.ts`, shared styles in `src/styles/global.css`, and the shared shell in `src/layouts/Layout.astro`. Stories and Stars use separate Astro content collections: https://docs.astro.build/en/guides/content-collections/.
 

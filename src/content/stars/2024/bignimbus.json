@@ -2,10 +2,7 @@
   "name": "Jeff Auriemma",
   "initials": "JA",
   "year": 2024,
-  "color": "#50534a",
   "github": "bignimbus",
   "avatar": "https://github.com/bignimbus.png",
-  "sample": false,
-  "tsc": false,
-  "bio": "Senior EM, Apollo Client teams @apollographql"
+  "tsc": false
 }

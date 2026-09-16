@@ -2,10 +2,7 @@
   "name": "Benjie",
   "initials": "BE",
   "year": 2026,
-  "color": "#50534a",
   "github": "benjie",
   "avatar": "https://github.com/benjie.png",
-  "sample": false,
-  "bio": "Community-funded OSS developer/maintainer, working in the GraphQL, Node.js and PostgreSQL ecosystems.\r\nGraphQL Technical Steering Committee member.\r\nHe/him",
   "tsc": true
 }

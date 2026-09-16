@@ -2,10 +2,7 @@
   "name": "keweiqu",
   "initials": "KE",
   "year": 2024,
-  "color": "#50534a",
   "github": "keweiqu",
   "avatar": "https://github.com/keweiqu.png",
-  "sample": false,
-  "tsc": true,
-  "bio": "Working on GraphQL."
+  "tsc": true
 }

@@ -2,9 +2,6 @@
   "name": "Jem",
   "initials": "JE",
   "year": 2026,
-  "color": "#50534a",
   "github": "jemgillam",
-  "avatar": "https://github.com/jemgillam.png",
-  "sample": false,
-  "bio": "Half of @graphile - community funded OSS projects in and around GraphQL, Postgres and Node ecosystems. they/them"
+  "avatar": "https://github.com/jemgillam.png"
 }

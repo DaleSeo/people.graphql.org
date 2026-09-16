@@ -2,10 +2,7 @@
   "name": "Jovi De Croock",
   "initials": "JD",
   "year": 2024,
-  "color": "#50534a",
   "github": "jovidecroock",
   "avatar": "https://github.com/jovidecroock.png",
-  "sample": false,
-  "tsc": false,
-  "bio": "Software Engineer | Open-source enthusiast | Preact core team"
+  "tsc": false
 }

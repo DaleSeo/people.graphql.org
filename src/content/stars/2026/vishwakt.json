@@ -2,9 +2,6 @@
   "name": "Vishwak",
   "initials": "VI",
   "year": 2026,
-  "color": "#50534a",
   "github": "vishwakt",
-  "avatar": "https://github.com/vishwakt.png",
-  "sample": false,
-  "bio": "Node.js, React, AWS"
+  "avatar": "https://github.com/vishwakt.png"
 }

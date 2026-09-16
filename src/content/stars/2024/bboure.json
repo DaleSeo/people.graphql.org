@@ -2,10 +2,7 @@
   "name": "Benoît Bouré",
   "initials": "BB",
   "year": 2024,
-  "color": "#50534a",
   "github": "bboure",
   "avatar": "https://github.com/bboure.png",
-  "sample": false,
-  "tsc": false,
-  "bio": "⚡️ Serverless enthousiast"
+  "tsc": false
 }

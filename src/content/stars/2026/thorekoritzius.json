@@ -2,9 +2,6 @@
   "name": "Thore Koritzius",
   "initials": "TK",
   "year": 2026,
-  "color": "#50534a",
   "github": "thorekoritzius",
-  "avatar": "https://github.com/thorekoritzius.png",
-  "sample": false,
-  "bio": "Machine Learning Software Engineer, M.Sc. CS  RWTH Aachen"
+  "avatar": "https://github.com/thorekoritzius.png"
 }

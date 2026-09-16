@@ -2,9 +2,6 @@
   "name": "Lenz Weber-Tronic",
   "initials": "LW",
   "year": 2026,
-  "color": "#50534a",
   "github": "phryneas",
-  "avatar": "https://github.com/phryneas.png",
-  "sample": false,
-  "bio": "Sr. Staff Engineer @apollographql & Redux Toolkit co-maintainer."
+  "avatar": "https://github.com/phryneas.png"
 }

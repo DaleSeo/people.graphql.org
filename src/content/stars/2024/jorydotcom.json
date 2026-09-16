@@ -2,10 +2,7 @@
   "name": "Jory Burson",
   "initials": "JB",
   "year": 2024,
-  "color": "#50534a",
   "github": "jorydotcom",
   "avatar": "https://github.com/jorydotcom.png",
-  "sample": false,
-  "tsc": false,
-  "bio": "getting things from todo to tada 🎉"
+  "tsc": false
 }

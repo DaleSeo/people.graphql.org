@@ -2,9 +2,6 @@
   "name": "Alexandre Dias",
   "initials": "AD",
   "year": 2026,
-  "color": "#50534a",
   "github": "alexdias",
-  "avatar": "https://github.com/alexdias.png",
-  "sample": false,
-  "bio": "Software Engineer"
+  "avatar": "https://github.com/alexdias.png"
 }

@@ -2,9 +2,6 @@
   "name": "Sarah Sanders",
   "initials": "SS",
   "year": 2026,
-  "color": "#50534a",
   "github": "sarahxsanders",
-  "avatar": "https://github.com/sarahxsanders.png",
-  "sample": false,
-  "bio": "doing robot things @ PostHog"
+  "avatar": "https://github.com/sarahxsanders.png"
 }

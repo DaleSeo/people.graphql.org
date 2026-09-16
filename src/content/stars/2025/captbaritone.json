@@ -2,9 +2,6 @@
   "name": "Jordan Eldredge",
   "initials": "JE",
   "year": 2025,
-  "color": "#50534a",
   "github": "captbaritone",
-  "avatar": "https://github.com/captbaritone.png",
-  "sample": false,
-  "bio": "Engineer on relay.dev at Meta | Made webamp.org"
+  "avatar": "https://github.com/captbaritone.png"
 }

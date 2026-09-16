@@ -2,10 +2,7 @@
   "name": "Martin Bonnin",
   "initials": "MB",
   "year": 2024,
-  "color": "#50534a",
   "github": "martinbonnin",
   "avatar": "https://github.com/martinbonnin.png",
-  "sample": false,
-  "tsc": false,
-  "bio": "Make val, not var"
+  "tsc": false
 }

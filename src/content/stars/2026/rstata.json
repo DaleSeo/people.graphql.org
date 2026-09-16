@@ -2,8 +2,6 @@
   "name": "Raymie Stata",
   "initials": "RS",
   "year": 2026,
-  "color": "#50534a",
   "github": "rstata",
-  "avatar": "https://github.com/rstata.png",
-  "sample": false
+  "avatar": "https://github.com/rstata.png"
 }

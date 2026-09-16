@@ -2,10 +2,7 @@
   "name": "Fran Dios",
   "initials": "FD",
   "year": 2024,
-  "color": "#50534a",
   "github": "frandiox",
   "avatar": "https://github.com/frandiox.png",
-  "sample": false,
-  "tsc": false,
-  "bio": "[object Object]"
+  "tsc": false
 }

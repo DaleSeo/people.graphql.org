@@ -2,9 +2,7 @@
   "name": "Itamar",
   "initials": "IT",
   "year": 2024,
-  "color": "#50534a",
   "github": "itamark",
   "avatar": "https://github.com/itamark.png",
-  "sample": false,
   "tsc": false
 }
