@@ -7,5 +7,5 @@
   "avatar": "https://github.com/andimarek.png",
   "sample": false,
   "bio": "@graphql-java founder.",
-  "tsc": true
+  "tsc": false
 }

@@ -7,5 +7,5 @@
   "avatar": "https://github.com/ivangoncharov.png",
   "sample": false,
   "bio": "GraphQL TSC member and graphql-js maintainer🇺🇦",
-  "tsc": true
+  "tsc": false
 }

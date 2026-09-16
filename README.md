@@ -73,10 +73,12 @@ Add one JSON file per person inside `src/content/stars/<year>/`. For example, `2
 
 Schemas are in `src/content.config.ts`, shared styles in `src/styles/global.css`, and the shared shell in `src/layouts/Layout.astro`. Stories and Stars use separate Astro content collections: https://docs.astro.build/en/guides/content-collections/.
 
+Optional contribution images go in `public/stars/<year>/<github-username>.png` (for example, `public/stars/2025/acao.png`). A profile popover displays an image only when that exact year's PNG exists at build time; images are loaded when the popover opens. Add or remove files and rebuild to update availability. Images are never shared automatically between years.
+
 ## Design and hosting
 
 The theme follows the current GraphQL website: locally hosted Host Grotesk and Commit Mono, Rhodamine pink accents, white editorial pages, and a near-black Stars gallery. The header and footer use the unmodified official GraphQL wordmark; the favicon uses the official hexagraph. Asset provenance and font licences are documented in `public/brand/README.md`. Native disclosure elements keep profiles usable without JavaScript. Search and year switching use a small client-side script.
 
-TSC members are marked with `"tsc": true` on their annual Stars entry and receive a gold `#FFD700` avatar border. Membership is based on any overlap between their term and September 1 of the preceding year through August 31 of the class year (inclusive). Lee Byron’s chair role has no fixed term and qualifies for all three cohorts. Terms were checked against https://handbooks.graphql.org/tsc/members and its canonical source https://github.com/graphql/graphql-wg/blob/main/GraphQL-TSC.md on 2026-09-14.
+TSC members are marked with `"tsc": true` on their annual Stars entry and receive a gold `#FFD700` avatar border. Membership reflects who was serving when the cards were produced in August of the class year. Set `"tsc": true` only for members serving at that time; a term ending earlier that year does not qualify. Each year’s flag is independent. Lee Byron’s chair role has no fixed term and qualifies for all three cohorts. Terms were checked against https://handbooks.graphql.org/tsc/members and its canonical source https://github.com/graphql/graphql-wg/blob/main/GraphQL-TSC.md on 2026-09-16.
 
 The Stars loader reads year folders recursively. A person’s entry in one year is independent of their entry in another year.

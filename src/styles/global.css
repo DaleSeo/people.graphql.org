@@ -813,7 +813,7 @@ footer .brand {
 
 
 
-/* Centred contribution dialog; SVGs load only when a profile opens. */
+/* Centred contribution dialog; PNGs load only when a profile opens. */
 .star-trigger:focus-visible, .star-dialog-close:focus-visible {
   outline: 3px solid var(--pink);
   outline-offset: 5px;
@@ -850,7 +850,7 @@ body:has(.star-dialog[open]) { overflow: hidden; }
 .star-dialog a { text-decoration: underline; text-underline-offset: 4px; }
 .star-dialog .tsc-label { color: #ffd700; font-size: 13px; }
 .star-contribution { margin: 28px 0 0; }
-.star-contribution img { display: block; width: 100%; height: auto; }
+.star-contribution img { display: block; width: 100%; height: auto; border-radius: 4% / 3%; }
 .star-contribution figcaption { margin-top: 16px; font-size: 13px; }
 
 /* About GraphQL Stars and video */

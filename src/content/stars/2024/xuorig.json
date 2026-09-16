@@ -6,6 +6,6 @@
   "github": "xuorig",
   "avatar": "https://github.com/xuorig.png",
   "sample": false,
-  "tsc": true,
+  "tsc": false,
   "bio": "🚀"
 }

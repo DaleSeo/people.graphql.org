@@ -1,7 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
-const stars = (await getCollection('stars')).sort((a,b)=>a.data.name.localeCompare(b.data.name));
+// Discover filenames at build time without loading image contents into the page.
+const contributionImages = new Set(
+  Object.keys(import.meta.glob('/public/stars/*/*.png', { query: '?url', import: 'default' }))
+    .map(path => path.replace('/public', ''))
+);
+const stars = (await getCollection('stars'))
+  .sort((a,b)=>a.data.name.localeCompare(b.data.name))
+  .map(star => {
+    const imagePath = `/stars/${star.data.year}/${star.data.github}.png`;
+    return { ...star, contributionImage: star.data.github && contributionImages.has(imagePath) ? imagePath : undefined };
+  });
 const years = [...new Set(stars.map(s=>s.data.year))].sort((a,b)=>b-a);
 ---
 <Layout title="GraphQL Stars" dark>
@@ -31,7 +41,7 @@ const years = [...new Set(stars.map(s=>s.data.year))].sort((a,b)=>b-a);
           
             {star.data.tsc && (
               <p class="tsc-label">
-                Technical Steering Committee · {star.data.year - 1}–{String(star.data.year).slice(-2)}
+                Technical Steering Committee · {star.data.year}
               </p>
             )}
   
@@ -42,6 +52,15 @@ const years = [...new Set(stars.map(s=>s.data.year))].sort((a,b)=>b-a);
               />
             )}
           </div>
+          {star.contributionImage && (
+            <figure class="star-contribution">
+              <img
+                src={star.contributionImage}
+                alt={`GraphQL contributions for ${star.data.name}, class of ${star.data.year}`}
+                decoding="async"
+              />
+            </figure>
+          )}
         </template>
       </div>)}
     </div>
