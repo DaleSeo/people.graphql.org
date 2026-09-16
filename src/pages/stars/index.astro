@@ -54,11 +54,13 @@ const years = [...new Set(stars.map(s=>s.data.year))].sort((a,b)=>b-a);
           </div>
           {star.contributionImage && (
             <figure class="star-contribution">
+              <button class="star-card-zoom" type="button" aria-label="Zoom contribution card" aria-pressed="false" title="Click to zoom in">
               <img
                 src={star.contributionImage}
                 alt={`GraphQL contributions for ${star.data.name}, class of ${star.data.year}`}
                 decoding="async"
               />
+              </button>
             </figure>
           )}
         </template>
@@ -101,6 +103,16 @@ search.addEventListener('input', filter);
 year.addEventListener('change', filter);
 const dialog = document.querySelector<HTMLDialogElement>('.star-dialog')!;
 const content = dialog.querySelector<HTMLElement>('.star-dialog-content')!;
+content.addEventListener('click', event => {
+  const button = event.target instanceof Element ? event.target.closest<HTMLButtonElement>('.star-card-zoom') : null;
+  if (!button) return;
+  const zoomed = button.getAttribute('aria-pressed') !== 'true';
+  button.setAttribute('aria-pressed', String(zoomed));
+  button.title = zoomed ? 'Click to zoom out' : 'Click to zoom in';
+  const figure = button.closest<HTMLElement>('.star-contribution')!;
+  figure.classList.toggle('is-zoomed', zoomed);
+  if (!zoomed) figure.scrollTo(0, 0);
+});
 for (const card of cards) {
   card.querySelector<HTMLButtonElement>('.star-trigger')!.addEventListener('click', () => {
     content.replaceChildren(card.querySelector('template')!.content.cloneNode(true));
