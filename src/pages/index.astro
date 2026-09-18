@@ -1,4 +1,7 @@
 ---
+import styles from './index.module.css';
+import shared from '../styles/shared.module.css';
+import cards from '../styles/storyCards.module.css';
 import Layout from '../layouts/Layout.astro';
 import StarsConstellation from '../components/StarsConstellation.astro';
 import { getCollection } from 'astro:content';
@@ -6,45 +9,45 @@ const stories = (await getCollection('stories')).sort((a,b) => b.data.publishedA
 const [featured, ...rest] = stories;
 ---
 <Layout>
-  <section class="intro wrap">
+  <section class:list={[styles.intro, shared.wrap]}>
     <h1>Code is only<br /><em>part of the story.</em></h1>
-    <div class="intro-bottom">
+    <div class={shared.introBottom}>
       <p>Meet the maintainers, practitioners, educators, and organizers working across the GraphQL ecosystem.</p>
     </div>
     </section>
-  <section class="wrap stories-section">
-    <div class="section-label">
+  <section class:list={[shared.wrap, styles.storiesSection]}>
+    <div class={styles.sectionLabel}>
       <a href="/stories/">Explore all stories</a>
     </div>
-    <a class="featured" href={`/stories/${featured.id}/`}>
-      <div class="portrait feature-art" style={`--portrait:${featured.data.color}`}>
-        <span class="portrait-initials">{featured.data.initials}</span>
-        <span class="image-caption">PEOPLE OF GRAPHQL · STORY PREVIEW</span>
+    <a class={styles.featured} href={`/stories/${featured.id}/`}>
+      <div class:list={[cards.portrait, styles.featureArt]} style={`--portrait:${featured.data.color}`}>
+        <span class={cards.portraitInitials}>{featured.data.initials}</span>
+        <span class={styles.imageCaption}>PEOPLE OF GRAPHQL · STORY PREVIEW</span>
       </div>
-      <div class="feature-copy">
+      <div class={styles.featureCopy}>
         <h2>{featured.data.title}</h2>
         <p>{featured.data.description}</p>
-        <div class="story-credit"><span>{featured.data.name}</span></div>
+        <div class={styles.storyCredit}><span>{featured.data.name}</span></div>
       </div>
     </a>
-    <div class="story-grid">{rest.map(story =>
-      <a class="story-card" href={`/stories/${story.id}/`}>
-        <div class="portrait card-art" style={`--portrait:${story.data.color}`}>
-          <span class="portrait-initials">{story.data.initials}</span>
-          <span class="image-caption">STORY PREVIEW</span>
+    <div class={cards.storyGrid}>{rest.map(story =>
+      <a class={cards.storyCard} href={`/stories/${story.id}/`}>
+        <div class:list={[cards.portrait, cards.cardArt]} style={`--portrait:${story.data.color}`}>
+          <span class={cards.portraitInitials}>{story.data.initials}</span>
+          <span class={styles.imageCaption}>STORY PREVIEW</span>
         </div>
         <h3>{story.data.title}</h3>
         <p>{story.data.description}</p>
-        <div class="card-credit">{story.data.name}<span>Read the preview</span></div>
+        <div class={cards.cardCredit}>{story.data.name}<span>Read the preview</span></div>
       </a>)}
     </div>
   </section>
-  <section class="stars-teaser">
-    <div class="wrap teaser-inner">
+  <section class={styles.starsTeaser}>
+    <div class:list={[shared.wrap, styles.teaserInner]}>
       <div>
         <h2>A constellation<br />of contributions.</h2>
-        <p>Each year, GraphQL Stars recognizes 52 people for their<br class="desktop" />contributions across the GraphQL GitHub repositories.</p>
-        <a class="button" href="/stars/">Explore the class of 2026</a>
+        <p>Each year, GraphQL Stars recognizes 52 people for their<br class={styles.desktop} />contributions across the GraphQL GitHub repositories.</p>
+        <a class={shared.button} href="/stars/">Explore the class of 2026</a>
       </div>
       <StarsConstellation />
     </div>

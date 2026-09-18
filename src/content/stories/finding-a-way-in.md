@@ -37,7 +37,7 @@ This preview explores the kind of personal story we want to tell — the path in
 
 A first contribution can be a small thing: a question in a discussion, a correction to a guide, or a test that helps someone understand an unexpected result. What makes it meaningful is the conversation that follows.
 
-<figure class="story-photo">
+<figure data-story-photo>
   <img src="/stories/working-notes.jpg" alt="An open notebook, laptop, and coffee on a wooden desk." width="1800" height="1200" loading="lazy" decoding="async" />
   <figcaption>The work between conversations. Stock photography from Unsplash, used as a layout placeholder.</figcaption>
 </figure>

@@ -1,4 +1,5 @@
 ---
+import styles from './Layout.module.css';
 import '../styles/global.css';
 import Brand from '../components/Brand.astro';
 interface Props { title?: string; description?: string; dark?: boolean }
@@ -7,7 +8,7 @@ const path = Astro.url.pathname;
 ---
 <!doctype html>
 <html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><meta name="description" content={description} /><title>{title}</title><link rel="preload" href="/fonts/host-grotesk.woff2" as="font" type="font/woff2" crossorigin /><link rel="icon" href="/favicon.svg" type="image/svg+xml" /></head>
-<body class:list={[{ dark }]}><a class="skip" href="#main">Skip to content</a>
-<header class="site-header"><Brand /><nav aria-label="Main navigation"><a href="/stories/" aria-current={path.startsWith('/stories') ? 'page' : undefined}>Stories</a><a href="/stars/" aria-current={path.startsWith('/stars') ? 'page' : undefined}>GraphQL Stars</a><a href="/about/" aria-current={path.startsWith('/about') ? 'page' : undefined}>About</a></nav></header>
+<body data-theme={dark ? "dark" : undefined}><a class={styles.skip} href="#main">Skip to content</a>
+<header class={styles.siteHeader}><Brand /><nav class={styles.navigation} aria-label="Main navigation"><a href="/stories/" aria-current={path.startsWith('/stories') ? 'page' : undefined}>Stories</a><a href="/stars/" aria-current={path.startsWith('/stars') ? 'page' : undefined}>GraphQL Stars</a><a href="/about/" aria-current={path.startsWith('/about') ? 'page' : undefined}>About</a></nav></header>
 <main id="main"><slot /></main>
-<footer><Brand /><span>A GraphQL Foundation project.</span><a href="/about/">About this project</a></footer></body></html>
+<footer class={styles.footer}><Brand /><span>A GraphQL Foundation project.</span><a href="/about/">About this project</a></footer></body></html>

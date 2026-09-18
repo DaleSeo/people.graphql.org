@@ -1,0 +1,45 @@
+.starsConstellation {
+  position: relative;
+  flex: 0 1 480px;
+  width: 100%;
+  min-width: 280px;
+  max-width: 480px;
+  aspect-ratio: 4 / 3;
+  background: radial-gradient(
+    ellipse at center,
+    rgb(225 0 152 / 9%),
+    transparent 68%
+  );
+}
+.constellationDot {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--dot-size);
+  height: var(--dot-size);
+  border-radius: 50%;
+  background: #ff99df;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.constellationAvatar {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: 19%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgb(255 153 223 / 45%);
+  box-shadow: 0 0 0 6px var(--night);
+  background: var(--night);
+}
+@media (max-width: 800px) {
+  .starsConstellation {
+    flex: none;
+    align-self: center;
+    min-width: 0;
+  }
+}

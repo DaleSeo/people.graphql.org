@@ -1,21 +1,22 @@
 ---
+import shared from '../../styles/shared.module.css';
+import styles from './about.module.css';
 import Layout from '../../layouts/Layout.astro';
-const talkUrl = 'https://graphql.org/conf/2024/schedule/5245297ed1f7b82885c742d77f209bda/';
 ---
 <Layout
   title="About GraphQL Stars"
   description="GraphQL Stars celebrates 52 people each year whose work across the GraphQL GitHub repositories moves the project forward."
   dark
 >
-  <section class="wrap page-intro stars-about-intro">
-    <a class="back" href="/stars/">← Meet the GraphQL Stars</a>
-    <p class="eyebrow">ABOUT GRAPHQL STARS</p>
+  <section class:list={[shared.wrap, shared.pageIntro, styles.starsAboutIntro]}>
+    <a class={shared.back} href="/stars/">← Meet the GraphQL Stars</a>
+    <p class={shared.eyebrow}>ABOUT GRAPHQL STARS</p>
     <h1>A universe shaped<br /><em>by contributors.</em></h1>
-    <p class="standfirst">GraphQL Stars celebrates 52 people each year whose work across the GraphQL GitHub repositories moves the project forward.</p>
+    <p class={shared.standfirst}>GraphQL Stars celebrates 52 people each year whose work across the GraphQL GitHub repositories moves the project forward.</p>
   </section>
 
-  
-  <div class="article-body stars-about-copy">
+
+  <div class:list={[shared.articleBody, styles.starsAboutCopy]}>
     <h2>GraphQL is a shared effort</h2>
 
   <p>
@@ -47,8 +48,8 @@ const talkUrl = 'https://graphql.org/conf/2024/schedule/5245297ed1f7b82885c742d7
     recognised each year.
   </p>
   </div>
-<section class="wrap stars-video" aria-labelledby="talk-heading">
-    <div class="stars-video-frame">
+<section class={shared.wrap} aria-labelledby="talk-heading">
+    <div class={styles.starsVideoFrame}>
       <iframe
         src="https://www.youtube-nocookie.com/embed/bCBZTNib0mA?si=yxipoNUAP8qZsM3v&amp;start=203"
         title="You're Our Universe: GraphQL Community Update 2024"
@@ -58,7 +59,7 @@ const talkUrl = 'https://graphql.org/conf/2024/schedule/5245297ed1f7b82885c742d7
         allowfullscreen
       ></iframe>
     </div>
-    <div class="stars-video-caption">
+    <div class={styles.starsVideoCaption}>
       <div>
         <h2 id="talk-heading">You're Our Universe: GraphQL Community Update 2024</h2>
         <p>Benjie Gillam · Community Gardener · GraphQLConf 2024</p>
@@ -66,8 +67,8 @@ const talkUrl = 'https://graphql.org/conf/2024/schedule/5245297ed1f7b82885c742d7
       <a href="https://www.youtube.com/watch?v=bCBZTNib0mA">Watch on YouTube ↗</a>
     </div>
   </section>
-  
-  <div class="article-body stars-about-copy">
+
+  <div class:list={[shared.articleBody, styles.starsAboutCopy]}>
   <h2>52 Stars, every year</h2>
 
   <p>
@@ -81,8 +82,8 @@ const talkUrl = 'https://graphql.org/conf/2024/schedule/5245297ed1f7b82885c742d7
     the class, choose a card, and meet someone helping to build GraphQL.
   </p>
 
-  <a class="button" href="/stars/">
+  <a class={shared.button} href="/stars/">
     Explore the class of 2026 <span aria-hidden="true">→</span>
   </a></div>
-  
+
 </Layout>

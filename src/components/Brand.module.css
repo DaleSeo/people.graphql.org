@@ -1,0 +1,36 @@
+.brand {
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  gap: 18px;
+  letter-spacing: normal;
+  flex-shrink: 0;
+}
+
+.brandPrefix {
+  font-size: 18px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.brandLogo {
+  display: block;
+  width: 126px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.brand:hover .brandPrefix {
+  color: #b8007d;
+}
+
+@media (max-width: 600px) {
+  .brand {
+    font-size: 18px;
+    gap: 18px;
+  }
+
+  .brandPrefix {
+    font-size: 18px;
+  }
+}

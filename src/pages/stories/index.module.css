@@ -1,0 +1,9 @@
+.archive {
+  padding-bottom: 90px;
+}
+
+@media (max-width: 600px) {
+  .archive {
+    margin-top: 0;
+  }
+}

@@ -17,4 +17,4 @@ File extensions match the image format returned by GitHub. Portrait rights remai
 with their respective owners. Replace these files to refresh the images.
 
 Arrangement: `src/components/StarsConstellation.astro`.
-Appearance: `.stars-constellation` in `src/styles/global.css`.
+Appearance: `.starsConstellation` in `src/components/StarsConstellation.module.css`.

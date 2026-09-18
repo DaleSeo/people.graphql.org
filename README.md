@@ -72,7 +72,7 @@ hero:
 
 Write the approved article beneath the frontmatter. Stories are sorted by `publishedAt` (newest first), with the newest featured on the homepage. Use a publication date in `YYYY-MM-DD` format; dates are displayed in UTC. The existing fictional drafts use placeholder dates of September 14–16, 2026 to preserve their previous order. `location`, `links`, and `hero` are optional. Article pages use the hero photograph when supplied, with initials artwork as a fallback; homepage and archive cards still use initials artwork. Remove preview wording and placeholder reading times in the homepage/archive/article templates when preparing actual publication.
 
-Article text uses a narrow reading column beside a project introduction. Markdown blockquotes (`> Quote text`) become large pull quotes. For a photograph spanning the article width within the body, use `<figure class="story-photo">` with an `<img>` (including descriptive `alt`, dimensions, and `loading="lazy"`) and a `<figcaption>` for its caption and credit. Store photographs locally in `public/stories/`. The longer `finding-a-way-in.md` sample demonstrates these elements with repeated preview text and clearly labelled stock photography; source details are in `public/stories/README.md`.
+Article text uses a narrow reading column beside a project introduction. Markdown blockquotes (`> Quote text`) become large pull quotes. For a photograph spanning the article width within the body, use `<figure data-story-photo>` with an `<img>` (including descriptive `alt`, dimensions, and `loading="lazy"`) and a `<figcaption>` for its caption and credit. Store photographs locally in `public/stories/`. The longer `finding-a-way-in.md` sample demonstrates these elements with repeated preview text and clearly labelled stock photography; source details are in `public/stories/README.md`.
 
 ### Stars
 
@@ -91,7 +91,7 @@ Add one JSON file per person inside `src/content/stars/<year>/`. For example, `2
 
 `github`, `avatar`, and `contribution` are optional. GitHub avatars are hotlinked using `https://github.com/<username>.png`, lazy-loaded, and cropped into circles. They reflect the current GitHub avatar and depend on GitHub availability; missing or failed images display initials. Names and usernames appear inside expandable profiles. Search matches only names and GitHub usernames, ignoring capitalisation, within the selected year. Each year needs its own entry for returning contributors; the year selector automatically expands when additional years are added.
 
-Schemas are in `src/content.config.ts`, shared styles in `src/styles/global.css`, and the shared shell in `src/layouts/Layout.astro`. Stories and Stars use separate Astro content collections: https://docs.astro.build/en/guides/content-collections/.
+Schemas are in `src/content.config.ts`, global foundations in `src/styles/global.css`, and the shared shell in `src/layouts/Layout.astro`. Stories and Stars use separate Astro content collections: https://docs.astro.build/en/guides/content-collections/.
 
 Optional contribution images go in `public/stars/<year>/<github-username>.png` (for example, `public/stars/2025/acao.png`). A profile popover displays an image only when that exact year's PNG exists at build time; images are loaded when the popover opens. Add or remove files and rebuild to update availability. Images are never shared automatically between years.
 
@@ -102,3 +102,23 @@ The theme follows the current GraphQL website: locally hosted Host Grotesk and C
 TSC members are marked with `"tsc": true` on their annual Stars entry and receive a gold `#FFD700` avatar border. Membership reflects who was serving when the cards were produced in August of the class year. Set `"tsc": true` only for members serving at that time; a term ending earlier that year does not qualify. Each year’s flag is independent. Lee Byron’s chair role has no fixed term and qualifies for all three cohorts. Terms were checked against https://handbooks.graphql.org/tsc/members and its canonical source https://github.com/graphql/graphql-wg/blob/main/GraphQL-TSC.md on 2026-09-16.
 
 The Stars loader reads year folders recursively. A person’s entry in one year is independent of their entry in another year.
+
+## Styling
+
+Astro imports CSS Modules directly; no extra plugin is required. Page and component styles live beside their `.astro` files in `.module.css` files. For example, the homepage uses `src/pages/index.module.css`, Stars uses `src/pages/stars/index.module.css`, and article layouts use `src/pages/stories/article.module.css`.
+
+```astro
+---
+import styles from './index.module.css';
+import shared from '../styles/shared.module.css';
+---
+<section class:list={[shared.wrap, styles.intro]}>...</section>
+```
+
+- `src/styles/global.css`: fonts, colour tokens, element defaults, and the body’s dark theme.
+- `src/styles/shared.module.css`: shared layout and typography utilities.
+- `src/styles/storyCards.module.css`: artwork and cards shared by the homepage, archive, and article fallback.
+- `src/layouts/Layout.module.css`: header, navigation, footer, and skip link.
+- `src/components/Brand.module.css` and `StarsConstellation.module.css`: component-specific styling.
+
+Module class names use camelCase and are accessed through the imported object. Cross-module selectors use `@value` imports, so they target the same generated classes. The Stars client script imports its module too; avoid literal CSS class names in DOM queries. Markdown body photos use the stable `data-story-photo` attribute, styled only inside the article module’s reading column. Headings and blockquotes in Markdown are styled through that column’s scoped descendant selectors.

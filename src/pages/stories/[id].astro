@@ -1,4 +1,7 @@
 ---
+import styles from './article.module.css';
+import shared from '../../styles/shared.module.css';
+import cards from '../../styles/storyCards.module.css';
 import Layout from '../../layouts/Layout.astro';
 import { getCollection, render } from 'astro:content';
 export async function getStaticPaths() { return (await getCollection('stories')).map(story => ({ params: { id: story.id }, props: { story } })); }
@@ -7,46 +10,46 @@ const links = story.data.links ?? [];
 const { Content } = await render(story);
 ---
 <Layout title={`${story.data.title} · People of GraphQL`} description={story.data.description}>
-  <article class="story-feature">
-    <a class="back" href="/stories/">← All stories</a>
-    <header class="story-feature-header">
-      <p class="eyebrow"><time datetime={story.data.publishedAt.toISOString().slice(0, 10)}>{story.data.publishedAt.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })}</time></p>
+  <article class={styles.storyFeature}>
+    <a class={shared.back} href="/stories/">← All stories</a>
+    <header class={styles.storyFeatureHeader}>
+      <p class={shared.eyebrow}><time datetime={story.data.publishedAt.toISOString().slice(0, 10)}>{story.data.publishedAt.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })}</time></p>
       <h1>{story.data.title}</h1>
-      <div class="story-introduction">
+      <div class={styles.storyIntroduction}>
         <div>
-          <p class="story-person">{story.data.name}</p>
-          <p class="story-deck">{story.data.description}</p>
+          <p class={styles.storyPerson}>{story.data.name}</p>
+          <p class={styles.storyDeck}>{story.data.description}</p>
         </div>
         {(story.data.location || links.length > 0) && (
-          <aside class="story-person-details" aria-label="About the contributor">
-            {story.data.location && <><p class="eyebrow">Based in</p><p>{story.data.location}</p></>}
-            {links.length > 0 && <><p class="eyebrow">Find them online</p><ul>{links.map(link => <li><a href={link.url}>{link.label} ↗</a></li>)}</ul></>}
+          <aside class={styles.storyPersonDetails} aria-label="About the contributor">
+            {story.data.location && <><p class={shared.eyebrow}>Based in</p><p>{story.data.location}</p></>}
+            {links.length > 0 && <><p class={shared.eyebrow}>Find them online</p><ul>{links.map(link => <li><a href={link.url}>{link.label} ↗</a></li>)}</ul></>}
           </aside>
         )}
       </div>
     </header>
     {story.data.hero ? (
-      <figure class="story-photo story-hero">
-        <div class="story-hero-image">
+      <figure class:list={[styles.storyPhoto, styles.storyHero]}>
+        <div class={styles.storyHeroImage}>
           <img src={story.data.hero.src} alt={story.data.hero.alt} width="1800" height="1200" fetchpriority="high" />
-          <span class="story-hero-stripes" aria-hidden="true"></span>
+          <span class={styles.storyHeroStripes} aria-hidden="true"></span>
         </div>
         <figcaption>{story.data.hero.caption}</figcaption>
       </figure>
     ) : (
-      <div class="portrait story-hero-art" style={`--portrait:${story.data.color}`} aria-label={`Illustration for ${story.data.name}`}>
-        <span class="art-orbit"></span><span class="portrait-initials">{story.data.initials}</span>
+      <div class:list={[cards.portrait, styles.storyHeroArt]} style={`--portrait:${story.data.color}`} aria-label={`Illustration for ${story.data.name}`}>
+        <span class={cards.portraitInitials}>{story.data.initials}</span>
       </div>
     )}
-    <div class="story-reading-layout">
-      <aside class="story-project-note" aria-label="About People of GraphQL">
-        <p class="eyebrow">People of GraphQL</p>
+    <div class={styles.storyReadingLayout}>
+      <aside class={styles.storyProjectNote} aria-label="About People of GraphQL">
+        <p class={shared.eyebrow}>People of GraphQL</p>
         <h2>A community is made of people.</h2>
         <p>Personal stories from the people building, maintaining, and finding their place in the GraphQL community.</p>
         <a href="/about/">About the project ↗</a>
       </aside>
       <Content />
-      <a class="back story-end" href="/stories/">Explore more stories →</a>
+      <a class:list={[shared.back, styles.storyEnd]} href="/stories/">Explore more stories →</a>
     </div>
   </article>
 </Layout>

@@ -1,0 +1,75 @@
+@value back as sharedBack from "../../styles/shared.module.css";
+@value standfirst as sharedStandfirst from "../../styles/shared.module.css";
+
+.starsAboutIntro {
+  padding-top: 24px;
+}
+
+.starsAboutIntro :global(.sharedBack) {
+  margin-bottom: 36px;
+}
+
+.starsAboutIntro :global(.sharedStandfirst) {
+  max-width: 660px;
+  color: var(--muted);
+}
+
+.starsVideoFrame {
+  aspect-ratio: 16 / 9;
+}
+
+.starsVideoFrame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #000;
+}
+
+.starsVideoCaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.starsVideoCaption h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.starsVideoCaption p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.starsVideoCaption a {
+  font-size: 13px;
+  flex-shrink: 0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.starsAboutCopy {
+  margin-top: 48px;
+  padding-bottom: 80px;
+}
+
+@media (max-width: 600px) {
+  .starsVideoCaption {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .starsAboutCopy {
+    margin-top: 32px;
+  }
+
+  .starsAboutIntro {
+    padding-top: 24px;
+  }
+}
