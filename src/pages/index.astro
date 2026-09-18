@@ -1,12 +1,52 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import StarsConstellation from '../components/StarsConstellation.astro';
 import { getCollection } from 'astro:content';
 const stories = (await getCollection('stories')).sort((a,b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime() || a.id.localeCompare(b.id));
 const [featured, ...rest] = stories;
 ---
-<Layout><section class="intro wrap"><p class="eyebrow"><span class="pink-dot"></span> THE HUMAN SIDE OF THE GRAPH</p><h1>Great technology.<br /><em>Even better people.</em></h1><div class="intro-bottom"><p>Behind every query, there’s a person.<br />Meet the people making GraphQL what it is.</p><span class="small-note">Ideas. Journeys. Connections.</span></div></section>
-<section class="wrap stories-section"><div class="section-label"><h2>The stories</h2><a href="/stories/">Explore all stories</a></div>
-<a class="featured" href={`/stories/${featured.id}/`}><div class="portrait feature-art" style={`--portrait:${featured.data.color}`}><span class="art-orbit orbit-one"></span><span class="art-orbit orbit-two"></span><span class="portrait-initials">{featured.data.initials}</span><span class="image-caption">PEOPLE OF GRAPHQL · STORY PREVIEW</span></div><div class="feature-copy"><p class="eyebrow"><time datetime={featured.data.publishedAt.toISOString().slice(0, 10)}>{featured.data.publishedAt.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })}</time></p><h2>{featured.data.title}</h2><p>{featured.data.description}</p><div class="story-credit"><span>{featured.data.name}</span></div></div></a>
-<div class="story-grid">{rest.map(story => <a class="story-card" href={`/stories/${story.id}/`}><div class="portrait card-art" style={`--portrait:${story.data.color}`}><span class="art-orbit"></span><span class="portrait-initials">{story.data.initials}</span><span class="image-caption">STORY PREVIEW</span></div><p class="eyebrow"><time datetime={story.data.publishedAt.toISOString().slice(0, 10)}>{story.data.publishedAt.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })}</time></p><h3>{story.data.title}</h3><p>{story.data.description}</p><div class="card-credit">{story.data.name}<span>Read the preview</span></div></a>)}</div></section>
-<section class="stars-teaser"><div class="wrap teaser-inner"><div><p class="eyebrow">MANY CONTRIBUTORS. ONE COMMUNITY.</p><h2>A constellation<br />of contributions.</h2><p>52 GraphQL Stars. An annual celebration of the people<br class="desktop" /> moving the ecosystem forward.</p><a class="button" href="/stars/">Meet the GraphQL Stars</a></div><div class="star-illustration" aria-hidden="true"><span>52</span><small>PEOPLE. COUNTLESS POSSIBILITIES.</small></div></div></section>
-<section class="wrap closing"><p class="eyebrow">OPEN SOURCE. HUMAN STORIES.</p><h2>The graph connects our data.<br /><em>The people connect us.</em></h2><a href="/about/">A little about this project</a></section></Layout>
+<Layout>
+  <section class="intro wrap">
+    <h1>Code is only<br /><em>part of the story.</em></h1>
+    <div class="intro-bottom">
+      <p>Meet the maintainers, practitioners, educators, and organizers working across the GraphQL ecosystem.</p>
+    </div>
+    </section>
+  <section class="wrap stories-section">
+    <div class="section-label">
+      <a href="/stories/">Explore all stories</a>
+    </div>
+    <a class="featured" href={`/stories/${featured.id}/`}>
+      <div class="portrait feature-art" style={`--portrait:${featured.data.color}`}>
+        <span class="portrait-initials">{featured.data.initials}</span>
+        <span class="image-caption">PEOPLE OF GRAPHQL · STORY PREVIEW</span>
+      </div>
+      <div class="feature-copy">
+        <h2>{featured.data.title}</h2>
+        <p>{featured.data.description}</p>
+        <div class="story-credit"><span>{featured.data.name}</span></div>
+      </div>
+    </a>
+    <div class="story-grid">{rest.map(story =>
+      <a class="story-card" href={`/stories/${story.id}/`}>
+        <div class="portrait card-art" style={`--portrait:${story.data.color}`}>
+          <span class="portrait-initials">{story.data.initials}</span>
+          <span class="image-caption">STORY PREVIEW</span>
+        </div>
+        <h3>{story.data.title}</h3>
+        <p>{story.data.description}</p>
+        <div class="card-credit">{story.data.name}<span>Read the preview</span></div>
+      </a>)}
+    </div>
+  </section>
+  <section class="stars-teaser">
+    <div class="wrap teaser-inner">
+      <div>
+        <h2>A constellation<br />of contributions.</h2>
+        <p>Each year, GraphQL Stars recognizes 52 people for their<br class="desktop" />contributions across the GraphQL GitHub repositories.</p>
+        <a class="button" href="/stars/">Explore the class of 2026</a>
+      </div>
+      <StarsConstellation />
+    </div>
+  </section>
+</Layout>
