@@ -85,11 +85,11 @@ Add one JSON file per person inside `src/content/stars/<year>/`. For example, `2
   "year": 2026,
   "contribution": "An optional, verified description of their contribution.",
   "github": "github-username",
-  "avatar": "https://github.com/github-username.png"
+  "avatar": "/avatars/github-username.png"
 }
 ```
 
-`github`, `avatar`, and `contribution` are optional. GitHub avatars are hotlinked using `https://github.com/<username>.png`, lazy-loaded, and cropped into circles. They reflect the current GitHub avatar and depend on GitHub availability; missing or failed images display initials. Names and usernames appear inside expandable profiles. Search matches only names and GitHub usernames, ignoring capitalisation, within the selected year. Each year needs its own entry for returning contributors; the year selector automatically expands when additional years are added.
+`github`, `avatar`, and `contribution` are optional. Avatars are hosted locally at `/avatars/<username>.png`, lazy-loaded, and cropped into circles; missing or failed images display initials. All years share the same current portrait. Run `npm run avatars:refresh` after adding each year’s data to download and convert all portraits to PNGs and update the local paths. Visitors do not contact GitHub for avatars. See `public/avatars/README.md` for the refresh workflow. Names and usernames appear inside expandable profiles. Search matches only names and GitHub usernames, ignoring capitalisation, within the selected year. Each year needs its own entry for returning contributors; the year selector automatically expands when additional years are added.
 
 Schemas are in `src/content.config.ts`, global foundations in `src/styles/global.css`, and the shared shell in `src/layouts/Layout.astro`. Stories and Stars use separate Astro content collections: https://docs.astro.build/en/guides/content-collections/.
 

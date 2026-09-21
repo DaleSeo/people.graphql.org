@@ -1,14 +1,14 @@
 ---
 import styles from './StarsConstellation.module.css';
 const people = [
-  { github: 'acao', extension: 'jpg', x: 20, y: 20 },
-  { github: 'martinbonnin', extension: 'jpg', x: 50, y: 20 },
-  { github: 'keweiqu', extension: 'jpg', x: 80, y: 20 },
-  { github: 'sachindshinde', extension: 'jpg', x: 35, y: 50 },
-  { github: 'sarahxsanders', extension: 'png', x: 65, y: 50 },
-  { github: 'enisdenjo', extension: 'png', x: 20, y: 80 },
-  { github: 'michaelstaib', extension: 'jpg', x: 50, y: 80 },
-  { github: 'hasparus', extension: 'jpg', x: 80, y: 80 },
+  { github: 'acao', x: 20, y: 20 },
+  { github: 'martinbonnin', x: 50, y: 20 },
+  { github: 'keweiqu', x: 80, y: 20 },
+  { github: 'sachindshinde', x: 35, y: 50 },
+  { github: 'sarahxsanders', x: 65, y: 50 },
+  { github: 'enisdenjo', x: 20, y: 80 },
+  { github: 'michaelstaib', x: 50, y: 80 },
+  { github: 'hasparus', x: 80, y: 80 },
 ];
 ---
 <div class={styles.starsConstellation} aria-hidden="true">
@@ -20,7 +20,7 @@ const people = [
   {people.map(person => (
     <img
       class={styles.constellationAvatar}
-      src={`/avatars/${person.github}.${person.extension}`}
+      src={`/avatars/${person.github}.png`}
       alt=""
       width="200"
       height="200"

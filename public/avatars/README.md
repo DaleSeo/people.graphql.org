@@ -1,20 +1,42 @@
-# Homepage constellation portraits
+# Local contributor avatars
 
-Public GitHub avatars downloaded on 2026-09-18 requesting 200 × 200 pixels (some originals are larger) from
-`https://github.com/<username>.png?size=200` for:
+The Stars gallery and homepage use locally hosted PNGs from this directory.
+Each GitHub username has one `240 × 240` image, shared across every class year:
 
-- acao
-- martinbonnin
-- keweiqu
-- hasparus
-- enisdenjo
-- michaelstaib
-- sachindshinde
-- sarahxsanders
+```text
+public/avatars/ab-pm.png
+```
 
-These are local snapshots; loading the homepage makes no avatar requests to GitHub.
-File extensions match the image format returned by GitHub. Portrait rights remain
-with their respective owners. Replace these files to refresh the images.
+The corresponding Stars JSON field is `"avatar": "/avatars/ab-pm.png"`.
+These are current portrait snapshots, not historical portraits for each year.
+Visitors make no requests to GitHub to load these images.
 
-Arrangement: `src/components/StarsConstellation.astro`.
+## Refresh all portraits
+
+After adding the new year's Stars entries, run from the project root:
+
+```sh
+npm install
+npm run avatars:refresh
+npm run build
+```
+
+The refresh script reads every year in `src/content/stars/`, downloads each unique
+username from `https://github.com/<username>.png?size=240`, and converts the result
+to a real PNG using Sharp. GitHub sometimes returns JPEG or WebP bytes even from
+a `.png` URL, so the images are decoded and converted rather than just renamed.
+They are resized to 240 × 240 pixels for the gallery and homepage.
+
+All downloads are staged and validated before existing images or data are updated.
+If a download fails after retries, fix the reported username/network issue and run
+again; the existing images and JSON entries are preserved on download failure.
+A successful run replaces all downloaded portraits, updates each year's local
+`avatar` path, and removes superseded `.jpg`/`.jpeg` copies for those usernames.
+Review and commit the images, data, and `manifest.json` together.
+
+`manifest.json` records the last successful refresh time and included usernames.
+Refreshes require network access; normal builds do not download avatars.
+Portrait rights remain with their respective owners.
+
+Homepage selection and arrangement: `src/components/StarsConstellation.astro`.
 Appearance: `.starsConstellation` in `src/components/StarsConstellation.module.css`.

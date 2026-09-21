@@ -7,7 +7,8 @@
     "dev": "astro dev --force",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "avatars:refresh": "node scripts/refresh-avatars.mjs"
   },
   "dependencies": {
     "astro": "^7.3.2"
@@ -15,6 +16,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
     "@types/node": "^22.20.2",
+    "sharp": "0.35.4",
     "typescript": "^5.9.2"
   },
   "engines": {
