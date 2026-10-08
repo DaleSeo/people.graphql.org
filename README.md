@@ -35,7 +35,8 @@ npx astro sync --force
 - `/`: editorial homepage with a featured story and Stars introduction.
 - `/stories/`: interview archive.
 - `/stories/[id]/`: individual Markdown stories.
-- `/stars/`: default Stars destination, opening the 2026 gallery with year selection, search, and expandable contributor profiles.
+- `/stars/`: redirects to the latest Stars class.
+- `/stars/2026/`, `/stars/2025/`, `/stars/2024/`: individual Stars class pages with year navigation, search, and expandable contributor profiles. Routes are generated automatically from the content years.
 - `/stars/about/`: background on GraphQL Stars and the official GraphQLConf 2024 launch keynote. Linked from the gallery without replacing it as the main Stars destination.
 - `/about/`: project introduction.
 
@@ -89,7 +90,7 @@ Add one JSON file per person inside `src/content/stars/<year>/`. For example, `2
 }
 ```
 
-`github`, `avatar`, and `contribution` are optional. Avatars are hosted locally at `/avatars/<username>.png`, lazy-loaded, and cropped into circles; missing or failed images display initials. All years share the same current portrait. Run `npm run avatars:refresh` after adding each year’s data to download and convert all portraits to PNGs and update the local paths. Visitors do not contact GitHub for avatars. See `public/avatars/README.md` for the refresh workflow. Names and usernames appear inside expandable profiles. Search matches only names and GitHub usernames, ignoring capitalisation, within the selected year. Each year needs its own entry for returning contributors; the year selector automatically expands when additional years are added.
+`github`, `avatar`, and `contribution` are optional. Avatars are hosted locally at `/avatars/<username>.png`, lazy-loaded, and cropped into circles; missing or failed images display initials. All years share the same current portrait. Run `npm run avatars:refresh` after adding each year’s data to download and convert all portraits to PNGs and update the local paths. Visitors do not contact GitHub for avatars. See `public/avatars/README.md` for the refresh workflow. Names and usernames appear inside expandable profiles. Search matches only names and GitHub usernames, ignoring capitalisation, within the selected year. Each year needs its own entry for returning contributors; the year navigation links to a separate page for each class, underlines the current year in pink, and automatically expands when additional years are added.
 
 Schemas are in `src/content.config.ts`, global foundations in `src/styles/global.css`, and the shared shell in `src/layouts/Layout.astro`. Stories and Stars use separate Astro content collections: https://docs.astro.build/en/guides/content-collections/.
 
@@ -97,7 +98,7 @@ Optional contribution images go in `public/stars/<year>/<github-username>.png` (
 
 ## Design and hosting
 
-The theme follows the current GraphQL website: locally hosted Host Grotesk and Commit Mono, Rhodamine pink accents, white editorial pages, and a near-black Stars gallery. The header and footer use the unmodified official GraphQL wordmark; the favicon uses the official hexagraph. Asset provenance and font licences are documented in `public/brand/README.md`. Native disclosure elements keep profiles usable without JavaScript. Search and year switching use a small client-side script.
+The theme follows the current GraphQL website: locally hosted Host Grotesk and Commit Mono, Rhodamine pink accents, white editorial pages, and a near-black Stars gallery. The header and footer use the unmodified official GraphQL wordmark; the favicon uses the official hexagraph. Asset provenance and font licences are documented in `public/brand/README.md`. Contributor profiles use native dialogs. Year navigation uses standard links. Search and profile interactions use a small client-side script.
 
 TSC members are marked with `"tsc": true` on their annual Stars entry and receive a gold `#FFD700` avatar border. Membership reflects who was serving when the cards were produced in August of the class year. Set `"tsc": true` only for members serving at that time; a term ending earlier that year does not qualify. Each year’s flag is independent. Lee Byron’s chair role has no fixed term and qualifies for all three cohorts. Terms were checked against https://handbooks.graphql.org/tsc/members and its canonical source https://github.com/graphql/graphql-wg/blob/main/GraphQL-TSC.md on 2026-09-16.
 
@@ -105,7 +106,7 @@ The Stars loader reads year folders recursively. A person’s entry in one year 
 
 ## Styling
 
-Astro imports CSS Modules directly; no extra plugin is required. Page and component styles live beside their `.astro` files in `.module.css` files. For example, the homepage uses `src/pages/index.module.css`, Stars uses `src/pages/stars/index.module.css`, and article layouts use `src/pages/stories/article.module.css`.
+Astro imports CSS Modules directly; no extra plugin is required. Page and component styles live beside their `.astro` files in `.module.css` files. For example, the homepage uses `src/pages/index.module.css`, Stars shares `src/components/StarsClass.astro` and `src/components/StarsClass.module.css` across all class pages, and article layouts use `src/pages/stories/article.module.css`.
 
 ```astro
 ---

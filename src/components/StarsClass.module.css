@@ -2,18 +2,27 @@
   position: relative;
 }
 
-.yearLabel {
-  font-size: 12px;
+.yearNav {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 12px 28px;
   font-family: var(--font-mono);
-  font-feature-settings:
-    "ss01" on,
-    "ss02" on,
-    "ss04" on,
-    "ss05" on,
-    "cv08" on;
+  font-size: 16px;
+}
+
+.yearNav a {
+  padding: 12px 0;
+  border-bottom: 3px solid transparent;
+  text-decoration: none;
+}
+
+.yearNav a[aria-current="page"] {
+  border-bottom-color: var(--pink);
+}
+
+.searchGroup {
+  display: grid;
+  gap: 10px;
 }
 
 .gallerySection {
@@ -26,6 +35,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
   font-size: 14px;
 }
 
@@ -249,8 +259,9 @@ body:has(.starDialog[open]) {
     padding-bottom: 18px;
   }
 
+  .searchGroup,
   .searchLabel,
-.searchLabel input {
+  .searchLabel input {
     width: 100%;
   }
 
