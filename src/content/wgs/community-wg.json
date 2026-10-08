@@ -1,13 +1,6 @@
 {
   "attendees": [
     {
-      "github": "-",
-      "name": "Viola Marku",
-      "org": "WunderGraph",
-      "location": "London, UK",
-      "count": 3
-    },
-    {
       "github": "benjie",
       "name": "Benjie Gillam",
       "org": "Graphile",
@@ -47,13 +40,6 @@
       "name": "Piotr Monwid-Olechnowicz",
       "org": "The Guild",
       "location": "Wrocław, PL",
-      "count": 1
-    },
-    {
-      "github": "https://github.com/salome-ruckstuhl",
-      "name": "Salomé Ruckstuhl",
-      "org": "ChilliCream",
-      "location": "Switzerland",
       "count": 1
     },
     {
@@ -132,6 +118,13 @@
       "org": "The Guild",
       "location": "India",
       "count": 3
+    },
+    {
+      "github": "salome-ruckstuhl",
+      "name": "Salomé Ruckstuhl",
+      "org": "ChilliCream",
+      "location": "Switzerland",
+      "count": 1
     },
     {
       "github": "urigo",

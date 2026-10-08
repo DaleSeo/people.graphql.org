@@ -198,17 +198,10 @@
     },
     {
       "github": "doc-jones",
-      "name": "Doc Jones",
-      "org": "Postman",
-      "location": "Raleigh, NC, US",
-      "count": 1
-    },
-    {
-      "github": "doc-jones.",
       "name": "Doc Jones.",
       "org": "Postman",
       "location": "Raleigh, NC, US",
-      "count": 3
+      "count": 4
     },
     {
       "github": "dondonz",
@@ -712,14 +705,7 @@
       "name": "Uri Goldshtein",
       "org": "The Guild",
       "location": "Tel Aviv, IL",
-      "count": 10
-    },
-    {
-      "github": "urigo.",
-      "name": "Uri Goldshtein",
-      "org": "The Guild",
-      "location": "Tel Aviv, IL",
-      "count": 1
+      "count": 11
     },
     {
       "github": "varachit",
@@ -747,14 +733,7 @@
       "name": "Yaacov Rydzinski",
       "org": "n/a",
       "location": "Neve Daniel",
-      "count": 32
-    },
-    {
-      "github": "yaacovcr.",
-      "name": "Yaacov Rydzinski",
-      "org": "N/A.",
-      "location": "Neve Daniel, IL",
-      "count": 1
+      "count": 33
     }
   ]
 }
