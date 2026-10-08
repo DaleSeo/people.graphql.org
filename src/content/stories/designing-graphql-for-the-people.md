@@ -1,18 +1,16 @@
 ---
-title: "Finding a way in. And leaving the door open."
-name: "Alex Morgan"
-description: "A story about first contributions, finding confidence, and making room for the next person."
-color: "#50534a"
-initials: "AM"
+title: "Designing GraphQL for the People"
+name: "Jeff Auriemma"
+description: "Jeff Auriemma is an engineering leader at Apollo, chair of the GraphQL Foundation’s Governing Board and a GraphQL Ambassador. Here, he tells the story of discovering GraphQL late at night while raising a young family, designing software around the people who use it, and helping more people shape GraphQL’s future."
 publishedAt: 2026-09-16
-location: "London, UK · sample location"
 links:
   - label: "Personal website (example)"
     url: "https://example.com"
 hero:
-  src: "/stories/shared-workspace.jpg"
+  src: "/stories/jeff-auriemma/graphql-conf.jpg"
   alt: "A bright shared workspace with long tables, chairs, and plants."
   caption: "Space to come together. Stock photography from Unsplash; illustrative, not the interview subject’s workspace."
+github: bignimbus
 ---
 
 ## Every journey starts somewhere
@@ -29,7 +27,7 @@ This preview explores the kind of personal story we want to tell — the path in
 
 The finished interview will make space for more than technical milestones. What sparked their curiosity? Who offered encouragement? How has working with others changed the way they think?
 
-> Every contribution has a person behind it.
+> I am in the business of making things for people to use. GraphQL brings us closer to the needs of those people
 
 That is the idea at the heart of People of GraphQL: time to step back from the tools and listen to the people who make them possible.
 
@@ -38,7 +36,7 @@ This preview explores the kind of personal story we want to tell — the path in
 A first contribution can be a small thing: a question in a discussion, a correction to a guide, or a test that helps someone understand an unexpected result. What makes it meaningful is the conversation that follows.
 
 <figure data-story-photo>
-  <img src="/stories/working-notes.jpg" alt="An open notebook, laptop, and coffee on a wooden desk." width="1800" height="1200" loading="lazy" decoding="async" />
+  <img src="/stories/jeff-auriemma/all-hands.jpg" alt="An open notebook, laptop, and coffee on a wooden desk." width="1800" height="1200" loading="lazy" decoding="async" />
   <figcaption>The work between conversations. Stock photography from Unsplash, used as a layout placeholder.</figcaption>
 </figure>
 

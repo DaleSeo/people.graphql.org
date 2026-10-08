@@ -121,10 +121,7 @@
   -webkit-mask-image: var(--hero-corner-mask);
   mask-image: var(--hero-corner-mask);
 }
-.storyHeroArt {
-  height: 480px;
-  margin-bottom: 72px;
-}
+
 .storyReadingLayout {
   display: grid;
   grid-template-columns: minmax(160px, 220px) minmax(0, 700px) minmax(0, 1fr);
@@ -253,8 +250,5 @@
   .storyHero {
     margin-bottom: 44px;
   }
-  .storyHeroArt {
-    height: 280px;
-    margin-bottom: 44px;
-  }
+
 }

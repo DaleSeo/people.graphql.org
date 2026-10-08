@@ -1,7 +1,6 @@
 ---
 import styles from './article.module.css';
 import shared from '../../styles/shared.module.css';
-import cards from '../../styles/storyCards.module.css';
 import Layout from '../../layouts/Layout.astro';
 import { getCollection, render } from 'astro:content';
 export async function getStaticPaths() { return (await getCollection('stories')).map(story => ({ params: { id: story.id }, props: { story } })); }
@@ -28,7 +27,7 @@ const { Content } = await render(story);
         )}
       </div>
     </header>
-    {story.data.hero ? (
+    {story.data.hero && (
       <figure class:list={[styles.storyPhoto, styles.storyHero]}>
         <div class={styles.storyHeroImage}>
           <img src={story.data.hero.src} alt={story.data.hero.alt} width="1800" height="1200" fetchpriority="high" />
@@ -36,10 +35,6 @@ const { Content } = await render(story);
         </div>
         <figcaption>{story.data.hero.caption}</figcaption>
       </figure>
-    ) : (
-      <div class:list={[cards.portrait, styles.storyHeroArt]} style={`--portrait:${story.data.color}`} aria-label={`Illustration for ${story.data.name}`}>
-        <span class={cards.portraitInitials}>{story.data.initials}</span>
-      </div>
     )}
     <div class={styles.storyReadingLayout}>
       <aside class={styles.storyProjectNote} aria-label="About People of GraphQL">

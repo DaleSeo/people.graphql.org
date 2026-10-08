@@ -1,6 +1,6 @@
 # Local contributor avatars
 
-The Stars gallery and homepage use locally hosted PNGs from this directory.
+The Stars gallery, stories archive, and homepage use locally hosted PNGs from this directory.
 Each GitHub username has one `240 × 240` image, shared across every class year:
 
 ```text

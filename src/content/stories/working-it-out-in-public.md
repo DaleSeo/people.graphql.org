@@ -1,10 +1,16 @@
 ---
-title: "Learning in the open."
-name: "Jordan Ellis"
-description: "On asking better questions, sharing unfinished ideas, and growing together."
-color: "#44473d"
-initials: "JE"
-publishedAt: 2026-09-14
+title: "Working it out in public"
+name: "Eddy Nguyen"
+description: "Eddy Nguyen’s first open-source contribution was a one- or two-line fix to GraphQL Code Generator. He now maintains the project, developing ideas with the people who use and contribute to it while sharing the questions, mistakes, and learning that shape his work."
+publishedAt: 2026-09-18
+links:
+  - label: "Personal website (example)"
+    url: "https://example.com"
+hero:
+  src: "/stories/eddy-nguyen/graphql-conf.jpg"
+  alt: "A bright shared workspace with long tables, chairs, and plants."
+  caption: "Space to come together. Stock photography from Unsplash; illustrative, not the interview subject’s workspace."
+github: eddeee888
 ---
 
 ## Every journey starts somewhere

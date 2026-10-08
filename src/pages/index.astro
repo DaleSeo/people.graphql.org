@@ -6,7 +6,6 @@ import Layout from '../layouts/Layout.astro';
 import StarsConstellation from '../components/StarsConstellation.astro';
 import { getCollection } from 'astro:content';
 const stories = (await getCollection('stories')).sort((a,b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime() || a.id.localeCompare(b.id));
-const [featured, ...rest] = stories;
 ---
 <Layout>
   <section class:list={[styles.intro, shared.wrap]}>
@@ -19,24 +18,13 @@ const [featured, ...rest] = stories;
     <div class={styles.sectionLabel}>
       <a href="/stories/">Explore all stories</a>
     </div>
-    <a class={styles.featured} href={`/stories/${featured.id}/`}>
-      <div class:list={[cards.portrait, styles.featureArt]} style={`--portrait:${featured.data.color}`}>
-        <span class={cards.portraitInitials}>{featured.data.initials}</span>
-        <span class={styles.imageCaption}>PEOPLE OF GRAPHQL · STORY PREVIEW</span>
-      </div>
-      <div class={styles.featureCopy}>
-        <h2>{featured.data.title}</h2>
-        <p>{featured.data.description}</p>
-        <div class={styles.storyCredit}><span>{featured.data.name}</span></div>
-      </div>
-    </a>
-    <div class={cards.storyGrid}>{rest.map(story =>
+    <div class={cards.storyGrid}>{stories.map(story =>
       <a class={cards.storyCard} href={`/stories/${story.id}/`}>
-        <div class:list={[cards.portrait, cards.cardArt]} style={`--portrait:${story.data.color}`}>
-          <span class={cards.portraitInitials}>{story.data.initials}</span>
+        <div class:list={[cards.portrait, cards.cardArt]}>
+          {story.data.hero && <img src={story.data.hero.src} alt={story.data.hero.alt} loading="lazy" decoding="async" />}
           <span class={styles.imageCaption}>STORY PREVIEW</span>
         </div>
-        <h3>{story.data.title}</h3>
+        <h2>{story.data.title}</h2>
         <p>{story.data.description}</p>
         <div class={cards.cardCredit}>{story.data.name}<span>Read the preview</span></div>
       </a>)}

@@ -32,7 +32,7 @@ npx astro sync --force
 
 ## Pages
 
-- `/`: editorial homepage with a featured story and Stars introduction.
+- `/`: editorial homepage with a story grid and Stars introduction.
 - `/stories/`: interview archive.
 - `/stories/[id]/`: individual Markdown stories.
 - `/stars/`: redirects to the latest Stars class.
@@ -56,9 +56,8 @@ Frontmatter fields:
 ---
 title: A story headline
 name: Interview subject
+github: github-username
 description: A short introduction to the story
-color: "#797d67"
-initials: IS
 publishedAt: 2026-09-16
 location: London, UK
 links:
@@ -71,7 +70,7 @@ hero:
 ---
 ```
 
-Write the approved article beneath the frontmatter. Stories are sorted by `publishedAt` (newest first), with the newest featured on the homepage. Use a publication date in `YYYY-MM-DD` format; dates are displayed in UTC. The existing fictional drafts use placeholder dates of September 14–16, 2026 to preserve their previous order. `location`, `links`, and `hero` are optional. Article pages use the hero photograph when supplied, with initials artwork as a fallback; homepage and archive cards still use initials artwork. Remove preview wording and placeholder reading times in the homepage/archive/article templates when preparing actual publication.
+Write the approved article beneath the frontmatter. Stories are sorted by `publishedAt` (newest first) in the homepage and archive grids. Use a publication date in `YYYY-MM-DD` format; dates are displayed in UTC. The existing fictional drafts use placeholder dates of September 14–16, 2026 to preserve their previous order. `location`, `links`, `github`, and `hero` are optional. The stories archive displays one story per row and uses `/avatars/<github>.png` for circular contributor portraits, with derived initials as a fallback. Article pages, homepage cards, and archive cards use the hero photograph when supplied. Stories do not need `color` or `initials` fields. Remove preview wording and placeholder reading times in the homepage/archive/article templates when preparing actual publication.
 
 Article text uses a narrow reading column beside a project introduction. Markdown blockquotes (`> Quote text`) become large pull quotes. For a photograph spanning the article width within the body, use `<figure data-story-photo>` with an `<img>` (including descriptive `alt`, dimensions, and `loading="lazy"`) and a `<figcaption>` for its caption and credit. Store photographs locally in `public/stories/`. The longer `finding-a-way-in.md` sample demonstrates these elements with repeated preview text and clearly labelled stock photography; source details are in `public/stories/README.md`.
 
@@ -118,7 +117,7 @@ import shared from '../styles/shared.module.css';
 
 - `src/styles/global.css`: fonts, colour tokens, element defaults, and the body’s dark theme.
 - `src/styles/shared.module.css`: shared layout and typography utilities.
-- `src/styles/storyCards.module.css`: artwork and cards shared by the homepage, archive, and article fallback.
+- `src/styles/storyCards.module.css`: hero image styling and cards shared by the homepage and archive.
 - `src/layouts/Layout.module.css`: header, navigation, footer, and skip link.
 - `src/components/Brand.module.css` and `StarsConstellation.module.css`: component-specific styling.
 

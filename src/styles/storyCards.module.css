@@ -1,7 +1,7 @@
 @value eyebrow as sharedEyebrow from "./shared.module.css";
 
 .portrait {
-  background: var(--portrait);
+  background: var(--paper);
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -10,21 +10,13 @@
   align-items: center;
 }
 
-.portrait:before {
-  content: "";
+.portrait img {
   position: absolute;
   inset: 0;
-  background: linear-gradient(145deg, #ffffff15, transparent 60%, #0002);
-  z-index: -1;
-}
-
-.portraitInitials {
-  font-family: var(--font-sans);
-  font-size: 170px;
-  color: #fff9;
-  letter-spacing: -7px;
-  line-height: 1;
-  font-weight: 300;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .storyGrid {
@@ -37,10 +29,6 @@
 .cardArt {
   height: 295px;
   border-radius: 10px;
-}
-
-.cardArt .portraitInitials {
-  font-size: 135px;
 }
 
 .storyCard > :global(.sharedEyebrow) {
