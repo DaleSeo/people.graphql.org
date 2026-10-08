@@ -5,105 +5,120 @@
       "name": "Benjie Gillam",
       "org": "Graphile",
       "location": "Chandler's Ford, UK",
-      "count": 6
+      "count": 6,
+      "lastMeeting": "2025-02-26"
     },
     {
       "github": "bignimbus",
       "name": "Jeff Auriemma",
       "org": "Apollo",
       "location": "Scottsdale, AZ, USA",
-      "count": 3
+      "count": 3,
+      "lastMeeting": "2025-02-26"
     },
     {
       "github": "enisdenjo",
       "name": "Denis Badurina",
       "org": "The Guild",
       "location": "Sarajevo, BA",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-06-25"
     },
     {
       "github": "fersilva16",
       "name": "Fernando Silva",
       "org": "Woovi",
       "location": "Belo Horizonte, MG, BR",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2024-03-27"
     },
     {
       "github": "jaydenseric",
       "name": "Jayden Seric",
       "org": "Independent",
       "location": "Melbourne, AU",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-06-25"
     },
     {
       "github": "jerelmiller",
       "name": "Jerel Miller",
       "org": "Apollo",
       "location": "Scottsdale, AZ, USA",
-      "count": 3
+      "count": 3,
+      "lastMeeting": "2025-02-26"
     },
     {
       "github": "JoviDeCroock",
       "name": "Jovi De Croock",
       "org": "Independent",
       "location": "Aalst, BE",
-      "count": 6
+      "count": 6,
+      "lastMeeting": "2025-10-29"
     },
     {
       "github": "kitten",
       "name": "Phil Pluckthun",
       "org": "Expo",
       "location": "London, UK",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2024-05-29"
     },
     {
       "github": "martinbonnin",
       "name": "Martin Bonnin",
       "org": "Apollo",
       "location": "Paris, FR",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-10-29"
     },
     {
       "github": "PabloSzx",
       "name": "Pablo Saez",
       "org": "Independent",
       "location": "New York, US",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-06-25"
     },
     {
       "github": "phryneas",
       "name": "Lenz Weber-Tronic",
       "org": "Apollo",
       "location": "Germany",
-      "count": 5
+      "count": 5,
+      "lastMeeting": "2025-10-29"
     },
     {
       "github": "saihaj",
       "name": "Saihajpreet Singh",
       "org": "The Guild",
       "location": "Ottawa, ON",
-      "count": 2
+      "count": 2,
+      "lastMeeting": "2024-06-26"
     },
     {
       "github": "twof",
       "name": "Alex Reilly",
       "org": "DoorDash",
       "location": "San Francisco, CA, US",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-02-26"
     },
     {
       "github": "urigo",
       "name": "Uri Goldshtein",
       "org": "The Guild",
       "location": "Tel Aviv, IL",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-10-29"
     },
     {
       "github": "yaacovCR",
       "name": "Yaacov Rydzinski",
       "org": "Independent",
       "location": "Neve Daniel, IL",
-      "count": 5
+      "count": 5,
+      "lastMeeting": "2025-06-25"
     }
   ]
 }

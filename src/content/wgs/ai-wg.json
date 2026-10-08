@@ -5,252 +5,288 @@
       "name": "Abhinand C",
       "org": "Strollby",
       "location": "Kerala, India IN",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-10-23"
     },
     {
       "github": "abocan-atl",
       "name": "Andrei Bocan",
       "org": "Atlassian",
       "location": "San Francisco, CA, US",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-10-23"
     },
     {
       "github": "akhilsai25",
       "name": "Akhil Sai Devunoori",
       "org": "Expedia",
       "location": "Austin, TX, USA",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-10-23"
     },
     {
       "github": "alexdias",
       "name": "Alexandre Dias",
       "org": "Meta Platforms",
       "location": "Menlo Park, CA, USA",
-      "count": 3
+      "count": 3,
+      "lastMeeting": "2026-02-26"
     },
     {
       "github": "aprilrd",
       "name": "Young Min Kim",
       "org": "The Trade Desk",
       "location": "San Francisco, CA",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2026-05-28"
     },
     {
       "github": "ariana0699",
       "name": "Ariana Eed",
       "org": "Independent",
       "location": "Amsterdam, NL",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-10-23"
     },
     {
       "github": "asoorm",
       "name": "Ahmet Soormally",
       "org": "WunderGraph",
       "location": "London, UK",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-10-23"
     },
     {
       "github": "benjie",
       "name": "Benjie Gillam",
       "org": "Graphile",
       "location": "Chandler's Ford, UK",
-      "count": 3
+      "count": 3,
+      "lastMeeting": "2026-05-28"
     },
     {
       "github": "bignimbus",
       "name": "Jeff Auriemma",
       "org": "Apollo",
       "location": "Monroe, CT, US",
-      "count": 9
+      "count": 9,
+      "lastMeeting": "2026-09-24"
     },
     {
       "github": "cernst11",
       "name": "Christian Ernst",
       "org": "Booking.com",
       "location": "Amsterdam, NL",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-10-23"
     },
     {
       "github": "DaleSeo",
       "name": "Dale Seo",
       "org": "Apollo",
       "location": "Toronto, ON, CA",
-      "count": 9
+      "count": 9,
+      "lastMeeting": "2026-09-24"
     },
     {
       "github": "egoodwinx",
       "name": "Emily Goodwin",
       "org": "Independent",
       "location": "Toronto, ON, CA",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-10-23"
     },
     {
       "github": "erikwrede",
       "name": "Erik Wrede",
       "org": "Self",
       "location": "Cologne, Germany",
-      "count": 2
+      "count": 2,
+      "lastMeeting": "2026-01-22"
     },
     {
       "github": "fotoetienne",
       "name": "Stephen Spalding",
       "org": "Netflix",
       "location": "Chattanooga, TN, US",
-      "count": 6
+      "count": 6,
+      "lastMeeting": "2026-08-27"
     },
     {
       "github": "HieuNguyen202",
       "name": "Hugh Nguyen",
       "org": "Meta",
       "location": "Chicago, IL, USA",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-12-11"
     },
     {
       "github": "jakerobinson",
       "name": "Jake Robinson",
       "org": "Rubrik",
       "location": "Indianapolis, IN",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2026-08-27"
     },
     {
       "github": "jeanlucaslima",
       "name": "Jean Lucas",
       "org": "Viaduct",
       "location": "São Paulo, Brazil",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2026-02-26"
     },
     {
       "github": "jensneuse",
       "name": "Jens Neuse",
       "org": "WunderGraph",
       "location": "Karlsruhe, DE",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-10-23"
     },
     {
       "github": "joannaroy",
       "name": "Joanna Roy",
       "org": "trail",
       "location": "Munich, Germany",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-10-23"
     },
     {
       "github": "Keweiqu",
       "name": "Kewei Qu",
       "org": "Meta",
       "location": "Menlo Park, CA, USA",
-      "count": 7
+      "count": 7,
+      "lastMeeting": "2026-05-28"
     },
     {
       "github": "magicmark",
       "name": "Mark Larah",
       "org": "Yelp",
       "location": "Austin, TX, USA",
-      "count": 8
+      "count": 8,
+      "lastMeeting": "2026-08-27"
     },
     {
       "github": "martinbonnin",
       "name": "Martin Bonnin",
       "org": "Apollo",
       "location": "Paris, FR",
-      "count": 4
+      "count": 4,
+      "lastMeeting": "2026-08-27"
     },
     {
       "github": "michael-watson",
       "name": "Michael Watson",
       "org": "Self",
       "location": "Granite Bay, CA, USA",
-      "count": 2
+      "count": 2,
+      "lastMeeting": "2026-01-22"
     },
     {
       "github": "michaelstaib",
       "name": "Michael Staib",
       "org": "ChilliCream",
       "location": "Zurich, CH",
-      "count": 5
+      "count": 5,
+      "lastMeeting": "2026-09-24"
     },
     {
       "github": "miqui",
       "name": "Miguel Quintero",
       "org": "",
       "location": "Atlanta, GA, US",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2026-08-27"
     },
     {
       "github": "PascalSenn",
       "name": "Pascal Senn",
       "org": "ChilliCream",
       "location": "Zurich, CH",
-      "count": 8
+      "count": 8,
+      "lastMeeting": "2026-09-24"
     },
     {
       "github": "pinkmarlin",
       "name": "Kenny Hammerlund",
       "org": "Independent",
       "location": "Houston, TX, US",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-10-23"
     },
     {
       "github": "rebello95",
       "name": "Michael Rebello",
       "org": "Airbnb",
       "location": "San Diego, CA, USA",
-      "count": 6
+      "count": 6,
+      "lastMeeting": "2026-08-27"
     },
     {
       "github": "royderks",
       "name": "Roy Derks",
       "org": "IBM",
       "location": "San Jose, CA, USA",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-12-11"
     },
     {
       "github": "rstata",
       "name": "Raymie Stata",
       "org": "Airbnb",
       "location": "San Francisco, CA, US",
-      "count": 6
+      "count": 6,
+      "lastMeeting": "2026-09-24"
     },
     {
       "github": "rudrasrivastava",
       "name": "Rudra Srivastava",
       "org": "Block",
       "location": "New York, US",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-10-23"
     },
     {
       "github": "samuelAndalon",
       "name": "Samuel Vazquez",
       "org": "Expedia Group",
       "location": "Seattle, WA, US",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2026-06-25"
     },
     {
       "github": "ThoreKoritzius",
       "name": "Thore Koritzius",
       "org": "Self",
       "location": "Cologne, Germany",
-      "count": 7
+      "count": 7,
+      "lastMeeting": "2026-08-27"
     },
     {
       "github": "trkohler",
       "name": "Troy Kohler",
       "org": "Zalando",
       "location": "Berlin, DE",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-10-23"
     },
     {
       "github": "urigo",
       "name": "Uri Goldshtein",
       "org": "The Guild",
       "location": "Tel Aviv, IL",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-10-23"
     },
     {
       "github": "zkozina",
       "name": "Željko Kozina",
       "org": "Chronomill",
       "location": "Dublin, ROI",
-      "count": 2
+      "count": 2,
+      "lastMeeting": "2026-08-27"
     }
   ]
 }

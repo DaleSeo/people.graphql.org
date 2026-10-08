@@ -5,98 +5,112 @@
       "name": "Benjie Gillam",
       "org": "Graphile",
       "location": "Chandler's Ford, UK",
-      "count": 7
+      "count": 7,
+      "lastMeeting": "2026-08-13"
     },
     {
       "github": "egoodwinx",
       "name": "Emily Goodwin",
       "org": "N/A",
       "location": "Toronto, ON, CAN",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2026-02-12"
     },
     {
       "github": "gmale",
       "name": "Kevin Gorham",
       "org": "Meta",
       "location": "Fishers, IN",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2026-06-11"
     },
     {
       "github": "janettec",
       "name": "Janette Cheng",
       "org": "Meta",
       "location": "New York, NY",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2026-06-11"
     },
     {
       "github": "jeanlucaslima",
       "name": "Jean Lucas Lima",
       "org": "Viaduct",
       "location": "São Paulo, SP, Brazil",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2026-03-12"
     },
     {
       "github": "jerelmiller",
       "name": "Jerel Miller",
       "org": "Apollo",
       "location": "Windsor, CO, US",
-      "count": 7
+      "count": 7,
+      "lastMeeting": "2026-08-13"
     },
     {
       "github": "magicmark",
       "name": "Mark Larah",
       "org": "Yelp",
       "location": "Austin, TX, US",
-      "count": 4
+      "count": 4,
+      "lastMeeting": "2026-07-09"
     },
     {
       "github": "martinbonnin",
       "name": "Martin Bonnin",
       "org": "Apollo",
       "location": "Paris, FR",
-      "count": 2
+      "count": 2,
+      "lastMeeting": "2026-04-30"
     },
     {
       "github": "michaelstaib",
       "name": "Michael Staib",
       "org": "ChilliCream",
       "location": "Zurich",
-      "count": 3
+      "count": 3,
+      "lastMeeting": "2026-07-09"
     },
     {
       "github": "mjmahone",
       "name": "Matt Mahoney",
       "org": "Meta",
       "location": "New York, NY, US",
-      "count": 3
+      "count": 3,
+      "lastMeeting": "2026-08-13"
     },
     {
       "github": "n1ru4l",
       "name": "Laurin Quast",
       "org": "The Guild",
       "location": "Germany",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2026-02-12"
     },
     {
       "github": "pascalsenn",
       "name": "Pascal Senn",
       "org": "ChilliCream",
       "location": "Zurich, CH",
-      "count": 5
+      "count": 5,
+      "lastMeeting": "2026-08-13"
     },
     {
       "github": "tobbe",
       "name": "Tobbe Lundberg",
       "org": "CedarJS",
       "location": "Karlskrona, SE",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2026-07-09"
     },
     {
       "github": "urigo",
       "name": "Uri Goldshtein",
       "org": "The Guild",
       "location": "Tel Aviv, IL",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2026-02-12"
     }
   ]
 }

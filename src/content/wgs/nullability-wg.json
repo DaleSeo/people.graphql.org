@@ -5,105 +5,120 @@
       "name": "Alf Lervåg",
       "org": "Sikt",
       "location": "Oslo, NO",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2024-09-25"
     },
     {
       "github": "AnthonyMDev",
       "name": "Anthony Miller",
       "org": "Apollo",
       "location": "Los Angeles, CA, US",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2023-07-26"
     },
     {
       "github": "aprilrd",
       "name": "Young Min Kim",
       "org": "The Trade Desk",
       "location": "San Francisco, CA, US",
-      "count": 5
+      "count": 5,
+      "lastMeeting": "2023-10-25"
     },
     {
       "github": "benjie",
       "name": "Benjie Gillam",
       "org": "Graphile",
       "location": "Chandler's Ford, UK",
-      "count": 15
+      "count": 15,
+      "lastMeeting": "2025-05-28"
     },
     {
       "github": "bod",
       "name": "Benoit Lubek",
       "org": "Apollo",
       "location": "Lyon, FR",
-      "count": 5
+      "count": 5,
+      "lastMeeting": "2024-09-25"
     },
     {
       "github": "calvincestari",
       "name": "Calvin Cestari",
       "org": "Apollo",
       "location": "Vancouver, BC",
-      "count": 10
+      "count": 10,
+      "lastMeeting": "2025-03-26"
     },
     {
       "github": "Captbaritone",
       "name": "Jordan Eldredge",
       "org": "Meta (Relay)",
       "location": "San Francisco, US",
-      "count": 6
+      "count": 6,
+      "lastMeeting": "2024-09-25"
     },
     {
       "github": "ernieturner",
       "name": "Ernie Turner",
       "org": "Coinbase",
       "location": "Bozeman, MT",
-      "count": 4
+      "count": 4,
+      "lastMeeting": "2024-09-25"
     },
     {
       "github": "fotoetienne",
       "name": "Stephen Spalding",
       "org": "Netflix",
       "location": "Los Gatos, CA, US",
-      "count": 8
+      "count": 8,
+      "lastMeeting": "2025-05-28"
     },
     {
       "github": "fotoetinne",
       "name": "Stephen Spalding",
       "org": "Netflix",
       "location": "Los Gatos  , CA, US",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-04-30"
     },
     {
       "github": "itamark",
       "name": "Itamar Kestenbaum",
       "org": "Meta",
       "location": "Plainsboro, NJ",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2024-09-25"
     },
     {
       "github": "janettec",
       "name": "Janette Cheng",
       "org": "Meta",
       "location": "New York, NY, US",
-      "count": 2
+      "count": 2,
+      "lastMeeting": "2025-04-30"
     },
     {
       "github": "martinbonnin",
       "name": "Martin Bonnin",
       "org": "Apollo",
       "location": "Paris, FR",
-      "count": 11
+      "count": 11,
+      "lastMeeting": "2026-01-28"
     },
     {
       "github": "mjmahone",
       "name": "Matt Mahoney",
       "org": "Meta",
       "location": "New York, NY",
-      "count": 2
+      "count": 2,
+      "lastMeeting": "2023-08-23"
     },
     {
       "github": "twof",
       "name": "Alex Reilly",
       "org": "DoorDash",
       "location": "San Francisco, CA, USA",
-      "count": 19
+      "count": 19,
+      "lastMeeting": "2026-01-28"
     }
   ]
 }

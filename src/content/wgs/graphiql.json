@@ -5,35 +5,40 @@
       "name": "Benjie Gillam",
       "org": "Graphile",
       "location": "Chandler's Ford, UK",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-03-11"
     },
     {
       "github": "dimaMachina",
       "name": "Dimitri Postolov",
       "org": "independant",
       "location": "Paris, France",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-03-11"
     },
     {
       "github": "jonathanawesome",
       "name": "Jonathan Brennan",
       "org": "Grafbase",
       "location": "Austin, TX, US",
-      "count": 2
+      "count": 2,
+      "lastMeeting": "2023-01-09"
     },
     {
       "github": "thomasheyenbrock",
       "name": "Thomas Heyenbrock",
       "org": "GraphCDN",
       "location": "Munich, DE",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2021-10-12"
     },
     {
       "github": "timsuchanek",
       "name": "Tim Suchanek",
       "org": "GraphCDN",
       "location": "Berlin, DE",
-      "count": 2
+      "count": 2,
+      "lastMeeting": "2023-01-09"
     }
   ]
 }

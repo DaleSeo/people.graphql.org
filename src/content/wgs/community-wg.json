@@ -5,147 +5,168 @@
       "name": "Benjie Gillam",
       "org": "Graphile",
       "location": "Chandlers Ford, UK",
-      "count": 6
+      "count": 6,
+      "lastMeeting": "2025-10-09"
     },
     {
       "github": "bignimbus",
       "name": "Jeff Auriemma",
       "org": "Apollo GraphQL",
       "location": "Monroe, CT, US",
-      "count": 4
+      "count": 4,
+      "lastMeeting": "2025-09-25"
     },
     {
       "github": "danstarns",
       "name": "Dan Starns",
       "org": "Rconnect",
       "location": "London, UK",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-03-13"
     },
     {
       "github": "doc-jones",
       "name": "Doc Jones",
       "org": "Cyberspace",
       "location": "Raleigh, NC, USA",
-      "count": 3
+      "count": 3,
+      "lastMeeting": "2025-04-10"
     },
     {
       "github": "erikwrede",
       "name": "Erik Wrede",
       "org": "Self",
       "location": "Germany",
-      "count": 4
+      "count": 4,
+      "lastMeeting": "2026-01-08"
     },
     {
       "github": "haspaus",
       "name": "Piotr Monwid-Olechnowicz",
       "org": "The Guild",
       "location": "Wrocław, PL",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-12-18"
     },
     {
       "github": "jeanlucaslima",
       "name": "Jean Lucas",
       "org": "Viaduct",
       "location": "Brazil",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2026-01-08"
     },
     {
       "github": "jemgillam",
       "name": "Jem Gillam",
       "org": "Graphile",
       "location": "Chandlers Ford, UK",
-      "count": 10
+      "count": 10,
+      "lastMeeting": "2026-08-13"
     },
     {
       "github": "jonathanrainer",
       "name": "Jonathan Rainer",
       "org": "Apollo GraphQL",
       "location": "York, UK",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-09-25"
     },
     {
       "github": "jvlavan",
       "name": "Lavan J V",
       "org": "Self",
       "location": "Chennai, IN",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-04-10"
     },
     {
       "github": "martinbonnin",
       "name": "Martin Bonnin",
       "org": "apollo",
       "location": "Paris, FR",
-      "count": 9
+      "count": 9,
+      "lastMeeting": "2026-08-13"
     },
     {
       "github": "meenakshi-dhanani",
       "name": "Meenakshi Dhanani",
       "org": "Postman",
       "location": "India",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-03-13"
     },
     {
       "github": "michaelstaib",
       "name": "Michael Staib",
       "org": "ChilliCream",
       "location": "Zurich, CH",
-      "count": 2
+      "count": 2,
+      "lastMeeting": "2025-12-18"
     },
     {
       "github": "pascalsenn",
       "name": "Pascal Senn",
       "org": "ChilliCream",
       "location": "Zurich, CH",
-      "count": 2
+      "count": 2,
+      "lastMeeting": "2025-12-18"
     },
     {
       "github": "rbalicki2",
       "name": "Robert Balicki",
       "org": "Pinterest",
       "location": "New York, NY, USA",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-02-13"
     },
     {
       "github": "riginoommen",
       "name": "Rigin Oommen",
       "org": "Red Hat LLC",
       "location": "India",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2026-01-08"
     },
     {
       "github": "saihaj",
       "name": "Saihajpreet Singh",
       "org": "The Guild",
       "location": "India",
-      "count": 3
+      "count": 3,
+      "lastMeeting": "2025-04-10"
     },
     {
       "github": "salome-ruckstuhl",
       "name": "Salomé Ruckstuhl",
       "org": "ChilliCream",
       "location": "Switzerland",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2026-06-11"
     },
     {
       "github": "urigo",
       "name": "Uri Goldshtein",
       "org": "The Guild",
       "location": "Tel Aviv, IL",
-      "count": 5
+      "count": 5,
+      "lastMeeting": "2025-09-25"
     },
     {
       "github": "vanessamj99",
       "name": "Vanessa Johnson",
       "org": "The New York Times",
       "location": "New York City, NY, US",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-09-25"
     },
     {
       "github": "vliegveld5",
       "name": "An Ngo",
       "org": "Bol",
       "location": "The Netherlands",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-03-13"
     }
   ]
 }

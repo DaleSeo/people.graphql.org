@@ -5,91 +5,104 @@
       "name": "Brian Clozel",
       "org": "Spring at VMware",
       "location": "Lyon, FR",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-08-28"
     },
     {
       "github": "benjie",
       "name": "Benjie Gillam",
       "org": "Graphile",
       "location": "Chandler's Ford, UK",
-      "count": 2
+      "count": 2,
+      "lastMeeting": "2025-05-22"
     },
     {
       "github": "BrynCooke",
       "name": "Bryn Cooke",
       "org": "Apollo",
       "location": "Norfolk, UK",
-      "count": 3
+      "count": 3,
+      "lastMeeting": "2025-06-26"
     },
     {
       "github": "carodewig",
       "name": "Caroline Rodewig",
       "org": "Apollo",
       "location": "Traverse City, MI, US",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-04-24"
     },
     {
       "github": "eli0shin",
       "name": "Eli Oshinsky",
       "org": "PayPal",
       "location": "Baltimore, MD",
-      "count": 5
+      "count": 5,
+      "lastMeeting": "2025-10-23"
     },
     {
       "github": "EmrysMyrddin",
       "name": "Valentin Cocaud",
       "org": "The Guild",
       "location": "Nantes, FR",
-      "count": 5
+      "count": 5,
+      "lastMeeting": "2025-10-23"
     },
     {
       "github": "logaretm",
       "name": "Abdelrahman Awad",
       "org": "Sentry",
       "location": "Vienna, Austria",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2026-05-28"
     },
     {
       "github": "marcotc",
       "name": "Marco Costa",
       "org": "Datadog",
       "location": "Victoria, BC, CA",
-      "count": 3
+      "count": 3,
+      "lastMeeting": "2025-10-23"
     },
     {
       "github": "michaelstaib",
       "name": "Michael Staib",
       "org": "ChilliCream",
       "location": "Zurich, CH",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2025-04-24"
     },
     {
       "github": "pascalsenn",
       "name": "Pascal Senn",
       "org": "ChilliCream",
       "location": "Zurich, CH",
-      "count": 9
+      "count": 9,
+      "lastMeeting": "2026-05-28"
     },
     {
       "github": "ravangen",
       "name": "Rob Van Gennip",
       "org": "Shopify",
       "location": "Toronto, ON, CA",
-      "count": 4
+      "count": 4,
+      "lastMeeting": "2025-09-25"
     },
     {
       "github": "rstata",
       "name": "Raymie Stata",
       "org": "Airbnb",
       "location": "San Francisco, CA",
-      "count": 1
+      "count": 1,
+      "lastMeeting": "2026-02-26"
     },
     {
       "github": "trask",
       "name": "Trask Stalnaker",
       "org": "Microsoft",
       "location": "Portland, OR, US",
-      "count": 2
+      "count": 2,
+      "lastMeeting": "2025-05-22"
     }
   ]
 }
