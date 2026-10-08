@@ -113,12 +113,24 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
       url(slug) + (explicitMode && mode !== "article" ? `?view=${mode}` : "")
     );
   }
+  const isWorkingGroup = page.slug === "wg" || page.slug.startsWith("wg/");
   function renderPerson(p: Entry) {
     const profile = `/profiles/${p.slug}/`;
     const meetings = p.count
       ? `${p.count} meeting${p.count === 1 ? "" : "s"} attended`
       : undefined;
     const context = [...new Set(p.memberships.map((m) => m.label))];
+    const lastAttended = p.memberships
+      .map((m) => m.lastActive ?? "")
+      .sort()
+      .at(-1);
+    const groups = [
+      ...new Map(
+        p.memberships
+          .filter((m) => m.page.startsWith("wg/"))
+          .map((m) => [m.page, m]),
+      ).values(),
+    ];
     return (
       <li key={p.slug} id={p.anchor} className={styles.person}>
         <a
@@ -168,7 +180,47 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
               <span className={styles.username}>@{p.githubUsername}</span>
             )}
           </div>
-          {mode !== "article" && (
+          {mode !== "article" && isWorkingGroup && (
+            <>
+              <div className={styles.memberMeta}>
+                {p.location && <span>{p.location}</span>}
+                {meetings && <span>{meetings}</span>}
+                {lastAttended && (
+                  <span>
+                    Last attended{" "}
+                    <time dateTime={lastAttended}>{lastAttended}</time>
+                  </span>
+                )}
+                {p.memberships.some((m) => m.chair) && <span>TSC chair</span>}
+                {p.memberships
+                  .filter((m) => m.affiliation)
+                  .map((m) => (
+                    <span key={m.page}>
+                      {m.affiliation}
+                      {m.emeriti ? " (during term)" : ""}
+                    </span>
+                  ))}
+                <a href={profile}>View profile ↗</a>
+              </div>
+              {page.slug === "wg" && (
+                <ul
+                  className={styles.groupLinks}
+                  aria-label={`${p.name}'s working groups`}
+                >
+                  {groups.map((m) => (
+                    <li key={m.page}>
+                      <a href={`${url(m.page)}#${p.anchor}`}>
+                        {m.page === "wg/tsc"
+                          ? "TSC"
+                          : m.label.replace(/ WG$/, "")}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
+          )}
+          {mode !== "article" && !isWorkingGroup && (
             <>
               {p.location && <p className={styles.location}>{p.location}</p>}
               <p className={styles.context}>
@@ -300,7 +352,11 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
           ))}
         </div>
       </div>
-      <div data-view={mode} className={styles.results}>
+      <div
+        data-view={mode}
+        data-working-group={isWorkingGroup || undefined}
+        className={styles.results}
+      >
         <section aria-label="Active people">
           <h2 className={styles.sectionTitle} aria-live="polite">
             {activeTitle}

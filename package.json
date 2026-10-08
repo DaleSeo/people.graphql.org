@@ -14,7 +14,8 @@
     "prebuild": "npm run people:sync",
     "predev": "npm run people:sync",
     "test": "node --experimental-strip-types --test tests/directory.test.ts",
-    "test:site": "node scripts/check-site.mjs"
+    "test:site": "node scripts/check-site.mjs",
+    "avatars:refresh:wgs": "node scripts/refresh-wg-avatars.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^7.0.1",

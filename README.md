@@ -49,7 +49,7 @@ All directories share breadcrumbs, introductory copy and an action, category nav
 
 The importer writes `src/data/directory.json`, the build-time participation index, and seeds new person files. No network calls are needed for import or builds. `src/data/identity-aliases.json` records explicit cross-source identity mappings, including differences in conference usernames and source spelling. `src/data/identity-review.json` reports unmatched speaker identities with name-based candidates; review those rather than merging automatically. GitHub usernames are matched case-insensitively. Preserve source IDs when editing people. To resolve a new match, map the source ID to the canonical slug in `identity-aliases.json`, then sync again.
 
-Missing local portraits use `/avatars/jemgillam.png` as a temporary placeholder. Replace `avatarUrl` in the relevant person record as portraits become available. Existing local portraits are reused. `npm run avatars:refresh` refreshes the original Stars portraits; it does not download the whole people registry.
+Missing local portraits use `/avatars/jemgillam.png` as a temporary placeholder. Replace `avatarUrl` in the relevant person record as portraits become available. Existing local portraits are reused. `npm run avatars:refresh` refreshes the original Stars portraits. `npm run avatars:refresh:wgs` refreshes all working-group attendees through their canonical GitHub identities and updates their person records. Run `npm run people:sync` afterward to refresh the directory.
 
 ### Activity and ordering
 

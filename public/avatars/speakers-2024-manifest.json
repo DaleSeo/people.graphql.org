@@ -1,0 +1,141 @@
+{
+  "downloadedAt": "2026-10-08T20:46:51.490Z",
+  "event": "graphqlconf-2024",
+  "size": 240,
+  "portraits": [
+    {
+      "slug": "aditi-rajawat",
+      "sourceUrl": "https://avatars.sched.co/7/07/21066788/avatar.jpg.320x320px.jpg?825"
+    },
+    {
+      "slug": "alan-quigley",
+      "sourceUrl": "https://avatars.sched.co/a/aa/21066789/avatar.jpg.320x320px.jpg?256"
+    },
+    {
+      "slug": "anant-jhingran",
+      "sourceUrl": "https://avatars.sched.co/3/48/19225935/avatar.jpg.320x320px.jpg?a5a"
+    },
+    {
+      "slug": "andrew-doyle",
+      "sourceUrl": "https://avatars.sched.co/e/7d/21066800/avatar.jpg.320x320px.jpg?55c"
+    },
+    {
+      "slug": "ankita-gupta",
+      "sourceUrl": "https://avatars.sched.co/9/a0/21265832/avatar.jpg.320x320px.jpg?b49"
+    },
+    {
+      "slug": "anushrut-gupta",
+      "sourceUrl": "https://avatars.sched.co/3/3e/21460012/avatar.jpg.320x320px.jpg?925"
+    },
+    {
+      "slug": "budhaditya-bhattacharya",
+      "sourceUrl": "https://avatars.sched.co/1/fe/17694866/avatar.jpg.320x320px.jpg?7a7"
+    },
+    {
+      "slug": "christian-stangier",
+      "sourceUrl": "https://avatars.sched.co/a/5f/21066807/avatar.jpg.320x320px.jpg?a7c"
+    },
+    {
+      "slug": "dan-adajian",
+      "sourceUrl": "https://avatars.sched.co/a/cc/21487429/avatar.jpg.320x320px.jpg?ffa"
+    },
+    {
+      "slug": "danielle-man",
+      "sourceUrl": "https://avatars.sched.co/b/1a/21066810/avatar.jpg.320x320px.jpg?708"
+    },
+    {
+      "slug": "emily-li",
+      "sourceUrl": "https://avatars.sched.co/d/91/21066813/avatar.jpg.320x320px.jpg?591"
+    },
+    {
+      "slug": "gabriel-schulhof",
+      "sourceUrl": "https://avatars.sched.co/0/e6/13020672/avatar.jpg.320x320px.jpg?d7c"
+    },
+    {
+      "slug": "giacomo-simmi",
+      "sourceUrl": "https://avatars.sched.co/6/8c/21496501/avatar.jpg.320x320px.jpg?5c6"
+    },
+    {
+      "slug": "kenneth-stott",
+      "sourceUrl": "https://avatars.sched.co/f/b3/21066821/avatar.jpg.320x320px.jpg?439"
+    },
+    {
+      "slug": "kevin-brown",
+      "sourceUrl": "https://avatars.sched.co/f/4d/21490044/avatar.jpg.320x320px.jpg?2c5"
+    },
+    {
+      "slug": "lars-de-bruijn",
+      "sourceUrl": "https://avatars.sched.co/4/57/5922948/avatar.jpg.320x320px.jpg?fa5"
+    },
+    {
+      "slug": "mary-briskin",
+      "sourceUrl": "https://avatars.sched.co/2/3f/21457039/avatar.jpg.320x320px.jpg?7cf"
+    },
+    {
+      "slug": "masanori-uehara",
+      "sourceUrl": "https://avatars.sched.co/4/fd/21066828/avatar.jpg.320x320px.jpg?b60"
+    },
+    {
+      "slug": "michael-bleigh",
+      "sourceUrl": "https://avatars.sched.co/d/0b/21066834/avatar.jpg.320x320px.jpg?83f"
+    },
+    {
+      "slug": "mike-solomon",
+      "sourceUrl": "https://avatars.sched.co/1/be/18743867/avatar.jpg.320x320px.jpg?5f6"
+    },
+    {
+      "slug": "pooja-mistry",
+      "sourceUrl": "https://avatars.sched.co/1/b4/21225462/avatar.jpg.320x320px.jpg?a43"
+    },
+    {
+      "slug": "rachit-sengupta",
+      "sourceUrl": "https://avatars.sched.co/7/bc/21066842/avatar.jpg.320x320px.jpg?426"
+    },
+    {
+      "slug": "rama-palaniappan",
+      "sourceUrl": "https://avatars.sched.co/5/dc/21066845/avatar.jpg.320x320px.jpg?4c4"
+    },
+    {
+      "slug": "ramnivas-laddad",
+      "sourceUrl": "https://avatars.sched.co/6/89/21066848/avatar.jpg.320x320px.jpg?5de"
+    },
+    {
+      "slug": "ruben-cagnie",
+      "sourceUrl": "https://avatars.sched.co/1/37/21066855/avatar.jpg.320x320px.jpg?9fa"
+    },
+    {
+      "slug": "satish-chitnis",
+      "sourceUrl": "https://avatars.sched.co/1/c3/21496512/avatar.jpg.320x320px.jpg?0c2"
+    },
+    {
+      "slug": "seiya-izumi",
+      "sourceUrl": "https://avatars.sched.co/7/bc/21066863/avatar.jpg.320x320px.jpg?c03"
+    },
+    {
+      "slug": "siva-thiru",
+      "sourceUrl": "https://avatars.sched.co/f/23/9778144/avatar.jpg.320x320px.jpg?422"
+    },
+    {
+      "slug": "stefan-avram",
+      "sourceUrl": "https://avatars.sched.co/0/e6/21335795/avatar.jpg.320x320px.jpg?985"
+    },
+    {
+      "slug": "vincent-desmares",
+      "sourceUrl": "https://avatars.sched.co/d/cc/21066875/avatar.jpg.320x320px.jpg?f80"
+    },
+    {
+      "slug": "yassin-eldeeb",
+      "sourceUrl": "https://avatars.sched.co/4/33/18743822/avatar.jpg.320x320px.jpg?230"
+    }
+  ],
+  "failures": [
+    {
+      "slug": "kenneth-wu-mann",
+      "error": "No photo URL in this event’s speaker data"
+    },
+    {
+      "slug": "adam-malone",
+      "error": "No photo URL in this event’s speaker data"
+    }
+  ]
+}

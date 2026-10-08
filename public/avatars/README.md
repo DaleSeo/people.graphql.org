@@ -39,3 +39,28 @@ Refreshes require network access; normal builds do not download avatars.
 Portrait rights remain with their respective owners.
 
 Directory portraits use the canonical `avatarUrl` in `src/content/people/<slug>.json`. Missing portraits temporarily use `jemgillam.png`. Layout and appearance are shared in `src/components/PeopleDirectory.tsx` and its CSS Module.
+
+## Refresh working-group portraits
+
+Run `npm run avatars:refresh:wgs` to download avatars for attendees in
+`src/content/wgs/`. The script resolves source aliases to canonical people,
+downloads each GitHub username once, validates and converts portraits to
+240 × 240 PNGs, and updates the matching person records' `avatarUrl` fields.
+Existing references are preserved for failed downloads. Other profile fields
+and portraits belonging only to other categories are left alone.
+
+`wg-manifest.json` records successful usernames, the refresh time, and any
+failures. After refreshing, run `npm run people:sync` and `npm run build` to
+update the directory and site. No network requests are needed by site visitors.
+
+## Fill missing conference portraits
+
+Run `node scripts/download-speaker-avatars.mjs 2026` to fill missing portraits
+for GraphQLConf 2026 speakers using the Sched photo URLs already stored in
+`src/content/talks/graphqlconf/speakers.json`. The script keeps existing
+portraits, resolves conference identity aliases, and saves validated 240 × 240
+PNGs under the person's profile slug. It updates their `avatarUrl` and records
+photo source URLs in `speakers-2026-manifest.json`.
+
+Run `npm run people:sync` and rebuild afterward. Another imported conference
+year can be supplied instead of `2026`.
