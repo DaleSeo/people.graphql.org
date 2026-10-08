@@ -31,10 +31,11 @@ export function summarizeAgendaDetails({ meetings }: AgendaDetails): {
     a.start.localeCompare(b.start),
   )) {
     for (const attendee of meeting.attendees) {
-      const github = attendee.github.trim().replace(/^@/, "").toLowerCase();
-      if (!github) continue;
+      const github = attendee.github.trim().replace(/^@/, "");
+      const githubKey = github.toLowerCase();
+      if (!githubKey) continue;
 
-      const existing = attendees.get(github) ?? {
+      const existing = attendees.get(githubKey) ?? {
         github,
         name: "",
         org: "",
@@ -43,16 +44,23 @@ export function summarizeAgendaDetails({ meetings }: AgendaDetails): {
       };
       const name = cleanName(attendee.name);
 
+      existing.github = github;
       if (name) existing.name = name;
       if (attendee.org.trim()) existing.org = attendee.org.trim();
       if (attendee.location.trim())
         existing.location = attendee.location.trim();
       existing.count += 1;
-      attendees.set(github, existing);
+      attendees.set(githubKey, existing);
     }
   }
 
-  return { attendees: [...attendees.values()] };
+  return {
+    attendees: [...attendees.values()].sort((a, b) => {
+      const aKey = a.github.toLowerCase();
+      const bKey = b.github.toLowerCase();
+      return aKey < bKey ? -1 : aKey > bKey ? 1 : 0;
+    }),
+  };
 }
 
 function cleanName(name: string): string {
