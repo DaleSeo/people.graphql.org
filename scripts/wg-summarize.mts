@@ -20,6 +20,7 @@ interface SummaryAttendee {
   org: string;
   location: string;
   count: number;
+  lastMeeting: string;
 }
 
 export function summarizeAgendaDetails({ meetings }: AgendaDetails): {
@@ -42,6 +43,7 @@ export function summarizeAgendaDetails({ meetings }: AgendaDetails): {
         org: "",
         location: "",
         count: 0,
+        lastMeeting: "",
       };
       const name = cleanName(attendee.name);
 
@@ -51,6 +53,7 @@ export function summarizeAgendaDetails({ meetings }: AgendaDetails): {
       if (attendee.location.trim())
         existing.location = attendee.location.trim();
       existing.count += 1;
+      existing.lastMeeting = meeting.start.slice(0, 10);
       attendees.set(githubKey, existing);
     }
   }
