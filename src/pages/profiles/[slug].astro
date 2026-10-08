@@ -18,7 +18,9 @@ export function getStaticPaths() {
 }
 const { slug, person } = Astro.props;
 const appearances = memberships.filter((m) => m.person === slug);
-const groups = [...new Set(appearances.map((m) => m.page))];
+const groups = [...new Set(appearances.map((m) => m.page))].filter(
+  (page) => !page.startsWith("stars/") && !page.startsWith("speakers/"),
+);
 const articles = appearances.flatMap((m) => (m.article ? [m.article] : []));
 const talks = appearances.filter((m) => m.talk);
 const interests = [...new Set(appearances.flatMap((m) => m.interests ?? []))];
@@ -69,48 +71,68 @@ const links = [
         )}
       </div>
     </header>
-    <section class={styles.section} aria-labelledby="community-title">
-      <h2 id="community-title">Around the community</h2>
-      <ul class={styles.appearances}>
-        {groups.map((page) => {
-          const ms = appearances.filter((m) => m.page === page);
-          const active = ms.some((m) => isActive(m));
-          return (
-            <li>
-              <a href={`${hrefFor(page)}#${anchor}`}>
-                <span>{pageFor(page).title}</span>
-                <span aria-hidden="true">↗</span>
+    {groups.length > 0 && (
+      <section class={styles.section} aria-labelledby="community-title">
+        <h2 id="community-title">Around the community</h2>
+        <ul class={styles.appearances}>
+          {groups.map((page) => {
+            const ms = appearances.filter((m) => m.page === page);
+            const active = ms.some((m) => isActive(m));
+            return (
+              <li>
+                <a href={`${hrefFor(page)}#${anchor}`}>
+                  <span>{pageFor(page).title}</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <p>
+                  {!active ? "Previously active · " : ""}
+                  {ms.some((m) => m.chair)
+                    ? "Chair"
+                    : ms.some((m) => m.emeriti)
+                      ? "Emeritus"
+                      : ms[0].label}
+                </p>
+                {ms[0].count !== undefined && (
+                  <p>
+                    {ms[0].count} meetings attended · last attended{" "}
+                    {ms[0].lastActive}
+                  </p>
+                )}
+                {ms[0].affiliation && (
+                  <p>
+                    {ms[0].affiliation}
+                    {ms[0].emeriti ? " · affiliation during term" : ""}
+                  </p>
+                )}
+                {ms[0].termStart && (
+                  <p>
+                    Term: {ms[0].termStart} – {ms[0].termEnd}
+                  </p>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    )}
+    {appearances.some((m) => m.image) && (
+      <section class={styles.section} aria-labelledby="cards-title">
+        <h2 id="cards-title">Stars contribution cards</h2>
+        <div class={styles.cards}>
+          {appearances
+            .filter((m) => m.image)
+            .map((m) => (
+              <a href={m.image}>
+                <img
+                  src={m.image}
+                  alt={`${person.name} · ${m.label}`}
+                  loading="lazy"
+                />
               </a>
-              <p>
-                {!active ? "Previously active · " : ""}
-                {ms.some((m) => m.chair)
-                  ? "Chair"
-                  : ms.some((m) => m.emeriti)
-                    ? "Emeritus"
-                    : ms[0].label}
-              </p>
-              {ms[0].count !== undefined && (
-                <p>
-                  {ms[0].count} meetings attended · last attended{" "}
-                  {ms[0].lastActive}
-                </p>
-              )}
-              {ms[0].affiliation && (
-                <p>
-                  {ms[0].affiliation}
-                  {ms[0].emeriti ? " · affiliation during term" : ""}
-                </p>
-              )}
-              {ms[0].termStart && (
-                <p>
-                  Term: {ms[0].termStart} – {ms[0].termEnd}
-                </p>
-              )}
-            </li>
-          );
-        })}
-      </ul>
-    </section>
+            ))}
+        </div>
+      </section>
+    )}
     {articles.length > 0 && (
       <section class={styles.section} aria-labelledby="stories-title">
         <h2 id="stories-title">Stories</h2>
@@ -149,24 +171,6 @@ const links = [
             )}
           </article>
         ))}
-      </section>
-    )}
-    {appearances.some((m) => m.image) && (
-      <section class={styles.section} aria-labelledby="cards-title">
-        <h2 id="cards-title">Stars contribution cards</h2>
-        <div class={styles.cards}>
-          {appearances
-            .filter((m) => m.image)
-            .map((m) => (
-              <a href={m.image}>
-                <img
-                  src={m.image}
-                  alt={`${person.name} · ${m.label}`}
-                  loading="lazy"
-                />
-              </a>
-            ))}
-        </div>
       </section>
     )}
     {links.length > 0 && (

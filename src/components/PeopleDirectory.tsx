@@ -1,4 +1,4 @@
-import { useEffect, useState, type CSSProperties } from "react";
+import { useEffect, useState, useRef, type CSSProperties } from "react";
 import type { DirectoryPage, Entry, Mode } from "../lib/directory";
 import styles from "./PeopleDirectory.module.css";
 
@@ -19,6 +19,17 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
   const [mode, setMode] = useState<Mode>(page.mode);
   const [search, setSearch] = useState("");
   const [explicitMode, setExplicitMode] = useState(false);
+  const isStars = page.slug === "stars" || page.slug.startsWith("stars/");
+  const [selectedStar, setSelectedStar] = useState<Entry | null>(null);
+  const starDialog = useRef<HTMLDialogElement>(null);
+  const selectedMembership =
+    selectedStar?.memberships.find((m) => m.image) ??
+    selectedStar?.memberships[0];
+  const starImage = selectedMembership?.image ?? "/stars/2025/andimarek.png";
+  useEffect(() => {
+    if (selectedStar && starDialog.current && !starDialog.current.open)
+      starDialog.current.showModal();
+  }, [selectedStar]);
   const hasArticles = entries.some((p) => p.articles.length);
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -113,7 +124,25 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
         <a
           href={profile}
           className={`${styles.avatar} ${p.memberships.some((m) => m.tsc || m.chair) ? styles.gold : ""}`}
-          aria-label={`Meet ${p.name}`}
+          aria-label={
+            isStars ? `View star card for ${p.name}` : `Meet ${p.name}`
+          }
+          aria-haspopup={isStars ? "dialog" : undefined}
+          onClick={
+            isStars
+              ? (event) => {
+                  if (
+                    event.metaKey ||
+                    event.ctrlKey ||
+                    event.shiftKey ||
+                    event.altKey
+                  )
+                    return;
+                  event.preventDefault();
+                  setSelectedStar(p);
+                }
+              : undefined
+          }
           title={p.name}
           style={{ viewTransitionName: p.transitionName } as CSSProperties}
         >
@@ -299,6 +328,77 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
           </p>
         )}
       </div>
+      {isStars && (
+        <dialog
+          ref={starDialog}
+          className={styles.starDialog}
+          aria-labelledby="star-dialog-name"
+          onClose={() => setSelectedStar(null)}
+          onClick={(event) => {
+            if (event.target !== event.currentTarget) return;
+            const bounds = event.currentTarget.getBoundingClientRect();
+            if (
+              event.clientX < bounds.left ||
+              event.clientX > bounds.right ||
+              event.clientY < bounds.top ||
+              event.clientY > bounds.bottom
+            )
+              event.currentTarget.close();
+          }}
+        >
+          <button
+            className={styles.dialogClose}
+            type="button"
+            aria-label="Close star card"
+            autoFocus
+            onClick={() => starDialog.current?.close()}
+          >
+            ×
+          </button>
+          {selectedStar && (
+            <>
+              <div className={styles.dialogHeading}>
+                <p className={styles.date}>
+                  GRAPHQL STARS · {selectedMembership?.label}
+                </p>
+                <div className={styles.identity}>
+                  <h2 id="star-dialog-name">{selectedStar.name}</h2>
+                  {selectedStar.githubUsername && (
+                    <a
+                      href={`https://github.com/${selectedStar.githubUsername}`}
+                    >
+                      @{selectedStar.githubUsername} ↗
+                    </a>
+                  )}
+                </div>
+              </div>
+              <a
+                className={styles.profileLink}
+                href={`/profiles/${selectedStar.slug}/`}
+              >
+                View full profile <span aria-hidden="true">↗</span>
+              </a>
+              <p>
+                Thank you {selectedStar.githubUsername ?? selectedStar.name} for
+                being a Star in {selectedMembership?.page.split("/")[1]}!
+              </p>
+              <figure className={styles.starCard}>
+                <img
+                  src={starImage}
+                  alt={
+                    selectedMembership?.image
+                      ? `GraphQL Stars contribution card for ${selectedStar.name}, ${selectedMembership.label}`
+                      : "Placeholder GraphQL Stars contribution card"
+                  }
+                />
+                {!selectedMembership?.image && (
+                  <figcaption>Placeholder card</figcaption>
+                )}
+              </figure>
+            </>
+          )}
+        </dialog>
+      )}
     </div>
   );
 }

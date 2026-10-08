@@ -280,3 +280,64 @@
     flex-wrap: wrap;
   }
 }
+
+:global(body:has(dialog[open])) {
+  overflow: hidden;
+}
+.starDialog {
+  width: min(960px, calc(100vw - 32px));
+  max-width: none;
+  max-height: calc(100dvh - 32px);
+  padding: clamp(20px, 4vw, 36px);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+  color: var(--ink);
+  overflow: auto;
+}
+.starDialog::backdrop {
+  background: rgb(0 0 0 / 75%);
+}
+.dialogClose {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper);
+  color: inherit;
+  font-size: 26px;
+  cursor: pointer;
+}
+.dialogClose:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 3px;
+}
+.dialogHeading {
+  padding-right: 40px;
+}
+.dialogHeading h2 {
+  margin: 0;
+  font-size: clamp(24px, 4vw, 36px);
+}
+.dialogHeading a {
+  color: #b8007d;
+  font-size: 14px;
+}
+.starCard {
+  margin: 24px 0;
+  text-align: center;
+}
+.starCard img {
+  display: block;
+  width: 100%;
+  max-height: 60dvh;
+  object-fit: contain;
+}
+.starCard figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 12px;
+}
