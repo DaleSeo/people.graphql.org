@@ -1,18 +1,38 @@
 ---
-import styles from './article.module.css';
-import shared from '../../styles/shared.module.css';
-import Layout from '../../layouts/Layout.astro';
-import { getCollection, render } from 'astro:content';
-export async function getStaticPaths() { return (await getCollection('stories')).map(story => ({ params: { id: story.id }, props: { story } })); }
+import styles from "./article.module.css";
+import shared from "../../styles/shared.module.css";
+import Layout from "../../layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+export async function getStaticPaths() {
+  return (await getCollection("stories")).map((story) => ({
+    params: { id: story.id },
+    props: { story },
+  }));
+}
 const { story } = Astro.props;
 const links = story.data.links ?? [];
 const { Content } = await render(story);
 ---
-<Layout title={`${story.data.title} · People of GraphQL`} description={story.data.description}>
+
+<Layout
+  title={`${story.data.title} · People of GraphQL`}
+  description={story.data.description}
+>
   <article class={styles.storyFeature}>
-    <a class={shared.back} href="/stories/">← All stories</a>
+    <a class={shared.back} href="/stories/">
+      ← All stories
+    </a>
     <header class={styles.storyFeatureHeader}>
-      <p class={shared.eyebrow}><time datetime={story.data.publishedAt.toISOString().slice(0, 10)}>{story.data.publishedAt.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })}</time></p>
+      <p class={shared.eyebrow}>
+        <time datetime={story.data.publishedAt.toISOString().slice(0, 10)}>
+          {story.data.publishedAt.toLocaleDateString("en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+            timeZone: "UTC",
+          })}
+        </time>
+      </p>
       <h1>{story.data.title}</h1>
       <div class={styles.storyIntroduction}>
         <div>
@@ -20,9 +40,28 @@ const { Content } = await render(story);
           <p class={styles.storyDeck}>{story.data.description}</p>
         </div>
         {(story.data.location || links.length > 0) && (
-          <aside class={styles.storyPersonDetails} aria-label="About the contributor">
-            {story.data.location && <><p class={shared.eyebrow}>Based in</p><p>{story.data.location}</p></>}
-            {links.length > 0 && <><p class={shared.eyebrow}>Find them online</p><ul>{links.map(link => <li><a href={link.url}>{link.label} ↗</a></li>)}</ul></>}
+          <aside
+            class={styles.storyPersonDetails}
+            aria-label="About the contributor"
+          >
+            {story.data.location && (
+              <>
+                <p class={shared.eyebrow}>Based in</p>
+                <p>{story.data.location}</p>
+              </>
+            )}
+            {links.length > 0 && (
+              <>
+                <p class={shared.eyebrow}>Find them online</p>
+                <ul>
+                  {links.map((link) => (
+                    <li>
+                      <a href={link.url}>{link.label} ↗</a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
           </aside>
         )}
       </div>
@@ -30,21 +69,35 @@ const { Content } = await render(story);
     {story.data.hero && (
       <figure class:list={[styles.storyPhoto, styles.storyHero]}>
         <div class={styles.storyHeroImage}>
-          <img src={story.data.hero.src} alt={story.data.hero.alt} width="1800" height="1200" fetchpriority="high" />
+          <img
+            src={story.data.hero.src}
+            alt={story.data.hero.alt}
+            width="1800"
+            height="1200"
+            fetchpriority="high"
+          />
           <span class={styles.storyHeroStripes} aria-hidden="true"></span>
         </div>
         <figcaption>{story.data.hero.caption}</figcaption>
       </figure>
     )}
     <div class={styles.storyReadingLayout}>
-      <aside class={styles.storyProjectNote} aria-label="About People of GraphQL">
+      <aside
+        class={styles.storyProjectNote}
+        aria-label="About People of GraphQL"
+      >
         <p class={shared.eyebrow}>People of GraphQL</p>
         <h2>A community is made of people.</h2>
-        <p>Personal stories from the people building, maintaining, and finding their place in the GraphQL community.</p>
+        <p>
+          Personal stories from the people building, maintaining, and finding
+          their place in the GraphQL community.
+        </p>
         <a href="/about/">About the project ↗</a>
       </aside>
       <Content />
-      <a class:list={[shared.back, styles.storyEnd]} href="/stories/">Explore more stories →</a>
+      <a class:list={[shared.back, styles.storyEnd]} href="/stories/">
+        Explore more stories →
+      </a>
     </div>
   </article>
 </Layout>

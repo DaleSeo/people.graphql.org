@@ -1,23 +1,39 @@
 ---
-import styles from './StarsConstellation.module.css';
+import styles from "./StarsConstellation.module.css";
 const people = [
-  { github: 'acao', x: 20, y: 20 },
-  { github: 'martinbonnin', x: 50, y: 20 },
-  { github: 'keweiqu', x: 80, y: 20 },
-  { github: 'sachindshinde', x: 35, y: 50 },
-  { github: 'sarahxsanders', x: 65, y: 50 },
-  { github: 'enisdenjo', x: 20, y: 80 },
-  { github: 'michaelstaib', x: 50, y: 80 },
-  { github: 'hasparus', x: 80, y: 80 },
+  { github: "acao", x: 20, y: 20 },
+  { github: "martinbonnin", x: 50, y: 20 },
+  { github: "keweiqu", x: 80, y: 20 },
+  { github: "sachindshinde", x: 35, y: 50 },
+  { github: "sarahxsanders", x: 65, y: 50 },
+  { github: "enisdenjo", x: 20, y: 80 },
+  { github: "michaelstaib", x: 50, y: 80 },
+  { github: "hasparus", x: 80, y: 80 },
 ];
 ---
+
 <div class={styles.starsConstellation} aria-hidden="true">
-  <span class={styles.constellationDot} style="--x:8%;--y:43%;--dot-size:5px"></span>
-  <span class={styles.constellationDot} style="--x:92%;--y:58%;--dot-size:6px"></span>
-  <span class={styles.constellationDot} style="--x:36%;--y:7%;--dot-size:4px"></span>
-  <span class={styles.constellationDot} style="--x:65%;--y:94%;--dot-size:4px"></span>
-  <span class={styles.constellationDot} style="--x:50%;--y:50%;--dot-size:3px"></span>
-  {people.map(person => (
+  <span
+    class={styles.constellationDot}
+    style="--x:8%;--y:43%;--dot-size:5px"
+  ></span>
+  <span
+    class={styles.constellationDot}
+    style="--x:92%;--y:58%;--dot-size:6px"
+  ></span>
+  <span
+    class={styles.constellationDot}
+    style="--x:36%;--y:7%;--dot-size:4px"
+  ></span>
+  <span
+    class={styles.constellationDot}
+    style="--x:65%;--y:94%;--dot-size:4px"
+  ></span>
+  <span
+    class={styles.constellationDot}
+    style="--x:50%;--y:50%;--dot-size:3px"
+  ></span>
+  {people.map((person) => (
     <img
       class={styles.constellationAvatar}
       src={`/avatars/${person.github}.png`}

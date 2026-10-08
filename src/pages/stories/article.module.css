@@ -215,8 +215,8 @@
     font-size: 19px;
   }
   .storyReadingLayout > *,
-.storyReadingLayout > blockquote,
-.storyReadingLayout > [data-story-photo] {
+  .storyReadingLayout > blockquote,
+  .storyReadingLayout > [data-story-photo] {
     grid-column: 1;
   }
   .storyReadingLayout > .storyProjectNote {
@@ -250,5 +250,4 @@
   .storyHero {
     margin-bottom: 44px;
   }
-
 }

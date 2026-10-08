@@ -1,41 +1,75 @@
 ---
-import styles from './index.module.css';
-import shared from '../styles/shared.module.css';
-import cards from '../styles/storyCards.module.css';
-import Layout from '../layouts/Layout.astro';
-import StarsConstellation from '../components/StarsConstellation.astro';
-import { getCollection } from 'astro:content';
-const stories = (await getCollection('stories')).sort((a,b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime() || a.id.localeCompare(b.id));
+import styles from "./index.module.css";
+import shared from "../styles/shared.module.css";
+import cards from "../styles/storyCards.module.css";
+import Layout from "../layouts/Layout.astro";
+import StarsConstellation from "../components/StarsConstellation.astro";
+import { getCollection } from "astro:content";
+const stories = (await getCollection("stories")).sort(
+  (a, b) =>
+    b.data.publishedAt.getTime() - a.data.publishedAt.getTime() ||
+    a.id.localeCompare(b.id),
+);
 ---
+
 <Layout>
   <section class:list={[styles.intro, shared.wrap]}>
-    <h1>Code is only<br /><em>part of the story.</em></h1>
+    <h1>
+      Code is only
+      <br />
+      <em>part of the story.</em>
+    </h1>
     <div class={shared.introBottom}>
-      <p>Meet the maintainers, practitioners, educators, and organizers working across the GraphQL ecosystem.</p>
+      <p>
+        Meet the maintainers, practitioners, educators, and organizers working
+        across the GraphQL ecosystem.
+      </p>
     </div>
-    </section>
+  </section>
   <section class:list={[shared.wrap, styles.storiesSection]}>
     <div class={styles.sectionLabel}>
       <a href="/stories/">Explore all stories</a>
     </div>
-    <div class={cards.storyGrid}>{stories.map(story =>
-      <a class={cards.storyCard} href={`/stories/${story.id}/`}>
-        <div class:list={[cards.portrait, cards.cardArt]}>
-          {story.data.hero && <img src={story.data.hero.src} alt={story.data.hero.alt} loading="lazy" decoding="async" />}
-          <span class={styles.imageCaption}>STORY PREVIEW</span>
-        </div>
-        <h2>{story.data.title}</h2>
-        <p>{story.data.description}</p>
-        <div class={cards.cardCredit}>{story.data.name}<span>Read the preview</span></div>
-      </a>)}
+    <div class={cards.storyGrid}>
+      {stories.map((story) => (
+        <a class={cards.storyCard} href={`/stories/${story.id}/`}>
+          <div class:list={[cards.portrait, cards.cardArt]}>
+            {story.data.hero && (
+              <img
+                src={story.data.hero.src}
+                alt={story.data.hero.alt}
+                loading="lazy"
+                decoding="async"
+              />
+            )}
+            <span class={styles.imageCaption}>STORY PREVIEW</span>
+          </div>
+          <h2>{story.data.title}</h2>
+          <p>{story.data.description}</p>
+          <div class={cards.cardCredit}>
+            {story.data.name}
+            <span>Read the preview</span>
+          </div>
+        </a>
+      ))}
     </div>
   </section>
   <section class={styles.starsTeaser}>
     <div class:list={[shared.wrap, styles.teaserInner]}>
       <div>
-        <h2>A constellation<br />of contributions.</h2>
-        <p>Each year, GraphQL Stars recognizes 52 people for their<br class={styles.desktop} />contributions across the GraphQL GitHub repositories.</p>
-        <a class={shared.button} href="/stars/2026/">Explore the class of 2026</a>
+        <h2>
+          A constellation
+          <br />
+          of contributions.
+        </h2>
+        <p>
+          Each year, GraphQL Stars recognizes 52 people for their
+          <br class={styles.desktop} />
+          contributions across the GraphQL GitHub repositories.
+        </p>
+        <a class={shared.button} href="/stars/2026/">
+          Explore the class of 2026
+        </a>
       </div>
       <StarsConstellation />
     </div>

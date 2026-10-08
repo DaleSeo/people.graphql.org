@@ -1,6 +1,6 @@
 ---
-import { getCollection } from 'astro:content';
-const stars = await getCollection('stars');
-const latestYear = Math.max(...stars.map(star => star.data.year));
+import { getCollection } from "astro:content";
+const stars = await getCollection("stars");
+const latestYear = Math.max(...stars.map((star) => star.data.year));
 return Astro.redirect(`/stars/${latestYear}/`, 302);
 ---

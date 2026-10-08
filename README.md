@@ -109,9 +109,10 @@ Astro imports CSS Modules directly; no extra plugin is required. Page and compon
 
 ```astro
 ---
-import styles from './index.module.css';
-import shared from '../styles/shared.module.css';
+import styles from "./index.module.css";
+import shared from "../styles/shared.module.css";
 ---
+
 <section class:list={[shared.wrap, styles.intro]}>...</section>
 ```
 

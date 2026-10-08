@@ -1,0 +1,5 @@
+# Generated files and dependencies
+dist/
+.astro/
+node_modules/
+package-lock.json

@@ -1,54 +1,65 @@
 ---
-import shared from '../../styles/shared.module.css';
-import styles from './about.module.css';
-import Layout from '../../layouts/Layout.astro';
+import shared from "../../styles/shared.module.css";
+import styles from "./about.module.css";
+import Layout from "../../layouts/Layout.astro";
 ---
+
 <Layout
   title="About GraphQL Stars"
   description="GraphQL Stars celebrates 52 people each year whose work across the GraphQL GitHub repositories moves the project forward."
   dark
 >
   <section class:list={[shared.wrap, shared.pageIntro, styles.starsAboutIntro]}>
-    <a class={shared.back} href="/stars/">← Meet the GraphQL Stars</a>
+    <a class={shared.back} href="/stars/">
+      ← Meet the GraphQL Stars
+    </a>
     <p class={shared.eyebrow}>ABOUT GRAPHQL STARS</p>
-    <h1>A universe shaped<br /><em>by contributors.</em></h1>
-    <p class={shared.standfirst}>GraphQL Stars celebrates 52 people each year whose work across the GraphQL GitHub repositories moves the project forward.</p>
+    <h1>
+      A universe shaped
+      <br />
+      <em>by contributors.</em>
+    </h1>
+    <p class={shared.standfirst}>
+      GraphQL Stars celebrates 52 people each year whose work across the GraphQL
+      GitHub repositories moves the project forward.
+    </p>
   </section>
-
 
   <div class:list={[shared.articleBody, styles.starsAboutCopy]}>
     <h2>GraphQL is a shared effort</h2>
 
-  <p>
-    GraphQL does not move forward by itself. Every improvement to the
-    specification, its implementations, documentation, tests, tooling, and
-    websites begins with someone choosing to contribute their time and
-    knowledge.
-  </p>
+    <p>
+      GraphQL does not move forward by itself. Every improvement to the
+      specification, its implementations, documentation, tests, tooling, and
+      websites begins with someone choosing to contribute their time and
+      knowledge.
+    </p>
 
-  <p>
-    GraphQL Stars celebrates 52 of the people whose work across the GraphQL
-    GitHub repositories helped the project move forward. It brings those
-    contributors out from behind commits, issues, and pull requests, so the
-    wider community can discover the people behind the work.
-  </p>
+    <p>
+      GraphQL Stars celebrates 52 of the people whose work across the GraphQL
+      GitHub repositories helped the project move forward. It brings those
+      contributors out from behind commits, issues, and pull requests, so the
+      wider community can discover the people behind the work.
+    </p>
 
-  <h2>Where the Stars began</h2>
+    <h2>Where the Stars began</h2>
 
-  <p>
-    Benjie introduced GraphQL Stars at GraphQLConf 2024 during his
-    keynote, <a href="https://graphql.org/conf/2024/schedule/5245297ed1f7b82885c742d77f209bda/?name=Keynote%3A%20You%27re%20Our%20Universe%3A%20GraphQL%20Community%20Update%202024"><cite>You’re Our Universe: GraphQL Community
-    Update 2024</cite></a>. Looking back over a year of work across the
-    project, he celebrated some of the people improving GraphQL and invited
-    others to help shape what comes next.
-  </p>
+    <p>
+      Benjie introduced GraphQL Stars at GraphQLConf 2024 during his keynote,{" "}
+      <a href="https://graphql.org/conf/2024/schedule/5245297ed1f7b82885c742d77f209bda/?name=Keynote%3A%20You%27re%20Our%20Universe%3A%20GraphQL%20Community%20Update%202024">
+        <cite>You’re Our Universe: GraphQL Community Update 2024</cite>
+      </a>
+      . Looking back over a year of work across the project, he celebrated some
+      of the people improving GraphQL and invited others to help shape what
+      comes next.
+    </p>
 
-  <p>
-    That celebration became GraphQL Stars: a new class of contributors,
-    recognised each year.
-  </p>
+    <p>
+      That celebration became GraphQL Stars: a new class of contributors,
+      recognised each year.
+    </p>
   </div>
-<section class={shared.wrap} aria-labelledby="talk-heading">
+  <section class={shared.wrap} aria-labelledby="talk-heading">
     <div class={styles.starsVideoFrame}>
       <iframe
         src="https://www.youtube-nocookie.com/embed/bCBZTNib0mA?si=yxipoNUAP8qZsM3v&amp;start=203"
@@ -61,29 +72,33 @@ import Layout from '../../layouts/Layout.astro';
     </div>
     <div class={styles.starsVideoCaption}>
       <div>
-        <h2 id="talk-heading">You're Our Universe: GraphQL Community Update 2024</h2>
+        <h2 id="talk-heading">
+          You're Our Universe: GraphQL Community Update 2024
+        </h2>
         <p>Benjie Gillam · Community Gardener · GraphQLConf 2024</p>
       </div>
-      <a href="https://www.youtube.com/watch?v=bCBZTNib0mA">Watch on YouTube ↗</a>
+      <a href="https://www.youtube.com/watch?v=bCBZTNib0mA">
+        Watch on YouTube ↗
+      </a>
     </div>
   </section>
 
   <div class:list={[shared.articleBody, styles.starsAboutCopy]}>
-  <h2>52 Stars, every year</h2>
+    <h2>52 Stars, every year</h2>
 
-  <p>
-    Each class covers contributions made from September through August. The
-    class of 2026, for example, reflects work carried out between September
-    2025 and August 2026.
-  </p>
+    <p>
+      Each class covers contributions made from September through August. The
+      class of 2026, for example, reflects work carried out between September
+      2025 and August 2026.
+    </p>
 
-  <p>
-    There are 52 Stars in each class: one for every card in a deck. Explore
-    the class, choose a card, and meet someone helping to build GraphQL.
-  </p>
+    <p>
+      There are 52 Stars in each class: one for every card in a deck. Explore
+      the class, choose a card, and meet someone helping to build GraphQL.
+    </p>
 
-  <a class={shared.button} href="/stars/2026/">
-    Explore the class of 2026 <span aria-hidden="true">→</span>
-  </a></div>
-
+    <a class={shared.button} href="/stars/2026/">
+      Explore the class of 2026 <span aria-hidden="true">→</span>
+    </a>
+  </div>
 </Layout>
