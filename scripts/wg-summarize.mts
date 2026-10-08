@@ -1,6 +1,6 @@
 interface Attendee {
   name: string;
-  github: string;
+  github: string | null;
   org: string;
   location: string;
 }
@@ -31,6 +31,7 @@ export function summarizeAgendaDetails({ meetings }: AgendaDetails): {
     a.start.localeCompare(b.start),
   )) {
     for (const attendee of meeting.attendees) {
+      if (!attendee.github) continue;
       const github = attendee.github.trim().replace(/^@/, "");
       const githubKey = github.toLowerCase();
       if (!githubKey) continue;
