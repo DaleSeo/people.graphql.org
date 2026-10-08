@@ -1,0 +1,438 @@
+{
+  "attendees": [
+    {
+      "github": "aenimus",
+      "name": "David Stutt",
+      "org": "WunderGraph",
+      "location": "Midlands, UK",
+      "count": 12
+    },
+    {
+      "github": "agata-wit",
+      "name": "Agata Witkowska",
+      "org": "Tyk",
+      "location": "Gdansk, PL",
+      "count": 2
+    },
+    {
+      "github": "ardatan",
+      "name": "Arda TANRIKULU",
+      "org": "The Guild",
+      "location": "Istanbul, TR",
+      "count": 3
+    },
+    {
+      "github": "ashpak-shaikh",
+      "name": "Ashpak Shaikh",
+      "org": "Intuit",
+      "location": "San Diego, CA, USA",
+      "count": 1
+    },
+    {
+      "github": "benhead",
+      "name": "Benjamin Turner",
+      "org": "Google",
+      "location": "New York, NY, USA",
+      "count": 1
+    },
+    {
+      "github": "benjie",
+      "name": "Benjie Gillam",
+      "org": "Graphile",
+      "location": "Chandler's Ford, UK",
+      "count": 15
+    },
+    {
+      "github": "bignimbus",
+      "name": "Jeff Auriemma",
+      "org": "Apollo",
+      "location": "Monroe, CT, USA",
+      "count": 17
+    },
+    {
+      "github": "bobbiejc",
+      "name": "Bobbie Cochrane.",
+      "org": "StepZen",
+      "location": "Oriental, NC",
+      "count": 1
+    },
+    {
+      "github": "christiansany",
+      "name": "Christian Sany",
+      "org": "Individual",
+      "location": "Zurich, CH",
+      "count": 1
+    },
+    {
+      "github": "dariuszkuc",
+      "name": "Derek Kuc",
+      "org": "Apollo",
+      "location": "Chicago, IL, USA",
+      "count": 55
+    },
+    {
+      "github": "devsergiy",
+      "name": "Sergiy Petrunin",
+      "org": "WunderGraph",
+      "location": "Kharkiv, UA",
+      "count": 6
+    },
+    {
+      "github": "doc-jones",
+      "name": "Doc Jones",
+      "org": "Postman",
+      "location": "Raliegh, NC, USA",
+      "count": 1
+    },
+    {
+      "github": "dotansimha",
+      "name": "Dotan Simha",
+      "org": "The Guild",
+      "location": "Ramat Gan, IL",
+      "count": 2
+    },
+    {
+      "github": "dsandip",
+      "name": "Sandip Devarkonda",
+      "org": "Hasura",
+      "location": "San Francisco, CA",
+      "count": 1
+    },
+    {
+      "github": "duckki",
+      "name": "Duckki Oe",
+      "org": "Apollo",
+      "location": "Seattle, WA",
+      "count": 5
+    },
+    {
+      "github": "dventimihasura",
+      "name": "David Ventimiglia",
+      "org": "Hasura",
+      "location": "San Francisco, CA",
+      "count": 6
+    },
+    {
+      "github": "Finistere",
+      "name": "Benjamin Rabier",
+      "org": "Grafbase",
+      "location": "Paris, FR",
+      "count": 3
+    },
+    {
+      "github": "flexzuu",
+      "name": "Jonas Faber",
+      "org": "Hygraph",
+      "location": "Butzbach, DE",
+      "count": 1
+    },
+    {
+      "github": "fotoetienne",
+      "name": "Stephen Spalding",
+      "org": "Netflix",
+      "location": "Chattanooga, TN, US",
+      "count": 28
+    },
+    {
+      "github": "gausie",
+      "name": "Sam Zislis-Gaus",
+      "org": "WunderGraph",
+      "location": "Edinburgh, Scotland",
+      "count": 1
+    },
+    {
+      "github": "grillorafael",
+      "name": "Rafael Abreu",
+      "org": "Individual",
+      "location": "Rio de Janeiro, Brazil",
+      "count": 1
+    },
+    {
+      "github": "gwardwell",
+      "name": "Greg Wardwell",
+      "org": "Wayfair",
+      "location": "Fort Wayne, IN, USA",
+      "count": 1
+    },
+    {
+      "github": "hayes",
+      "name": "Michael Hayes",
+      "org": "Stellate",
+      "location": "Portland, OR, US",
+      "count": 1
+    },
+    {
+      "github": "hwillson",
+      "name": "Hugh Willson",
+      "org": "Apollo",
+      "location": "Ottawa, Canada",
+      "count": 1
+    },
+    {
+      "github": "IvanGoncharov",
+      "name": "Ivan Goncharov",
+      "org": "Apollo",
+      "location": "Lviv, UA",
+      "count": 1
+    },
+    {
+      "github": "jensneuse",
+      "name": "Jens Neuse",
+      "org": "WunderGraph",
+      "location": "Bretten, Germany",
+      "count": 1
+    },
+    {
+      "github": "JoeyNenni",
+      "name": "Joey Nenni",
+      "org": "PayPal.",
+      "location": "Austin, TX, USA",
+      "count": 1
+    },
+    {
+      "github": "JohnStarich",
+      "name": "John Starich",
+      "org": "IBM",
+      "location": "Austin, TX, USA",
+      "count": 9
+    },
+    {
+      "github": "jonnydgreen",
+      "name": "Jonny Green",
+      "org": "Unity",
+      "location": "Bath, UK",
+      "count": 2
+    },
+    {
+      "github": "juiceppe",
+      "name": "Giuseppe Abrignani",
+      "org": "the LEGO Group",
+      "location": "Copenhagen, DK",
+      "count": 1
+    },
+    {
+      "github": "jwebb49",
+      "name": "Jason Webb",
+      "org": "Intuit",
+      "location": "San Diego, CA",
+      "count": 2
+    },
+    {
+      "github": "jwebb94",
+      "name": "Jason Webb",
+      "org": "Intuit",
+      "location": "San Diego, CA, USA",
+      "count": 1
+    },
+    {
+      "github": "kamilkisiela",
+      "name": "Kamil Kisiela",
+      "org": "The Guild",
+      "location": "Warsaw, PL",
+      "count": 54
+    },
+    {
+      "github": "linux-jedi",
+      "name": "Caleb Thomas",
+      "org": "Meta",
+      "location": "Brooklyn, NY, US",
+      "count": 1
+    },
+    {
+      "github": "LunaticMuch",
+      "name": "Stefano Cislaghi",
+      "org": "American Express",
+      "location": "Brighton, UK",
+      "count": 2
+    },
+    {
+      "github": "magicmark",
+      "name": "Mark Larah",
+      "org": "Yelp",
+      "location": "Austin, TX, US",
+      "count": 1
+    },
+    {
+      "github": "martijnwalraven",
+      "name": "Martijn Walraven",
+      "org": "Apollo",
+      "location": "Amsterdam, NL",
+      "count": 67
+    },
+    {
+      "github": "martinbonnin",
+      "name": "Martin Bonnin",
+      "org": "Apollo",
+      "location": "Paris, FR",
+      "count": 1
+    },
+    {
+      "github": "mcollina",
+      "name": "Matteo Collina",
+      "org": "Individual",
+      "location": "Forlì, IT",
+      "count": 2
+    },
+    {
+      "github": "michaelstaib",
+      "name": "Michael Staib",
+      "org": "ChilliCream",
+      "location": "Zurich, CH",
+      "count": 76
+    },
+    {
+      "github": "n1ru4l",
+      "name": "Laurin Quast",
+      "org": "The Guild",
+      "location": "Baden-Württemberg, DE",
+      "count": 3
+    },
+    {
+      "github": "nathanchapman",
+      "name": "Nathan Chapman",
+      "org": "Individual",
+      "location": "Austin, TX",
+      "count": 1
+    },
+    {
+      "github": "ndejaco2",
+      "name": "Nicholas DeJaco",
+      "org": "Amazon",
+      "location": "Seattle, WA",
+      "count": 1
+    },
+    {
+      "github": "obi1kenobi",
+      "name": "Predrag Gruevski",
+      "org": "Kensho",
+      "location": "Boston, MA, USA",
+      "count": 2
+    },
+    {
+      "github": "okjulian",
+      "name": "Julian Mayorga",
+      "org": "gql.app",
+      "location": "Rio Grande, BR",
+      "count": 1
+    },
+    {
+      "github": "pascalsenn",
+      "name": "Pascal Senn",
+      "org": "ChilliCream",
+      "location": "Zurich, CH.",
+      "count": 71
+    },
+    {
+      "github": "praveenweb",
+      "name": "Praveen Durairaju",
+      "org": "Hasura",
+      "location": "San Francisco, CA",
+      "count": 2
+    },
+    {
+      "github": "rivantsov",
+      "name": "Roman Ivantsov",
+      "org": "Microsoft",
+      "location": "Seattle, WA",
+      "count": 1
+    },
+    {
+      "github": "rstaib",
+      "name": "Rafael Staib",
+      "org": "ChilliCream",
+      "location": "Zurich, CH",
+      "count": 3
+    },
+    {
+      "github": "sachindshinde",
+      "name": "Sachin Shinde",
+      "org": "Apollo",
+      "location": "San Francisco, CA, USA",
+      "count": 26
+    },
+    {
+      "github": "saihaj",
+      "name": "Saihajpreet Singh",
+      "org": "The Guild",
+      "location": "Ottawa, ON, CA",
+      "count": 2
+    },
+    {
+      "github": "ShogunPanda",
+      "name": "Paolo Insogna",
+      "org": "NearForm",
+      "location": "Campobasso, IT",
+      "count": 1
+    },
+    {
+      "github": "SimonSapin",
+      "name": "Simon Sapin",
+      "org": "Apollo",
+      "location": "Paris, FR",
+      "count": 8
+    },
+    {
+      "github": "smyrick",
+      "name": "Shane Myrick",
+      "org": "Apollo",
+      "location": "Seattle, WA",
+      "count": 37
+    },
+    {
+      "github": "starptech",
+      "name": "Dustin Deus",
+      "org": "WunderGraph",
+      "location": "Wuppertal, Germany",
+      "count": 1
+    },
+    {
+      "github": "timsuchanek",
+      "name": "Tim Suchanek",
+      "org": "Stellate",
+      "location": "Berlin, Germany",
+      "count": 1
+    },
+    {
+      "github": "tomhoule",
+      "name": "Tom Houlé",
+      "org": "Grafbase",
+      "location": "Berlin, DE",
+      "count": 2
+    },
+    {
+      "github": "trkohler",
+      "name": "Troy Kohler",
+      "org": "Zalando",
+      "location": "Berlin, DE",
+      "count": 2
+    },
+    {
+      "github": "urigo",
+      "name": "Uri Goldshtein",
+      "org": "The Guild",
+      "location": "Tel Aviv, IL",
+      "count": 3
+    },
+    {
+      "github": "urigo.",
+      "name": "Uri Goldshtein",
+      "org": "The Guild",
+      "location": "Tel Aviv, Israel",
+      "count": 1
+    },
+    {
+      "github": "xuorig",
+      "name": "Marc Giroux",
+      "org": "Netflix",
+      "location": "Montreal, QC, CA",
+      "count": 1
+    },
+    {
+      "github": "yaacovCR",
+      "name": "Yaacov Rydzinski",
+      "org": "Individual",
+      "location": "Neve Daniel, IL",
+      "count": 4
+    }
+  ]
+}

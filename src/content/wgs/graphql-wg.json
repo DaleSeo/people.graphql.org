@@ -1,0 +1,760 @@
+{
+  "attendees": [
+    {
+      "github": "abhinand-c",
+      "name": "Abhinand C",
+      "org": "Strollby",
+      "location": "Kerala, India (IN)",
+      "count": 1
+    },
+    {
+      "github": "acao",
+      "name": "Rikki Schulte",
+      "org": "Recarb",
+      "location": "Berlin, DE",
+      "count": 1
+    },
+    {
+      "github": "adarshdigievo",
+      "name": "Adarsh Divakaran",
+      "org": "Strollby",
+      "location": "Kerala, India, IN",
+      "count": 2
+    },
+    {
+      "github": "adron",
+      "name": "Adron Hall",
+      "org": "Amazon",
+      "location": "Seattle, WA, US",
+      "count": 6
+    },
+    {
+      "github": "Alan-Cha",
+      "name": "Alan Cha",
+      "org": "IBM Research",
+      "location": "New York, NY, US",
+      "count": 2
+    },
+    {
+      "github": "aleksandarsusnjar",
+      "name": "Aleksandar Susnjar",
+      "org": "Individual",
+      "location": "Toronto, ON, CA",
+      "count": 1
+    },
+    {
+      "github": "alessbell",
+      "name": "Alessia Bellisario",
+      "org": "Apollo",
+      "location": "New York, NY, US",
+      "count": 1
+    },
+    {
+      "github": "alloy",
+      "name": "Eloy Durán",
+      "org": "Microsoft",
+      "location": "Amsterdam, NL",
+      "count": 3
+    },
+    {
+      "github": "andimarek",
+      "name": "Andi Marek",
+      "org": "GraphQL Java",
+      "location": "Brisbane, AU",
+      "count": 3
+    },
+    {
+      "github": "AnthonyMDev",
+      "name": "Anthony Miller",
+      "org": "Apollo",
+      "location": "Las Vegas, NV, US",
+      "count": 10
+    },
+    {
+      "github": "aprilrd",
+      "name": "Young Min Kim",
+      "org": "The Trade Desk",
+      "location": "San Francisco, CA, US",
+      "count": 1
+    },
+    {
+      "github": "ardatan",
+      "name": "Arda Tanrikulu",
+      "org": "The Guild",
+      "location": "Istanbul, TR",
+      "count": 1
+    },
+    {
+      "github": "asprouse",
+      "name": "Andrew Sprouse",
+      "org": "TakeShape",
+      "location": "Brooklyn, NY, US",
+      "count": 2
+    },
+    {
+      "github": "aubron",
+      "name": "Aubron Wood",
+      "org": "Google",
+      "location": "Seattle, WA, US",
+      "count": 1
+    },
+    {
+      "github": "bbakerman",
+      "name": "Brad Baker",
+      "org": "graphql-java / Atlassian",
+      "location": "Sydney, AU",
+      "count": 1
+    },
+    {
+      "github": "benjaminjkraft",
+      "name": "Ben Kraft",
+      "org": "none",
+      "location": "San Francisco, CA, US",
+      "count": 1
+    },
+    {
+      "github": "benjie",
+      "name": "Benjie Gillam",
+      "org": "Graphile",
+      "location": "Chandler's Ford, UK",
+      "count": 71
+    },
+    {
+      "github": "bignimbus",
+      "name": "Jeff Auriemma",
+      "org": "Apollo",
+      "location": "Monroe, CT, US",
+      "count": 22
+    },
+    {
+      "github": "BobaFetters",
+      "name": "Zach FettersMoore",
+      "org": "Apollo",
+      "location": "Cincinnati, OH, US",
+      "count": 2
+    },
+    {
+      "github": "bobbiejc",
+      "name": "Bobbie Cochrane",
+      "org": "StepZen",
+      "location": "Oriental, NC, US.",
+      "count": 2
+    },
+    {
+      "github": "BoD",
+      "name": "Benoit Lubek",
+      "org": "Apollo",
+      "location": "Lyon, FR.",
+      "count": 34
+    },
+    {
+      "github": "brainkim",
+      "name": "Brian Kim",
+      "org": "Apollo",
+      "location": "Palisades Park, NJ, US",
+      "count": 2
+    },
+    {
+      "github": "calvincestari",
+      "name": "Calvin Cestari",
+      "org": "Apollo",
+      "location": "Vancouver, BC",
+      "count": 7
+    },
+    {
+      "github": "captbaritone",
+      "name": "Jordan Eldredge",
+      "org": "Meta",
+      "location": "San Francisco, CA, US",
+      "count": 13
+    },
+    {
+      "github": "chillicream",
+      "name": "Michael Staib",
+      "org": "ChilliCream",
+      "location": "Zurich, CH",
+      "count": 2
+    },
+    {
+      "github": "cristaloleg",
+      "name": "Oleg Kovalov",
+      "org": "Individual",
+      "location": "Warsaw, PL",
+      "count": 3
+    },
+    {
+      "github": "cuhtis",
+      "name": "Curtis Li",
+      "org": "Meta",
+      "location": "New York, NY, US",
+      "count": 1
+    },
+    {
+      "github": "dariuszkuc",
+      "name": "Dariusz Kuc",
+      "org": "Apollo",
+      "location": "Chicago, IL, US",
+      "count": 10
+    },
+    {
+      "github": "doc-jones",
+      "name": "Doc Jones",
+      "org": "Postman",
+      "location": "Raleigh, NC, US",
+      "count": 1
+    },
+    {
+      "github": "doc-jones.",
+      "name": "Doc Jones.",
+      "org": "Postman",
+      "location": "Raleigh, NC, US",
+      "count": 3
+    },
+    {
+      "github": "dondonz",
+      "name": "Donna Zhou",
+      "org": "graphql-java / Atlassian",
+      "location": "Sydney, AU",
+      "count": 6
+    },
+    {
+      "github": "dotansimha",
+      "name": "Dotan Simha",
+      "org": "The Guild",
+      "location": "Israel",
+      "count": 1
+    },
+    {
+      "github": "dugenkui03",
+      "name": "Du Genkui",
+      "org": "GraphQL Calculator",
+      "location": "BeiJing, CN",
+      "count": 1
+    },
+    {
+      "github": "egoodwinx",
+      "name": "Emily Goodwin",
+      "org": "N/A",
+      "location": "Toronto, ON, CAN",
+      "count": 4
+    },
+    {
+      "github": "enisdenjo",
+      "name": "Denis Badurina",
+      "org": "The Guild",
+      "location": "Le Corbier, FR",
+      "count": 4
+    },
+    {
+      "github": "ernieturner",
+      "name": "Ernie Turner",
+      "org": "Coinbase",
+      "location": "Bozeman, MT, US",
+      "count": 3
+    },
+    {
+      "github": "fotoetienne",
+      "name": "Stephen Spalding",
+      "org": "Netflix",
+      "location": "Chattanooga, TN, US",
+      "count": 32
+    },
+    {
+      "github": "ghmcadams",
+      "name": "Gabriel McAdams",
+      "org": "Self.",
+      "location": "San Jose, CA, US",
+      "count": 4
+    },
+    {
+      "github": "glasser",
+      "name": "David Glasser",
+      "org": "Apollo",
+      "location": "Berkeley, CA, US",
+      "count": 2
+    },
+    {
+      "github": "guialbuk",
+      "name": "Guilherme Vieira",
+      "org": "Shopify",
+      "location": "Vancouver, BC, CA",
+      "count": 2
+    },
+    {
+      "github": "gwardwell",
+      "name": "Greg Wardwell",
+      "org": "Wayfair",
+      "location": "Fort Wayne, IN, USA",
+      "count": 1
+    },
+    {
+      "github": "hwillson",
+      "name": "Hugh Willson",
+      "org": "Apollo",
+      "location": "Manotick, ON, CA",
+      "count": 20
+    },
+    {
+      "github": "itamark",
+      "name": "Itamar Kestenbaum",
+      "org": "Meta",
+      "location": "Plainsboro, NJ, US",
+      "count": 1
+    },
+    {
+      "github": "IvanGoncharov",
+      "name": "Ivan Goncharov",
+      "org": "Keenethics",
+      "location": "Lviv, UA",
+      "count": 29
+    },
+    {
+      "github": "janettec",
+      "name": "Janette Cheng",
+      "org": "Meta",
+      "location": "New York, NY, US",
+      "count": 5
+    },
+    {
+      "github": "jbellenger",
+      "name": "James Bellenger",
+      "org": "Airbnb",
+      "location": "Oakland, CA, US",
+      "count": 5
+    },
+    {
+      "github": "jensneuse",
+      "name": "Jens Neuse",
+      "org": "WunderGraph",
+      "location": "Frankfurt, GER",
+      "count": 1
+    },
+    {
+      "github": "jerelmiller",
+      "name": "Jerel Miller",
+      "org": "Apollo",
+      "location": "Windsor, CO, US",
+      "count": 2
+    },
+    {
+      "github": "joeynenni",
+      "name": "Joey Nenni.",
+      "org": "PayPal",
+      "location": "Austin, TX",
+      "count": 5
+    },
+    {
+      "github": "JohnStarich",
+      "name": "John Starich",
+      "org": "IBM",
+      "location": "Austin, TX, US",
+      "count": 1
+    },
+    {
+      "github": "jonathanawesome",
+      "name": "Jonathan Brennan",
+      "org": "Grafbase",
+      "location": "Austin, TX, US",
+      "count": 1
+    },
+    {
+      "github": "jorydotcom",
+      "name": "Jory Burson",
+      "org": "Linux Foundation",
+      "location": "Boston, MA, US",
+      "count": 1
+    },
+    {
+      "github": "josephsavona",
+      "name": "Joseph Savona",
+      "org": "Facebook (Meta)",
+      "location": "Seattle, WA, US",
+      "count": 1
+    },
+    {
+      "github": "jovidecroock",
+      "name": "Jovi De Croock",
+      "org": "Independent",
+      "location": "Aalst, BE",
+      "count": 6
+    },
+    {
+      "github": "jovideroock",
+      "name": "JoviDe Croock",
+      "org": "Independent",
+      "location": "Aalst, BE",
+      "count": 1
+    },
+    {
+      "github": "Keweiqu",
+      "name": "Kewei Qu",
+      "org": "Meta",
+      "location": "Menlo Park, CA, US",
+      "count": 16
+    },
+    {
+      "github": "korinne",
+      "name": "Korinne Alpers",
+      "org": "Apollo",
+      "location": "Morro Bay, CA, US",
+      "count": 1
+    },
+    {
+      "github": "leebyron",
+      "name": "Lee Byron",
+      "org": "GraphQL Foundation",
+      "location": "San Francisco, CA, US",
+      "count": 76
+    },
+    {
+      "github": "lizjakubowski",
+      "name": "Liz Jakubowski",
+      "org": "Yelp",
+      "location": "San Francisco, CA, US",
+      "count": 1
+    },
+    {
+      "github": "LunaticMuch",
+      "name": "Stefano Cislaghi",
+      "org": "American Express",
+      "location": "Brighton, UK",
+      "count": 4
+    },
+    {
+      "github": "magicmark",
+      "name": "Mark Larah",
+      "org": "Yelp",
+      "location": "Austin, TX, USA",
+      "count": 20
+    },
+    {
+      "github": "martijnwalraven",
+      "name": "Martijn Walraven",
+      "org": "Apollo",
+      "location": "Amsterdam, NL",
+      "count": 2
+    },
+    {
+      "github": "martinbonin",
+      "name": "Martin Bonnin",
+      "org": "Apollo",
+      "location": "Paris, FR",
+      "count": 1
+    },
+    {
+      "github": "martinbonnin",
+      "name": "Martin Bonnin",
+      "org": "Apollo",
+      "location": "Paris, FR",
+      "count": 35
+    },
+    {
+      "github": "maryelizbeth",
+      "name": "Mary Cutrali",
+      "org": "Apollo",
+      "location": "Austin, TX, US",
+      "count": 3
+    },
+    {
+      "github": "mcohen75",
+      "name": "Mike Cohen",
+      "org": "Indeed",
+      "location": "Austin, TX, US",
+      "count": 3
+    },
+    {
+      "github": "michaelstaib",
+      "name": "Michael Staib",
+      "org": "ChilliCream",
+      "location": "Zurich, CH",
+      "count": 48
+    },
+    {
+      "github": "miqui",
+      "name": "Miguel Quintero",
+      "org": "",
+      "location": "Atlanta, GA, US",
+      "count": 2
+    },
+    {
+      "github": "mjmahone",
+      "name": "Matt Mahoney",
+      "org": "Meta",
+      "location": "New York, NY, US",
+      "count": 51
+    },
+    {
+      "github": "mmahoney",
+      "name": "Matt Mahoney",
+      "org": "Meta",
+      "location": "New York, NY, US",
+      "count": 4
+    },
+    {
+      "github": "mmatsa",
+      "name": "Morris Matsa",
+      "org": "IBM",
+      "location": "Boston, US",
+      "count": 7
+    },
+    {
+      "github": "monicatang",
+      "name": "Monica Tang",
+      "org": "Meta",
+      "location": "San Francisco, CA, US",
+      "count": 1
+    },
+    {
+      "github": "n1ru4l",
+      "name": "Laurin Quast",
+      "org": "The Guild",
+      "location": "Oftersheim, DE",
+      "count": 5
+    },
+    {
+      "github": "n1rual",
+      "name": "Laurin Quast",
+      "org": "The Guild",
+      "location": "Mannheim, DE",
+      "count": 1
+    },
+    {
+      "github": "nalchevanidze",
+      "name": "Davit Nalchevanidze",
+      "org": "Individual",
+      "location": "Hamburg, DE",
+      "count": 1
+    },
+    {
+      "github": "ndejaco2",
+      "name": "Nick DeJaco",
+      "org": "Amazon",
+      "location": "Seattle, WA, US",
+      "count": 2
+    },
+    {
+      "github": "nojvek",
+      "name": "Noj Vek",
+      "org": "Recurrency",
+      "location": "Seattle, WA, US",
+      "count": 1
+    },
+    {
+      "github": "pascalsenn",
+      "name": "Pascal Senn",
+      "org": "ChilliCream",
+      "location": "Zurich, CH",
+      "count": 17
+    },
+    {
+      "github": "phillip-kruger",
+      "name": "Phillip Kruger",
+      "org": "Red Hat",
+      "location": "Melbourne, AU",
+      "count": 2
+    },
+    {
+      "github": "phryneas",
+      "name": "Lenz Weber-Tronic",
+      "org": "Apollo",
+      "location": "Germany",
+      "count": 2
+    },
+    {
+      "github": "prasek",
+      "name": "Phil Prasek",
+      "org": "Apollo",
+      "location": "Seattle, WA, US",
+      "count": 1
+    },
+    {
+      "github": "ravangen",
+      "name": "Rob Van Gennip",
+      "org": "Shopify",
+      "location": "Toronto, ON, CA",
+      "count": 3
+    },
+    {
+      "github": "rivantsov",
+      "name": "Roman Ivantsov",
+      "org": "Individual",
+      "location": "Seattle, WA, US",
+      "count": 14
+    },
+    {
+      "github": "robgrant",
+      "name": "Rob Grant",
+      "org": "TakeShape",
+      "location": "Brooklyn, NY, US",
+      "count": 2
+    },
+    {
+      "github": "robrichard",
+      "name": "Rob Richard",
+      "org": "1stDibs",
+      "location": "New Jersey, US",
+      "count": 58
+    },
+    {
+      "github": "robzhu",
+      "name": "Robert Zhu",
+      "org": "AWS",
+      "location": "Seattle, WA",
+      "count": 3
+    },
+    {
+      "github": "rstaib",
+      "name": "Rafael Staib",
+      "org": "ChilliCream",
+      "location": "ChilliCream, CH",
+      "count": 2
+    },
+    {
+      "github": "russellyou",
+      "name": "Russell You",
+      "org": "graphql-java / Atlassian",
+      "location": "Sydney, AU",
+      "count": 1
+    },
+    {
+      "github": "RyanHoldren",
+      "name": "Ryan Holdren",
+      "org": "Meta",
+      "location": "Vancouver, BC, CA",
+      "count": 1
+    },
+    {
+      "github": "sachee",
+      "name": "Sasha Solomon",
+      "org": "Twitter",
+      "location": "Portland, OR, US",
+      "count": 4
+    },
+    {
+      "github": "saerdnaer",
+      "name": "Andreas Hubel",
+      "org": "Independent",
+      "location": "Munich, DE",
+      "count": 1
+    },
+    {
+      "github": "saihaj",
+      "name": "Saihajpreet Singh",
+      "org": "The Guild",
+      "location": "Ottawa, ON, CA",
+      "count": 8
+    },
+    {
+      "github": "shane32",
+      "name": "Shane Krueger",
+      "org": "Zbox Global",
+      "location": "Detroit, MI, US",
+      "count": 1
+    },
+    {
+      "github": "solomon-b",
+      "name": "Solomon Bothwell",
+      "org": "Hasura",
+      "location": "Los Angeles, CA",
+      "count": 1
+    },
+    {
+      "github": "statisticsftw",
+      "name": "Robert Balicki",
+      "org": "Pinterest",
+      "location": "New York, NY, US",
+      "count": 3
+    },
+    {
+      "github": "thomasheyenbrock",
+      "name": "Thomas Heyenbrock",
+      "org": "Stellate",
+      "location": "Munich, DE.",
+      "count": 1
+    },
+    {
+      "github": "timsuchanek",
+      "name": "Tim Suchanek",
+      "org": "Stellate",
+      "location": "Portland, OR, US",
+      "count": 6
+    },
+    {
+      "github": "tinnou",
+      "name": "Antoine Boyer",
+      "org": "Netflix",
+      "location": "San Jose, CA, US",
+      "count": 1
+    },
+    {
+      "github": "twof",
+      "name": "Alex Reilly",
+      "org": "DoorDash",
+      "location": "San Francisco, CA, US",
+      "count": 26
+    },
+    {
+      "github": "tyao1",
+      "name": "Tianyu Yao",
+      "org": "Meta",
+      "location": "Foser City, CA, US",
+      "count": 1
+    },
+    {
+      "github": "urig",
+      "name": "Uri Goldshtein",
+      "org": "The Guild",
+      "location": "Tel Aviv, IL",
+      "count": 1
+    },
+    {
+      "github": "urigo",
+      "name": "Uri Goldshtein",
+      "org": "The Guild",
+      "location": "Tel Aviv, IL",
+      "count": 10
+    },
+    {
+      "github": "urigo.",
+      "name": "Uri Goldshtein",
+      "org": "The Guild",
+      "location": "Tel Aviv, IL",
+      "count": 1
+    },
+    {
+      "github": "varachit",
+      "name": "Varachit Wirunpat",
+      "org": "Individual",
+      "location": "Bangkok, TH",
+      "count": 1
+    },
+    {
+      "github": "wiegell",
+      "name": "Bjørn Wiegell",
+      "org": "Trifork",
+      "location": "Aarhus, Denmark, DK",
+      "count": 1
+    },
+    {
+      "github": "xuorig",
+      "name": "Marc Giroux",
+      "org": "Netflix",
+      "location": "Montreal, Canada",
+      "count": 10
+    },
+    {
+      "github": "yaacovCR",
+      "name": "Yaacov Rydzinski",
+      "org": "n/a",
+      "location": "Neve Daniel",
+      "count": 32
+    },
+    {
+      "github": "yaacovcr.",
+      "name": "Yaacov Rydzinski",
+      "org": "N/A.",
+      "location": "Neve Daniel, IL",
+      "count": 1
+    }
+  ]
+}

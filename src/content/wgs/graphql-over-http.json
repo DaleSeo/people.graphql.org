@@ -1,0 +1,88 @@
+{
+  "attendees": [
+    {
+      "github": "benjie",
+      "name": "Benjie Gillam",
+      "org": "Graphile",
+      "location": "Chandler's Ford, UK",
+      "count": 14
+    },
+    {
+      "github": "enisdenjo",
+      "name": "Denis Badurina",
+      "org": "The Guild",
+      "location": "Sarajevo, BA",
+      "count": 3
+    },
+    {
+      "github": "ghmcadams",
+      "name": "Gabriel McAdams",
+      "org": "self",
+      "location": "San Jose, CA, USA",
+      "count": 3
+    },
+    {
+      "github": "glasser",
+      "name": "David Glasser",
+      "org": "Apollo Graph",
+      "location": "Berkeley, CA, US",
+      "count": 1
+    },
+    {
+      "github": "IvanGoncharov",
+      "name": "Ivan Goncharov",
+      "org": "Apollo",
+      "location": "Lviv, UA",
+      "count": 1
+    },
+    {
+      "github": "jovidecroock",
+      "name": "Jovi De Croock",
+      "org": "Independent",
+      "location": "Aalst, BE",
+      "count": 3
+    },
+    {
+      "github": "martinbonnin",
+      "name": "Martin Bonnin",
+      "org": "ApolloGraphQL",
+      "location": "Paris, FR",
+      "count": 12
+    },
+    {
+      "github": "michaelstaib",
+      "name": "Michael Staib",
+      "org": "ChilliCream",
+      "location": "Zurich, CH",
+      "count": 7
+    },
+    {
+      "github": "mmatsa",
+      "name": "Morris Matsa",
+      "org": "IBM",
+      "location": "Boston, US",
+      "count": 1
+    },
+    {
+      "github": "pascalsenn",
+      "name": "Pascal Senn",
+      "org": "ChilliCream",
+      "location": "Zurich, CH",
+      "count": 2
+    },
+    {
+      "github": "shane32",
+      "name": "Shane Krueger",
+      "org": "GraphQL.NET",
+      "location": "Detroit, USA",
+      "count": 5
+    },
+    {
+      "github": "spawnia",
+      "name": "Benedikt Franke",
+      "org": "graphql-php, lighthouse",
+      "location": "Bavaria, Germany",
+      "count": 2
+    }
+  ]
+}

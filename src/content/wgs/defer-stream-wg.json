@@ -1,0 +1,39 @@
+{
+  "attendees": [
+    {
+      "github": "benjie",
+      "name": "Benjie Gillam",
+      "org": "Graphile",
+      "location": "Chandler's Ford, UK",
+      "count": 7
+    },
+    {
+      "github": "BoD",
+      "name": "Benoit Lubek",
+      "org": "Apollo",
+      "location": "Lyon, FR",
+      "count": 1
+    },
+    {
+      "github": "IvanGoncharov",
+      "name": "Ivan Goncharov",
+      "org": "Apollo",
+      "location": "Lviv, UA",
+      "count": 1
+    },
+    {
+      "github": "robrichard",
+      "name": "Rob Richard",
+      "org": "1stDibs",
+      "location": "Jersey City, NJ, US",
+      "count": 9
+    },
+    {
+      "github": "yaacovCR",
+      "name": "Yaacov Rydzinski",
+      "org": "Individual",
+      "location": "Neve Daniel, IL",
+      "count": 7
+    }
+  ]
+}

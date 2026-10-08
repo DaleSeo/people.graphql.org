@@ -1,0 +1,270 @@
+{
+  "attendees": [
+    {
+      "github": "abhinand-c",
+      "name": "Abhinand C",
+      "org": "Strollby",
+      "location": "Kerala, India IN",
+      "count": 1
+    },
+    {
+      "github": "abocan-atl",
+      "name": "Andrei Bocan",
+      "org": "Atlassian",
+      "location": "San Francisco, CA, US",
+      "count": 1
+    },
+    {
+      "github": "akhilsai25",
+      "name": "Akhil Sai Devunoori",
+      "org": "Expedia",
+      "location": "Austin, TX, USA",
+      "count": 1
+    },
+    {
+      "github": "alexdias",
+      "name": "Alexandre Dias",
+      "org": "Meta Platforms",
+      "location": "Menlo Park, CA, USA",
+      "count": 2
+    },
+    {
+      "github": "alexdias       Meta",
+      "name": "Alexandre Dias",
+      "org": "London, UK",
+      "location": "",
+      "count": 1
+    },
+    {
+      "github": "aprilrd",
+      "name": "Young Min Kim",
+      "org": "The Trade Desk",
+      "location": "San Francisco, CA",
+      "count": 1
+    },
+    {
+      "github": "ariana0699",
+      "name": "Ariana Eed",
+      "org": "Independent",
+      "location": "Amsterdam, NL",
+      "count": 1
+    },
+    {
+      "github": "asoorm",
+      "name": "Ahmet Soormally",
+      "org": "WunderGraph",
+      "location": "London, UK",
+      "count": 1
+    },
+    {
+      "github": "benjie",
+      "name": "Benjie Gillam",
+      "org": "Graphile",
+      "location": "Chandler's Ford, UK",
+      "count": 3
+    },
+    {
+      "github": "bignimbus",
+      "name": "Jeff Auriemma",
+      "org": "Apollo",
+      "location": "Monroe, CT, US",
+      "count": 9
+    },
+    {
+      "github": "cernst11",
+      "name": "Christian Ernst",
+      "org": "Booking.com",
+      "location": "Amsterdam, NL",
+      "count": 1
+    },
+    {
+      "github": "DaleSeo",
+      "name": "Dale Seo",
+      "org": "Apollo",
+      "location": "Toronto, ON, CA",
+      "count": 8
+    },
+    {
+      "github": "DaleSeo.",
+      "name": "Dale Seo",
+      "org": "Apollo",
+      "location": "Toronto, ON, CA",
+      "count": 1
+    },
+    {
+      "github": "egoodwinx",
+      "name": "Emily Goodwin",
+      "org": "Independent",
+      "location": "Toronto, ON, CA",
+      "count": 1
+    },
+    {
+      "github": "erikwrede",
+      "name": "Erik Wrede",
+      "org": "Self",
+      "location": "Cologne, Germany",
+      "count": 2
+    },
+    {
+      "github": "fotoetienne",
+      "name": "Stephen Spalding",
+      "org": "Netflix",
+      "location": "Chattanooga, TN, US",
+      "count": 6
+    },
+    {
+      "github": "HieuNguyen202",
+      "name": "Hugh Nguyen",
+      "org": "Meta",
+      "location": "Chicago, IL, USA",
+      "count": 1
+    },
+    {
+      "github": "jakerobinson",
+      "name": "Jake Robinson",
+      "org": "Rubrik",
+      "location": "Indianapolis, IN",
+      "count": 1
+    },
+    {
+      "github": "jeanlucaslima",
+      "name": "Jean Lucas",
+      "org": "Viaduct",
+      "location": "São Paulo, Brazil",
+      "count": 1
+    },
+    {
+      "github": "jensneuse",
+      "name": "Jens Neuse",
+      "org": "WunderGraph",
+      "location": "Karlsruhe, DE",
+      "count": 1
+    },
+    {
+      "github": "joannaroy",
+      "name": "Joanna Roy",
+      "org": "trail",
+      "location": "Munich, Germany",
+      "count": 1
+    },
+    {
+      "github": "Keweiqu",
+      "name": "Kewei Qu",
+      "org": "Meta",
+      "location": "Menlo Park, CA, USA",
+      "count": 7
+    },
+    {
+      "github": "magicmark",
+      "name": "Mark Larah",
+      "org": "Yelp",
+      "location": "Austin, TX, USA",
+      "count": 8
+    },
+    {
+      "github": "martinbonnin",
+      "name": "Martin Bonnin",
+      "org": "Apollo",
+      "location": "Paris, FR",
+      "count": 4
+    },
+    {
+      "github": "michael-watson",
+      "name": "Michael Watson",
+      "org": "Self",
+      "location": "Granite Bay, CA, USA",
+      "count": 2
+    },
+    {
+      "github": "michaelstaib",
+      "name": "Michael Staib",
+      "org": "ChilliCream",
+      "location": "Zurich, CH",
+      "count": 5
+    },
+    {
+      "github": "miqui",
+      "name": "Miguel Quintero",
+      "org": "",
+      "location": "Atlanta, GA, US",
+      "count": 1
+    },
+    {
+      "github": "PascalSenn",
+      "name": "Pascal Senn",
+      "org": "ChilliCream",
+      "location": "Zurich, CH",
+      "count": 8
+    },
+    {
+      "github": "pinkmarlin",
+      "name": "Kenny Hammerlund",
+      "org": "Independent",
+      "location": "Houston, TX, US",
+      "count": 1
+    },
+    {
+      "github": "rebello95",
+      "name": "Michael Rebello",
+      "org": "Airbnb",
+      "location": "San Diego, CA, USA",
+      "count": 6
+    },
+    {
+      "github": "royderks",
+      "name": "Roy Derks",
+      "org": "IBM",
+      "location": "San Jose, CA, USA",
+      "count": 1
+    },
+    {
+      "github": "rstata",
+      "name": "Raymie Stata",
+      "org": "Airbnb",
+      "location": "San Francisco, CA, US",
+      "count": 6
+    },
+    {
+      "github": "rudrasrivastava",
+      "name": "Rudra Srivastava",
+      "org": "Block",
+      "location": "New York, US",
+      "count": 1
+    },
+    {
+      "github": "samuelAndalon",
+      "name": "Samuel Vazquez",
+      "org": "Expedia Group",
+      "location": "Seattle, WA, US",
+      "count": 1
+    },
+    {
+      "github": "ThoreKoritzius",
+      "name": "Thore Koritzius",
+      "org": "Self",
+      "location": "Cologne, Germany",
+      "count": 7
+    },
+    {
+      "github": "trkohler",
+      "name": "Troy Kohler",
+      "org": "Zalando",
+      "location": "Berlin, DE",
+      "count": 1
+    },
+    {
+      "github": "urigo",
+      "name": "Uri Goldshtein",
+      "org": "The Guild",
+      "location": "Tel Aviv, IL",
+      "count": 1
+    },
+    {
+      "github": "zkozina",
+      "name": "Željko Kozina",
+      "org": "Chronomill",
+      "location": "Dublin, ROI",
+      "count": 2
+    }
+  ]
+}

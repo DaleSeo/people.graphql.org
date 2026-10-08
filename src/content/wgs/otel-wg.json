@@ -1,0 +1,95 @@
+{
+  "attendees": [
+    {
+      "github": "bclozel",
+      "name": "Brian Clozel",
+      "org": "Spring at VMware",
+      "location": "Lyon, FR",
+      "count": 1
+    },
+    {
+      "github": "benjie",
+      "name": "Benjie Gillam",
+      "org": "Graphile",
+      "location": "Chandler's Ford, UK",
+      "count": 2
+    },
+    {
+      "github": "BrynCooke",
+      "name": "Bryn Cooke",
+      "org": "Apollo",
+      "location": "Norfolk, UK",
+      "count": 3
+    },
+    {
+      "github": "carodewig",
+      "name": "Caroline Rodewig",
+      "org": "Apollo",
+      "location": "Traverse City, MI, US",
+      "count": 1
+    },
+    {
+      "github": "eli0shin",
+      "name": "Eli Oshinsky",
+      "org": "PayPal",
+      "location": "Baltimore, MD",
+      "count": 5
+    },
+    {
+      "github": "EmrysMyrddin",
+      "name": "Valentin Cocaud",
+      "org": "The Guild",
+      "location": "Nantes, FR",
+      "count": 5
+    },
+    {
+      "github": "logaretm",
+      "name": "Abdelrahman Awad",
+      "org": "Sentry",
+      "location": "Vienna, Austria",
+      "count": 1
+    },
+    {
+      "github": "marcotc",
+      "name": "Marco Costa",
+      "org": "Datadog",
+      "location": "Victoria, BC, CA",
+      "count": 3
+    },
+    {
+      "github": "michaelstaib",
+      "name": "Michael Staib",
+      "org": "ChilliCream",
+      "location": "Zurich, CH",
+      "count": 1
+    },
+    {
+      "github": "pascalsenn",
+      "name": "Pascal Senn",
+      "org": "ChilliCream",
+      "location": "Zurich, CH",
+      "count": 9
+    },
+    {
+      "github": "ravangen",
+      "name": "Rob Van Gennip",
+      "org": "Shopify",
+      "location": "Toronto, ON, CA",
+      "count": 4
+    },
+    {
+      "github": "rstata",
+      "name": "Raymie Stata",
+      "org": "Airbnb",
+      "location": "San Francisco, CA",
+      "count": 1
+    },
+    {
+      "github": "trask",
+      "name": "Trask Stalnaker",
+      "org": "Microsoft",
+      "location": "Portland, OR, US",
+      "count": 2
+    }
+  ]
+}

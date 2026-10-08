@@ -1,0 +1,109 @@
+{
+  "attendees": [
+    {
+      "github": "alf",
+      "name": "Alf Lervåg",
+      "org": "Sikt",
+      "location": "Oslo, NO",
+      "count": 1
+    },
+    {
+      "github": "AnthonyMDev",
+      "name": "Anthony Miller",
+      "org": "Apollo",
+      "location": "Los Angeles, CA, US",
+      "count": 1
+    },
+    {
+      "github": "aprilrd",
+      "name": "Young Min Kim",
+      "org": "The Trade Desk",
+      "location": "San Francisco, CA, US",
+      "count": 5
+    },
+    {
+      "github": "benjie",
+      "name": "Benjie Gillam",
+      "org": "Graphile",
+      "location": "Chandler's Ford, UK",
+      "count": 15
+    },
+    {
+      "github": "bod",
+      "name": "Benoit Lubek",
+      "org": "Apollo",
+      "location": "Lyon, FR",
+      "count": 5
+    },
+    {
+      "github": "calvincestari",
+      "name": "Calvin Cestari",
+      "org": "Apollo",
+      "location": "Vancouver, BC",
+      "count": 10
+    },
+    {
+      "github": "Captbaritone",
+      "name": "Jordan Eldredge",
+      "org": "Meta (Relay)",
+      "location": "San Francisco, US",
+      "count": 6
+    },
+    {
+      "github": "ernieturner",
+      "name": "Ernie Turner",
+      "org": "Coinbase",
+      "location": "Bozeman, MT",
+      "count": 4
+    },
+    {
+      "github": "fotoetienne",
+      "name": "Stephen Spalding",
+      "org": "Netflix",
+      "location": "Los Gatos, CA, US",
+      "count": 8
+    },
+    {
+      "github": "fotoetinne",
+      "name": "Stephen Spalding",
+      "org": "Netflix",
+      "location": "Los Gatos  , CA, US",
+      "count": 1
+    },
+    {
+      "github": "itamark",
+      "name": "Itamar Kestenbaum",
+      "org": "Meta",
+      "location": "Plainsboro, NJ",
+      "count": 1
+    },
+    {
+      "github": "janettec",
+      "name": "Janette Cheng",
+      "org": "Meta",
+      "location": "New York, NY, US",
+      "count": 2
+    },
+    {
+      "github": "martinbonnin",
+      "name": "Martin Bonnin",
+      "org": "Apollo",
+      "location": "Paris, FR",
+      "count": 11
+    },
+    {
+      "github": "mjmahone",
+      "name": "Matt Mahoney",
+      "org": "Meta",
+      "location": "New York, NY",
+      "count": 2
+    },
+    {
+      "github": "twof",
+      "name": "Alex Reilly",
+      "org": "DoorDash",
+      "location": "San Francisco, CA, USA",
+      "count": 19
+    }
+  ]
+}
