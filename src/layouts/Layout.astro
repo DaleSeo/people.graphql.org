@@ -13,6 +13,14 @@ const {
   dark = false,
 } = Astro.props;
 const path = Astro.url.pathname;
+const navigation = [
+  { label: "Everyone", href: "/" },
+  { label: "Stories", href: "/stories/" },
+  { label: "Stars", href: "/stars/" },
+  { label: "Working groups", href: "/wg/" },
+  { label: "Ambassadors", href: "/ambassadors/" },
+  { label: "Speakers", href: "/speakers/" },
+];
 ---
 
 <!doctype html>
@@ -36,27 +44,22 @@ const path = Astro.url.pathname;
       Skip to content
     </a>
     <header class={styles.siteHeader}>
-      <Brand />
       <nav class={styles.navigation} aria-label="Main navigation">
-        <a
-          href="/stories/"
-          aria-current={path.startsWith("/stories") ? "page" : undefined}
-        >
-          Stories
-        </a>
-        <a
-          href="/stars/"
-          aria-current={path.startsWith("/stars") ? "page" : undefined}
-        >
-          GraphQL Stars
-        </a>
-        <a
-          href="/about/"
-          aria-current={path.startsWith("/about") ? "page" : undefined}
-        >
-          About
-        </a>
+        {navigation.map((item) => (
+          <a
+            href={item.href}
+            data-directory-link
+            aria-current={
+              (item.href === "/" ? path === "/" : path.startsWith(item.href))
+                ? "page"
+                : undefined
+            }
+          >
+            {item.label}
+          </a>
+        ))}
       </nav>
+      <Brand />
     </header>
     <main id="main">
       <slot />

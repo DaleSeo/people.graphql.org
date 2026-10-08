@@ -38,4 +38,18 @@ const stars = defineCollection({
       .optional(),
   }),
 });
-export const collections = { stories, stars };
+const people = defineCollection({
+  loader: glob({ pattern: "*.json", base: "./src/content/people" }),
+  schema: z.object({
+    name: z.string().min(1),
+    githubUsername: z
+      .string()
+      .regex(/^[a-zA-Z0-9-]+$/)
+      .optional(),
+    avatarUrl: z.string().regex(/^(\/|https:\/\/)/),
+    location: z.string().optional(),
+    organization: z.string().optional(),
+    sourceIds: z.array(z.string().min(1)),
+  }),
+});
+export const collections = { stories, stars, people };

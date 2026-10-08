@@ -38,5 +38,4 @@ Review and commit the images, data, and `manifest.json` together.
 Refreshes require network access; normal builds do not download avatars.
 Portrait rights remain with their respective owners.
 
-Homepage selection and arrangement: `src/components/StarsConstellation.astro`.
-Appearance: `.starsConstellation` in `src/components/StarsConstellation.module.css`.
+Directory portraits use the canonical `avatarUrl` in `src/content/people/<slug>.json`. Missing portraits temporarily use `jemgillam.png`. Layout and appearance are shared in `src/components/PeopleDirectory.tsx` and its CSS Module.

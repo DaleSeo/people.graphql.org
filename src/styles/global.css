@@ -141,3 +141,21 @@ body[data-theme="dark"] {
     font-size: clamp(40px, 9.7vw, 58px);
   }
 }
+
+/* Progressive enhancement: shared people keep their identity across full-page navigation. */
+@view-transition {
+  navigation: auto;
+}
+::view-transition-group(*) {
+  animation-duration: 320ms;
+}
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation-duration: 0s !important;
+  }
+}

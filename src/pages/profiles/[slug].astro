@@ -1,0 +1,185 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import {
+  people,
+  memberships,
+  pageFor,
+  hrefFor,
+  isActive,
+  transitionName,
+} from "../../lib/directory";
+import shared from "../../styles/shared.module.css";
+import styles from "./profile.module.css";
+export function getStaticPaths() {
+  return Object.entries(people).map(([slug, person]) => ({
+    params: { slug },
+    props: { slug, person },
+  }));
+}
+const { slug, person } = Astro.props;
+const appearances = memberships.filter((m) => m.person === slug);
+const groups = [...new Set(appearances.map((m) => m.page))];
+const articles = appearances.flatMap((m) => (m.article ? [m.article] : []));
+const talks = appearances.filter((m) => m.talk);
+const interests = [...new Set(appearances.flatMap((m) => m.interests ?? []))];
+const anchor = person.githubUsername ?? slug;
+const links = [
+  ...new Map(
+    appearances
+      .flatMap((m) => m.links ?? [])
+      .filter((l) => /^https?:\/\//.test(l.url))
+      .map((l) => [l.url, l]),
+  ).values(),
+];
+---
+
+<Layout
+  title={`${person.name} · People of GraphQL`}
+  description={`Discover ${person.name}'s participation in the GraphQL community.`}
+>
+  <article class:list={[shared.wrap, styles.profile]}>
+    <nav class={styles.breadcrumbs} aria-label="Breadcrumbs">
+      <a href="/">People</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">{person.name}</span>
+    </nav>
+    <header class={styles.header}>
+      <img
+        class={styles.avatar}
+        src={person.avatarUrl}
+        alt=""
+        width="240"
+        height="240"
+        style={`view-transition-name: ${transitionName(slug)}`}
+      />
+      <div>
+        <p class={shared.eyebrow}>PEOPLE OF GRAPHQL</p>
+        <h1>{person.name}</h1>
+        {person.githubUsername && (
+          <a
+            class={styles.github}
+            href={`https://github.com/${person.githubUsername}`}
+          >
+            @{person.githubUsername} ↗
+          </a>
+        )}
+        {person.location && <p class={styles.location}>{person.location}</p>}
+        {interests.length > 0 && (
+          <p class={styles.location}>Ask me about {interests.join(", ")}.</p>
+        )}
+      </div>
+    </header>
+    <section class={styles.section} aria-labelledby="community-title">
+      <h2 id="community-title">Around the community</h2>
+      <ul class={styles.appearances}>
+        {groups.map((page) => {
+          const ms = appearances.filter((m) => m.page === page);
+          const active = ms.some((m) => isActive(m));
+          return (
+            <li>
+              <a href={`${hrefFor(page)}#${anchor}`}>
+                <span>{pageFor(page).title}</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <p>
+                {!active ? "Previously active · " : ""}
+                {ms.some((m) => m.chair)
+                  ? "Chair"
+                  : ms.some((m) => m.emeriti)
+                    ? "Emeritus"
+                    : ms[0].label}
+              </p>
+              {ms[0].count !== undefined && (
+                <p>
+                  {ms[0].count} meetings attended · last attended{" "}
+                  {ms[0].lastActive}
+                </p>
+              )}
+              {ms[0].affiliation && (
+                <p>
+                  {ms[0].affiliation}
+                  {ms[0].emeriti ? " · affiliation during term" : ""}
+                </p>
+              )}
+              {ms[0].termStart && (
+                <p>
+                  Term: {ms[0].termStart} – {ms[0].termEnd}
+                </p>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+    {articles.length > 0 && (
+      <section class={styles.section} aria-labelledby="stories-title">
+        <h2 id="stories-title">Stories</h2>
+        {articles.map((a) => (
+          <a href={a.href} class={styles.story}>
+            {a.image && (
+              <img src={a.image} alt={a.imageAlt ?? ""} loading="lazy" />
+            )}
+            <div>
+              <h3>{a.title}</h3>
+              <p>{a.description}</p>
+              <span>Read the story ↗</span>
+            </div>
+          </a>
+        ))}
+      </section>
+    )}
+    {talks.length > 0 && (
+      <section class={styles.section} aria-labelledby="talks-title">
+        <h2 id="talks-title">Talks & appearances</h2>
+        {talks.map((m) => (
+          <article id={`talk-${m.talk!.id}`} class={styles.talk}>
+            <a class={styles.event} href={`${hrefFor(m.page)}#${anchor}`}>
+              {pageFor(m.page).title} ↗
+            </a>
+            <h3>{m.talk!.title}</h3>
+            {m.talk!.videoId && (
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${m.talk!.videoId}`}
+                title={m.talk!.title}
+                loading="lazy"
+                allow="encrypted-media; picture-in-picture; fullscreen"
+                allowfullscreen
+                referrerpolicy="strict-origin-when-cross-origin"
+              />
+            )}
+          </article>
+        ))}
+      </section>
+    )}
+    {appearances.some((m) => m.image) && (
+      <section class={styles.section} aria-labelledby="cards-title">
+        <h2 id="cards-title">Stars contribution cards</h2>
+        <div class={styles.cards}>
+          {appearances
+            .filter((m) => m.image)
+            .map((m) => (
+              <a href={m.image}>
+                <img
+                  src={m.image}
+                  alt={`${person.name} · ${m.label}`}
+                  loading="lazy"
+                />
+              </a>
+            ))}
+        </div>
+      </section>
+    )}
+    {links.length > 0 && (
+      <section class={styles.section} aria-labelledby="links-title">
+        <h2 id="links-title">Find {person.name} online</h2>
+        <ul class={styles.links}>
+          {links.map((link) => (
+            <li>
+              <a href={link.url}>{link.label} ↗</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </article>
+</Layout>

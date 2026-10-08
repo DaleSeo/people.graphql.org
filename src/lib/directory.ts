@@ -1,0 +1,130 @@
+import raw from "../data/directory.json" with { type: "json" };
+export interface Person {
+  name: string;
+  githubUsername?: string;
+  avatarUrl: string;
+  location?: string;
+  organization?: string;
+  sourceIds: string[];
+}
+export interface Article {
+  title: string;
+  description: string;
+  href: string;
+  publishedAt: string;
+  image?: string;
+  imageAlt?: string;
+}
+export interface Membership {
+  person: string;
+  page: string;
+  label: string;
+  emeriti?: boolean;
+  lastActive?: string;
+  count?: number;
+  chair?: boolean;
+  tsc?: boolean;
+  affiliation?: string | null;
+  termStart?: string | null;
+  termEnd?: string | null;
+  cohort?: string;
+  interests?: string[];
+  links?: { label: string; url: string }[];
+  image?: string;
+  article?: Article;
+  talk?: { title: string; id: string; videoId?: string };
+}
+export type Mode = "grid" | "list" | "article";
+export interface DirectoryPage {
+  slug: string;
+  title: string;
+  description: string;
+  action: { label: string; href: string };
+  parent: string;
+  order: string;
+  mode: Mode;
+}
+export interface Entry extends Person {
+  slug: string;
+  anchor: string;
+  active: boolean;
+  memberships: Membership[];
+  count: number;
+  chair: boolean;
+  articles: Article[];
+  transitionName: string;
+}
+const data = raw as {
+  pages: DirectoryPage[];
+  people: Record<string, Person>;
+  memberships: Membership[];
+};
+export const pages = data.pages;
+export const people = data.people;
+export const memberships = data.memberships;
+export const hrefFor = (slug: string) => (slug ? `/${slug}/` : "/");
+export const pageFor = (slug: string) => pages.find((p) => p.slug === slug)!;
+export const transitionName = (slug: string) => `person-${slug}`;
+export function isActive(m: Membership, now = new Date()) {
+  if (m.emeriti !== undefined) return !m.emeriti;
+  if (!m.lastActive) return true;
+  const cutoff = new Date(now);
+  cutoff.setUTCFullYear(cutoff.getUTCFullYear() - 2);
+  return new Date(`${m.lastActive.slice(0, 10)}T23:59:59Z`) >= cutoff;
+}
+export function entriesFor(page: DirectoryPage): Entry[] {
+  const selected = memberships.filter(
+    (m) =>
+      !page.slug || m.page === page.slug || m.page.startsWith(page.slug + "/"),
+  );
+  const grouped = new Map<string, Membership[]>();
+  for (const m of selected)
+    grouped.set(m.person, [...(grouped.get(m.person) ?? []), m]);
+  const result = [...grouped].map(([slug, ms]) => ({
+    ...people[slug],
+    slug,
+    anchor: people[slug].githubUsername ?? slug,
+    active: ms.some((m) => isActive(m)),
+    memberships: ms,
+    count: ms.reduce((n, m) => n + (m.count ?? 0), 0),
+    chair: ms.some((m) => m.chair),
+    articles: ms.flatMap((m) => (m.article ? [m.article] : [])),
+    transitionName: transitionName(slug),
+  }));
+  result.sort((a, b) => {
+    if (page.order === "attendance" && a.count !== b.count)
+      return b.count - a.count;
+    if (page.order === "chair" && a.chair !== b.chair)
+      return Number(b.chair) - Number(a.chair);
+    if (page.order === "recent")
+      return (
+        (b.articles[0]?.publishedAt ?? "").localeCompare(
+          a.articles[0]?.publishedAt ?? "",
+        ) || a.name.localeCompare(b.name)
+      );
+    return a.name.localeCompare(b.name);
+  });
+  // One build-time shuffle is shared by SSR and hydration; no position jump on first render.
+  if (page.order === "random")
+    for (let i = result.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [result[i], result[j]] = [result[j], result[i]];
+    }
+  return result;
+}
+export function categoriesFor(slug: string) {
+  const root = slug.split("/")[0];
+  return {
+    top: pages.filter((p) => p.slug && !p.parent),
+    sub: pages.filter((p) => p.parent === root && p.parent !== ""),
+  };
+}
+export function breadcrumbsFor(page: DirectoryPage) {
+  return [
+    { label: "People", href: "/" },
+    ...(page.parent
+      ? [{ label: pageFor(page.parent).title, href: hrefFor(page.parent) }]
+      : []),
+    ...(page.slug ? [{ label: page.title, href: hrefFor(page.slug) }] : []),
+  ];
+}

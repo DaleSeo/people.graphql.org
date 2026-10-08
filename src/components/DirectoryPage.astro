@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PeopleDirectory from "./PeopleDirectory";
+import {
+  entriesFor,
+  categoriesFor,
+  breadcrumbsFor,
+  type DirectoryPage,
+} from "../lib/directory";
+import shared from "../styles/shared.module.css";
+import styles from "./DirectoryPage.module.css";
+interface Props {
+  page: DirectoryPage;
+}
+const { page } = Astro.props;
+const entries = entriesFor(page);
+const breadcrumbs = breadcrumbsFor(page);
+---
+
+<Layout
+  title={page.slug ? `${page.title} · People of GraphQL` : "People of GraphQL"}
+  description={page.description}
+>
+  <section class:list={[shared.wrap, styles.intro]}>
+    <nav class={styles.breadcrumbs} aria-label="Breadcrumbs">
+      <ol>
+        {breadcrumbs.map((crumb, i) => (
+          <li>
+            <a
+              href={crumb.href}
+              aria-current={i === breadcrumbs.length - 1 ? "page" : undefined}
+            >
+              {crumb.label}
+            </a>
+          </li>
+        ))}
+      </ol>
+    </nav>
+    <p class={shared.eyebrow}>PEOPLE OF GRAPHQL</p>
+    <h1>{page.title}</h1>
+    <div class={styles.about}>
+      <p>{page.description}</p>
+      <a class={styles.action} href={page.action.href}>
+        {page.action.label}
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+  <section class={shared.wrap} aria-label="Discover people">
+    <PeopleDirectory
+      page={page}
+      entries={entries}
+      categories={categoriesFor(page.slug)}
+      client:load
+    />
+  </section>
+</Layout>

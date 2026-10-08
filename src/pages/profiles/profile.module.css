@@ -1,0 +1,150 @@
+.profile {
+  padding-top: 28px;
+  padding-bottom: 80px;
+}
+.breadcrumbs {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 48px;
+}
+.header {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 56px;
+}
+.avatar {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid rgb(191, 65, 130);
+}
+.header h1 {
+  font-size: clamp(36px, 6vw, 72px);
+  margin-bottom: 18px;
+}
+.github,
+.event {
+  color: #b8007d;
+  font-size: 14px;
+}
+.location {
+  margin: 14px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.section {
+  padding-top: 32px;
+  margin-top: 40px;
+  border-top: 1px solid var(--line);
+}
+.section > h2 {
+  font-size: 30px;
+  margin-bottom: 28px;
+}
+.appearances {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+.appearances li {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 22px;
+}
+.appearances a {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.appearances p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 6px 0 0;
+}
+.story {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.story img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.story h3,
+.talk h3 {
+  font-size: 26px;
+  margin: 12px 0;
+}
+.story p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+.story span {
+  color: #b8007d;
+  font-size: 13px;
+}
+.talk {
+  margin-bottom: 40px;
+  scroll-margin-top: 24px;
+  max-width: 900px;
+}
+.talk iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 0;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.cards img {
+  width: 100%;
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+@media (max-width: 800px) {
+  .appearances {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .header {
+    grid-template-columns: 130px minmax(0, 1fr);
+    gap: 28px;
+  }
+}
+@media (max-width: 500px) {
+  .header {
+    grid-template-columns: 1fr;
+  }
+  .avatar {
+    width: 150px;
+  }
+  .appearances,
+  .story,
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

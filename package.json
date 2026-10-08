@@ -9,14 +9,25 @@
     "preview": "astro preview",
     "check": "astro check",
     "avatars:refresh": "node scripts/refresh-avatars.mjs",
-    "wgs:sync": "node scripts/sync-wgs.mts"
+    "wgs:sync": "node scripts/sync-wgs.mts",
+    "people:sync": "node scripts/sync-people.mjs",
+    "prebuild": "npm run people:sync",
+    "predev": "npm run people:sync",
+    "test": "node --experimental-strip-types --test tests/directory.test.ts",
+    "test:site": "node scripts/check-site.mjs"
   },
   "dependencies": {
-    "astro": "^7.3.2"
+    "@astrojs/react": "^7.0.1",
+    "astro": "^7.3.2",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "yaml": "^2.9.1"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
     "@types/node": "^22.20.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "prettier": "^3.9.9",
     "prettier-plugin-astro": "^1.1.0",
     "sharp": "0.35.4",

@@ -1,0 +1,1085 @@
+{
+  "members": [
+    {
+      "name": "Artur Czemiel",
+      "github": "aexol",
+      "avatarUrl": "https://github.com/aexol.png",
+      "avatarAlt": "Artur Czemiel",
+      "cohort": "2025-09",
+      "emeriti": false,
+      "location": {
+        "name": "Poland",
+        "flag": "🇵🇱"
+      },
+      "askMeAbout": ["GraphQL Editor", "GraphQL Zeus", "schema design"],
+      "links": [
+        {
+          "label": "Bluesky",
+          "url": "https://bsky.app/profile/arturcz.bsky.social"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/aexol/"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/arturczemiel/"
+        }
+      ]
+    },
+    {
+      "name": "Donna Zhou",
+      "github": "dondonz",
+      "avatarUrl": "/img/ambassadors/donna-zhou.jpg",
+      "avatarAlt": "Donna Zhou",
+      "cohort": "2025-09",
+      "emeriti": true,
+      "term": "2025-2026",
+      "location": {
+        "name": "Australia",
+        "flag": "🇦🇺"
+      },
+      "askMeAbout": ["GraphQL Java", "open source"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/dondonz"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://linkedin.com/in/donnazhou"
+        }
+      ]
+    },
+    {
+      "name": "Dotan Simha",
+      "github": "dotansimha",
+      "avatarUrl": "https://github.com/dotansimha.png",
+      "avatarAlt": "Dotan Simha",
+      "cohort": "2025-09",
+      "emeriti": false,
+      "location": {
+        "name": "Israel",
+        "flag": "🇮🇱"
+      },
+      "askMeAbout": ["GraphQL Yoga", "federation"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/dotansimha/"
+        },
+        {
+          "label": "X",
+          "url": "https://x.com/dotansimha"
+        }
+      ]
+    },
+    {
+      "name": "Eddy Nguyen",
+      "github": "eddeee888",
+      "avatarUrl": "https://github.com/eddeee888.png",
+      "avatarAlt": "Eddy Nguyen",
+      "cohort": "2025-09",
+      "emeriti": false,
+      "location": {
+        "name": "Australia",
+        "flag": "🇦🇺"
+      },
+      "askMeAbout": ["GraphQL Code Generator", "type safety"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/eddeee888"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/eddeee888/"
+        },
+        {
+          "label": "X",
+          "url": "https://x.com/eddeee888"
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/@eddeee888"
+        }
+      ]
+    },
+    {
+      "name": "Erik Wrede",
+      "github": "erikwrede",
+      "avatarUrl": "https://github.com/erikwrede.png",
+      "avatarAlt": "Erik Wrede",
+      "cohort": "2025-09",
+      "emeriti": false,
+      "location": {
+        "name": "Germany",
+        "flag": "🇩🇪"
+      },
+      "askMeAbout": ["Python GraphQL", "Strawberry GraphQL", "GraphQL & AI"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/erikwrede/"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/erikwrede"
+        }
+      ],
+      "organizes": [
+        {
+          "name": "GraphQL Amsterdam",
+          "url": "https://www.meetup.com/amsterdam-graphql-meetup"
+        }
+      ]
+    },
+    {
+      "name": "Itamar Kestenbaum",
+      "avatarUrl": "/img/ambassadors/itamar-kestenbaum.jpg",
+      "avatarAlt": "Itamar Kestenbaum",
+      "cohort": "2025-09",
+      "emeriti": false,
+      "location": {
+        "name": "United States",
+        "flag": "🇺🇸"
+      },
+      "askMeAbout": ["error handling", "GraphQL at scale", "nullability"],
+      "links": [
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/profile.php?id=504330120"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/itamarkestenbaum/"
+        },
+        {
+          "label": "Threads",
+          "url": "https://www.threads.com/@itamarok"
+        }
+      ]
+    },
+    {
+      "name": "Jamie Barton",
+      "github": "notrab",
+      "avatarUrl": "/img/ambassadors/jamie-barton.jpg",
+      "avatarAlt": "Jamie Barton",
+      "cohort": "2025-09",
+      "emeriti": false,
+      "location": {
+        "name": "United Kingdom",
+        "flag": "🇬🇧"
+      },
+      "askMeAbout": [
+        "developer tooling",
+        "GraphQL at the edge",
+        "GraphQL education"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/notrab"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/notrab/"
+        },
+        {
+          "label": "X",
+          "url": "https://x.com/notrab"
+        },
+        {
+          "label": "Website",
+          "url": "https://notrab.dev"
+        }
+      ]
+    },
+    {
+      "name": "Jeff Auriemma",
+      "github": "bignimbus",
+      "avatarUrl": "/img/ambassadors/jeff-auriemma.jpg",
+      "avatarAlt": "Jeff Auriemma",
+      "cohort": "2025-09",
+      "emeriti": false,
+      "location": {
+        "name": "United States",
+        "flag": "🇺🇸"
+      },
+      "askMeAbout": ["GraphQL clients", "GraphQL governance", "schema design"],
+      "links": [
+        {
+          "label": "Bluesky",
+          "url": "https://bsky.app/profile/jeff.auriemma.xyz"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/bignimbus"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/jeffreyauriemma/"
+        },
+        {
+          "label": "Website",
+          "url": "https://jdauriemma.com/"
+        }
+      ],
+      "organizes": [
+        {
+          "name": "GraphQL Virtual",
+          "url": "https://guild.host/graphql-virtual"
+        }
+      ]
+    },
+    {
+      "name": "Jem Gillam",
+      "github": "jemgillam",
+      "avatarUrl": "https://github.com/jemgillam.png",
+      "avatarAlt": "Jem Gillam",
+      "cohort": "2025-09",
+      "emeriti": false,
+      "location": {
+        "name": "United Kingdom",
+        "flag": "🇬🇧"
+      },
+      "askMeAbout": ["GraphQL governance", "open source"],
+      "links": [
+        {
+          "label": "Bluesky",
+          "url": "https://bsky.app/profile/jem.graphile.org"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/jemgillam"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/jemgillam/"
+        }
+      ],
+      "organizes": [
+        {
+          "name": "London GraphQL",
+          "url": "https://guild.host/london-graphql"
+        }
+      ]
+    },
+    {
+      "name": "Jordan Eldredge",
+      "github": "captbaritone",
+      "avatarUrl": "https://github.com/captbaritone.png",
+      "avatarAlt": "Jordan Eldredge",
+      "cohort": "2025-09",
+      "emeriti": false,
+      "location": {
+        "name": "United States",
+        "flag": "🇺🇸"
+      },
+      "askMeAbout": ["Grats", "Relay", "nullability"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/captbaritone"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/jordaneldredge"
+        },
+        {
+          "label": "Threads",
+          "url": "https://www.threads.com/@captbaritone"
+        },
+        {
+          "label": "Website",
+          "url": "https://jordaneldredge.com/"
+        }
+      ]
+    },
+    {
+      "name": "Jovi De Croock",
+      "github": "jovidecroock",
+      "avatarUrl": "https://github.com/jovidecroock.png",
+      "avatarAlt": "Jovi De Croock",
+      "cohort": "2025-09",
+      "emeriti": true,
+      "term": "2025-2026",
+      "location": {
+        "name": "Belgium",
+        "flag": "🇧🇪"
+      },
+      "askMeAbout": ["gql.tada", "urql"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/jovidecroock"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/jovidecroock/"
+        },
+        {
+          "label": "X",
+          "url": "https://x.com/jovidecroock"
+        },
+        {
+          "label": "Website",
+          "url": "https://www.jovidecroock.com/blog/"
+        }
+      ]
+    },
+    {
+      "name": "Marc-Andre Giroux",
+      "github": "xuorig",
+      "avatarUrl": "https://github.com/xuorig.png",
+      "avatarAlt": "Marc-Andre Giroux",
+      "cohort": "2025-09",
+      "emeriti": true,
+      "term": "2025-2026",
+      "location": {
+        "name": "Canada",
+        "flag": "🇨🇦"
+      },
+      "askMeAbout": [
+        "API architecture",
+        "GraphQL at scale",
+        "production GraphQL"
+      ],
+      "links": [
+        {
+          "label": "BlueSky",
+          "url": "https://bsky.app/profile/xuorig.bsky.social"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/xuorig"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/magiroux/"
+        },
+        {
+          "label": "Website",
+          "url": "https://magiroux.com/"
+        }
+      ]
+    },
+    {
+      "name": "Michael Watson",
+      "github": "michael-watson",
+      "avatarUrl": "https://github.com/michael-watson.png",
+      "avatarAlt": "Michael Watson",
+      "cohort": "2025-09",
+      "emeriti": true,
+      "term": "2025-2026",
+      "location": {
+        "name": "United States",
+        "flag": "🇺🇸"
+      },
+      "askMeAbout": ["enterprise GraphQL", "GraphQL & AI", "schema design"],
+      "links": [
+        {
+          "label": "BlueSky",
+          "url": "https://bsky.app/profile/michael-watson.bsky.social"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/michael-watson"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/michael-watson-%F0%9F%96%A5-85844442/"
+        }
+      ]
+    },
+    {
+      "name": "Patrick Arminio",
+      "github": "patrick91",
+      "avatarUrl": "https://github.com/patrick91.png",
+      "avatarAlt": "Patrick Arminio",
+      "cohort": "2025-09",
+      "emeriti": false,
+      "location": {
+        "name": "United Kingdom",
+        "flag": "🇬🇧"
+      },
+      "askMeAbout": ["Strawberry GraphQL", "code-first GraphQL, type safety"],
+      "links": [
+        {
+          "label": "BlueSky",
+          "url": "https://bsky.app/profile/patrick.wtf"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/patrick91"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/patrickarminio/"
+        }
+      ]
+    },
+    {
+      "name": "Phil Pluckthun",
+      "github": "kitten",
+      "avatarUrl": "https://github.com/kitten.png",
+      "avatarAlt": "Phil Pluckthun",
+      "cohort": "2025-09",
+      "emeriti": true,
+      "term": "2025-2026",
+      "location": {
+        "name": "United Kingdom",
+        "flag": "🇬🇧"
+      },
+      "askMeAbout": ["gql.tada", "urql"],
+      "links": [
+        {
+          "label": "BlueSky",
+          "url": "https://bsky.app/profile/kitten.sh"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/kitten"
+        },
+        {
+          "label": "X",
+          "url": "http://x.com/_philpl"
+        },
+        {
+          "label": "Website",
+          "url": "https://kitten.sh/"
+        }
+      ]
+    },
+    {
+      "name": "Sarah Sanders",
+      "avatarUrl": "/img/ambassadors/sarah-sanders.jpg",
+      "avatarAlt": "Sarah Sanders",
+      "cohort": "2025-09",
+      "emeriti": false,
+      "location": {
+        "name": "United States",
+        "flag": "🇺🇸"
+      },
+      "askMeAbout": ["developer experience", "GraphQL education"],
+      "links": [
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/sarah-s-42913121a/"
+        }
+      ],
+      "organizes": [
+        {
+          "name": "Philly GraphQL",
+          "url": "https://luma.com/phillygraphql"
+        }
+      ]
+    },
+    {
+      "name": "Stephen Spalding",
+      "github": "fotoetienne",
+      "avatarUrl": "https://github.com/fotoetienne.png",
+      "avatarAlt": "Stephen Spalding",
+      "cohort": "2025-09",
+      "emeriti": false,
+      "location": {
+        "name": "United States",
+        "flag": "🇺🇸"
+      },
+      "askMeAbout": ["GraphQL & AI", "GraphQL at scale", "nullability"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/fotoetienne"
+        },
+        {
+          "label": "X",
+          "url": "https://x.com/stephenspalding"
+        },
+        {
+          "label": "Website",
+          "url": "http://stephenspalding.com/"
+        }
+      ]
+    },
+    {
+      "name": "Taz Singh",
+      "github": "tazsingh",
+      "avatarUrl": "https://github.com/tazsingh.png",
+      "avatarAlt": "Taz Singh",
+      "cohort": "2025-09",
+      "emeriti": true,
+      "term": "2025-2026",
+      "location": {
+        "name": "United Kingdom",
+        "flag": "🇬🇧"
+      },
+      "askMeAbout": ["community building", "production GraphQL"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/tazsingh"
+        },
+        {
+          "label": "X",
+          "url": "https://x.com/tazsingh"
+        }
+      ]
+    },
+    {
+      "name": "Warren Day",
+      "avatarUrl": "/img/ambassadors/warren-day.jpeg",
+      "avatarAlt": "Warren Day",
+      "cohort": "2025-09",
+      "emeriti": false,
+      "location": {
+        "name": "United Kingdom",
+        "flag": "🇬🇧"
+      },
+      "askMeAbout": [
+        "GraphQL Network Inspector",
+        "debugging",
+        "developer tooling"
+      ],
+      "links": [
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/warren-day-86b0a15a"
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/@overstacked_io"
+        }
+      ]
+    },
+    {
+      "name": "An Ngo",
+      "github": "vliegveld5",
+      "avatarUrl": "https://github.com/vliegveld5.png",
+      "avatarAlt": "An Ngo",
+      "cohort": "2025-12",
+      "emeriti": false,
+      "location": {
+        "name": "Netherlands",
+        "flag": "🇳🇱"
+      },
+      "askMeAbout": ["enterprise GraphQL", "federation", "GraphQL at scale"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/vliegveld5"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/vliegveld5/"
+        }
+      ],
+      "organizes": [
+        {
+          "name": "GraphQL Amsterdam",
+          "url": "https://www.meetup.com/amsterdam-graphql-meetup"
+        }
+      ]
+    },
+    {
+      "name": "Aurélien David",
+      "github": "spyl94",
+      "avatarUrl": "https://github.com/spyl94.png",
+      "avatarAlt": "Aurélien David",
+      "cohort": "2025-12",
+      "emeriti": false,
+      "location": {
+        "name": "France",
+        "flag": "🇫🇷"
+      },
+      "askMeAbout": ["API migration", "GraphQL education", "public APIs"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/spyl94/"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/aurel-spyl/"
+        },
+        {
+          "label": "Twitter",
+          "url": "https://x.com/spyl94"
+        }
+      ]
+    },
+    {
+      "name": "Chanda Raj Kumar",
+      "avatarUrl": "/img/ambassadors/chanda-raj-kumar.jpg",
+      "avatarAlt": "Chanda Raj Kumar",
+      "cohort": "2025-12",
+      "emeriti": false,
+      "location": {
+        "name": "India",
+        "flag": "🇮🇳"
+      },
+      "askMeAbout": ["GraphQL & AI", "GraphQL education"],
+      "links": [
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/chanda-raj-kumar-88799a1b3/"
+        }
+      ],
+      "organizes": [
+        {
+          "name": "GraphQL Hyderabad",
+          "url": "https://guild.host/graphql-hyderabad/"
+        }
+      ]
+    },
+    {
+      "name": "Derek Kuc",
+      "github": "dariuszkuc",
+      "avatarUrl": "https://github.com/dariuszkuc.png",
+      "avatarAlt": "Derek Kuc",
+      "cohort": "2025-12",
+      "emeriti": false,
+      "location": {
+        "name": "United States",
+        "flag": "🇺🇸"
+      },
+      "askMeAbout": ["Apollo Federation", "GraphQL testing"],
+      "links": [
+        {
+          "label": "Bluesky",
+          "url": "https://bsky.app/profile/dkuc.bsky.social"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/dariuszkuc"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/dkuc/"
+        },
+        {
+          "label": "Twitter",
+          "url": "https://x.com/derek_kuc"
+        }
+      ]
+    },
+    {
+      "name": "Gil Gardosh",
+      "github": "gilgardosh",
+      "avatarUrl": "https://github.com/gilgardosh.png",
+      "avatarAlt": "Gil Gardosh",
+      "cohort": "2025-12",
+      "emeriti": false,
+      "location": {
+        "name": "Israel",
+        "flag": "🇮🇱"
+      },
+      "askMeAbout": ["GraphQL Mesh", "API integration", "federation"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/gilgardosh/"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/gil-gardosh-9a5088a5/"
+        },
+        {
+          "label": "Twitter",
+          "url": "https://x.com/gilgardosh"
+        }
+      ]
+    },
+    {
+      "name": "Giuseppe Abrignani",
+      "avatarUrl": "/img/ambassadors/giuseppe-abrignani.jpg",
+      "avatarAlt": "Giuseppe Abrignani",
+      "cohort": "2025-12",
+      "emeriti": false,
+      "location": {
+        "name": "Denmark",
+        "flag": "🇩🇰"
+      },
+      "askMeAbout": ["data modelling", "GraphQL at scale", "schema tooling"],
+      "links": [
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/giuseppeabrignani/"
+        }
+      ]
+    },
+    {
+      "name": "Jayant Acharya",
+      "github": "jayant99acharya",
+      "avatarUrl": "/img/ambassadors/jayant-acharya.jpg",
+      "avatarAlt": "Jayant Acharya",
+      "cohort": "2025-12",
+      "emeriti": false,
+      "location": {
+        "name": "India",
+        "flag": "🇮🇳"
+      },
+      "askMeAbout": ["GraphQL education"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/jayant99acharya"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/jayantacharya/"
+        }
+      ],
+      "organizes": [
+        {
+          "name": "GraphQL Hyderabad",
+          "url": "https://guild.host/graphql-hyderabad"
+        }
+      ]
+    },
+    {
+      "name": "Laurin Quast",
+      "github": "n1ru4l",
+      "avatarUrl": "https://github.com/n1ru4l.png",
+      "avatarAlt": "Laurin Quast",
+      "cohort": "2025-12",
+      "emeriti": false,
+      "location": {
+        "name": "Germany",
+        "flag": "🇩🇪"
+      },
+      "askMeAbout": ["GraphQL Hive", "schema evolution"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/n1ru4l"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/laurin-quast-a47b871b4/"
+        },
+        {
+          "label": "Twitter",
+          "url": "https://x.com/n1rual"
+        }
+      ]
+    },
+    {
+      "name": "Lenz Weber-Tronic",
+      "github": "phryneas",
+      "avatarUrl": "https://github.com/phryneas.png",
+      "avatarAlt": "Lenz Weber-Tronic",
+      "cohort": "2025-12",
+      "emeriti": false,
+      "location": {
+        "name": "Germany",
+        "flag": "🇩🇪"
+      },
+      "askMeAbout": ["Apollo Client", "GraphQL clients"],
+      "links": [
+        {
+          "label": "Bluesky",
+          "url": "https://bsky.app/profile/phry.dev"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/phryneas"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/lenz-w-069040113/"
+        },
+        {
+          "label": "Website",
+          "url": "https://phryneas.de/"
+        }
+      ]
+    },
+    {
+      "name": "Rigin Oommen",
+      "github": "riginoommen",
+      "avatarUrl": "https://github.com/riginoommen.png",
+      "avatarAlt": "Rigin Oommen",
+      "cohort": "2025-12",
+      "emeriti": false,
+      "location": {
+        "name": "India",
+        "flag": "🇮🇳"
+      },
+      "askMeAbout": ["API design", "developer experience", "schema evolution"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/riginoommen"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/riginoommen/"
+        }
+      ]
+    },
+    {
+      "name": "Sabrina Wasserman",
+      "github": "s3wasser",
+      "avatarUrl": "/img/ambassadors/sabrina-wasserman.jpg",
+      "avatarAlt": "Sabrina Wasserman",
+      "cohort": "2025-12",
+      "emeriti": false,
+      "location": {
+        "name": "United States",
+        "flag": "🇺🇸"
+      },
+      "askMeAbout": ["data consistency", "GraphQL clients", "pagination"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/s3wasser"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/sabrina-wasserman-251045138/"
+        }
+      ]
+    },
+    {
+      "name": "Valentin Cocaud",
+      "github": "emrysmyrddin",
+      "avatarUrl": "https://github.com/EmrysMyrddin.png",
+      "avatarAlt": "Valentin Cocaud",
+      "cohort": "2025-12",
+      "emeriti": false,
+      "location": {
+        "name": "France",
+        "flag": "🇫🇷"
+      },
+      "askMeAbout": ["GraphQL Gateway", "GraphQL Mesh", "GraphQL Yoga"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/EmrysMyrddin"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/valentin-cocaud/"
+        }
+      ]
+    },
+    {
+      "name": "Akshat Sharma",
+      "avatarUrl": "/img/ambassadors/akshat-sharma.jpg",
+      "avatarAlt": "Akshat Sharma",
+      "cohort": "2026-03",
+      "emeriti": false,
+      "location": {
+        "name": "India",
+        "flag": "🇮🇳"
+      },
+      "askMeAbout": ["developer advocacy", "GraphQL & AI"],
+      "links": [
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/akshat-sharma11/"
+        },
+        {
+          "label": "Medium",
+          "url": "https://medium.com/@akshat111111"
+        }
+      ]
+    },
+    {
+      "name": "Ayush More",
+      "github": "ayushmore1214",
+      "avatarUrl": "/img/ambassadors/ayush-more.jpg",
+      "avatarAlt": "Ayush More",
+      "cohort": "2026-03",
+      "emeriti": false,
+      "location": {
+        "name": "India",
+        "flag": "🇮🇳"
+      },
+      "askMeAbout": ["the CNCF community, getting started with GraphQL"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/Ayushmore1214"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/ayush-more-3b4154341/"
+        },
+        {
+          "label": "Website",
+          "url": "https://heyyayush.hashnode.dev/"
+        }
+      ]
+    },
+    {
+      "name": "Emily Goodwin",
+      "github": "egoodwinx",
+      "avatarUrl": "/img/ambassadors/emily-goodwin.jpg",
+      "avatarAlt": "Emily Goodwin",
+      "cohort": "2026-03",
+      "emeriti": false,
+      "location": {
+        "name": "Canada",
+        "flag": "🇨🇦"
+      },
+      "askMeAbout": ["caching", "federation", "GraphQL tooling"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/egoodwinx"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/emily-y-goodwin/"
+        }
+      ],
+      "organizes": [
+        {
+          "name": "GraphQL Toronto",
+          "url": "https://guild.host/graphql-toronto"
+        }
+      ]
+    },
+    {
+      "name": "Ivan Goncharov",
+      "github": "ivangoncharov",
+      "avatarUrl": "https://github.com/IvanGoncharov.png",
+      "avatarAlt": "Ivan Goncharov",
+      "cohort": "2026-03",
+      "emeriti": false,
+      "location": {
+        "name": "Ukraine",
+        "flag": "🇺🇦"
+      },
+      "askMeAbout": [
+        "GraphQL Voyager",
+        "GraphQL specification",
+        "GraphQL tooling"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/IvanGoncharov"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/igoncharov/"
+        }
+      ]
+    },
+    {
+      "name": "Christian Ernst",
+      "avatarUrl": "/img/ambassadors/christian-ernst.jpg",
+      "avatarAlt": "Christian Ernst",
+      "cohort": "2026-06",
+      "emeriti": false,
+      "location": {
+        "name": "Netherlands",
+        "flag": "🇳🇱"
+      },
+      "askMeAbout": ["enterprise GraphQL", "federation", "schema evolution"],
+      "links": [
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/christian-ernst11/"
+        }
+      ],
+      "organizes": [
+        {
+          "name": "GraphQL Amsterdam",
+          "url": "https://www.meetup.com/amsterdam-graphql-meetup"
+        }
+      ]
+    },
+    {
+      "name": "Željko Kozina",
+      "avatarUrl": "/img/ambassadors/zeljko-kozina.jpg",
+      "avatarAlt": "Željko Kozina",
+      "cohort": "2026-06",
+      "emeriti": false,
+      "location": {
+        "name": "Ireland",
+        "flag": "🇮🇪"
+      },
+      "askMeAbout": ["Spring for GraphQL", "API design", "GraphQL & AI"],
+      "links": [
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/zkozina/"
+        },
+        {
+          "label": "Website",
+          "url": "https://graphqlguy.com/blog/"
+        }
+      ]
+    },
+    {
+      "name": "Eeshaan Sawant",
+      "github": "eeshaansa",
+      "avatarUrl": "https://github.com/eeshaanSA.png",
+      "avatarAlt": "Eeshaan Sawant",
+      "cohort": "2026-09",
+      "emeriti": false,
+      "location": {
+        "name": "India",
+        "flag": "🇮🇳"
+      },
+      "askMeAbout": [
+        "API governance",
+        "continuous delivery",
+        "developer communities"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/eeshaanSA"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/sawanteeshaan/"
+        },
+        {
+          "label": "X",
+          "url": "https://x.com/eeshaantwts"
+        },
+        {
+          "label": "Website",
+          "url": "https://eeshaans.substack.com/"
+        }
+      ]
+    },
+    {
+      "name": "Jean Lucas Lima",
+      "github": "jeanlucaslima",
+      "avatarUrl": "https://github.com/jeanlucaslima.png",
+      "avatarAlt": "Jean Lucas Lima",
+      "cohort": "2026-09",
+      "emeriti": false,
+      "location": {
+        "name": "Brazil",
+        "flag": "🇧🇷"
+      },
+      "askMeAbout": [
+        "developer communities",
+        "distributed systems",
+        "GraphQL architecture"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/jeanlucaslima"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/jeanlucaslima/"
+        },
+        {
+          "label": "Website",
+          "url": "https://www.jeanlucas.me/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,63 +1,70 @@
 # People of GraphQL
 
-An Astro publication for personal interviews and an annual GraphQL Stars gallery.
+A showcase of the people involved in GraphQL, built with Astro and a shared React people directory.
 
 ## Run locally
 
-Use Node.js 22.19 or newer (required by a transitive dependency). The initial build was also verified on Node.js 22.14, which reports an engine warning.
+Use Node.js 22.19 or newer.
 
 ```sh
 npm install
 npm run dev
 ```
 
-Open http://localhost:4321.  
-Run `npm run check` for Astro/TypeScript validation  
-Run `npm run build` to generate the static site in `dist/`.  
-`npm run preview` serves that build locally.
+Open http://localhost:4321. `npm run check` validates Astro and TypeScript; `npm run build` generates the static site in `dist/`; `npm run preview` serves it locally. `npm test` checks identity and activity rules; after building, `npm run test:site` checks all directory/profile links, anchors, and local assets.
 
-## Clear the local cache
-
-If you make changes but they aren't reflected on a server restart, clear the cache:
-
-```sh
-npm run dev --force
-```
-
-or while running the server:
-
-```sh
-npx astro sync --force
-```
+`npm run dev` and `npm run build` first run `people:sync`. After editing source datasets while the dev server is running, run `npm run people:sync` to update the directory. If Astro's content cache is stale, restart `npm run dev`.
 
 ## Pages
 
-- `/`: editorial homepage with a story grid and Stars introduction.
-- `/stories/`: interview archive.
-- `/stories/[id]/`: individual Markdown stories.
-- `/stars/`: redirects to the latest Stars class.
-- `/stars/2026/`, `/stars/2025/`, `/stars/2024/`: individual Stars class pages with year navigation, search, and expandable contributor profiles. Routes are generated automatically from the content years.
-- `/stars/about/`: background on GraphQL Stars and the official GraphQLConf 2024 launch keynote. Linked from the gallery without replacing it as the main Stars destination.
-- `/about/`: project introduction.
+- `/`: all people, deduplicated, with active and previously active sections.
+- `/stories/`: people with published stories. Switch to Articles for story summaries.
+- `/stories/[id]/`: existing Markdown articles; filenames define the URL.
+- `/stars/`: all Stars classes combined.
+- `/stars/2024/`, `/stars/2025/`, `/stars/2026/`: individual classes.
+- `/stars/about/`: background on GraphQL Stars.
+- `/wg/`: working group participants and the Technical Steering Committee.
+- `/wg/tsc/`: current and emeritus TSC members.
+- `/wg/spec/`, `/wg/ai/`, `/wg/federation/`, `/wg/golden-path/`, `/wg/graphql-js/`, `/wg/graphiql/`, `/wg/http/`, `/wg/community/`, `/wg/otel/`, `/wg/nullability/`, `/wg/defer-stream/`: working group directories. Federation uses the composite schemas WG dataset.
+- `/ambassadors/`: current and emeritus ambassadors.
+- `/speakers/`: GraphQLConf speakers across all imported events.
+- `/speakers/graphqlconf-2023/` through `/speakers/graphqlconf-2026/`: speakers by event.
+- `/profiles/[slug]/`: a person's participation, stories, talks, available YouTube embeds, and Stars contribution cards.
+- `/about/`: project background.
 
-## Content
+All directories share breadcrumbs, introductory copy and an action, category navigation, search, counts, and grid/list modes. Articles mode appears where stories are available. `?view=list` and `?view=article` are shareable; explicit grid/list choices are carried between category links. Search matches names, usernames, locations, organizations, participation labels, and story titles. Counts count people, not appearances.
 
-The three interviews remain **fictional samples**.
+## Identity and content
 
-Each Stars collection contains the 52 Star GitHub usernames, with public display names retrieved from GitHub on 2026-09-14. Profile text is stored locally; builds do not call the GitHub API.
+`src/content/people/<slug>.json` is the canonical identity record. The filename is a stable profile URL; prefer a GitHub username for the initial slug, otherwise a URL-safe name. Records contain a name, optional GitHub username, avatar URL, optional location and organization, and `sourceIds` tying together source records. Existing identity fields are preserved on subsequent imports, so they can be curated independently of the datasets.
+
+`npm run people:sync` reads the following local datasets:
+
+- `src/content/stars/<year>/*.json`: annual Stars entries. Historical `tsc` flags belong to that class, not today's TSC roster.
+- `src/content/stories/*.md`: story frontmatter and article links.
+- `src/content/wgs/*.json`: GitHub identity, attendance count, and `lastMeeting`.
+- `src/content/tsc/members.json`: membership, terms, historical affiliations, chair and `emeriti` status.
+- `src/content/ambassadors/members.json`: cohorts, interests, links and `emeriti` status.
+- `src/content/talks/graphqlconf/`: speaker records, explicit speaker aliases, and schedules. Only events with speakers are imported; cancelled events are excluded. Video embeds appear only where a supported YouTube URL exists.
+
+The importer writes `src/data/directory.json`, the build-time participation index, and seeds new person files. No network calls are needed for import or builds. `src/data/identity-aliases.json` records explicit cross-source identity mappings, including differences in conference usernames and source spelling. `src/data/identity-review.json` reports unmatched speaker identities with name-based candidates; review those rather than merging automatically. GitHub usernames are matched case-insensitively. Preserve source IDs when editing people. To resolve a new match, map the source ID to the canonical slug in `identity-aliases.json`, then sync again.
+
+Missing local portraits use `/avatars/jemgillam.png` as a temporary placeholder. Replace `avatarUrl` in the relevant person record as portraits become available. Existing local portraits are reused. `npm run avatars:refresh` refreshes the original Stars portraits; it does not download the whole people registry.
+
+### Activity and ordering
+
+TSC and ambassadors use explicit `emeriti` status. Working group participation is active when the last meeting is within the preceding two calendar years (calculated during the build); unknown dates remain active. Stars recognition, stories, and speaking appearances do not expire. On aggregate pages, one active participation makes the person active in that context. Rebuild to advance the activity cutoff.
+
+WG directories order by attendance (summed on the WG overview). TSC places the chair first, followed by names. Stars shuffle once per build so server rendering and client hydration agree. Stories order by newest publication date. Other directories order by name.
 
 ### Stories
-
-Add Markdown files to `src/content/stories/`. The filename becomes the URL slug.
-
-Frontmatter fields:
 
 ```yaml
 ---
 title: A story headline
 name: Interview subject
 github: github-username
-description: A short introduction to the story
+description: A short introduction
 publishedAt: 2026-09-16
 location: London, UK
 links:
@@ -70,56 +77,22 @@ hero:
 ---
 ```
 
-Write the approved article beneath the frontmatter. Stories are sorted by `publishedAt` (newest first) in the homepage and archive grids. Use a publication date in `YYYY-MM-DD` format; dates are displayed in UTC. The existing fictional drafts use placeholder dates of September 14–16, 2026 to preserve their previous order. `location`, `links`, `github`, and `hero` are optional. The stories archive displays one story per row and uses `/avatars/<github>.png` for circular contributor portraits, with derived initials as a fallback. Article pages, homepage cards, and archive cards use the hero photograph when supplied. Stories do not need `color` or `initials` fields. Remove preview wording and placeholder reading times in the homepage/archive/article templates when preparing actual publication.
+Location, links, GitHub username, and hero are optional. The directory uses avatars; articles and profile story cards use hero photographs. Existing article bodies still contain sample content. Article rendering and typography remain in `src/pages/stories/[id].astro` and `article.module.css`.
 
-Article text uses a narrow reading column beside a project introduction. Markdown blockquotes (`> Quote text`) become large pull quotes. For a photograph spanning the article width within the body, use `<figure data-story-photo>` with an `<img>` (including descriptive `alt`, dimensions, and `loading="lazy"`) and a `<figcaption>` for its caption and credit. Store photographs locally in `public/stories/`. The longer `finding-a-way-in.md` sample demonstrates these elements with repeated preview text and clearly labelled stock photography; source details are in `public/stories/README.md`.
+### Stars cards
 
-### Stars
+Optional contribution images live at `public/stars/<year>/<github-username>.png`. Profiles show only the matching year's card when the file exists; images are not shared between classes. Annual Stars JSON continues to support name, initials, year, GitHub username, avatar, contribution text, and TSC flag.
 
-Add one JSON file per person inside `src/content/stars/<year>/`. For example, `2025/benjie.json` and `2026/benjie.json` are independent entries with their own contribution text and TSC flags.
+## Layout and styling
 
-```json
-{
-  "name": "Person Name",
-  "initials": "PN",
-  "year": 2026,
-  "contribution": "An optional, verified description of their contribution.",
-  "github": "github-username",
-  "avatar": "/avatars/github-username.png"
-}
-```
+- `src/components/DirectoryPage.astro`: shared directory shell, breadcrumbs, introduction and action.
+- `src/components/PeopleDirectory.tsx`: React filters, modes, search, counts, and people sections.
+- `src/pages/[...directory].astro`: static category and subcategory routes.
+- `src/lib/directory.ts`: contextual grouping, activity, ordering and navigation.
+- `src/pages/profiles/[slug].astro`: profiles and participation links with person anchors.
+- `src/layouts/Layout.astro`: document shell, navigation and footer.
+- `src/styles/global.css` and `shared.module.css`: fonts, tokens and shared spacing.
 
-`github`, `avatar`, and `contribution` are optional. Avatars are hosted locally at `/avatars/<username>.png`, lazy-loaded, and cropped into circles; missing or failed images display initials. All years share the same current portrait. Run `npm run avatars:refresh` after adding each year’s data to download and convert all portraits to PNGs and update the local paths. Visitors do not contact GitHub for avatars. See `public/avatars/README.md` for the refresh workflow. Names and usernames appear inside expandable profiles. Search matches only names and GitHub usernames, ignoring capitalisation, within the selected year. Each year needs its own entry for returning contributors; the year navigation links to a separate page for each class, underlines the current year in pink, and automatically expands when additional years are added.
+Native cross-document View Transitions animate avatars with the same person identity between pages in supporting browsers. Other browsers navigate normally. Reduced-motion preferences disable these transitions. Avatars link to full profile pages.
 
-Schemas are in `src/content.config.ts`, global foundations in `src/styles/global.css`, and the shared shell in `src/layouts/Layout.astro`. Stories and Stars use separate Astro content collections: https://docs.astro.build/en/guides/content-collections/.
-
-Optional contribution images go in `public/stars/<year>/<github-username>.png` (for example, `public/stars/2025/acao.png`). A profile popover displays an image only when that exact year's PNG exists at build time; images are loaded when the popover opens. Add or remove files and rebuild to update availability. Images are never shared automatically between years.
-
-## Design and hosting
-
-The theme follows the current GraphQL website: locally hosted Host Grotesk and Commit Mono, Rhodamine pink accents, white editorial pages, and a near-black Stars gallery. The header and footer use the unmodified official GraphQL wordmark; the favicon uses the official hexagraph. Asset provenance and font licences are documented in `public/brand/README.md`. Contributor profiles use native dialogs. Year navigation uses standard links. Search and profile interactions use a small client-side script.
-
-TSC members are marked with `"tsc": true` on their annual Stars entry and receive a gold `#FFD700` avatar border. Membership reflects who was serving when the cards were produced in August of the class year. Set `"tsc": true` only for members serving at that time; a term ending earlier that year does not qualify. Each year’s flag is independent. Lee Byron’s chair role has no fixed term and qualifies for all three cohorts. Terms were checked against https://handbooks.graphql.org/tsc/members and its canonical source https://github.com/graphql/graphql-wg/blob/main/GraphQL-TSC.md on 2026-09-16.
-
-The Stars loader reads year folders recursively. A person’s entry in one year is independent of their entry in another year.
-
-## Styling
-
-Astro imports CSS Modules directly; no extra plugin is required. Page and component styles live beside their `.astro` files in `.module.css` files. For example, the homepage uses `src/pages/index.module.css`, Stars shares `src/components/StarsClass.astro` and `src/components/StarsClass.module.css` across all class pages, and article layouts use `src/pages/stories/article.module.css`.
-
-```astro
----
-import styles from "./index.module.css";
-import shared from "../styles/shared.module.css";
----
-
-<section class:list={[shared.wrap, styles.intro]}>...</section>
-```
-
-- `src/styles/global.css`: fonts, colour tokens, element defaults, and the body’s dark theme.
-- `src/styles/shared.module.css`: shared layout and typography utilities.
-- `src/styles/storyCards.module.css`: hero image styling and cards shared by the homepage and archive.
-- `src/layouts/Layout.module.css`: header, navigation, footer, and skip link.
-- `src/components/Brand.module.css` and `StarsConstellation.module.css`: component-specific styling.
-
-Module class names use camelCase and are accessed through the imported object. Cross-module selectors use `@value` imports, so they target the same generated classes. The Stars client script imports its module too; avoid literal CSS class names in DOM queries. Markdown body photos use the stable `data-story-photo` attribute, styled only inside the article module’s reading column. Headings and blockquotes in Markdown are styled through that column’s scoped descendant selectors.
+CSS Modules live beside their components. Use `npx prettier --write .` to format the project; generated output, dependencies, and the package lock are ignored. Prettier's Astro plugin is configured in `.prettierrc.json`.

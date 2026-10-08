@@ -1,0 +1,12 @@
+{
+  "name": "Sarah Sanders",
+  "githubUsername": "sarahxsanders",
+  "avatarUrl": "/avatars/sarahxsanders.png",
+  "sourceIds": [
+    "github:sarahxsanders",
+    "ambassador:sarah-sanders",
+    "speaker:sasanders26"
+  ],
+  "location": "United States",
+  "organization": "Docker"
+}
