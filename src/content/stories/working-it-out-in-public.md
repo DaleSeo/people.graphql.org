@@ -27,6 +27,11 @@ The finished interview will make space for more than technical milestones. What 
 
 That is the idea at the heart of People of GraphQL: time to step back from the tools and listen to the people who make them possible.
 
+<figure data-story-photo>
+  <img src="/stories/eddy-nguyen/guild-booth.jpg" alt="An open notebook, laptop, and coffee on a wooden desk." width="1800" height="1200" loading="lazy" decoding="async" />
+  <figcaption>The work between conversations. Stock photography from Unsplash, used as a layout placeholder.</figcaption>
+</figure>
+
 ## Making room for what comes next
 
 This section will close with the subject’s reflections on their work and their hopes for the community. Replace this sample with the approved interview, add their portrait, and let their own words lead the story.

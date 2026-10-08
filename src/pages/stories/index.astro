@@ -36,21 +36,19 @@ const avatars = new Set(
           .join("");
         return (
           <article class={styles.storyRow}>
-            {story.data.hero && (
-              <a
-                class={styles.hero}
-                href={`/stories/${story.id}/`}
-                tabindex="-1"
-                aria-hidden="true"
-              >
+            <div class={styles.avatar} aria-hidden="true">
+              <span>{initials}</span>
+              {story.data.github && avatars.has(avatar) && (
                 <img
-                  src={story.data.hero.src}
+                  src={avatar}
                   alt=""
+                  width="240"
+                  height="240"
                   loading="lazy"
                   decoding="async"
                 />
-              </a>
-            )}
+              )}
+            </div>
             <div class={styles.storyCopy}>
               <p class={shared.eyebrow}>
                 <time
@@ -69,19 +67,6 @@ const avatars = new Set(
               </h2>
               <p class={styles.description}>{story.data.description}</p>
               <div class={styles.person}>
-                <div class={styles.avatar} aria-hidden="true">
-                  <span>{initials}</span>
-                  {story.data.github && avatars.has(avatar) && (
-                    <img
-                      src={avatar}
-                      alt=""
-                      width="240"
-                      height="240"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  )}
-                </div>
                 <div>
                   <p class={styles.personName}>{story.data.name}</p>
                   {story.data.github && (
