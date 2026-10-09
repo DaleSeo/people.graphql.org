@@ -372,32 +372,32 @@
 .groupLinks a:hover {
   border-color: var(--pink);
 }
-.results[data-working-group][data-view="grid"] .people {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 32px;
+
+.ambassador {
+  border-color: var(--ambassador-green);
 }
-.results[data-working-group][data-view="grid"] .person {
-  display: grid;
-  grid-template-columns: 80px minmax(0, 1fr);
-  align-items: start;
-  gap: 20px;
-  padding: 24px 0;
-  border-bottom: 1px solid var(--line);
+
+.ambassadorRoles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 0;
+  margin: 10px 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.6;
 }
-.results[data-working-group][data-view="grid"] .details {
-  display: block;
+.ambassadorRoles li + li::before {
+  content: "|";
+  margin: 0 12px;
+  color: var(--muted);
 }
-.results[data-working-group][data-view="grid"] .identity h3 {
-  font-size: 21px;
+
+.featuredStory {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 8px 0;
 }
-@media (max-width: 1000px) {
-  .results[data-working-group][data-view="grid"] .people {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
-@media (max-width: 420px) {
-  .results[data-working-group][data-view="grid"] .person {
-    grid-template-columns: 60px minmax(0, 1fr);
-    gap: 16px;
-  }
+.featuredStory a {
+  color: var(--pink);
 }

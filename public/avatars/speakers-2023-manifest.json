@@ -1,0 +1,156 @@
+{
+  "downloadedAt": "2026-10-09T09:41:51.716Z",
+  "event": "graphqlconf-2023",
+  "size": 240,
+  "portraits": [
+    {
+      "slug": "adam-sayah",
+      "sourceUrl": "https://avatars.sched.co/e/3c/12615405/avatar.jpg.320x320px.jpg?742"
+    },
+    {
+      "slug": "aleksandra-sikora",
+      "sourceUrl": "https://avatars.sched.co/5/98/18743798/avatar.jpg.320x320px.jpg?43c"
+    },
+    {
+      "slug": "amy-dutton",
+      "sourceUrl": "https://avatars.sched.co/4/80/16832327/avatar.jpg.320x320px.jpg?42e"
+    },
+    {
+      "slug": "andreas-heiberg",
+      "sourceUrl": "https://avatars.sched.co/9/16/18743801/avatar.jpg.320x320px.jpg?7e0"
+    },
+    {
+      "slug": "annyce-davis",
+      "sourceUrl": "https://avatars.sched.co/3/11/2147992/avatar.jpg.320x320px.jpg?b1a"
+    },
+    {
+      "slug": "antoine-carossio",
+      "sourceUrl": "https://avatars.sched.co/c/49/18743834/avatar.jpg.320x320px.jpg?7f3"
+    },
+    {
+      "slug": "ben-sklar",
+      "sourceUrl": "https://avatars.sched.co/d/92/18743813/avatar.jpg.320x320px.jpg?042"
+    },
+    {
+      "slug": "brandon-minnick",
+      "sourceUrl": "https://avatars.sched.co/2/a4/9493345/avatar.jpg.320x320px.jpg?3ce"
+    },
+    {
+      "slug": "bryan-robinson",
+      "sourceUrl": "https://avatars.sched.co/5/8e/19076363/avatar.jpg.320x320px.jpg?ad8"
+    },
+    {
+      "slug": "bryan-yang",
+      "sourceUrl": "https://avatars.sched.co/7/1c/18743852/avatar.jpg.320x320px.jpg?de3"
+    },
+    {
+      "slug": "david-emanuel-sarabia",
+      "sourceUrl": "https://avatars.sched.co/7/71/13551525/avatar.jpg.320x320px.jpg?cc8"
+    },
+    {
+      "slug": "eitan-joffe",
+      "sourceUrl": "https://avatars.sched.co/5/e5/17700131/avatar.jpg.320x320px.jpg?aaf"
+    },
+    {
+      "slug": "gerard-klijs",
+      "sourceUrl": "https://avatars.sched.co/2/4b/18743792/avatar.jpg.320x320px.jpg?b61"
+    },
+    {
+      "slug": "gonen-jerbi",
+      "sourceUrl": "https://avatars.sched.co/3/c5/18743816/avatar.jpg.320x320px.jpg?0f8"
+    },
+    {
+      "slug": "idit-levine",
+      "sourceUrl": "https://avatars.sched.co/e/82/18769950/avatar.jpg.320x320px.jpg?ca2"
+    },
+    {
+      "slug": "jared-cheney",
+      "sourceUrl": "https://avatars.sched.co/4/e3/18775617/avatar.jpg.320x320px.jpg?01b"
+    },
+    {
+      "slug": "jim-barton",
+      "sourceUrl": "https://avatars.sched.co/f/74/12615290/avatar.jpg.320x320px.jpg?8cc"
+    },
+    {
+      "slug": "keith-babo",
+      "sourceUrl": "https://avatars.sched.co/2/05/19071264/avatar.jpg.320x320px.jpg?0c9"
+    },
+    {
+      "slug": "kevin-jones",
+      "sourceUrl": "https://avatars.sched.co/2/d0/19150962/avatar.jpg.320x320px.jpg?e4c"
+    },
+    {
+      "slug": "laurent-broudoux",
+      "sourceUrl": "https://avatars.sched.co/4/7d/18853523/avatar.jpg.320x320px.jpg?fdb"
+    },
+    {
+      "slug": "lerenzo-malcom",
+      "sourceUrl": "https://avatars.sched.co/f/19/5604312/avatar.jpg.320x320px.jpg?db4"
+    },
+    {
+      "slug": "marion-schleifer",
+      "sourceUrl": "https://avatars.sched.co/b/cf/19150944/avatar.jpg.320x320px.jpg?418"
+    },
+    {
+      "slug": "pascal-heus",
+      "sourceUrl": "https://avatars.sched.co/f/0e/15289322/avatar.jpg.320x320px.jpg?4a4"
+    },
+    {
+      "slug": "ryan-abbott",
+      "sourceUrl": "https://avatars.sched.co/9/c4/18680304/avatar.jpg.320x320px.jpg?949"
+    },
+    {
+      "slug": "sai-ekbote",
+      "sourceUrl": "https://avatars.sched.co/a/6d/14553875/avatar.jpg.320x320px.jpg?9aa"
+    },
+    {
+      "slug": "seddik-benaissa",
+      "sourceUrl": "https://avatars.sched.co/2/52/18743831/avatar.jpg.320x320px.jpg?746"
+    },
+    {
+      "slug": "serhii-korin",
+      "sourceUrl": "https://avatars.sched.co/4/6a/19235292/avatar.jpg.320x320px.jpg?3fe"
+    },
+    {
+      "slug": "shahar-binyamin",
+      "sourceUrl": "https://avatars.sched.co/c/b0/17274089/avatar.jpg.320x320px.jpg?cec"
+    },
+    {
+      "slug": "spencer-mackinnon",
+      "sourceUrl": "https://avatars.sched.co/e/9c/18743795/avatar.jpg.320x320px.jpg?957"
+    },
+    {
+      "slug": "stephanie-saunders",
+      "sourceUrl": "https://avatars.sched.co/1/65/14992671/avatar.jpg.320x320px.jpg?588"
+    },
+    {
+      "slug": "suresh-muthu",
+      "sourceUrl": "https://avatars.sched.co/2/29/18743849/avatar.jpg.320x320px.jpg?d1d"
+    },
+    {
+      "slug": "tanmai-gopal",
+      "sourceUrl": "https://avatars.sched.co/1/7c/4968006/avatar.jpg.320x320px.jpg?81a"
+    },
+    {
+      "slug": "theo-browne",
+      "sourceUrl": "https://avatars.sched.co/2/a1/19108367/avatar.jpg.320x320px.jpg?09c"
+    },
+    {
+      "slug": "tim-hall",
+      "sourceUrl": "https://avatars.sched.co/a/76/18743807/avatar.jpg.320x320px.jpg?7e7"
+    },
+    {
+      "slug": "tristan-kalos",
+      "sourceUrl": "https://avatars.sched.co/7/08/19011005/avatar.jpg.320x320px.jpg?53c"
+    },
+    {
+      "slug": "william-lyon",
+      "sourceUrl": "https://avatars.sched.co/5/93/19084292/avatar.jpg.320x320px.jpg?348"
+    },
+    {
+      "slug": "yuanchao-zhu",
+      "sourceUrl": "https://avatars.sched.co/4/46/18743882/avatar.jpg.320x320px.jpg?6ba"
+    }
+  ],
+  "failures": []
+}

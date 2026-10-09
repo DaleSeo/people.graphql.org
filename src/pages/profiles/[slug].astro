@@ -2,10 +2,13 @@
 import Layout from "../../layouts/Layout.astro";
 import {
   people,
+  localsForPerson,
   memberships,
   pageFor,
   hrefFor,
   isActive,
+  isCurrentTsc,
+  isCurrentAmbassador,
   transitionName,
 } from "../../lib/directory";
 import shared from "../../styles/shared.module.css";
@@ -21,6 +24,10 @@ const appearances = memberships.filter((m) => m.person === slug);
 const groups = [...new Set(appearances.map((m) => m.page))].filter(
   (page) => !page.startsWith("stars/") && !page.startsWith("speakers/"),
 );
+const localGroups = localsForPerson(slug);
+const projects = [
+  ...new Set(appearances.flatMap((m) => m.maintainerProjects ?? [])),
+];
 const articles = appearances.flatMap((m) => (m.article ? [m.article] : []));
 const talks = appearances.filter((m) => m.talk);
 const interests = [...new Set(appearances.flatMap((m) => m.interests ?? []))];
@@ -47,7 +54,14 @@ const links = [
     </nav>
     <header class={styles.header}>
       <img
-        class={styles.avatar}
+        class:list={[
+          styles.avatar,
+          {
+            [styles.gold]: isCurrentTsc(slug),
+            [styles.ambassador]:
+              !isCurrentTsc(slug) && isCurrentAmbassador(slug),
+          },
+        ]}
         src={person.avatarUrl}
         alt=""
         width="240"
@@ -71,7 +85,7 @@ const links = [
         )}
       </div>
     </header>
-    {groups.length > 0 && (
+    {(groups.length > 0 || localGroups.length > 0 || projects.length > 0) && (
       <section class={styles.section} aria-labelledby="community-title">
         <h2 id="community-title">Around the community</h2>
         <ul class={styles.appearances}>
@@ -81,17 +95,23 @@ const links = [
             return (
               <li>
                 <a href={`${hrefFor(page)}#${anchor}`}>
-                  <span>{pageFor(page).title}</span>
+                  <span>
+                    {page === "ambassadors"
+                      ? "GraphQL Ambassador"
+                      : pageFor(page).title}
+                  </span>
                   <span aria-hidden="true">↗</span>
                 </a>
-                <p>
-                  {!active ? "Previously active · " : ""}
-                  {ms.some((m) => m.chair)
-                    ? "Chair"
-                    : ms.some((m) => m.emeriti)
-                      ? "Emeritus"
-                      : ms[0].label}
-                </p>
+                {page !== "ambassadors" && (
+                  <p>
+                    {!active ? "Previously active · " : ""}
+                    {ms.some((m) => m.chair)
+                      ? "Chair"
+                      : ms.some((m) => m.emeriti)
+                        ? "Emeritus"
+                        : ms[0].label}
+                  </p>
+                )}
                 {ms[0].count !== undefined && (
                   <p>
                     {ms[0].count} meetings attended · last attended{" "}
@@ -112,6 +132,21 @@ const links = [
               </li>
             );
           })}
+          {localGroups.map((local) => (
+            <li>
+              <a href={local.url}>
+                <span>{local.name}</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <p>Organizer</p>
+            </li>
+          ))}
+          {projects.map((project) => (
+            <li>
+              <h3 class={styles.tileTitle}>{project}</h3>
+              <p>Maintainer</p>
+            </li>
+          ))}
         </ul>
       </section>
     )}

@@ -89,3 +89,69 @@ test("class sizes, explicit rosters and attendance order are preserved", () => {
   const wg = entriesFor(pageFor("wg/spec"));
   for (let i = 1; i < wg.length; i++) assert.ok(wg[i - 1].count >= wg[i].count);
 });
+
+test("current TSC borders are consistent across directories regardless of historical flags", () => {
+  const current = new Set(
+    memberships
+      .filter((m) => m.page === "wg/tsc" && m.emeriti === false)
+      .map((m) => m.person),
+  );
+  assert.equal(current.size, 11);
+  for (const page of pages) {
+    for (const entry of entriesFor(page))
+      assert.equal(
+        entry.currentTsc,
+        current.has(entry.slug),
+        `${page.slug}: ${entry.slug}`,
+      );
+  }
+  const stars = entriesFor(pageFor("stars/2024"));
+  assert.equal(stars.find((p) => p.slug === "enisdenjo")!.currentTsc, false);
+  assert.equal(stars.find((p) => p.slug === "benjie")!.currentTsc, true);
+});
+
+test("current ambassador status is shared across pages and excludes emeriti", () => {
+  const current = new Set(
+    memberships
+      .filter((m) => m.page === "ambassadors" && m.emeriti === false)
+      .map((m) => m.person),
+  );
+  for (const page of pages) {
+    for (const entry of entriesFor(page))
+      assert.equal(
+        entry.currentAmbassador,
+        current.has(entry.slug),
+        `${page.slug}: ${entry.slug}`,
+      );
+  }
+  const all = entriesFor(pageFor(""));
+  assert.equal(
+    all.find((p) => p.slug === "jemgillam")!.currentAmbassador,
+    true,
+  );
+  assert.equal(all.find((p) => p.slug === "dondonz")!.currentAmbassador, false);
+});
+
+test("Local organizers resolve to existing profiles and give Alf global active status", async () => {
+  const { locals, localsForPerson } = await import("../src/lib/directory.ts");
+  for (const local of locals) {
+    for (const organizer of local.organizers) {
+      if (organizer.person) assert.ok(people[organizer.person], organizer.name);
+    }
+  }
+  assert.deepEqual(
+    locals.flatMap((local) =>
+      local.organizers.filter((o) => !o.person).map((o) => o.name),
+    ),
+    ["Graham Vasquez", "Sebastien Lavoie-Courchesne", "Alexandre Ravenelle"],
+  );
+  assert.equal(localsForPerson("alf")[0].name, "GraphQL Oslo");
+  assert.equal(
+    entriesFor(pageFor("")).find((p) => p.slug === "alf")?.active,
+    true,
+  );
+  assert.equal(
+    entriesFor(pageFor("wg")).find((p) => p.slug === "alf")?.active,
+    false,
+  );
+});

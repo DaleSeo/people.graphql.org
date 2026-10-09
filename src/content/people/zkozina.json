@@ -1,10 +1,11 @@
 {
   "name": "Željko Kozina",
   "githubUsername": "zkozina",
-  "avatarUrl": "/avatars/zkozina.png",
+  "avatarUrl": "/avatars/zeljko-kozina.jpg",
   "location": "Dublin, ROI",
   "organization": "Chronomill",
   "sourceIds": [
-    "github:zkozina"
+    "github:zkozina",
+    "ambassador:zeljko-kozina"
   ]
 }

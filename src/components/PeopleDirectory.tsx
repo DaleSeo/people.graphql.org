@@ -30,20 +30,21 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
     if (selectedStar && starDialog.current && !starDialog.current.open)
       starDialog.current.showModal();
   }, [selectedStar]);
+  const isStories = page.slug === "stories";
   const hasArticles = entries.some((p) => p.articles.length);
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const requested = params.get("view");
     if (
       requested === "grid" ||
-      requested === "list" ||
+      (requested === "list" && !isStories) ||
       (requested === "article" && hasArticles)
     ) {
       setMode(requested);
       setExplicitMode(true);
     }
     setSearch(params.get("q") ?? "");
-  }, [hasArticles]);
+  }, [hasArticles, isStories]);
   function changeMode(next: Mode) {
     setMode(next);
     setExplicitMode(true);
@@ -56,7 +57,11 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
       "[data-directory-link]",
     )) {
       const target = new URL(link.href);
-      if (explicitMode && mode !== "article")
+      if (
+        explicitMode &&
+        mode !== "article" &&
+        !(mode === "list" && target.pathname === "/stories/")
+      )
         target.searchParams.set("view", mode);
       else target.searchParams.delete("view");
       link.href = target.href;
@@ -116,6 +121,22 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
   const isWorkingGroup = page.slug === "wg" || page.slug.startsWith("wg/");
   function renderPerson(p: Entry) {
     const profile = `/profiles/${p.slug}/`;
+    const ambassadorList = page.slug === "ambassadors" && mode === "list";
+    const ambassador = p.memberships.find((m) => m.page === "ambassadors");
+    const featuredStories =
+      mode === "list" &&
+      !isStories &&
+      p.featuredStories.map((story) => (
+        <h4 className={styles.featuredStory} key={story.href}>
+          <a href={story.href}>Featured story: {story.title}</a>
+        </h4>
+      ));
+    const ambassadorRoles = [
+      ...p.localNames.map((local) => `${local} organizer`),
+      ...(ambassador?.maintainerProjects ?? []).map(
+        (project) => `${project} maintainer`,
+      ),
+    ];
     const meetings = p.count
       ? `${p.count} meeting${p.count === 1 ? "" : "s"} attended`
       : undefined;
@@ -135,7 +156,7 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
       <li key={p.slug} id={p.anchor} className={styles.person}>
         <a
           href={profile}
-          className={`${styles.avatar} ${p.memberships.some((m) => m.tsc || m.chair) ? styles.gold : ""}`}
+          className={`${styles.avatar} ${p.currentTsc ? styles.gold : p.currentAmbassador ? styles.ambassador : ""}`}
           aria-label={
             isStars ? `View star card for ${p.name}` : `Meet ${p.name}`
           }
@@ -202,6 +223,7 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
                   ))}
                 <a href={profile}>View profile ↗</a>
               </div>
+              {featuredStories}
               {page.slug === "wg" && (
                 <ul
                   className={styles.groupLinks}
@@ -223,12 +245,33 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
           {mode !== "article" && !isWorkingGroup && (
             <>
               {p.location && <p className={styles.location}>{p.location}</p>}
-              <p className={styles.context}>
-                {meetings ?? context.slice(0, 3).join(" · ")}
-                {!meetings && context.length > 3
-                  ? ` · +${context.length - 3} more`
-                  : ""}
-              </p>
+              {featuredStories}
+              {ambassadorList ? (
+                <>
+                  {ambassadorRoles.length > 0 && (
+                    <ul
+                      className={styles.ambassadorRoles}
+                      aria-label="Community roles"
+                    >
+                      {ambassadorRoles.map((role) => (
+                        <li key={role}>{role}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {!ambassador?.emeriti && !!ambassador?.interests?.length && (
+                    <p className={styles.context}>
+                      Ask me about {ambassador.interests.join(", ")}.
+                    </p>
+                  )}
+                </>
+              ) : (
+                <p className={styles.context}>
+                  {meetings ?? context.slice(0, 3).join(" · ")}
+                  {!meetings && context.length > 3
+                    ? ` · +${context.length - 3} more`
+                    : ""}
+                </p>
+              )}
               {p.memberships.some((m) => m.chair) && (
                 <p className={styles.context}>TSC chair</p>
               )}
@@ -335,7 +378,11 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
       <div className={styles.viewToolbar}>
         <div className={styles.modes} role="group" aria-label="Display mode">
           {(
-            ["grid", "list", ...(hasArticles ? ["article"] : [])] as Mode[]
+            [
+              "grid",
+              ...(!isStories ? ["list"] : []),
+              ...(hasArticles ? ["article"] : []),
+            ] as Mode[]
           ).map((value) => (
             <button
               type="button"
@@ -352,11 +399,7 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
           ))}
         </div>
       </div>
-      <div
-        data-view={mode}
-        data-working-group={isWorkingGroup || undefined}
-        className={styles.results}
-      >
+      <div data-view={mode} className={styles.results}>
         <section aria-label="Active people">
           <h2 className={styles.sectionTitle} aria-live="polite">
             {activeTitle}

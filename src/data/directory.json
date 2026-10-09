@@ -385,7 +385,7 @@
     },
     "adam-sayah": {
       "name": "Adam Sayah",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/adam-sayah.png",
       "organization": "Solo.io",
       "sourceIds": [
         "speaker:adam.sayah"
@@ -523,7 +523,7 @@
     },
     "aleksandra-sikora": {
       "name": "Aleksandra Sikora",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/aleksandra-sikora.png",
       "organization": "The Guild",
       "sourceIds": [
         "speaker:alexsandra.sikora"
@@ -580,7 +580,7 @@
     },
     "amy-dutton": {
       "name": "Amy Dutton",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/amy-dutton.png",
       "organization": "RedwoodJS",
       "sourceIds": [
         "speaker:amy1908"
@@ -607,7 +607,7 @@
     },
     "andreas-heiberg": {
       "name": "Andreas Heiberg",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/andreas-heiberg.png",
       "location": "London, United Kingdom",
       "organization": "Stellate",
       "sourceIds": [
@@ -650,7 +650,7 @@
     },
     "annyce-davis": {
       "name": "Annyce Davis",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/annyce-davis.png",
       "location": "United States",
       "organization": "Meetup",
       "sourceIds": [
@@ -670,7 +670,7 @@
     },
     "antoine-carossio": {
       "name": "Antoine Carossio",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/antoine-carossio.png",
       "organization": "Escape.tech",
       "sourceIds": [
         "speaker:antoine.carossio"
@@ -813,7 +813,7 @@
     },
     "ben-sklar": {
       "name": "Ben Sklar",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/ben-sklar.png",
       "organization": "Salesforce",
       "sourceIds": [
         "speaker:bsklar"
@@ -913,7 +913,7 @@
     },
     "brandon-minnick": {
       "name": "Brandon Minnick",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/brandon-minnick.png",
       "organization": "AWS",
       "sourceIds": [
         "speaker:brandon.r.minnick"
@@ -938,7 +938,7 @@
     },
     "bryan-robinson": {
       "name": "Bryan Robinson",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/bryan-robinson.png",
       "organization": "Hygraph",
       "sourceIds": [
         "speaker:bryan.robinson2"
@@ -946,7 +946,7 @@
     },
     "bryan-yang": {
       "name": "Bryan Yang",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/bryan-yang.png",
       "organization": "Meta Platforms, Inc.",
       "sourceIds": [
         "speaker:bsy"
@@ -1160,7 +1160,7 @@
     },
     "david-emanuel-sarabia": {
       "name": "David Emanuel Sarabia",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/david-emanuel-sarabia.png",
       "organization": "inRecovery",
       "sourceIds": [
         "speaker:david3103"
@@ -1248,7 +1248,7 @@
     "dschafer": {
       "name": "Dan Schafer",
       "githubUsername": "dschafer",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/dschafer.png",
       "sourceIds": [
         "github:dschafer"
       ]
@@ -1316,7 +1316,7 @@
     },
     "eitan-joffe": {
       "name": "Eitan Joffe",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/eitan-joffe.png",
       "organization": "Inigo",
       "sourceIds": [
         "speaker:eitan15"
@@ -1521,7 +1521,7 @@
     },
     "gerard-klijs": {
       "name": "Gerard Klijs",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/gerard-klijs.png",
       "organization": "AxonIQ",
       "sourceIds": [
         "speaker:gerard.klijs"
@@ -1596,7 +1596,7 @@
     },
     "gonen-jerbi": {
       "name": "Gonen Jerbi",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/gonen-jerbi.png",
       "organization": "Wix.com",
       "sourceIds": [
         "speaker:gonenj"
@@ -1702,7 +1702,7 @@
     },
     "idit-levine": {
       "name": "Idit Levine",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/idit-levine.png",
       "organization": "Solo.io",
       "sourceIds": [
         "speaker:idit_levine.25krdj4u"
@@ -1770,7 +1770,7 @@
     },
     "jared-cheney": {
       "name": "Jared Cheney",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/jared-cheney.png",
       "location": "Boise, ID",
       "organization": "Intuit",
       "sourceIds": [
@@ -1809,7 +1809,7 @@
     "jbaxleyiii": {
       "name": "James Baxley",
       "githubUsername": "jbaxleyiii",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/jbaxleyiii.png",
       "sourceIds": [
         "github:jbaxleyiii"
       ]
@@ -1879,7 +1879,7 @@
     },
     "jim-barton": {
       "name": "Jim Barton",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/jim-barton.png",
       "location": "Myrtle Beach, SC, USA",
       "organization": "Solo.io",
       "sourceIds": [
@@ -2055,7 +2055,7 @@
     },
     "keith-babo": {
       "name": "Keith Babo",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/keith-babo.png",
       "organization": "Solo.io",
       "sourceIds": [
         "speaker:keith.babo"
@@ -2087,7 +2087,7 @@
     },
     "kevin-jones": {
       "name": "Kevin Jones",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/kevin-jones.png",
       "location": "San Francisco, CA",
       "organization": "The Graph",
       "sourceIds": [
@@ -2151,7 +2151,7 @@
     },
     "laurent-broudoux": {
       "name": "Laurent Broudoux",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/laurent-broudoux.png",
       "location": "Le Mans, France",
       "organization": "Postman",
       "sourceIds": [
@@ -2171,7 +2171,7 @@
     },
     "lerenzo-malcom": {
       "name": "LeRenzo Malcom",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/lerenzo-malcom.png",
       "organization": "Miro",
       "sourceIds": [
         "speaker:lerenzo"
@@ -2298,7 +2298,7 @@
     },
     "marion-schleifer": {
       "name": "Marion Schleifer",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/marion-schleifer.png",
       "organization": "Hasura",
       "sourceIds": [
         "speaker:marion84"
@@ -2589,7 +2589,7 @@
     "nyteshade": {
       "name": "Brielle Harrison",
       "githubUsername": "nyteshade",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/nyteshade.png",
       "sourceIds": [
         "github:nyteshade"
       ]
@@ -2634,7 +2634,7 @@
     },
     "pascal-heus": {
       "name": "Pascal Heus",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/pascal-heus.png",
       "location": "Calgary, Canada",
       "organization": "Postman",
       "sourceIds": [
@@ -2917,7 +2917,7 @@
     },
     "ryan-abbott": {
       "name": "Ryan Abbott",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/ryan-abbott.png",
       "organization": "NASA EED-3 / Element 84",
       "sourceIds": [
         "speaker:abbottry"
@@ -2978,7 +2978,7 @@
     },
     "sai-ekbote": {
       "name": "Sai Ekbote",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/sai-ekbote.png",
       "organization": "solo.io",
       "sourceIds": [
         "speaker:keerthan.ekbote"
@@ -3063,14 +3063,14 @@
     "schrockn": {
       "name": "Nick Schrock",
       "githubUsername": "schrockn",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/schrockn.png",
       "sourceIds": [
         "github:schrockn"
       ]
     },
     "seddik-benaissa": {
       "name": "Seddik Benaissa",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/seddik-benaissa.png",
       "organization": "Northeastern University",
       "sourceIds": [
         "speaker:sdk.bens"
@@ -3086,7 +3086,7 @@
     },
     "serhii-korin": {
       "name": "Serhii Korin",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/serhii-korin.png",
       "location": "Amsterdam",
       "organization": "Booking.com",
       "sourceIds": [
@@ -3095,7 +3095,7 @@
     },
     "shahar-binyamin": {
       "name": "Shahar Binyamin",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/shahar-binyamin.png",
       "organization": "Inigo",
       "sourceIds": [
         "speaker:shahar_binyamin.24vrzgo4"
@@ -3205,7 +3205,7 @@
     },
     "spencer-mackinnon": {
       "name": "Spencer MacKinnon",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/spencer-mackinnon.png",
       "organization": "Okta",
       "sourceIds": [
         "speaker:spencer211"
@@ -3249,7 +3249,7 @@
     },
     "stephanie-saunders": {
       "name": "Stephanie Saunders",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/stephanie-saunders.png",
       "organization": "Coinbase",
       "sourceIds": [
         "speaker:stephanie.saunders2"
@@ -3282,7 +3282,7 @@
     },
     "suresh-muthu": {
       "name": "Suresh Muthu",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/suresh-muthu.png",
       "organization": "Intuit",
       "sourceIds": [
         "speaker:suresh_muthu"
@@ -3290,7 +3290,7 @@
     },
     "tanmai-gopal": {
       "name": "Tanmai Gopal",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/tanmai-gopal.png",
       "location": "San Francisco",
       "organization": "Hasura",
       "sourceIds": [
@@ -3308,7 +3308,7 @@
     },
     "theo-browne": {
       "name": "Theo Browne",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/theo-browne.png",
       "location": "San Francisco",
       "organization": "Ping Labs",
       "sourceIds": [
@@ -3339,7 +3339,7 @@
     },
     "tim-hall": {
       "name": "Tim Hall",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/tim-hall.png",
       "organization": "Postman",
       "sourceIds": [
         "speaker:tim.hall.engr"
@@ -3407,7 +3407,7 @@
     },
     "tristan-kalos": {
       "name": "Tristan Kalos",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/tristan-kalos.png",
       "location": "San Francisco, USA",
       "organization": "Escape",
       "sourceIds": [
@@ -3562,7 +3562,7 @@
     },
     "william-lyon": {
       "name": "William Lyon",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/william-lyon.png",
       "location": "San Mateo, CA",
       "organization": "Neo4j",
       "sourceIds": [
@@ -3626,7 +3626,7 @@
     },
     "yuanchao-zhu": {
       "name": "Yuanchao Zhu",
-      "avatarUrl": "/avatars/jemgillam.png",
+      "avatarUrl": "/avatars/yuanchao-zhu.png",
       "organization": "Meta",
       "sourceIds": [
         "speaker:yczhu"
@@ -3656,22 +3656,15 @@
         "speaker:zack.warnimont"
       ]
     },
-    "zeljko-kozina": {
-      "name": "Željko Kozina",
-      "avatarUrl": "/avatars/zeljko-kozina.jpg",
-      "location": "Ireland",
-      "sourceIds": [
-        "ambassador:zeljko-kozina"
-      ]
-    },
     "zkozina": {
       "name": "Željko Kozina",
       "githubUsername": "zkozina",
-      "avatarUrl": "/avatars/zkozina.png",
+      "avatarUrl": "/avatars/zeljko-kozina.jpg",
       "location": "Dublin, ROI",
       "organization": "Chronomill",
       "sourceIds": [
-        "github:zkozina"
+        "github:zkozina",
+        "ambassador:zeljko-kozina"
       ]
     }
   },
@@ -6999,6 +6992,11 @@
         "GraphQL Zeus",
         "schema design"
       ],
+      "maintainerProjects": [
+        "GraphQL Zeus",
+        "GraphQL Editor"
+      ],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "Bluesky",
@@ -7024,6 +7022,8 @@
         "GraphQL Java",
         "open source"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "GitHub",
@@ -7045,6 +7045,10 @@
         "GraphQL Yoga",
         "federation"
       ],
+      "maintainerProjects": [
+        "Yoga"
+      ],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "GitHub",
@@ -7066,6 +7070,10 @@
         "GraphQL Code Generator",
         "type safety"
       ],
+      "maintainerProjects": [
+        "GraphQL Code Gen"
+      ],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "GitHub",
@@ -7096,6 +7104,13 @@
         "Strawberry GraphQL",
         "GraphQL & AI"
       ],
+      "maintainerProjects": [
+        "Python GraphQL",
+        "Strawberry"
+      ],
+      "graphqlLocals": [
+        "Amsterdam"
+      ],
       "links": [
         {
           "label": "GitHub",
@@ -7118,6 +7133,8 @@
         "GraphQL at scale",
         "nullability"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "Facebook",
@@ -7144,6 +7161,8 @@
         "GraphQL at the edge",
         "GraphQL education"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "GitHub",
@@ -7174,6 +7193,10 @@
         "GraphQL governance",
         "schema design"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [
+        "Virtual"
+      ],
       "links": [
         {
           "label": "Bluesky",
@@ -7203,6 +7226,13 @@
         "GraphQL governance",
         "open source"
       ],
+      "maintainerProjects": [
+        "Grafast",
+        "PostGraphile"
+      ],
+      "graphqlLocals": [
+        "London"
+      ],
       "links": [
         {
           "label": "Bluesky",
@@ -7229,6 +7259,11 @@
         "Relay",
         "nullability"
       ],
+      "maintainerProjects": [
+        "Grats",
+        "Relay"
+      ],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "GitHub",
@@ -7258,6 +7293,8 @@
         "gql.tada",
         "urql"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "GitHub",
@@ -7288,6 +7325,8 @@
         "GraphQL at scale",
         "production GraphQL"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "BlueSky",
@@ -7318,6 +7357,8 @@
         "GraphQL & AI",
         "schema design"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "BlueSky",
@@ -7343,6 +7384,10 @@
         "Strawberry GraphQL",
         "code-first GraphQL, type safety"
       ],
+      "maintainerProjects": [
+        "Strawberry"
+      ],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "BlueSky",
@@ -7368,6 +7413,8 @@
         "gql.tada",
         "urql"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "BlueSky",
@@ -7397,6 +7444,10 @@
         "developer experience",
         "GraphQL education"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [
+        "Philly"
+      ],
       "links": [
         {
           "label": "LinkedIn",
@@ -7415,6 +7466,8 @@
         "GraphQL at scale",
         "nullability"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "GitHub",
@@ -7440,6 +7493,8 @@
         "community building",
         "production GraphQL"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "GitHub",
@@ -7462,6 +7517,10 @@
         "debugging",
         "developer tooling"
       ],
+      "maintainerProjects": [
+        "GraphQL Network Inspector"
+      ],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "LinkedIn",
@@ -7483,6 +7542,10 @@
         "enterprise GraphQL",
         "federation",
         "GraphQL at scale"
+      ],
+      "maintainerProjects": [],
+      "graphqlLocals": [
+        "Amsterdam"
       ],
       "links": [
         {
@@ -7506,6 +7569,8 @@
         "GraphQL education",
         "public APIs"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "GitHub",
@@ -7531,6 +7596,10 @@
         "GraphQL & AI",
         "GraphQL education"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [
+        "Hyderabad"
+      ],
       "links": [
         {
           "label": "LinkedIn",
@@ -7548,6 +7617,10 @@
         "Apollo Federation",
         "GraphQL testing"
       ],
+      "maintainerProjects": [
+        "Apollo Federation"
+      ],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "Bluesky",
@@ -7578,6 +7651,10 @@
         "API integration",
         "federation"
       ],
+      "maintainerProjects": [
+        "Mesh"
+      ],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "GitHub",
@@ -7604,6 +7681,8 @@
         "GraphQL at scale",
         "schema tooling"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "LinkedIn",
@@ -7619,6 +7698,10 @@
       "cohort": "2025-12",
       "interests": [
         "GraphQL education"
+      ],
+      "maintainerProjects": [],
+      "graphqlLocals": [
+        "Hyderabad"
       ],
       "links": [
         {
@@ -7641,6 +7724,10 @@
         "GraphQL Hive",
         "schema evolution"
       ],
+      "maintainerProjects": [
+        "Hive"
+      ],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "GitHub",
@@ -7666,6 +7753,10 @@
         "Apollo Client",
         "GraphQL clients"
       ],
+      "maintainerProjects": [
+        "Apollo Client"
+      ],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "Bluesky",
@@ -7696,6 +7787,8 @@
         "developer experience",
         "schema evolution"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "GitHub",
@@ -7718,6 +7811,8 @@
         "GraphQL clients",
         "pagination"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "GitHub",
@@ -7740,6 +7835,12 @@
         "GraphQL Mesh",
         "GraphQL Yoga"
       ],
+      "maintainerProjects": [
+        "Hive Gateway",
+        "Mesh",
+        "Yoga"
+      ],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "GitHub",
@@ -7761,6 +7862,8 @@
         "developer advocacy",
         "GraphQL & AI"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "LinkedIn",
@@ -7781,6 +7884,8 @@
       "interests": [
         "the CNCF community, getting started with GraphQL"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "GitHub",
@@ -7807,6 +7912,10 @@
         "federation",
         "GraphQL tooling"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [
+        "Toronto"
+      ],
       "links": [
         {
           "label": "GitHub",
@@ -7829,6 +7938,10 @@
         "GraphQL specification",
         "GraphQL tooling"
       ],
+      "maintainerProjects": [
+        "GraphQL Voyager"
+      ],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "GitHub",
@@ -7851,6 +7964,10 @@
         "federation",
         "schema evolution"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [
+        "Amsterdam"
+      ],
       "links": [
         {
           "label": "LinkedIn",
@@ -7859,7 +7976,7 @@
       ]
     },
     {
-      "person": "zeljko-kozina",
+      "person": "zkozina",
       "page": "ambassadors",
       "label": "GraphQL Ambassador",
       "emeriti": false,
@@ -7869,6 +7986,10 @@
         "API design",
         "GraphQL & AI"
       ],
+      "maintainerProjects": [
+        "Spring for GraphQL"
+      ],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "LinkedIn",
@@ -7891,6 +8012,8 @@
         "continuous delivery",
         "developer communities"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "GitHub",
@@ -7921,6 +8044,8 @@
         "distributed systems",
         "GraphQL architecture"
       ],
+      "maintainerProjects": [],
+      "graphqlLocals": [],
       "links": [
         {
           "label": "GitHub",

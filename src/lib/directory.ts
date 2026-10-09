@@ -1,3 +1,4 @@
+import localGroups from "../content/locals/groups.json" with { type: "json" };
 import raw from "../data/directory.json" with { type: "json" };
 export interface Person {
   name: string;
@@ -29,6 +30,8 @@ export interface Membership {
   termEnd?: string | null;
   cohort?: string;
   interests?: string[];
+  maintainerProjects?: string[];
+  graphqlLocals?: string[];
   links?: { label: string; url: string }[];
   image?: string;
   article?: Article;
@@ -48,10 +51,14 @@ export interface Entry extends Person {
   slug: string;
   anchor: string;
   active: boolean;
+  currentTsc: boolean;
+  currentAmbassador: boolean;
+  localNames: string[];
   memberships: Membership[];
   count: number;
   chair: boolean;
   articles: Article[];
+  featuredStories: Article[];
   transitionName: string;
 }
 const data = raw as {
@@ -62,6 +69,24 @@ const data = raw as {
 export const pages = data.pages;
 export const people = data.people;
 export const memberships = data.memberships;
+export const locals = localGroups;
+export const localsForPerson = (slug: string) =>
+  locals.filter((local) =>
+    local.organizers.some((organizer) => organizer.person === slug),
+  );
+const currentTsc = new Set(
+  memberships
+    .filter((m) => m.page === "wg/tsc" && m.emeriti === false)
+    .map((m) => m.person),
+);
+export const isCurrentTsc = (slug: string) => currentTsc.has(slug);
+const currentAmbassadors = new Set(
+  memberships
+    .filter((m) => m.page === "ambassadors" && m.emeriti === false)
+    .map((m) => m.person),
+);
+export const isCurrentAmbassador = (slug: string) =>
+  currentAmbassadors.has(slug);
 export const hrefFor = (slug: string) => (slug ? `/${slug}/` : "/");
 export const pageFor = (slug: string) => pages.find((p) => p.slug === slug)!;
 export const transitionName = (slug: string) => `person-${slug}`;
@@ -84,10 +109,26 @@ export function entriesFor(page: DirectoryPage): Entry[] {
     ...people[slug],
     slug,
     anchor: people[slug].githubUsername ?? slug,
-    active: ms.some((m) => isActive(m)),
+    active:
+      ms.some((m) => isActive(m)) ||
+      (!page.slug &&
+        localsForPerson(slug).some((local) =>
+          isActive({
+            person: slug,
+            page: "",
+            label: local.name,
+            lastActive: local.lastMet,
+          }),
+        )),
+    currentTsc: isCurrentTsc(slug),
+    currentAmbassador: isCurrentAmbassador(slug),
+    localNames: localsForPerson(slug).map((local) => local.name),
     memberships: ms,
     count: ms.reduce((n, m) => n + (m.count ?? 0), 0),
     chair: ms.some((m) => m.chair),
+    featuredStories: memberships
+      .filter((m) => m.person === slug)
+      .flatMap((m) => (m.article ? [m.article] : [])),
     articles: ms.flatMap((m) => (m.article ? [m.article] : [])),
     transitionName: transitionName(slug),
   }));

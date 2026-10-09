@@ -1,0 +1,155 @@
+[
+  {
+    "slug": "london",
+    "name": "London GraphQL",
+    "url": "https://guild.host/london-graphql",
+    "lastMet": "2025-07-01",
+    "organizers": [
+      {
+        "name": "Jem Gillam",
+        "person": "jemgillam"
+      },
+      {
+        "name": "Benjie Gillam",
+        "person": "benjie"
+      }
+    ]
+  },
+  {
+    "slug": "paris",
+    "name": "GraphQL Paris",
+    "url": "https://www.meetup.com/fr-FR/parisgraphql/",
+    "lastMet": "2025-10-22",
+    "organizers": [
+      {
+        "name": "Martin Bonnin",
+        "person": "martinbonnin"
+      }
+    ]
+  },
+  {
+    "slug": "hyderabad",
+    "name": "GraphQL Hyderabad",
+    "url": "https://guild.host/graphql-hyderabad/",
+    "lastMet": "2026-09-27",
+    "organizers": [
+      {
+        "name": "Chanda Raj Kumar",
+        "person": "chanda-raj-kumar"
+      },
+      {
+        "name": "Jayant Acharya",
+        "person": "jayant99acharya"
+      }
+    ]
+  },
+  {
+    "slug": "austin",
+    "name": "GraphQL Austin",
+    "url": "https://guild.host/atx-graphql/",
+    "lastMet": "2026-03-19",
+    "organizers": [
+      {
+        "name": "Mark Larah",
+        "person": "magicmark"
+      }
+    ]
+  },
+  {
+    "slug": "philadelphia",
+    "name": "Philly GraphQL",
+    "url": "https://luma.com/phillygraphql",
+    "lastMet": "2026-01-22",
+    "organizers": [
+      {
+        "name": "Sarah Sanders",
+        "person": "sarahxsanders"
+      },
+      {
+        "name": "Graham Vasquez"
+      }
+    ]
+  },
+  {
+    "slug": "zurich",
+    "name": "GraphQL Zurich",
+    "url": "https://www.meetup.com/graphql-zurich",
+    "lastMet": "2026-03-12",
+    "organizers": [
+      {
+        "name": "Michael Staib",
+        "person": "michaelstaib"
+      }
+    ]
+  },
+  {
+    "slug": "montreal",
+    "name": "GraphQL Montreal",
+    "url": "https://guild.host/graphql-montreal",
+    "lastMet": "2026-03-18",
+    "organizers": [
+      {
+        "name": "Sebastien Lavoie-Courchesne"
+      },
+      {
+        "name": "Alexandre Ravenelle"
+      }
+    ]
+  },
+  {
+    "slug": "amsterdam",
+    "name": "GraphQL Amsterdam",
+    "url": "https://www.meetup.com/amsterdam-graphql-meetup",
+    "lastMet": "2026-03-19",
+    "organizers": [
+      {
+        "name": "An Ngo",
+        "person": "vliegveld5"
+      },
+      {
+        "name": "Erik Wrede",
+        "person": "erikwrede"
+      },
+      {
+        "name": "Christian Ernst",
+        "person": "cernst11"
+      }
+    ]
+  },
+  {
+    "slug": "oslo",
+    "name": "GraphQL Oslo",
+    "url": "https://guild.host/graphql-oslo/",
+    "lastMet": "2026-01-26",
+    "organizers": [
+      {
+        "name": "Alf",
+        "person": "alf"
+      }
+    ]
+  },
+  {
+    "slug": "toronto",
+    "name": "GraphQL Toronto",
+    "url": "https://guild.host/graphql-toronto",
+    "lastMet": "2026-10-07",
+    "organizers": [
+      {
+        "name": "Emily Goodwin",
+        "person": "egoodwinx"
+      }
+    ]
+  },
+  {
+    "slug": "virtual",
+    "name": "GraphQL Virtual",
+    "url": "https://guild.host/graphql-virtual",
+    "lastMet": "2026-09-28",
+    "organizers": [
+      {
+        "name": "Jeff Auriemma",
+        "person": "bignimbus"
+      }
+    ]
+  }
+]

@@ -42,6 +42,7 @@
   background: var(--paper);
   font-synthesis: none;
   --pink: #e10098;
+  --ambassador-green: #2e9978;
   --line: hsl(77 14% 90%);
   --muted: #62665a;
 }

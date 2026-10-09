@@ -148,3 +148,17 @@
     grid-template-columns: 1fr;
   }
 }
+
+.gold {
+  border-color: #d8ae00;
+}
+
+.ambassador {
+  border-color: var(--ambassador-green);
+}
+
+.tileTitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
