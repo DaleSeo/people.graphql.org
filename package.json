@@ -4,15 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "astro dev --force",
-    "build": "astro build",
+    "dev": "node scripts/sync-people.mjs && astro dev --force",
+    "build": "node scripts/sync-people.mjs && astro build",
     "preview": "astro preview",
     "check": "astro check",
     "avatars:refresh": "node scripts/refresh-avatars.mjs",
     "wgs:sync": "node scripts/sync-wgs.mts",
     "people:sync": "node scripts/sync-people.mjs",
-    "prebuild": "npm run people:sync",
-    "predev": "npm run people:sync",
     "test": "node --experimental-strip-types --test tests/directory.test.ts",
     "test:site": "node scripts/check-site.mjs",
     "avatars:refresh:wgs": "node scripts/refresh-wg-avatars.mjs"

@@ -38,7 +38,7 @@ Review and commit the images, data, and `manifest.json` together.
 Refreshes require network access; normal builds do not download avatars.
 Portrait rights remain with their respective owners.
 
-Directory portraits use the canonical `avatarUrl` in `src/content/people/<slug>.json`. Missing portraits temporarily use `jemgillam.png`. Layout and appearance are shared in `src/components/PeopleDirectory.tsx` and its CSS Module.
+Directory portraits use the canonical `avatarUrl` in `src/content/people/<slug>.json`. When a portrait is missing, omit `avatarUrl`. The shared `Avatar.tsx` component displays the person’s initials in bold Host Grotesk, including when a photo fails to load. This applies to directories and profiles. Layout and appearance are shared in `src/components/PeopleDirectory.tsx` and its CSS Module.
 
 ## Refresh working-group portraits
 

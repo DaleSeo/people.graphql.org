@@ -1,3 +1,4 @@
+import Avatar from "./Avatar";
 import { useEffect, useState, useRef, type CSSProperties } from "react";
 import type { DirectoryPage, Entry, Mode } from "../lib/directory";
 import styles from "./PeopleDirectory.module.css";
@@ -84,6 +85,17 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
         .toLocaleLowerCase()
         .includes(query),
   );
+  if (mode === "article" && (isStories || page.slug === "")) {
+    const latestPublication = (person: Entry) =>
+      Math.max(
+        ...person.articles.map((article) => Date.parse(article.publishedAt)),
+      );
+    visible.sort(
+      (a, b) =>
+        latestPublication(b) - latestPublication(a) ||
+        a.name.localeCompare(b.name, "en"),
+    );
+  }
   const active = visible.filter((p) => p.active),
     previous = visible.filter((p) => !p.active);
   const activeTitle = (() => {
@@ -179,18 +191,7 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
           title={p.name}
           style={{ viewTransitionName: p.transitionName } as CSSProperties}
         >
-          <img
-            src={p.avatarUrl}
-            alt=""
-            width="240"
-            height="240"
-            loading="lazy"
-            decoding="async"
-            onError={(event) => {
-              if (!event.currentTarget.src.endsWith("/avatars/jemgillam.png"))
-                event.currentTarget.src = "/avatars/jemgillam.png";
-            }}
-          />
+          <Avatar name={p.name} src={p.avatarUrl} />
         </a>
         <div className={styles.details}>
           <div className={styles.identity}>
@@ -307,27 +308,31 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
             </>
           )}
           {mode === "article" &&
-            p.articles.map((a) => (
-              <div className={styles.article} key={a.href}>
-                <p className={styles.date}>
-                  <time dateTime={a.publishedAt}>
-                    {new Date(a.publishedAt).toLocaleDateString("en-GB", {
-                      day: "numeric",
-                      month: "long",
-                      year: "numeric",
-                      timeZone: "UTC",
-                    })}
-                  </time>
-                </p>
-                <h2>
-                  <a href={a.href}>{a.title}</a>
-                </h2>
-                <p>{a.description}</p>
-                <a className={styles.profileLink} href={a.href}>
-                  Read the story <span aria-hidden="true">↗</span>
-                </a>
-              </div>
-            ))}
+            [...p.articles]
+              .sort(
+                (a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt),
+              )
+              .map((a) => (
+                <div className={styles.article} key={a.href}>
+                  <p className={styles.date}>
+                    <time dateTime={a.publishedAt}>
+                      {new Date(a.publishedAt).toLocaleDateString("en-GB", {
+                        day: "numeric",
+                        month: "long",
+                        year: "numeric",
+                        timeZone: "UTC",
+                      })}
+                    </time>
+                  </p>
+                  <h2>
+                    <a href={a.href}>{a.title}</a>
+                  </h2>
+                  <p>{a.description}</p>
+                  <a className={styles.profileLink} href={a.href}>
+                    Read the story <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              ))}
         </div>
       </li>
     );

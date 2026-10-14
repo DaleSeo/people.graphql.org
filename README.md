@@ -13,7 +13,7 @@ npm run dev
 
 Open http://localhost:4321. `npm run check` validates Astro and TypeScript; `npm run build` generates the static site in `dist/`; `npm run preview` serves it locally. `npm test` checks identity and activity rules; after building, `npm run test:site` checks all directory/profile links, anchors, and local assets.
 
-`npm run dev` and `npm run build` first run `people:sync`. After editing source datasets while the dev server is running, run `npm run people:sync` to update the directory. If Astro's content cache is stale, restart `npm run dev`.
+`npm run dev` and `npm run build` first run `people:sync`. While the dev server is running, changes to `src/content/` and the identity aliases automatically refresh the directory. Sync only writes changed files to avoid unnecessary reloads. If a refresh fails, the terminal shows the error; fix the source file and save it again.
 
 ## Pages
 
@@ -49,7 +49,7 @@ All directories share breadcrumbs, introductory copy and an action, category nav
 
 The importer writes `src/data/directory.json`, the build-time participation index, and seeds new person files. No network calls are needed for import or builds. `src/data/identity-aliases.json` records explicit cross-source identity mappings, including differences in conference usernames and source spelling. `src/data/identity-review.json` reports unmatched speaker identities with name-based candidates; review those rather than merging automatically. GitHub usernames are matched case-insensitively. Preserve source IDs when editing people. To resolve a new match, map the source ID to the canonical slug in `identity-aliases.json`, then sync again.
 
-Missing local portraits use `/avatars/jemgillam.png` as a temporary placeholder. Replace `avatarUrl` in the relevant person record as portraits become available. Existing local portraits are reused. `npm run avatars:refresh` refreshes the original Stars portraits. `npm run avatars:refresh:wgs` refreshes all working-group attendees through their canonical GitHub identities and updates their person records. Run `npm run people:sync` afterward to refresh the directory.
+Missing or failed portraits display initials in bold Host Grotesk. Replace `avatarUrl` in the relevant person record as portraits become available. Existing local portraits are reused. `npm run avatars:refresh` refreshes the original Stars portraits. `npm run avatars:refresh:wgs` refreshes all working-group attendees through their canonical GitHub identities and updates their person records. Run `npm run people:sync` afterward to refresh the directory.
 
 ### Activity and ordering
 

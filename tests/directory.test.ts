@@ -75,19 +75,16 @@ test("known identities connect across sources and membership status stays contex
     true,
   );
 });
-test("class sizes, explicit rosters and attendance order are preserved", () => {
+test("class sizes and explicit rosters are preserved", () => {
   for (const year of ["2024", "2025", "2026"])
     assert.equal(entriesFor(pageFor(`stars/${year}`)).length, 52);
   const tsc = entriesFor(pageFor("wg/tsc"));
   assert.equal(tsc.filter((p) => p.active).length, 11);
   assert.equal(tsc.filter((p) => !p.active).length, 11);
-  assert.equal(tsc[0].slug, "leebyron");
   assert.equal(
     entriesFor(pageFor("ambassadors")).filter((p) => !p.active).length,
     6,
   );
-  const wg = entriesFor(pageFor("wg/spec"));
-  for (let i = 1; i < wg.length; i++) assert.ok(wg[i - 1].count >= wg[i].count);
 });
 
 test("current TSC borders are consistent across directories regardless of historical flags", () => {
@@ -154,4 +151,21 @@ test("Local organizers resolve to existing profiles and give Alf global active s
     entriesFor(pageFor("wg")).find((p) => p.slug === "alf")?.active,
     false,
   );
+});
+
+test("every directory uses the shared shuffle without losing people", () => {
+  const originalRandom = Math.random;
+  try {
+    for (const page of pages) {
+      Math.random = () => 0.999999;
+      const unchanged = entriesFor(page).map((p) => p.slug);
+      Math.random = () => 0;
+      const shuffled = entriesFor(page).map((p) => p.slug);
+      assert.deepEqual([...shuffled].sort(), [...unchanged].sort());
+      if (unchanged.length > 1)
+        assert.notDeepEqual(shuffled, unchanged, page.slug);
+    }
+  } finally {
+    Math.random = originalRandom;
+  }
 });

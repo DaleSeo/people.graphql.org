@@ -3,7 +3,7 @@ import raw from "../data/directory.json" with { type: "json" };
 export interface Person {
   name: string;
   githubUsername?: string;
-  avatarUrl: string;
+  avatarUrl?: string;
   location?: string;
   organization?: string;
   sourceIds: string[];
@@ -132,25 +132,11 @@ export function entriesFor(page: DirectoryPage): Entry[] {
     articles: ms.flatMap((m) => (m.article ? [m.article] : [])),
     transitionName: transitionName(slug),
   }));
-  result.sort((a, b) => {
-    if (page.order === "attendance" && a.count !== b.count)
-      return b.count - a.count;
-    if (page.order === "chair" && a.chair !== b.chair)
-      return Number(b.chair) - Number(a.chair);
-    if (page.order === "recent")
-      return (
-        (b.articles[0]?.publishedAt ?? "").localeCompare(
-          a.articles[0]?.publishedAt ?? "",
-        ) || a.name.localeCompare(b.name)
-      );
-    return a.name.localeCompare(b.name);
-  });
-  // One build-time shuffle is shared by SSR and hydration; no position jump on first render.
-  if (page.order === "random")
-    for (let i = result.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [result[i], result[j]] = [result[j], result[i]];
-    }
+  // All directories share one build-time shuffle, preserved through hydration.
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
   return result;
 }
 export function categoriesFor(slug: string) {

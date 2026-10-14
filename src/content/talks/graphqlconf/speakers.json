@@ -211,21 +211,6 @@
       "~syncedDetailsAt": 1758137788992
     },
     {
-      "username": "adambh",
-      "company": "The Guild Software",
-      "position": "Software Engineer",
-      "name": "Adam Benkhassen",
-      "about": "Adam Benkhassen is a Senior Software Engineer. He works at The Guild Software, where he contributes to GraphQL Hive (incl. Gateway). Previously a Founding Engineer at Inigo GraphQL, he brings 5 years of experience building GraphQL platform tooling. Adam is passionate about building open source tools that make GraphQL adoption seamless at scale. Outside of work, he enjoys reverse engineering and exploring how things work under the hood — from software to silicon.",
-      "location": "",
-      "url": "",
-      "avatar": "//avatars.sched.co/2/12/24421505/avatar.jpg.320x320px.jpg?0cc",
-      "socialurls": [],
-      "_years": [
-        2026
-      ],
-      "~syncedDetailsAt": 1772616262244
-    },
-    {
       "username": "aditi_rajawat",
       "company": "Intuit",
       "position": "Software Engineering Manager",
@@ -3043,21 +3028,6 @@
         2026
       ],
       "~syncedDetailsAt": 1772752087196
-    },
-    {
-      "username": "omribruchim",
-      "company": "Stealth",
-      "position": "CTO & Co-Founder @ Stealth",
-      "name": "Omri Bruchim",
-      "about": "Ex GM @ Wix, Public Speaker, Mostly talk about react, react-native, performance, and scale.",
-      "location": "",
-      "url": "",
-      "avatar": "//avatars.sched.co/8/5c/21066837/avatar.jpg.320x320px.jpg?b62",
-      "socialurls": [],
-      "_years": [
-        2024
-      ],
-      "~syncedDetailsAt": 1749502056388
     },
     {
       "username": "pascal.senn",

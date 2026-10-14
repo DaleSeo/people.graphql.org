@@ -3,6 +3,15 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse } from "yaml";
 
+async function writeIfChanged(file, contents) {
+  try {
+    if ((await readFile(file, "utf8")) === contents) return;
+  } catch (error) {
+    if (error.code !== "ENOENT") throw error;
+  }
+  await writeFile(file, contents);
+}
+
 const root = fileURLToPath(new URL("../", import.meta.url));
 const read = async (file) =>
   JSON.parse(await readFile(path.join(root, file), "utf8"));
@@ -50,7 +59,7 @@ addPage(
   "stories",
   "In their own words.",
   "Discover the personal stories of the people behind GraphQL.",
-  action("Meet the community", "/"),
+  action("About GraphQL Stories", "/stories/about/"),
   "",
   "recent",
   "grid",
@@ -131,7 +140,7 @@ async function personFor({ name, github, location, org, sourceId, avatarUrl }) {
     person = {
       name,
       ...(github ? { githubUsername: github } : {}),
-      avatarUrl: local ?? "/avatars/jemgillam.png",
+      avatarUrl: local,
       ...(location ? { location } : {}),
       ...(org ? { organization: org } : {}),
       sourceIds: [],
@@ -367,13 +376,13 @@ const used = new Set(memberships.map((m) => m.person));
 for (const [slug, person] of [...people].sort(([a], [b]) =>
   a.localeCompare(b),
 )) {
-  await writeFile(
+  await writeIfChanged(
     path.join(root, `src/content/people/${slug}.json`),
     JSON.stringify(person, null, 2) + "\n",
   );
 }
 await mkdir(path.join(root, "src/data"), { recursive: true });
-await writeFile(
+await writeIfChanged(
   path.join(root, "src/data/directory.json"),
   JSON.stringify(
     {
@@ -387,7 +396,7 @@ await writeFile(
     2,
   ) + "\n",
 );
-await writeFile(
+await writeIfChanged(
   path.join(root, "src/data/identity-review.json"),
   JSON.stringify(possibleMatches, null, 2) + "\n",
 );

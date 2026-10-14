@@ -46,7 +46,10 @@ const people = defineCollection({
       .string()
       .regex(/^[a-zA-Z0-9-]+$/)
       .optional(),
-    avatarUrl: z.string().regex(/^(\/|https:\/\/)/),
+    avatarUrl: z
+      .string()
+      .regex(/^(\/|https:\/\/)/)
+      .optional(),
     location: z.string().optional(),
     organization: z.string().optional(),
     sourceIds: z.array(z.string().min(1)),

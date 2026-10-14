@@ -2,7 +2,7 @@
 title: "The Complexity Has to Pay Off"
 name: "Jordan Eldredge"
 description: "Jordan Eldredge is a software engineer at Meta, where he works on Relay, and the creator of Grats, which brings implementation-first GraphQL to TypeScript. After joining Facebook with little GraphQL experience, he initially found the technology baffling before discovering ideas in Relay that changed how he thought about data fetching. Here, Jordan explains why GraphQL’s complexity has to pay off - and what fragments, semantic nullability, and better server tooling can give developers in return."
-publishedAt: 2026-09-17
+publishedAt: 2026-09-16
 links:
   - label: "Personal website (example)"
     url: "https://example.com"

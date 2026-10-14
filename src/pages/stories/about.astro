@@ -1,0 +1,61 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import shared from "../../styles/shared.module.css";
+import directory from "../../components/DirectoryPage.module.css";
+import styles from "../about.module.css";
+---
+
+<Layout
+  title="About Stories · People of GraphQL"
+  description="Personal stories from the people behind GraphQL."
+>
+  <section class:list={[shared.wrap, shared.pageIntro]}>
+    <nav class={directory.breadcrumbs} aria-label="Breadcrumbs">
+      <ol>
+        <li>
+          <a href="/">People</a>
+        </li>
+        <li>
+          <a href="/stories/">Stories</a>
+        </li>
+        <li>
+          <a href="/stories/about/" aria-current="page">
+            About
+          </a>
+        </li>
+      </ol>
+    </nav>
+    <p class={shared.eyebrow}>GRAPHQL STORIES</p>
+    <h1>Every face has a story.</h1>
+  </section>
+  <div class:list={[shared.articleBody, styles.aboutCopy]}>
+    <p>
+      GraphQL Stories introduces the people behind the projects, ideas, and
+      conversations that shape the GraphQL community.
+    </p>
+    <p>
+      Through personal stories, we explore how people found their way into
+      GraphQL, what they are working on, and what they have learned along the
+      way.
+    </p>
+    <p>
+      Each story connects to a profile where you can discover more about that
+      person's contributions and involvement around the community.
+    </p>
+    <section aria-labelledby="nominate-title">
+      <h2 id="nominate-title">Nominate a GraphQL person</h2>
+      <p>
+        We’re always on the lookout for inspiring people who are passionate
+        about GraphQL. Know somebody whose story deserves to be told? Let us
+        know, and they could end up being featured on The People of GraphQL
+        Stories Project.
+      </p>
+      <a class={shared.button} href="/stories/about/">
+        Nominate someone
+      </a>
+    </section>
+    <a class={shared.back} href="/stories/">
+      Explore the stories
+    </a>
+  </div>
+</Layout>

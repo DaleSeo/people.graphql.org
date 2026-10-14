@@ -17,8 +17,8 @@
       "title": "In their own words.",
       "description": "Discover the personal stories of the people behind GraphQL.",
       "action": {
-        "label": "Meet the community",
-        "href": "/"
+        "label": "About GraphQL Stories",
+        "href": "/stories/about/"
       },
       "parent": "",
       "order": "recent",
@@ -368,7 +368,6 @@
     },
     "adam-malone": {
       "name": "Adam Malone",
-      "avatarUrl": "/avatars/jemgillam.png",
       "organization": "Hasura",
       "sourceIds": [
         "speaker:adam_malone.2791s6x2"
@@ -2071,7 +2070,6 @@
     },
     "kenneth-wu-mann": {
       "name": "Kenneth Wußmann",
-      "avatarUrl": "/avatars/jemgillam.png",
       "organization": "MOIA GmbH",
       "sourceIds": [
         "speaker:kenneth.wussmann"
@@ -4629,7 +4627,7 @@
         "title": "The Complexity Has to Pay Off",
         "description": "Jordan Eldredge is a software engineer at Meta, where he works on Relay, and the creator of Grats, which brings implementation-first GraphQL to TypeScript. After joining Facebook with little GraphQL experience, he initially found the technology baffling before discovering ideas in Relay that changed how he thought about data fetching. Here, Jordan explains why GraphQL’s complexity has to pay off - and what fragments, semantic nullability, and better server tooling can give developers in return.",
         "href": "/stories/the-complexity-has-to-pay-off/",
-        "publishedAt": "2026-09-17",
+        "publishedAt": "2026-09-16",
         "image": "/stories/jordan-eldredge/graphql-conf.jpg",
         "imageAlt": "A bright shared workspace with long tables, chairs, and plants."
       }
