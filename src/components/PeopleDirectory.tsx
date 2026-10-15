@@ -1,6 +1,7 @@
 import Avatar from "./Avatar";
 import { useEffect, useState, useRef, type CSSProperties } from "react";
 import type { DirectoryPage, Entry, Mode } from "../lib/directory";
+import { memberships } from "../lib/directory";
 import styles from "./PeopleDirectory.module.css";
 import starCardStyles from "../styles/star-card.module.css";
 
@@ -154,8 +155,25 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
     const meetings = p.count
       ? `${p.count} meeting${p.count === 1 ? "" : "s"} attended`
       : undefined;
-    const context = [...new Set(p.memberships.map((m) => m.label))];
-    const lastAttended = p.memberships
+    const attendanceMemberships = memberships.filter(
+      (m) =>
+        m.person === p.slug && m.page.startsWith("wg/") && m.page !== "wg/tsc",
+    );
+    const groupCount = new Set(attendanceMemberships.map((m) => m.page)).size;
+    const context = [
+      ...new Set(
+        p.memberships.map((m) =>
+          mode === "list" && m.page.startsWith("stars/")
+            ? m.label.replace(/^Class of /, "Star of ")
+            : m.label,
+        ),
+      ),
+    ];
+    const lastAttended = (
+      page.slug === "wg" && mode === "list"
+        ? attendanceMemberships
+        : p.memberships
+    )
       .map((m) => m.lastActive ?? "")
       .sort()
       .at(-1);
@@ -166,6 +184,10 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
           .map((m) => [m.page, m]),
       ).values(),
     ];
+    const tscTerm =
+      page.slug === "wg/tsc" && mode === "list"
+        ? p.memberships.find((m) => m.page === "wg/tsc")
+        : undefined;
     return (
       <li key={p.slug} id={p.anchor} className={styles.person}>
         <a
@@ -208,16 +230,32 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
             <>
               <div className={styles.memberMeta}>
                 {p.location && <span>{p.location}</span>}
-                {meetings && <span>{meetings}</span>}
-                {lastAttended && (
+                {tscTerm ? (
+                  tscTerm.termStart && (
+                    <span>
+                      Term: {tscTerm.termStart} – {tscTerm.termEnd}
+                    </span>
+                  )
+                ) : mode === "list" ? (
+                  <span>
+                    Attends {groupCount} {groupCount === 1 ? "group" : "groups"}
+                  </span>
+                ) : (
+                  meetings && <span>{meetings}</span>
+                )}
+                {!tscTerm && lastAttended && (
                   <span>
                     Last attended{" "}
-                    <time dateTime={lastAttended}>{lastAttended}</time>
+                    <time dateTime={lastAttended}>
+                      {mode === "list"
+                        ? lastAttended.slice(0, 4)
+                        : lastAttended}
+                    </time>
                   </span>
                 )}
                 {p.memberships.some((m) => m.chair) && <span>TSC chair</span>}
                 {p.memberships
-                  .filter((m) => m.affiliation)
+                  .filter((m) => mode !== "list" && m.affiliation)
                   .map((m) => (
                     <span key={m.page}>
                       {m.affiliation}
@@ -279,7 +317,7 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
                 <p className={styles.context}>TSC chair</p>
               )}
               {p.memberships
-                .filter((m) => m.affiliation)
+                .filter((m) => mode !== "list" && m.affiliation)
                 .map((m) => (
                   <p key={m.page} className={styles.location}>
                     {m.affiliation}

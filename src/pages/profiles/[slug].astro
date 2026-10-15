@@ -97,33 +97,46 @@ const links = [
           {groups.map((page) => {
             const ms = appearances.filter((m) => m.page === page);
             const active = ms.some((m) => isActive(m));
+            const isAmbassador = page === "ambassadors";
+            const isAttendance =
+              page.startsWith("wg/") && ms[0].count !== undefined;
             return (
               <li>
                 <a href={`${hrefFor(page)}#${anchor}`}>
                   <span>
-                    {page === "ambassadors"
-                      ? "GraphQL Ambassador"
+                    {isAmbassador
+                      ? active
+                        ? "GraphQL Ambassador"
+                        : "GraphQL Ambassador Emeritus"
                       : pageFor(page).title}
                   </span>
                   <span aria-hidden="true">↗</span>
                 </a>
-                {page !== "ambassadors" && (
+                {isAmbassador ? (
                   <p>
-                    {!active ? "Previously active · " : ""}
-                    {ms.some((m) => m.chair)
-                      ? "Chair"
-                      : ms.some((m) => m.emeriti)
-                        ? "Emeritus"
-                        : ms[0].label}
+                    {active
+                      ? "Current Ambassador"
+                      : `Term: ${ms[0].term ?? "2025-2026"}`}
                   </p>
-                )}
-                {ms[0].count !== undefined && (
+                ) : isAttendance ? (
                   <p>
-                    {ms[0].count} meetings attended · last attended{" "}
-                    {ms[0].lastActive}
+                    {active
+                      ? `${ms[0].label} member${ms[0].lastActive ? ` · last attended in ${ms[0].lastActive.slice(0, 4)}` : ""}`
+                      : `Used to attend ${ms[0].label}`}
                   </p>
+                ) : (
+                  page !== "wg/tsc" && (
+                    <p>
+                      {!active ? "Previously active · " : ""}
+                      {ms.some((m) => m.chair)
+                        ? "Chair"
+                        : ms.some((m) => m.emeriti)
+                          ? "Emeritus"
+                          : ms[0].label}
+                    </p>
+                  )
                 )}
-                {ms[0].affiliation && (
+                {page !== "wg/tsc" && ms[0].affiliation && (
                   <p>
                     {ms[0].affiliation}
                     {ms[0].emeriti ? " · affiliation during term" : ""}

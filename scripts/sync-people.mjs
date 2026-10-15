@@ -2,6 +2,7 @@ import { readFile, readdir, writeFile, mkdir, access } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse } from "yaml";
+import { talkTitle } from "./talk-title.mjs";
 
 async function writeIfChanged(file, contents) {
   try {
@@ -282,6 +283,7 @@ for (const m of (await read("src/content/ambassadors/members.json")).members) {
     label: "GraphQL Ambassador",
     emeriti: m.emeriti,
     cohort: m.cohort,
+    term: m.term,
     interests: m.askMeAbout,
     maintainerProjects: m.maintainerProjects ?? [],
     graphqlLocals: m.graphqlLocals ?? [],
@@ -363,7 +365,7 @@ for (const file of (
       join(id, page, {
         label: `GraphQLConf ${year}`,
         talk: {
-          title: event.name,
+          title: talkTitle(event.name, event.speakers),
           id: event.id,
           ...(videoId && /^[\w-]{11}$/.test(videoId) ? { videoId } : {}),
         },

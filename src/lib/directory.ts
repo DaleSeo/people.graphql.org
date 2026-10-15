@@ -29,6 +29,7 @@ export interface Membership {
   termStart?: string | null;
   termEnd?: string | null;
   cohort?: string;
+  term?: string;
   interests?: string[];
   maintainerProjects?: string[];
   graphqlLocals?: string[];

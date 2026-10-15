@@ -11,7 +11,7 @@
     "avatars:refresh": "node scripts/refresh-avatars.mjs",
     "wgs:sync": "node scripts/sync-wgs.mts",
     "people:sync": "node scripts/sync-people.mjs",
-    "test": "node --experimental-strip-types --test tests/directory.test.ts",
+    "test": "node --experimental-strip-types --test tests/directory.test.ts tests/talk-title.test.mjs",
     "test:site": "node scripts/check-site.mjs",
     "avatars:refresh:wgs": "node scripts/refresh-wg-avatars.mjs"
   },
