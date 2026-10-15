@@ -3603,16 +3603,10 @@
       "location": "Egypt",
       "organization": "The Guild",
       "sourceIds": [
-        "speaker:yassineldeeb94"
-      ]
-    },
-    "yassineeldeeb": {
-      "name": "yassineeldeeb",
-      "githubUsername": "yassineeldeeb",
-      "avatarUrl": "/avatars/yassineeldeeb.png",
-      "sourceIds": [
-        "github:yassineeldeeb"
-      ]
+        "speaker:yassineldeeb94",
+        "github:yassineldeeb"
+      ],
+      "githubUsername": "YassinEldeeb"
     },
     "yehuda-rosenberg": {
       "name": "Yehuda Rosenberg",
@@ -4004,607 +3998,708 @@
       "person": "benjie",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2025/benjie.png"
     },
     {
       "person": "bignimbus",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/bignimbus.png"
     },
     {
       "person": "bod",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/bod.png"
     },
     {
       "person": "bryncooke",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/bryncooke.png"
     },
     {
       "person": "calvincestari",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/calvincestari.png"
     },
     {
       "person": "captbaritone",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/captbaritone.png"
     },
     {
       "person": "dariuszkuc",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/dariuszkuc.png"
     },
     {
       "person": "devsergiy",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/devsergiy.png"
     },
     {
       "person": "dimamachina",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/dimamachina.png"
     },
     {
       "person": "doc-jones",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/doc-jones.png"
     },
     {
       "person": "dondonz",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/dondonz.png"
     },
     {
       "person": "dventimihasura",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/dventimihasura.png"
     },
     {
       "person": "enisdenjo",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2025/enisdenjo.png"
     },
     {
       "person": "erikwrede",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/erikwrede.png"
     },
     {
       "person": "finistere",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/finistere.png"
     },
     {
       "person": "fotoetienne",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/fotoetienne.png"
     },
     {
       "person": "glasser",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/glasser.png"
     },
     {
       "person": "glen-84",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/glen-84.png"
     },
     {
       "person": "hasparus",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/hasparus.png"
     },
     {
       "person": "hayes",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/hayes.png"
     },
     {
       "person": "ivangoncharov",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2025/ivangoncharov.png"
     },
     {
       "person": "janettec",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/janettec.png"
     },
     {
       "person": "jasonkuhrt",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/jasonkuhrt.png"
     },
     {
       "person": "jemgillam",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/jemgillam.png"
     },
     {
       "person": "jorydotcom",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/jorydotcom.png"
     },
     {
       "person": "jovidecroock",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/jovidecroock.png"
     },
     {
       "person": "kamilkisiela",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/kamilkisiela.png"
     },
     {
       "person": "keweiqu",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2025/keweiqu.png"
     },
     {
       "person": "leebyron",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2025/leebyron.png"
     },
     {
       "person": "magicmark",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/magicmark.png"
     },
     {
       "person": "mandiwise",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/mandiwise.png"
     },
     {
       "person": "martijnwalraven",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/martijnwalraven.png"
     },
     {
       "person": "martinbonnin",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2025/martinbonnin.png"
     },
     {
       "person": "michaelstaib",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2025/michaelstaib.png"
     },
     {
       "person": "mjmahone",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2025/mjmahone.png"
     },
     {
       "person": "mjy9088",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/mjy9088.png"
     },
     {
       "person": "n1ru4l",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/n1ru4l.png"
     },
     {
       "person": "pascalsenn",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2025/pascalsenn.png"
     },
     {
       "person": "phryneas",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/phryneas.png"
     },
     {
       "person": "robrichard",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2025/robrichard.png"
     },
     {
       "person": "sachindshinde",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/sachindshinde.png"
     },
     {
       "person": "saihaj",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/saihaj.png"
     },
     {
       "person": "sarahxsanders",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/sarahxsanders.png"
     },
     {
       "person": "shane32",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/shane32.png"
     },
     {
       "person": "smyrick",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/smyrick.png"
     },
     {
       "person": "twof",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/twof.png"
     },
     {
       "person": "urigo",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2025/urigo.png"
     },
     {
       "person": "yaacovcr",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/yaacovcr.png"
     },
     {
-      "person": "yassineeldeeb",
+      "person": "yassin-eldeeb",
       "page": "stars/2025",
       "label": "Class of 2025",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2025/yassineldeeb.png"
     },
     {
       "person": "aaronmoat",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/aaronmoat.png"
     },
     {
       "person": "acao",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/acao.png"
     },
     {
       "person": "andimarek",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2024/andimarek.png"
     },
     {
       "person": "anthonymdev",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/anthonymdev.png"
     },
     {
       "person": "aprilrd",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/aprilrd.png"
     },
     {
       "person": "ardatan",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/ardatan.png"
     },
     {
       "person": "bboure",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/bboure.png"
     },
     {
       "person": "beerose",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/beerose.png"
     },
     {
       "person": "benjie",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2024/benjie.png"
     },
     {
       "person": "bignimbus",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/bignimbus.png"
     },
     {
       "person": "bod",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/bod.png"
     },
     {
       "person": "calvincestari",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/calvincestari.png"
     },
     {
       "person": "captbaritone",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/captbaritone.png"
     },
     {
       "person": "cuhtis",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/cuhtis.png"
     },
     {
       "person": "dariuszkuc",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/dariuszkuc.png"
     },
     {
       "person": "dimamachina",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/dimamachina.png"
     },
     {
       "person": "dondonz",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/dondonz.png"
     },
     {
       "person": "enisdenjo",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2024/enisdenjo.png"
     },
     {
       "person": "fotoetienne",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2024/fotoetienne.png"
     },
     {
       "person": "frandiox",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/frandiox.png"
     },
     {
       "person": "glen-84",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/glen-84.png"
     },
     {
       "person": "imolorhe",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/imolorhe.png"
     },
     {
       "person": "itamark",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/itamark.png"
     },
     {
       "person": "ivangoncharov",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2024/ivangoncharov.png"
     },
     {
       "person": "johnstarich",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/johnstarich.png"
     },
     {
       "person": "jorydotcom",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/jorydotcom.png"
     },
     {
       "person": "jovidecroock",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/jovidecroock.png"
     },
     {
       "person": "kamilkisiela",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/kamilkisiela.png"
     },
     {
       "person": "keweiqu",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2024/keweiqu.png"
     },
     {
       "person": "kitten",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/kitten.png"
     },
     {
       "person": "klippx",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/klippx.png"
     },
     {
       "person": "leebyron",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2024/leebyron.png"
     },
     {
       "person": "martijnwalraven",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/martijnwalraven.png"
     },
     {
       "person": "martinbonnin",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/martinbonnin.png"
     },
     {
       "person": "michaelstaib",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2024/michaelstaib.png"
     },
     {
       "person": "mjmahone",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2024/mjmahone.png"
     },
     {
       "person": "pascalsenn",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/pascalsenn.png"
     },
     {
       "person": "phryneas",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/phryneas.png"
     },
     {
       "person": "robrichard",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2024/robrichard.png"
     },
     {
       "person": "saihaj",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/saihaj.png"
     },
     {
       "person": "shane32",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/shane32.png"
     },
     {
       "person": "simonsapin",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/simonsapin.png"
     },
     {
       "person": "smyrick",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/smyrick.png"
     },
     {
       "person": "thomasheyenbrock",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/thomasheyenbrock.png"
     },
     {
       "person": "tusharmath",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/tusharmath.png"
     },
     {
       "person": "tuvalsimha",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/tuvalsimha.png"
     },
     {
       "person": "twof",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/twof.png"
     },
     {
       "person": "urigo",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": true
+      "tsc": true,
+      "image": "/stars/2024/urigo.png"
     },
     {
       "person": "wheresrhys",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/wheresrhys.png"
     },
     {
       "person": "xuorig",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/xuorig.png"
     },
     {
       "person": "yaacovcr",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/yaacovcr.png"
     },
     {
-      "person": "yassineeldeeb",
+      "person": "yassin-eldeeb",
       "page": "stars/2024",
       "label": "Class of 2024",
-      "tsc": false
+      "tsc": false,
+      "image": "/stars/2024/yassineldeeb.png"
     },
     {
       "person": "bignimbus",

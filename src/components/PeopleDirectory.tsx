@@ -2,6 +2,7 @@ import Avatar from "./Avatar";
 import { useEffect, useState, useRef, type CSSProperties } from "react";
 import type { DirectoryPage, Entry, Mode } from "../lib/directory";
 import styles from "./PeopleDirectory.module.css";
+import starCardStyles from "../styles/star-card.module.css";
 
 interface Props {
   page: DirectoryPage;
@@ -24,9 +25,10 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
   const [selectedStar, setSelectedStar] = useState<Entry | null>(null);
   const starDialog = useRef<HTMLDialogElement>(null);
   const selectedMembership =
-    selectedStar?.memberships.find((m) => m.image) ??
-    selectedStar?.memberships[0];
-  const starImage = selectedMembership?.image ?? "/stars/2025/andimarek.png";
+    selectedStar?.memberships.find((m) => m.page === page.slug) ??
+    selectedStar?.memberships
+      .filter((m) => m.page.startsWith("stars/"))
+      .toSorted((a, b) => b.page.localeCompare(a.page))[0];
   useEffect(() => {
     if (selectedStar && starDialog.current && !starDialog.current.open)
       starDialog.current.showModal();
@@ -486,19 +488,15 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
                 Thank you {selectedStar.githubUsername ?? selectedStar.name} for
                 being a Star in {selectedMembership?.page.split("/")[1]}!
               </p>
-              <figure className={styles.starCard}>
-                <img
-                  src={starImage}
-                  alt={
-                    selectedMembership?.image
-                      ? `GraphQL Stars contribution card for ${selectedStar.name}, ${selectedMembership.label}`
-                      : "Placeholder GraphQL Stars contribution card"
-                  }
-                />
-                {!selectedMembership?.image && (
-                  <figcaption>Placeholder card</figcaption>
-                )}
-              </figure>
+              {selectedMembership?.image && (
+                <figure className={styles.starCard}>
+                  <img
+                    className={starCardStyles.card}
+                    src={selectedMembership.image}
+                    alt={`GraphQL Stars contribution card for ${selectedStar.name}, ${selectedMembership.label}`}
+                  />
+                </figure>
+              )}
             </>
           )}
         </dialog>

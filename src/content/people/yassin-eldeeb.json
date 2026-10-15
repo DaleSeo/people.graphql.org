@@ -4,6 +4,8 @@
   "location": "Egypt",
   "organization": "The Guild",
   "sourceIds": [
-    "speaker:yassineldeeb94"
-  ]
+    "speaker:yassineldeeb94",
+    "github:yassineldeeb"
+  ],
+  "githubUsername": "YassinEldeeb"
 }

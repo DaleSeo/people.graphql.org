@@ -183,7 +183,7 @@ for (const year of years) {
         ? `github:${s.github.toLowerCase()}`
         : `star:${slugify(s.name)}`,
     });
-    const card = `/stars/${year}/${s.github}.png`;
+    const card = `/stars/${year}/${s.github?.toLowerCase()}.png`;
     join(id, `stars/${year}`, {
       label: `Class of ${year}`,
       tsc: s.tsc ?? false,

@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { existsSync } from "node:fs";
 import {
   isActive,
   entriesFor,
@@ -10,6 +11,35 @@ import {
 } from "../src/lib/directory.ts";
 const now = new Date("2026-10-08T12:00:00Z");
 const base = { person: "example", page: "wg/spec", label: "Specification WG" };
+
+test("Stars cards match their person's GitHub username and class year", () => {
+  for (const year of ["2024", "2025"]) {
+    const entries = entriesFor(pageFor(`stars/${year}`));
+    for (const entry of entries) {
+      const expected = `/stars/${year}/${entry.githubUsername?.toLowerCase()}.png`;
+      assert.equal(entry.memberships.length, 1);
+      const exists = existsSync(
+        new URL(`../public${expected}`, import.meta.url),
+      );
+      assert.equal(entry.memberships[0].image, exists ? expected : undefined);
+    }
+  }
+  for (const entry of entriesFor(pageFor("stars/2026")))
+    assert.equal(entry.memberships[0].image, undefined);
+});
+
+test("Yassin's Stars and talks share his canonical profile and correct GitHub username", () => {
+  assert.equal(people["yassineeldeeb"], undefined);
+  assert.equal(people["yassin-eldeeb"].githubUsername, "YassinEldeeb");
+  const records = memberships.filter((m) => m.person === "yassin-eldeeb");
+  for (const year of ["2024", "2025"])
+    assert.equal(
+      records.find((m) => m.page === `stars/${year}`)?.image,
+      `/stars/${year}/yassineldeeb.png`,
+    );
+  assert.ok(records.some((m) => m.page.startsWith("speakers/")));
+  assert.ok(!memberships.some((m) => m.person === "yassineeldeeb"));
+});
 
 test("explicit emeritus status overrides dates; missing dates do not imply inactivity", () => {
   assert.equal(

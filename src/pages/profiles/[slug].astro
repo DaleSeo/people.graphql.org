@@ -14,6 +14,7 @@ import {
 } from "../../lib/directory";
 import shared from "../../styles/shared.module.css";
 import styles from "./profile.module.css";
+import starCardStyles from "../../styles/star-card.module.css";
 export function getStaticPaths() {
   return Object.entries(people).map(([slug, person]) => ({
     params: { slug },
@@ -164,6 +165,7 @@ const links = [
               <a href={m.image}>
                 <img
                   src={m.image}
+                  class={starCardStyles.card}
                   alt={`${person.name} · ${m.label}`}
                   loading="lazy"
                 />
