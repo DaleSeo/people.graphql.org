@@ -118,6 +118,11 @@
 .cards img {
   width: 100%;
 }
+@media (min-width: 801px) {
+  .cards:has(> :nth-child(3)) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
 .links {
   display: flex;
   flex-wrap: wrap;

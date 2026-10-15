@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { existsSync } from "node:fs";
+import { existsSync, readdirSync } from "node:fs";
 import {
   isActive,
   entriesFor,
@@ -13,7 +13,7 @@ const now = new Date("2026-10-08T12:00:00Z");
 const base = { person: "example", page: "wg/spec", label: "Specification WG" };
 
 test("Stars cards match their person's GitHub username and class year", () => {
-  for (const year of ["2024", "2025"]) {
+  for (const year of ["2024", "2025", "2026"]) {
     const entries = entriesFor(pageFor(`stars/${year}`));
     for (const entry of entries) {
       const expected = `/stars/${year}/${entry.githubUsername?.toLowerCase()}.png`;
@@ -24,8 +24,19 @@ test("Stars cards match their person's GitHub username and class year", () => {
       assert.equal(entry.memberships[0].image, exists ? expected : undefined);
     }
   }
-  for (const entry of entriesFor(pageFor("stars/2026")))
-    assert.equal(entry.memberships[0].image, undefined);
+});
+
+test("the 2026 Stars roster exactly matches the definitive card list", () => {
+  const cards = readdirSync(new URL("../public/stars/2026/", import.meta.url))
+    .filter((file) => file.endsWith(".png"))
+    .map((file) => `/stars/2026/${file}`)
+    .sort();
+  const entries = entriesFor(pageFor("stars/2026"));
+  assert.equal(entries.length, 52);
+  assert.deepEqual(
+    entries.map((entry) => entry.memberships[0].image).sort(),
+    cards,
+  );
 });
 
 test("Yassin's Stars and talks share his canonical profile and correct GitHub username", () => {
@@ -96,7 +107,7 @@ test("known identities connect across sources and membership status stays contex
     false,
   );
   assert.equal(
-    entriesFor(pageFor("stars/2026")).find((p) => p.slug === "enisdenjo")!
+    entriesFor(pageFor("stars/2025")).find((p) => p.slug === "enisdenjo")!
       .active,
     true,
   );
