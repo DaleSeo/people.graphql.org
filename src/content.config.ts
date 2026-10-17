@@ -6,14 +6,35 @@ const stories = defineCollection({
     title: z.string(),
     name: z.string(),
     description: z.string(),
+    sidebar: z
+      .object({ role: z.string(), introduction: z.string() })
+      .optional(),
     publishedAt: z.coerce.date(),
+    relatedLinks: z
+      .object({
+        title: z.string(),
+        items: z.array(
+          z.object({
+            title: z.string(),
+            url: z.string().url(),
+            description: z.string(),
+          }),
+        ),
+      })
+      .optional(),
     github: z
       .string()
       .regex(/^[a-zA-Z0-9-]+$/)
       .optional(),
     location: z.string().optional(),
     links: z
-      .array(z.object({ label: z.string(), url: z.string().url() }))
+      .array(
+        z.object({
+          label: z.string(),
+          url: z.string().url(),
+          username: z.string().optional(),
+        }),
+      )
       .default([]),
     hero: z
       .object({ src: z.string(), alt: z.string(), caption: z.string() })

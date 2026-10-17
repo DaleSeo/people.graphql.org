@@ -3,7 +3,7 @@ import { useEffect, useState, useRef, type CSSProperties } from "react";
 import type { DirectoryPage, Entry, Mode } from "../lib/directory";
 import { memberships } from "../lib/directory";
 import styles from "./PeopleDirectory.module.css";
-import starCardStyles from "../styles/star-card.module.css";
+import starCardStyles from "./star-card.module.css";
 
 interface Props {
   page: DirectoryPage;
@@ -220,7 +220,7 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
         <div className={styles.details}>
           <div className={styles.identity}>
             <h3>
-              <a href={profile}>{p.name}</a>
+              {mode === "article" ? p.name : <a href={profile}>{p.name}</a>}
             </h3>
             {p.githubUsername && (
               <span className={styles.username}>@{p.githubUsername}</span>

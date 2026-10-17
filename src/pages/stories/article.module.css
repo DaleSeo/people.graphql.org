@@ -1,6 +1,15 @@
-@value eyebrow as sharedEyebrow from "../../styles/shared.module.css";
+/* Story article styles: layout, introduction, photos, accents and reading body. */
+.storyEyebrow {
+  composes: eyebrow from "../../styles/shared.module.css";
+}
+.storyBack {
+  composes: back from "../../styles/shared.module.css";
+}
+
+/* Page header and introductory paragraph. */
 
 .storyFeature {
+  --story-accent: hsl(79 98% 37%);
   max-width: 1480px;
   margin: auto;
   padding: 40px clamp(20px, 4vw, 64px) 100px;
@@ -8,13 +17,13 @@
 .storyFeatureHeader {
   margin: 60px 0 48px;
 }
-.storyFeatureHeader > :global(.sharedEyebrow) {
+.storyFeatureHeader > .storyEyebrow {
   color: #b8007d;
 }
 .storyFeatureHeader h1 {
   max-width: 1250px;
   margin-bottom: 48px;
-  font-size: clamp(52px, 7.6vw, 112px);
+  font-size: 5rem;
   font-weight: 800;
   line-height: 0.98;
   letter-spacing: -0.03em;
@@ -28,25 +37,31 @@
 }
 .storyPerson {
   margin-bottom: 16px;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 650;
 }
 .storyDeck {
   max-width: 850px;
   margin: 0;
-  font-size: clamp(23px, 2.6vw, 36px);
+  font-size: 1.75rem;
   line-height: 1.4;
   letter-spacing: -0.025em;
+}
+.storyPersonRole {
+  margin: 0 0 1rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--muted);
 }
 .storyPersonDetails {
   border-left: 2px solid var(--pink);
   padding-left: 24px;
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 1.6;
 }
-.storyPersonDetails :global(.sharedEyebrow) {
+.storyPersonDetails .storyEyebrow {
   margin: 0 0 8px;
-  font-size: 11px;
+  font-size: 1rem;
 }
 .storyPersonDetails ul {
   list-style: none;
@@ -58,6 +73,30 @@
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+.storyPersonDetails .storySocialLink {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  line-height: 1;
+  gap: 8px;
+  padding-block: 4px;
+  text-decoration: none;
+}
+.storySocialIcon {
+  display: inline-block;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--muted);
+  -webkit-mask: var(--social-icon) center / contain no-repeat;
+  mask: var(--social-icon) center / contain no-repeat;
+  transition: background-color 150ms ease;
+}
+.storySocialLink:hover .storySocialIcon,
+.storySocialLink:focus-visible .storySocialIcon {
+  background-color: var(--story-accent);
+}
+/* Article photos and captions. */
 .storyPhoto,
 .storyReadingLayout > [data-story-photo] {
   margin: 36px 0;
@@ -73,11 +112,12 @@
 .storyPhoto figcaption,
 .storyReadingLayout > [data-story-photo] figcaption {
   margin-top: 14px;
-  max-width: 720px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 0.8rem;
   line-height: 1.6;
+  text-wrap: pretty;
 }
+/* Header photo and green stripe overlay. */
 .storyHero {
   margin: 0 0 72px;
 }
@@ -117,16 +157,17 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(155deg, hsl(79 98% 37%), hsl(79 90% 65%));
+  background: linear-gradient(155deg, var(--story-accent), hsl(79 90% 65%));
   -webkit-mask-image: var(--hero-corner-mask);
   mask-image: var(--hero-corner-mask);
 }
 
+/* Reading column, pink sidebar divider and pull quotes. */
 .storyReadingLayout {
   display: grid;
   grid-template-columns: minmax(160px, 220px) minmax(0, 700px) minmax(0, 1fr);
   column-gap: clamp(32px, 5vw, 80px);
-  font-size: 21px;
+  font-size: 1.2rem;
   line-height: 1.8;
 }
 .storyReadingLayout > * {
@@ -138,7 +179,7 @@
 }
 .storyReadingLayout > h2 {
   margin: 36px 0 24px;
-  font-size: clamp(28px, 3vw, 38px);
+  font-size: 2rem;
   line-height: 1.15;
   font-weight: 650;
   letter-spacing: -0.015em;
@@ -150,12 +191,14 @@
   grid-column: 1;
   grid-row: 1 / span 3;
   align-self: start;
-  padding-top: 20px;
-  border-top: 3px solid var(--pink);
   font-size: 15px;
   line-height: 1.65;
 }
-.storyProjectNote :global(.sharedEyebrow) {
+.storyProjectCopy {
+  padding-top: 1.25rem;
+  border-top: 3px solid var(--pink);
+}
+.storyProjectNote .storyEyebrow {
   margin: 0 0 16px;
   font-size: 11px;
 }
@@ -203,10 +246,16 @@
   display: inline;
 }
 .storyReadingLayout > .storyEnd {
-  margin-top: 48px;
+  grid-column: 1 / -1;
+  margin: 3rem 0 0;
   border-top: 1px solid var(--line);
-  padding-top: 24px;
+  padding-block: 2.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
+/* Responsive layouts. */
 @media (max-width: 900px) {
   .storyReadingLayout {
     grid-template-columns: minmax(0, 1fr);
@@ -249,5 +298,63 @@
   }
   .storyHero {
     margin-bottom: 44px;
+  }
+}
+
+/* End-of-story contextual links and contributor socials. */
+.storyReadingLayout > .storyMoreLinks {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(12rem, 16rem);
+  gap: clamp(2rem, 5vw, 5rem);
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 3px solid var(--pink);
+}
+.storyMoreLinks h2 {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1.2;
+}
+.storyContextLinks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.storyContextLinks li {
+  border-top: 1px solid var(--line);
+  padding-top: 1rem;
+}
+.storyContextLinks a {
+  font-size: 1.125rem;
+  font-weight: 650;
+  line-height: 1.4;
+  color: var(--pink);
+  text-decoration: none;
+}
+.storyContextLinks p {
+  margin: 0.625rem 0 0;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+.storyMoreSocial {
+  align-self: start;
+}
+.storyMoreSocial h2 {
+  font-size: 1.25rem;
+}
+@media (max-width: 900px) {
+  .storyReadingLayout > .storyMoreLinks {
+    grid-column: 1;
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .storyContextLinks {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

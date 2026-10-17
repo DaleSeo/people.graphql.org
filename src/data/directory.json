@@ -22,7 +22,7 @@
       },
       "parent": "",
       "order": "recent",
-      "mode": "grid"
+      "mode": "article"
     },
     {
       "slug": "stars",
@@ -4740,9 +4740,9 @@
     {
       "person": "bignimbus",
       "page": "stories",
-      "label": "Designing GraphQL for the People",
+      "label": "Raising my hand for GraphQL",
       "article": {
-        "title": "Designing GraphQL for the People",
+        "title": "Raising my hand for GraphQL",
         "description": "Jeff Auriemma is an engineering leader at Apollo, chair of the GraphQL Foundation’s Governing Board and a GraphQL Ambassador. Here, he tells the story of discovering GraphQL late at night while raising a young family, designing software around the people who use it, and helping more people shape GraphQL’s future.",
         "href": "/stories/designing-graphql-for-the-people/",
         "publishedAt": "2026-09-16",
@@ -4769,7 +4769,7 @@
       "label": "Working it out in public",
       "article": {
         "title": "Working it out in public",
-        "description": "Eddy Nguyen’s first open-source contribution was a one- or two-line fix to GraphQL Code Generator. He now maintains the project, developing ideas with the people who use and contribute to it while sharing the questions, mistakes, and learning that shape his work.",
+        "description": "Eddy’s first open-source contribution was a one- or two-line fix to GraphQL Code Generator (Codegen). He now maintains the project, developing ideas with the people who use and contribute to it while sharing the questions, mistakes, and learning that shape his work.",
         "href": "/stories/working-it-out-in-public/",
         "publishedAt": "2026-09-18",
         "image": "/stories/eddy-nguyen/graphql-conf.jpg",

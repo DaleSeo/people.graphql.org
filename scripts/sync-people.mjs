@@ -63,7 +63,7 @@ addPage(
   action("About GraphQL Stories", "/stories/about/"),
   "",
   "recent",
-  "grid",
+  "article",
 );
 addPage(
   "stars",

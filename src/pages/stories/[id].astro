@@ -1,8 +1,9 @@
 ---
 import styles from "./article.module.css";
-import shared from "../../styles/shared.module.css";
+import StorySocialLinks from "../../components/StorySocialLinks.astro";
 import Layout from "../../layouts/Layout.astro";
 import { getCollection, render } from "astro:content";
+import { people } from "../../lib/directory";
 export async function getStaticPaths() {
   return (await getCollection("stories")).map((story) => ({
     params: { id: story.id },
@@ -11,6 +12,12 @@ export async function getStaticPaths() {
 }
 const { story } = Astro.props;
 const links = story.data.links ?? [];
+const firstName = story.data.name.trim().split(/\s+/)[0];
+const profile = Object.entries(people).find(
+  ([, person]) =>
+    story.data.github &&
+    person.githubUsername?.toLowerCase() === story.data.github.toLowerCase(),
+);
 const { Content } = await render(story);
 ---
 
@@ -19,11 +26,11 @@ const { Content } = await render(story);
   description={story.data.description}
 >
   <article class={styles.storyFeature}>
-    <a class={shared.back} href="/stories/">
+    <a class={styles.storyBack} href="/stories/">
       ← All stories
     </a>
     <header class={styles.storyFeatureHeader}>
-      <p class={shared.eyebrow}>
+      <p class={styles.storyEyebrow}>
         <time datetime={story.data.publishedAt.toISOString().slice(0, 10)}>
           {story.data.publishedAt.toLocaleDateString("en-GB", {
             day: "numeric",
@@ -36,7 +43,6 @@ const { Content } = await render(story);
       <h1>{story.data.title}</h1>
       <div class={styles.storyIntroduction}>
         <div>
-          <p class={styles.storyPerson}>{story.data.name}</p>
           <p class={styles.storyDeck}>{story.data.description}</p>
         </div>
         {(story.data.location || links.length > 0) && (
@@ -46,20 +52,14 @@ const { Content } = await render(story);
           >
             {story.data.location && (
               <>
-                <p class={shared.eyebrow}>Based in</p>
+                <p class={styles.storyEyebrow}>Based in</p>
                 <p>{story.data.location}</p>
               </>
             )}
             {links.length > 0 && (
               <>
-                <p class={shared.eyebrow}>Find them online</p>
-                <ul>
-                  {links.map((link) => (
-                    <li>
-                      <a href={link.url}>{link.label} ↗</a>
-                    </li>
-                  ))}
-                </ul>
+                <p class={styles.storyEyebrow}>Find {firstName} online</p>
+                <StorySocialLinks links={links} />
               </>
             )}
           </aside>
@@ -84,19 +84,56 @@ const { Content } = await render(story);
     <div class={styles.storyReadingLayout}>
       <aside
         class={styles.storyProjectNote}
-        aria-label="About People of GraphQL"
+        aria-label={`About ${story.data.name}`}
       >
-        <p class={shared.eyebrow}>People of GraphQL</p>
-        <h2>A community is made of people.</h2>
-        <p>
-          Personal stories from the people building, maintaining, and finding
-          their place in the GraphQL community.
-        </p>
-        <a href="/about/">About the project ↗</a>
+        <p class={styles.storyPerson}>{story.data.name}</p>
+        {story.data.sidebar && (
+          <p class={styles.storyPersonRole}>{story.data.sidebar.role}</p>
+        )}
+        <div class={styles.storyProjectCopy}>
+          {story.data.sidebar && <p>{story.data.sidebar.introduction}</p>}
+          {profile && (
+            <a href={`/profiles/${profile[0]}/`}>
+              Explore {firstName}’s profile →
+            </a>
+          )}
+        </div>
       </aside>
       <Content />
-      <a class:list={[shared.back, styles.storyEnd]} href="/stories/">
-        Explore more stories →
+      {(story.data.relatedLinks || links.length > 0) && (
+        <section class={styles.storyMoreLinks} aria-label="Explore further">
+          {story.data.relatedLinks && (
+            <div>
+              <h2>{story.data.relatedLinks.title}</h2>
+              <ul class={styles.storyContextLinks}>
+                {story.data.relatedLinks.items.map((link) => (
+                  <li>
+                    <a
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {link.title}
+                    </a>
+                    <p>{link.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {links.length > 0 && (
+            <aside
+              class:list={[styles.storyPersonDetails, styles.storyMoreSocial]}
+              aria-label={`Find ${firstName} online`}
+            >
+              <h2>Find {firstName} online</h2>
+              <StorySocialLinks links={links} />
+            </aside>
+          )}
+        </section>
+      )}
+      <a class:list={[styles.storyBack, styles.storyEnd]} href="/stories/">
+        Meet more people of GraphQL →
       </a>
     </div>
   </article>

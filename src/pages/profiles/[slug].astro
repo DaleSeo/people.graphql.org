@@ -14,7 +14,7 @@ import {
 } from "../../lib/directory";
 import shared from "../../styles/shared.module.css";
 import styles from "./profile.module.css";
-import starCardStyles from "../../styles/star-card.module.css";
+import starCardStyles from "../../components/star-card.module.css";
 export function getStaticPaths() {
   return Object.entries(people).map(([slug, person]) => ({
     params: { slug },
