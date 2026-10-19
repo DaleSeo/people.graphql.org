@@ -50,7 +50,7 @@ Existing references are preserved for failed downloads. Other profile fields
 and portraits belonging only to other categories are left alone.
 
 `wg-manifest.json` records successful usernames, the refresh time, and any
-failures. After refreshing, run `npm run people:sync` and `npm run build` to
+failures. After refreshing, run `npm run directory:build` and `npm run build` to
 update the directory and site. No network requests are needed by site visitors.
 
 ## Fill missing conference portraits
@@ -62,5 +62,5 @@ portraits, resolves conference identity aliases, and saves validated 240 × 240
 PNGs under the person's profile slug. It updates their `avatarUrl` and records
 photo source URLs in `speakers-2026-manifest.json`.
 
-Run `npm run people:sync` and rebuild afterward. Another imported conference
+Run `npm run directory:build` and rebuild afterward. Another imported conference
 year can be supplied instead of `2026`.

@@ -2,78 +2,79 @@
   "pages": [
     {
       "slug": "",
+      "breadcrumb": "People",
       "title": "The people behind GraphQL.",
-      "description": "Meet the people shaping GraphQL: building together, sharing what they know, and helping the community grow.",
+      "description": "Meet the people building GraphQL, sharing what they know, and helping others find their place in the community.",
       "action": {
         "label": "Find your working group",
         "href": "/wg/"
       },
       "parent": "",
-      "order": "name",
       "mode": "grid"
     },
     {
       "slug": "stories",
+      "breadcrumb": "Stories",
       "title": "In their own words.",
-      "description": "Discover the personal stories of the people behind GraphQL.",
+      "description": "How people found their way into GraphQL, what they’re working on, and what they’ve learned along the way.",
       "action": {
         "label": "About GraphQL Stories",
         "href": "/stories/about/"
       },
       "parent": "",
-      "order": "recent",
       "mode": "article"
     },
     {
       "slug": "stars",
+      "breadcrumb": "Stars",
       "title": "A universe shaped by contributors.",
-      "description": "Meet the GraphQL Stars, recognized for their contributions to the GraphQL ecosystem.",
+      "description": "Celebrating the people recognized each year for their contributions to GraphQL’s open-source projects and specifications.",
       "action": {
         "label": "About GraphQL Stars",
         "href": "/stars/about/"
       },
       "parent": "",
-      "order": "random",
       "mode": "grid"
     },
     {
       "slug": "wg",
+      "breadcrumb": "Working groups",
       "title": "Building GraphQL together.",
-      "description": "Meet the people participating in GraphQL working groups and technical governance.",
+      "description": "Meet the people taking part in GraphQL’s working groups, discussing proposals and bringing different experiences to the decisions ahead.",
       "action": {
-        "label": "Explore the specification working group",
-        "href": "/wg/spec/"
+        "label": "How to join a working group",
+        "href": "https://graphql.org/community/contribute/project-meetings/"
       },
       "parent": "",
-      "order": "attendance",
       "mode": "grid"
     },
     {
       "slug": "ambassadors",
-      "title": "GraphQL, shared with the world.",
-      "description": "Meet the ambassadors sharing their experience and welcoming more people into GraphQL.",
+      "breadcrumb": "Ambassadors",
+      "title": "Helping others get involved.",
+      "description": "Helping others get involved.",
       "action": {
         "label": "Find a working group",
         "href": "/wg/"
       },
       "parent": "",
-      "order": "name",
       "mode": "grid"
     },
     {
       "slug": "speakers",
-      "title": "Ideas worth sharing.",
-      "description": "Discover the people who have shared their ideas and experience at GraphQLConf.",
+      "breadcrumb": "Speakers",
+      "title": "Taking the stage.",
+      "description": "Meet the GraphQLConf speakers sharing what they’ve built, what they’ve learned, and the questions they’re still working on.",
       "action": {
         "label": "Explore GraphQLConf talks",
         "href": "/speakers/?view=list"
       },
       "parent": "",
-      "order": "name",
       "mode": "grid"
     },
     {
       "slug": "stars/2026",
+      "breadcrumb": "2026",
       "title": "Class of 2026",
       "description": "Celebrate the GraphQL Stars class of 2026 and their contributions to GraphQL.",
       "action": {
@@ -81,11 +82,11 @@
         "href": "/stars/about/"
       },
       "parent": "stars",
-      "order": "random",
       "mode": "grid"
     },
     {
       "slug": "stars/2025",
+      "breadcrumb": "2025",
       "title": "Class of 2025",
       "description": "Celebrate the GraphQL Stars class of 2025 and their contributions to GraphQL.",
       "action": {
@@ -93,11 +94,11 @@
         "href": "/stars/about/"
       },
       "parent": "stars",
-      "order": "random",
       "mode": "grid"
     },
     {
       "slug": "stars/2024",
+      "breadcrumb": "2024",
       "title": "Class of 2024",
       "description": "Celebrate the GraphQL Stars class of 2024 and their contributions to GraphQL.",
       "action": {
@@ -105,155 +106,155 @@
         "href": "/stars/about/"
       },
       "parent": "stars",
-      "order": "random",
       "mode": "grid"
     },
     {
       "slug": "wg/tsc",
+      "breadcrumb": "TSC",
       "title": "Technical Steering Committee",
       "description": "Meet the current and emeritus members of the GraphQL Technical Steering Committee.",
       "action": {
-        "label": "Explore working groups",
-        "href": "/wg/"
+        "label": "Apply to be a TSC member",
+        "href": "https://github.com/graphql/graphql-wg/blob/main/GraphQL-TSC.md#becoming-a-tsc-member"
       },
       "parent": "wg",
-      "order": "chair",
       "mode": "grid"
     },
     {
       "slug": "wg/spec",
-      "title": "Specification Working Group",
-      "description": "Meet the people helping shape Specification through the GraphQL working groups.",
+      "breadcrumb": "GraphQL Specification",
+      "title": "GraphQL Specification Working Group",
+      "description": "Meet the people helping shape the GraphQL Specification.",
       "action": {
-        "label": "Join the Specification WG",
+        "label": "Join the GraphQL WG",
         "href": "https://github.com/graphql/graphql-wg"
       },
       "parent": "wg",
-      "order": "attendance",
       "mode": "grid"
     },
     {
       "slug": "wg/ai",
+      "breadcrumb": "AI",
       "title": "AI Working Group",
-      "description": "Meet the people helping shape AI through the GraphQL working groups.",
+      "description": "Meet the people helping to explore how GraphQL can best support the growing needs of artificial intelligence and machine learning in the GraphQL AI Working Group.",
       "action": {
         "label": "Join the AI WG",
         "href": "https://github.com/graphql/ai-wg"
       },
       "parent": "wg",
-      "order": "attendance",
       "mode": "grid"
     },
     {
       "slug": "wg/federation",
+      "breadcrumb": "Federation",
       "title": "Federation Working Group",
-      "description": "Meet the people helping shape Federation through the GraphQL working groups.",
+      "description": "Meet the people helping shape the GraphQL Federation Specification through the GraphQL Federation Spec working group.",
       "action": {
         "label": "Join the Federation WG",
         "href": "https://github.com/graphql/composite-schemas-wg"
       },
       "parent": "wg",
-      "order": "attendance",
       "mode": "grid"
     },
     {
       "slug": "wg/golden-path",
+      "breadcrumb": "Golden Path",
       "title": "Golden Path Working Group",
-      "description": "Meet the people helping shape Golden Path through the GraphQL working groups.",
+      "description": "Meet the people helping to define and document an opinionated set of practices believed to give new users of GraphQL the greatest chance of success with the technology through the Golden Path working group.",
       "action": {
         "label": "Join the Golden Path WG",
         "href": "https://github.com/graphql/golden-path-wg"
       },
       "parent": "wg",
-      "order": "attendance",
       "mode": "grid"
     },
     {
       "slug": "wg/graphql-js",
+      "breadcrumb": "GraphQL.js",
       "title": "GraphQL.js Working Group",
-      "description": "Meet the people helping shape GraphQL.js through the GraphQL working groups.",
+      "description": "Meet the people discussing and agreeing upon proposed changes to the GraphQL-JS library and other related foundation libraries.",
       "action": {
         "label": "Join the GraphQL.js WG",
         "href": "https://github.com/graphql/graphql-js-wg"
       },
       "parent": "wg",
-      "order": "attendance",
       "mode": "grid"
     },
     {
       "slug": "wg/graphiql",
+      "breadcrumb": "GraphiQL",
       "title": "GraphiQL Working Group",
-      "description": "Meet the people helping shape GraphiQL through the GraphQL working groups.",
+      "description": "Meet the people helping shape GraphiQL through the GraphiQL working group.",
       "action": {
         "label": "Join the GraphiQL WG",
         "href": "https://github.com/graphql/graphiql"
       },
       "parent": "wg",
-      "order": "attendance",
       "mode": "grid"
     },
     {
       "slug": "wg/http",
+      "breadcrumb": "GraphQL over HTTP",
       "title": "GraphQL over HTTP Working Group",
-      "description": "Meet the people helping shape GraphQL over HTTP through the GraphQL working groups.",
+      "description": "Meet the people helping shape the GraphQL over HTTP Specification.",
       "action": {
         "label": "Join the GraphQL over HTTP WG",
         "href": "https://github.com/graphql/graphql-over-http"
       },
       "parent": "wg",
-      "order": "attendance",
-      "mode": "grid"
-    },
-    {
-      "slug": "wg/community",
-      "title": "Community Working Group",
-      "description": "Meet the people helping shape Community through the GraphQL working groups.",
-      "action": {
-        "label": "Join the Community WG",
-        "href": "https://github.com/graphql/community-wg"
-      },
-      "parent": "wg",
-      "order": "attendance",
       "mode": "grid"
     },
     {
       "slug": "wg/otel",
+      "breadcrumb": "OpenTelemetry",
       "title": "OpenTelemetry Working Group",
-      "description": "Meet the people helping shape OpenTelemetry through the GraphQL working groups.",
+      "description": "Meet the people defining the best practices and semantic conventions for using OpenTelemetry with GraphQL.",
       "action": {
-        "label": "Join the OpenTelemetry WG",
+        "label": "Join the OTel WG",
         "href": "https://github.com/graphql/otel-wg"
       },
       "parent": "wg",
-      "order": "attendance",
-      "mode": "grid"
-    },
-    {
-      "slug": "wg/nullability",
-      "title": "Nullability Working Group",
-      "description": "Meet the people helping shape Nullability through the GraphQL working groups.",
-      "action": {
-        "label": "Join the Nullability WG",
-        "href": "https://github.com/graphql/nullability-wg"
-      },
-      "parent": "wg",
-      "order": "attendance",
       "mode": "grid"
     },
     {
       "slug": "wg/defer-stream",
+      "breadcrumb": "Defer & Stream",
       "title": "Defer & Stream Working Group",
-      "description": "Meet the people helping shape Defer & Stream through the GraphQL working groups.",
+      "description": "Meet the people designing and drafting an \"incremental delivery\" enhancement to the GraphQL specification.",
       "action": {
-        "label": "Join the Defer & Stream WG",
+        "label": "Join the Incremental Delivery WG",
         "href": "https://github.com/graphql/defer-stream-wg"
       },
       "parent": "wg",
-      "order": "attendance",
+      "mode": "grid"
+    },
+    {
+      "slug": "wg/nullability",
+      "breadcrumb": "Nullability",
+      "title": "Nullability Working Group",
+      "description": "Meet the people who gave clients a way to influence or override nullability checks within queries. The nullability implementation has been merged into the main Specification and the group was archived on February 5, 2026.",
+      "action": {
+        "label": "Join the Specification WG",
+        "href": "https://github.com/graphql/graphql-wg"
+      },
+      "parent": "wg",
+      "mode": "grid"
+    },
+    {
+      "slug": "wg/community",
+      "breadcrumb": "Community",
+      "title": "Community Working Group",
+      "description": "Meet the people developing and executing strategic initiatives that reinforce GraphQL's value proposition while fostering an engaged, educated, and expanding community. The Community WG does not meet and instead uses Issues, Pull Requests and Discussions in the GitHub repository.",
+      "action": {
+        "label": "Visit the Community WG repo",
+        "href": "https://github.com/graphql/community-wg"
+      },
+      "parent": "wg",
       "mode": "grid"
     },
     {
       "slug": "speakers/graphqlconf-2026",
+      "breadcrumb": "GraphQLConf 2026",
       "title": "GraphQLConf 2026",
       "description": "Meet the speakers and explore talks from GraphQLConf 2026.",
       "action": {
@@ -261,11 +262,11 @@
         "href": "/speakers/graphqlconf-2026/?view=list"
       },
       "parent": "speakers",
-      "order": "name",
       "mode": "grid"
     },
     {
       "slug": "speakers/graphqlconf-2025",
+      "breadcrumb": "GraphQLConf 2025",
       "title": "GraphQLConf 2025",
       "description": "Meet the speakers and explore talks from GraphQLConf 2025.",
       "action": {
@@ -273,11 +274,11 @@
         "href": "/speakers/graphqlconf-2025/?view=list"
       },
       "parent": "speakers",
-      "order": "name",
       "mode": "grid"
     },
     {
       "slug": "speakers/graphqlconf-2024",
+      "breadcrumb": "GraphQLConf 2024",
       "title": "GraphQLConf 2024",
       "description": "Meet the speakers and explore talks from GraphQLConf 2024.",
       "action": {
@@ -285,11 +286,11 @@
         "href": "/speakers/graphqlconf-2024/?view=list"
       },
       "parent": "speakers",
-      "order": "name",
       "mode": "grid"
     },
     {
       "slug": "speakers/graphqlconf-2023",
+      "breadcrumb": "GraphQLConf 2023",
       "title": "GraphQLConf 2023",
       "description": "Meet the speakers and explore talks from GraphQLConf 2023.",
       "action": {
@@ -297,7 +298,6 @@
         "href": "/speakers/graphqlconf-2023/?view=list"
       },
       "parent": "speakers",
-      "order": "name",
       "mode": "grid"
     }
   ],
@@ -4999,735 +4999,735 @@
     {
       "person": "abhinand-c",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2023-06-01"
     },
     {
       "person": "acao",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2023-03-02"
     },
     {
       "person": "adarshdigievo",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 2,
       "lastActive": "2023-06-01"
     },
     {
       "person": "adron",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 6,
       "lastActive": "2022-07-07"
     },
     {
       "person": "alan-cha",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 2,
       "lastActive": "2022-01-06"
     },
     {
       "person": "aleksandarsusnjar",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2021-12-02"
     },
     {
       "person": "alessbell",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2022-09-01"
     },
     {
       "person": "alloy",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 3,
       "lastActive": "2022-04-07"
     },
     {
       "person": "andimarek",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 3,
       "lastActive": "2023-01-11"
     },
     {
       "person": "anthonymdev",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 10,
       "lastActive": "2024-01-04"
     },
     {
       "person": "aprilrd",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2023-09-07"
     },
     {
       "person": "ardatan",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2022-05-05"
     },
     {
       "person": "asprouse",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 2,
       "lastActive": "2022-07-07"
     },
     {
       "person": "aubron",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2022-05-05"
     },
     {
       "person": "bbakerman",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2023-05-10"
     },
     {
       "person": "benjaminjkraft",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2022-06-02"
     },
     {
       "person": "benjie",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 71,
       "lastActive": "2026-09-17"
     },
     {
       "person": "bignimbus",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 22,
       "lastActive": "2026-09-03"
     },
     {
       "person": "bobafetters",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 2,
       "lastActive": "2025-12-04"
     },
     {
       "person": "bobbiejc",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 2,
       "lastActive": "2022-12-01"
     },
     {
       "person": "bod",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 34,
       "lastActive": "2026-08-06"
     },
     {
       "person": "brainkim",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 2,
       "lastActive": "2022-01-06"
     },
     {
       "person": "calvincestari",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 7,
       "lastActive": "2024-11-07"
     },
     {
       "person": "captbaritone",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 13,
       "lastActive": "2025-04-03"
     },
     {
       "person": "michaelstaib",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 2,
       "lastActive": "2025-04-03"
     },
     {
       "person": "cristaloleg",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 3,
       "lastActive": "2022-02-03"
     },
     {
       "person": "cuhtis",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2024-03-07"
     },
     {
       "person": "dariuszkuc",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 10,
       "lastActive": "2023-09-07"
     },
     {
       "person": "doc-jones",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 4,
       "lastActive": "2022-08-04"
     },
     {
       "person": "dondonz",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 6,
       "lastActive": "2023-05-10"
     },
     {
       "person": "dotansimha",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2022-01-06"
     },
     {
       "person": "dugenkui03",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2021-10-07"
     },
     {
       "person": "egoodwinx",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 4,
       "lastActive": "2026-09-03"
     },
     {
       "person": "enisdenjo",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 4,
       "lastActive": "2023-03-16"
     },
     {
       "person": "ernieturner",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 3,
       "lastActive": "2024-07-18"
     },
     {
       "person": "fotoetienne",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 32,
       "lastActive": "2026-02-05"
     },
     {
       "person": "ghmcadams",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 4,
       "lastActive": "2022-08-04"
     },
     {
       "person": "glasser",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 2,
       "lastActive": "2022-10-20"
     },
     {
       "person": "guialbuk",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 2,
       "lastActive": "2025-05-01"
     },
     {
       "person": "gwardwell",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2024-11-07"
     },
     {
       "person": "hwillson",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 20,
       "lastActive": "2023-05-04"
     },
     {
       "person": "itamark",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2023-09-07"
     },
     {
       "person": "ivangoncharov",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 29,
       "lastActive": "2026-01-15"
     },
     {
       "person": "janettec",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 5,
       "lastActive": "2026-01-15"
     },
     {
       "person": "jbellenger",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 5,
       "lastActive": "2026-09-03"
     },
     {
       "person": "jensneuse",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2023-12-07"
     },
     {
       "person": "jerelmiller",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 2,
       "lastActive": "2025-11-06"
     },
     {
       "person": "joeynenni",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 5,
       "lastActive": "2022-07-07"
     },
     {
       "person": "johnstarich",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2022-07-07"
     },
     {
       "person": "jonathanawesome",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2023-03-02"
     },
     {
       "person": "jorydotcom",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2025-06-05"
     },
     {
       "person": "josephsavona",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2022-01-06"
     },
     {
       "person": "jovidecroock",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 6,
       "lastActive": "2025-03-06"
     },
     {
       "person": "jovidecroock",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2024-08-01"
     },
     {
       "person": "keweiqu",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 16,
       "lastActive": "2026-05-07"
     },
     {
       "person": "korinne",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2023-05-04"
     },
     {
       "person": "leebyron",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 76,
       "lastActive": "2026-11-19"
     },
     {
       "person": "lizjakubowski",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2021-12-02"
     },
     {
       "person": "lunaticmuch",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 4,
       "lastActive": "2023-02-02"
     },
     {
       "person": "magicmark",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 20,
       "lastActive": "2026-09-17"
     },
     {
       "person": "martijnwalraven",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 2,
       "lastActive": "2023-12-07"
     },
     {
       "person": "martinbonnin",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2025-08-07"
     },
     {
       "person": "martinbonnin",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 35,
       "lastActive": "2026-10-15"
     },
     {
       "person": "maryelizbeth",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 3,
       "lastActive": "2022-12-01"
     },
     {
       "person": "mcohen75",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 3,
       "lastActive": "2023-02-02"
     },
     {
       "person": "michaelstaib",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 48,
       "lastActive": "2026-09-03"
     },
     {
       "person": "miqui",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 2,
       "lastActive": "2026-09-03"
     },
     {
       "person": "mjmahone",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 51,
       "lastActive": "2026-09-03"
     },
     {
       "person": "mjmahone",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 4,
       "lastActive": "2026-01-15"
     },
     {
       "person": "mmatsa",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 7,
       "lastActive": "2022-08-04"
     },
     {
       "person": "monicatang",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2023-09-07"
     },
     {
       "person": "n1ru4l",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 5,
       "lastActive": "2022-05-05"
     },
     {
       "person": "n1ru4l",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2022-07-07"
     },
     {
       "person": "nalchevanidze",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2022-01-06"
     },
     {
       "person": "ndejaco2",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 2,
       "lastActive": "2022-07-07"
     },
     {
       "person": "nojvek",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2021-10-07"
     },
     {
       "person": "pascalsenn",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 17,
       "lastActive": "2026-09-17"
     },
     {
       "person": "phillip-kruger",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 2,
       "lastActive": "2022-11-09"
     },
     {
       "person": "phryneas",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 2,
       "lastActive": "2025-11-06"
     },
     {
       "person": "prasek",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2023-12-07"
     },
     {
       "person": "ravangen",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 3,
       "lastActive": "2022-06-02"
     },
     {
       "person": "rivantsov",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 14,
       "lastActive": "2023-01-19"
     },
     {
       "person": "robgrant",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 2,
       "lastActive": "2022-07-07"
     },
     {
       "person": "robrichard",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 58,
       "lastActive": "2026-09-17"
     },
     {
       "person": "robzhu",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 3,
       "lastActive": "2022-02-03"
     },
     {
       "person": "rstaib",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 2,
       "lastActive": "2023-12-07"
     },
     {
       "person": "russellyou",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2022-12-07"
     },
     {
       "person": "ryanholdren",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2023-09-07"
     },
     {
       "person": "sachee",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 4,
       "lastActive": "2022-07-07"
     },
     {
       "person": "saerdnaer",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2023-09-07"
     },
     {
       "person": "saihaj",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 8,
       "lastActive": "2022-11-03"
     },
     {
       "person": "shane32",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2023-11-02"
     },
     {
       "person": "solomon-b",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2022-08-04"
     },
     {
       "person": "rbalicki2",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 3,
       "lastActive": "2023-10-05"
     },
     {
       "person": "thomasheyenbrock",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2023-02-02"
     },
     {
       "person": "timsuchanek",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 6,
       "lastActive": "2022-08-04"
     },
     {
       "person": "tinnou",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2023-12-07"
     },
     {
       "person": "twof",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 26,
       "lastActive": "2026-02-05"
     },
     {
       "person": "tyao1",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2023-09-07"
     },
     {
       "person": "urigo",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2026-01-15"
     },
     {
       "person": "urigo",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 11,
       "lastActive": "2025-10-02"
     },
     {
       "person": "varachit",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2022-08-04"
     },
     {
       "person": "wiegell",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2026-01-15"
     },
     {
       "person": "xuorig",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 10,
       "lastActive": "2023-12-07"
     },
     {
       "person": "yaacovcr",
       "page": "wg/spec",
-      "label": "Specification WG",
+      "label": "GraphQL Specification WG",
       "count": 33,
       "lastActive": "2026-09-03"
     },
@@ -6733,6 +6733,237 @@
       "lastActive": "2022-07-21"
     },
     {
+      "person": "bclozel",
+      "page": "wg/otel",
+      "label": "OpenTelemetry WG",
+      "count": 1,
+      "lastActive": "2025-08-28"
+    },
+    {
+      "person": "benjie",
+      "page": "wg/otel",
+      "label": "OpenTelemetry WG",
+      "count": 2,
+      "lastActive": "2025-05-22"
+    },
+    {
+      "person": "bryncooke",
+      "page": "wg/otel",
+      "label": "OpenTelemetry WG",
+      "count": 3,
+      "lastActive": "2025-06-26"
+    },
+    {
+      "person": "carodewig",
+      "page": "wg/otel",
+      "label": "OpenTelemetry WG",
+      "count": 1,
+      "lastActive": "2025-04-24"
+    },
+    {
+      "person": "eli0shin",
+      "page": "wg/otel",
+      "label": "OpenTelemetry WG",
+      "count": 5,
+      "lastActive": "2025-10-23"
+    },
+    {
+      "person": "emrysmyrddin",
+      "page": "wg/otel",
+      "label": "OpenTelemetry WG",
+      "count": 5,
+      "lastActive": "2025-10-23"
+    },
+    {
+      "person": "logaretm",
+      "page": "wg/otel",
+      "label": "OpenTelemetry WG",
+      "count": 1,
+      "lastActive": "2026-05-28"
+    },
+    {
+      "person": "marcotc",
+      "page": "wg/otel",
+      "label": "OpenTelemetry WG",
+      "count": 3,
+      "lastActive": "2025-10-23"
+    },
+    {
+      "person": "michaelstaib",
+      "page": "wg/otel",
+      "label": "OpenTelemetry WG",
+      "count": 1,
+      "lastActive": "2025-04-24"
+    },
+    {
+      "person": "pascalsenn",
+      "page": "wg/otel",
+      "label": "OpenTelemetry WG",
+      "count": 9,
+      "lastActive": "2026-05-28"
+    },
+    {
+      "person": "ravangen",
+      "page": "wg/otel",
+      "label": "OpenTelemetry WG",
+      "count": 4,
+      "lastActive": "2025-09-25"
+    },
+    {
+      "person": "rstata",
+      "page": "wg/otel",
+      "label": "OpenTelemetry WG",
+      "count": 1,
+      "lastActive": "2026-02-26"
+    },
+    {
+      "person": "trask",
+      "page": "wg/otel",
+      "label": "OpenTelemetry WG",
+      "count": 2,
+      "lastActive": "2025-05-22"
+    },
+    {
+      "person": "benjie",
+      "page": "wg/defer-stream",
+      "label": "Defer & Stream WG",
+      "count": 7,
+      "lastActive": "2025-02-20"
+    },
+    {
+      "person": "bod",
+      "page": "wg/defer-stream",
+      "label": "Defer & Stream WG",
+      "count": 1,
+      "lastActive": "2023-09-11"
+    },
+    {
+      "person": "ivangoncharov",
+      "page": "wg/defer-stream",
+      "label": "Defer & Stream WG",
+      "count": 1,
+      "lastActive": "2023-08-14"
+    },
+    {
+      "person": "robrichard",
+      "page": "wg/defer-stream",
+      "label": "Defer & Stream WG",
+      "count": 9,
+      "lastActive": "2025-02-20"
+    },
+    {
+      "person": "yaacovcr",
+      "page": "wg/defer-stream",
+      "label": "Defer & Stream WG",
+      "count": 7,
+      "lastActive": "2025-01-13"
+    },
+    {
+      "person": "alf",
+      "page": "wg/nullability",
+      "label": "Nullability WG",
+      "count": 1,
+      "lastActive": "2024-09-25"
+    },
+    {
+      "person": "anthonymdev",
+      "page": "wg/nullability",
+      "label": "Nullability WG",
+      "count": 1,
+      "lastActive": "2023-07-26"
+    },
+    {
+      "person": "aprilrd",
+      "page": "wg/nullability",
+      "label": "Nullability WG",
+      "count": 5,
+      "lastActive": "2023-10-25"
+    },
+    {
+      "person": "benjie",
+      "page": "wg/nullability",
+      "label": "Nullability WG",
+      "count": 15,
+      "lastActive": "2025-05-28"
+    },
+    {
+      "person": "bod",
+      "page": "wg/nullability",
+      "label": "Nullability WG",
+      "count": 5,
+      "lastActive": "2024-09-25"
+    },
+    {
+      "person": "calvincestari",
+      "page": "wg/nullability",
+      "label": "Nullability WG",
+      "count": 10,
+      "lastActive": "2025-03-26"
+    },
+    {
+      "person": "captbaritone",
+      "page": "wg/nullability",
+      "label": "Nullability WG",
+      "count": 6,
+      "lastActive": "2024-09-25"
+    },
+    {
+      "person": "ernieturner",
+      "page": "wg/nullability",
+      "label": "Nullability WG",
+      "count": 4,
+      "lastActive": "2024-09-25"
+    },
+    {
+      "person": "fotoetienne",
+      "page": "wg/nullability",
+      "label": "Nullability WG",
+      "count": 8,
+      "lastActive": "2025-05-28"
+    },
+    {
+      "person": "fotoetienne",
+      "page": "wg/nullability",
+      "label": "Nullability WG",
+      "count": 1,
+      "lastActive": "2025-04-30"
+    },
+    {
+      "person": "itamark",
+      "page": "wg/nullability",
+      "label": "Nullability WG",
+      "count": 1,
+      "lastActive": "2024-09-25"
+    },
+    {
+      "person": "janettec",
+      "page": "wg/nullability",
+      "label": "Nullability WG",
+      "count": 2,
+      "lastActive": "2025-04-30"
+    },
+    {
+      "person": "martinbonnin",
+      "page": "wg/nullability",
+      "label": "Nullability WG",
+      "count": 11,
+      "lastActive": "2026-01-28"
+    },
+    {
+      "person": "mjmahone",
+      "page": "wg/nullability",
+      "label": "Nullability WG",
+      "count": 2,
+      "lastActive": "2023-08-23"
+    },
+    {
+      "person": "twof",
+      "page": "wg/nullability",
+      "label": "Nullability WG",
+      "count": 19,
+      "lastActive": "2026-01-28"
+    },
+    {
       "person": "benjie",
       "page": "wg/community",
       "label": "Community WG",
@@ -6878,237 +7109,6 @@
       "label": "Community WG",
       "count": 1,
       "lastActive": "2025-03-13"
-    },
-    {
-      "person": "bclozel",
-      "page": "wg/otel",
-      "label": "OpenTelemetry WG",
-      "count": 1,
-      "lastActive": "2025-08-28"
-    },
-    {
-      "person": "benjie",
-      "page": "wg/otel",
-      "label": "OpenTelemetry WG",
-      "count": 2,
-      "lastActive": "2025-05-22"
-    },
-    {
-      "person": "bryncooke",
-      "page": "wg/otel",
-      "label": "OpenTelemetry WG",
-      "count": 3,
-      "lastActive": "2025-06-26"
-    },
-    {
-      "person": "carodewig",
-      "page": "wg/otel",
-      "label": "OpenTelemetry WG",
-      "count": 1,
-      "lastActive": "2025-04-24"
-    },
-    {
-      "person": "eli0shin",
-      "page": "wg/otel",
-      "label": "OpenTelemetry WG",
-      "count": 5,
-      "lastActive": "2025-10-23"
-    },
-    {
-      "person": "emrysmyrddin",
-      "page": "wg/otel",
-      "label": "OpenTelemetry WG",
-      "count": 5,
-      "lastActive": "2025-10-23"
-    },
-    {
-      "person": "logaretm",
-      "page": "wg/otel",
-      "label": "OpenTelemetry WG",
-      "count": 1,
-      "lastActive": "2026-05-28"
-    },
-    {
-      "person": "marcotc",
-      "page": "wg/otel",
-      "label": "OpenTelemetry WG",
-      "count": 3,
-      "lastActive": "2025-10-23"
-    },
-    {
-      "person": "michaelstaib",
-      "page": "wg/otel",
-      "label": "OpenTelemetry WG",
-      "count": 1,
-      "lastActive": "2025-04-24"
-    },
-    {
-      "person": "pascalsenn",
-      "page": "wg/otel",
-      "label": "OpenTelemetry WG",
-      "count": 9,
-      "lastActive": "2026-05-28"
-    },
-    {
-      "person": "ravangen",
-      "page": "wg/otel",
-      "label": "OpenTelemetry WG",
-      "count": 4,
-      "lastActive": "2025-09-25"
-    },
-    {
-      "person": "rstata",
-      "page": "wg/otel",
-      "label": "OpenTelemetry WG",
-      "count": 1,
-      "lastActive": "2026-02-26"
-    },
-    {
-      "person": "trask",
-      "page": "wg/otel",
-      "label": "OpenTelemetry WG",
-      "count": 2,
-      "lastActive": "2025-05-22"
-    },
-    {
-      "person": "alf",
-      "page": "wg/nullability",
-      "label": "Nullability WG",
-      "count": 1,
-      "lastActive": "2024-09-25"
-    },
-    {
-      "person": "anthonymdev",
-      "page": "wg/nullability",
-      "label": "Nullability WG",
-      "count": 1,
-      "lastActive": "2023-07-26"
-    },
-    {
-      "person": "aprilrd",
-      "page": "wg/nullability",
-      "label": "Nullability WG",
-      "count": 5,
-      "lastActive": "2023-10-25"
-    },
-    {
-      "person": "benjie",
-      "page": "wg/nullability",
-      "label": "Nullability WG",
-      "count": 15,
-      "lastActive": "2025-05-28"
-    },
-    {
-      "person": "bod",
-      "page": "wg/nullability",
-      "label": "Nullability WG",
-      "count": 5,
-      "lastActive": "2024-09-25"
-    },
-    {
-      "person": "calvincestari",
-      "page": "wg/nullability",
-      "label": "Nullability WG",
-      "count": 10,
-      "lastActive": "2025-03-26"
-    },
-    {
-      "person": "captbaritone",
-      "page": "wg/nullability",
-      "label": "Nullability WG",
-      "count": 6,
-      "lastActive": "2024-09-25"
-    },
-    {
-      "person": "ernieturner",
-      "page": "wg/nullability",
-      "label": "Nullability WG",
-      "count": 4,
-      "lastActive": "2024-09-25"
-    },
-    {
-      "person": "fotoetienne",
-      "page": "wg/nullability",
-      "label": "Nullability WG",
-      "count": 8,
-      "lastActive": "2025-05-28"
-    },
-    {
-      "person": "fotoetienne",
-      "page": "wg/nullability",
-      "label": "Nullability WG",
-      "count": 1,
-      "lastActive": "2025-04-30"
-    },
-    {
-      "person": "itamark",
-      "page": "wg/nullability",
-      "label": "Nullability WG",
-      "count": 1,
-      "lastActive": "2024-09-25"
-    },
-    {
-      "person": "janettec",
-      "page": "wg/nullability",
-      "label": "Nullability WG",
-      "count": 2,
-      "lastActive": "2025-04-30"
-    },
-    {
-      "person": "martinbonnin",
-      "page": "wg/nullability",
-      "label": "Nullability WG",
-      "count": 11,
-      "lastActive": "2026-01-28"
-    },
-    {
-      "person": "mjmahone",
-      "page": "wg/nullability",
-      "label": "Nullability WG",
-      "count": 2,
-      "lastActive": "2023-08-23"
-    },
-    {
-      "person": "twof",
-      "page": "wg/nullability",
-      "label": "Nullability WG",
-      "count": 19,
-      "lastActive": "2026-01-28"
-    },
-    {
-      "person": "benjie",
-      "page": "wg/defer-stream",
-      "label": "Defer & Stream WG",
-      "count": 7,
-      "lastActive": "2025-02-20"
-    },
-    {
-      "person": "bod",
-      "page": "wg/defer-stream",
-      "label": "Defer & Stream WG",
-      "count": 1,
-      "lastActive": "2023-09-11"
-    },
-    {
-      "person": "ivangoncharov",
-      "page": "wg/defer-stream",
-      "label": "Defer & Stream WG",
-      "count": 1,
-      "lastActive": "2023-08-14"
-    },
-    {
-      "person": "robrichard",
-      "page": "wg/defer-stream",
-      "label": "Defer & Stream WG",
-      "count": 9,
-      "lastActive": "2025-02-20"
-    },
-    {
-      "person": "yaacovcr",
-      "page": "wg/defer-stream",
-      "label": "Defer & Stream WG",
-      "count": 7,
-      "lastActive": "2025-01-13"
     },
     {
       "person": "aexol",

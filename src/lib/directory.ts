@@ -40,12 +40,12 @@ export interface Membership {
 }
 export type Mode = "grid" | "list" | "article";
 export interface DirectoryPage {
+  breadcrumb: string;
   slug: string;
   title: string;
   description: string;
   action: { label: string; href: string };
   parent: string;
-  order: string;
   mode: Mode;
 }
 export interface Entry extends Person {
@@ -149,10 +149,12 @@ export function categoriesFor(slug: string) {
 }
 export function breadcrumbsFor(page: DirectoryPage) {
   return [
-    { label: "People", href: "/" },
+    { label: pageFor("").breadcrumb, href: "/" },
     ...(page.parent
-      ? [{ label: pageFor(page.parent).title, href: hrefFor(page.parent) }]
+      ? [{ label: pageFor(page.parent).breadcrumb, href: hrefFor(page.parent) }]
       : []),
-    ...(page.slug ? [{ label: page.title, href: hrefFor(page.slug) }] : []),
+    ...(page.slug
+      ? [{ label: page.breadcrumb, href: hrefFor(page.slug) }]
+      : []),
   ];
 }

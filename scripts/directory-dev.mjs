@@ -22,7 +22,7 @@ export default function directoryDev() {
         try {
           await run(
             process.execPath,
-            [path.join(root, "scripts/sync-people.mjs")],
+            [path.join(root, "scripts/build-directory.mjs")],
             { cwd: root },
           );
           // Vite observes directory.json changes and updates its importers.
@@ -39,7 +39,8 @@ export default function directoryDev() {
         const relative = path.relative(root, file).split(path.sep).join("/");
         if (!(
           relative.startsWith("src/content/") ||
-          relative === "src/data/identity-aliases.json"
+          relative === "src/data/identity-aliases.json" ||
+          relative === "src/config/directory-pages.mjs"
         ))
           return;
         pending = true;

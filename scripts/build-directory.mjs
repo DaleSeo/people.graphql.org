@@ -2,6 +2,14 @@ import { readFile, readdir, writeFile, mkdir, access } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse } from "yaml";
+import {
+  workingGroups,
+  directoryPages,
+  starsPage,
+  tscPage,
+  workingGroupPage,
+  conferencePage,
+} from "../src/config/directory-pages.mjs";
 import { talkTitle } from "./talk-title.mjs";
 
 async function writeIfChanged(file, contents) {
@@ -37,62 +45,7 @@ const people = new Map();
 const identities = new Map();
 const identityAliases = await read("src/data/identity-aliases.json");
 const memberships = [];
-const pages = [];
-const addPage = (
-  slug,
-  title,
-  description,
-  action,
-  parent = "",
-  order = "name",
-  mode = "grid",
-) => {
-  pages.push({ slug, title, description, action, parent, order, mode });
-};
-const action = (label, href) => ({ label, href });
-addPage(
-  "",
-  "The people behind GraphQL.",
-  "Meet the people shaping GraphQL: building together, sharing what they know, and helping the community grow.",
-  action("Find your working group", "/wg/"),
-);
-addPage(
-  "stories",
-  "In their own words.",
-  "Discover the personal stories of the people behind GraphQL.",
-  action("About GraphQL Stories", "/stories/about/"),
-  "",
-  "recent",
-  "article",
-);
-addPage(
-  "stars",
-  "A universe shaped by contributors.",
-  "Meet the GraphQL Stars, recognized for their contributions to the GraphQL ecosystem.",
-  action("About GraphQL Stars", "/stars/about/"),
-  "",
-  "random",
-);
-addPage(
-  "wg",
-  "Building GraphQL together.",
-  "Meet the people participating in GraphQL working groups and technical governance.",
-  action("Explore the specification working group", "/wg/spec/"),
-  "",
-  "attendance",
-);
-addPage(
-  "ambassadors",
-  "GraphQL, shared with the world.",
-  "Meet the ambassadors sharing their experience and welcoming more people into GraphQL.",
-  action("Find a working group", "/wg/"),
-);
-addPage(
-  "speakers",
-  "Ideas worth sharing.",
-  "Discover the people who have shared their ideas and experience at GraphQLConf.",
-  action("Explore GraphQLConf talks", "/speakers/?view=list"),
-);
+const pages = [...directoryPages];
 
 // Existing registry entries own their public identity and stable URL.
 await mkdir(path.join(root, "src/content/people"), { recursive: true });
@@ -164,14 +117,7 @@ const years = (await readdir(path.join(root, "src/content/stars")))
   .sort()
   .reverse();
 for (const year of years) {
-  addPage(
-    `stars/${year}`,
-    `Class of ${year}`,
-    `Celebrate the GraphQL Stars class of ${year} and their contributions to GraphQL.`,
-    action("About GraphQL Stars", "/stars/about/"),
-    "stars",
-    "random",
-  );
+  pages.push(starsPage(year));
   for (const file of (
     await readdir(path.join(root, `src/content/stars/${year}`))
   )
@@ -215,27 +161,8 @@ for (const file of (await readdir(path.join(root, "src/content/stories")))
     },
   });
 }
-const groups = {
-  "graphql-wg": ["spec", "Specification"],
-  "ai-wg": ["ai", "AI"],
-  "composite-schemas-wg": ["federation", "Federation"],
-  "golden-path-wg": ["golden-path", "Golden Path"],
-  "graphql-js-wg": ["graphql-js", "GraphQL.js"],
-  graphiql: ["graphiql", "GraphiQL"],
-  "graphql-over-http": ["http", "GraphQL over HTTP"],
-  "community-wg": ["community", "Community"],
-  "otel-wg": ["otel", "OpenTelemetry"],
-  "nullability-wg": ["nullability", "Nullability"],
-  "defer-stream-wg": ["defer-stream", "Defer & Stream"],
-};
-addPage(
-  "wg/tsc",
-  "Technical Steering Committee",
-  "Meet the current and emeritus members of the GraphQL Technical Steering Committee.",
-  action("Explore working groups", "/wg/"),
-  "wg",
-  "chair",
-);
+
+pages.push(tscPage);
 for (const m of (await read("src/content/tsc/members.json")).members) {
   const id = await personFor({
     ...m,
@@ -250,15 +177,9 @@ for (const m of (await read("src/content/tsc/members.json")).members) {
     termEnd: m.termEnd,
   });
 }
-for (const [repo, [slug, name]] of Object.entries(groups)) {
-  addPage(
-    `wg/${slug}`,
-    `${name} Working Group`,
-    `Meet the people helping shape ${name} through the GraphQL working groups.`,
-    action(`Join the ${name} WG`, `https://github.com/graphql/${repo}`),
-    "wg",
-    "attendance",
-  );
+for (const [repo, group] of Object.entries(workingGroups)) {
+  const { slug, name } = group;
+  pages.push(workingGroupPage(group));
   for (const m of (await read(`src/content/wgs/${repo}.json`)).attendees) {
     const id = await personFor({
       ...m,
@@ -336,13 +257,7 @@ for (const file of (
   .reverse()) {
   const year = file.match(/\d{4}/)[0];
   const page = `speakers/graphqlconf-${year}`;
-  addPage(
-    page,
-    `GraphQLConf ${year}`,
-    `Meet the speakers and explore talks from GraphQLConf ${year}.`,
-    action("Browse talks", `/${page}/?view=list`),
-    "speakers",
-  );
+  pages.push(conferencePage(year));
   for (const event of await read(`src/content/talks/graphqlconf/${file}`)) {
     if (event.active === "N") continue;
     for (const speaker of event.speakers ?? []) {

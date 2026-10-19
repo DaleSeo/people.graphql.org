@@ -37,7 +37,7 @@ for (const file of await readdir(path.join(root, "src/content/wgs"))) {
       !/^[a-zA-Z0-9-]+$/.test(person.githubUsername)
     ) {
       throw new Error(
-        `Unresolved GitHub identity: ${source}. Run people:sync and resolve aliases first.`,
+        `Unresolved GitHub identity: ${source}. Run directory:build and resolve aliases first.`,
       );
     }
     attendees.set(slug, person.githubUsername.toLowerCase());

@@ -13,7 +13,7 @@ npm run dev
 
 Open http://localhost:4321. `npm run check` validates Astro and TypeScript; `npm run build` generates the static site in `dist/`; `npm run preview` serves it locally. `npm test` checks identity and activity rules; after building, `npm run test:site` checks all directory/profile links, anchors, and local assets.
 
-`npm run dev` and `npm run build` first run `people:sync`. While the dev server is running, changes to `src/content/` and the identity aliases automatically refresh the directory. Sync only writes changed files to avoid unnecessary reloads. If a refresh fails, the terminal shows the error; fix the source file and save it again.
+`npm run dev` and `npm run build` first run `directory:build`. While the dev server is running, changes to `src/content/` and the identity aliases automatically refresh the directory. Sync only writes changed files to avoid unnecessary reloads. If a refresh fails, the terminal shows the error; fix the source file and save it again.
 
 ## Pages
 
@@ -38,7 +38,7 @@ All directories share breadcrumbs, introductory copy and an action, category nav
 
 `src/content/people/<slug>.json` is the canonical identity record. The filename is a stable profile URL; prefer a GitHub username for the initial slug, otherwise a URL-safe name. Records contain a name, optional GitHub username, avatar URL, optional location and organization, and `sourceIds` tying together source records. Existing identity fields are preserved on subsequent imports, so they can be curated independently of the datasets.
 
-`npm run people:sync` reads the following local datasets:
+`npm run directory:build` reads the following local datasets:
 
 - `src/content/stars/<year>/*.json`: annual Stars entries. Historical `tsc` flags belong to that class, not today's TSC roster.
 - `src/content/stories/*.md`: story frontmatter and article links.
@@ -49,13 +49,13 @@ All directories share breadcrumbs, introductory copy and an action, category nav
 
 The importer writes `src/data/directory.json`, the build-time participation index, and seeds new person files. No network calls are needed for import or builds. `src/data/identity-aliases.json` records explicit cross-source identity mappings, including differences in conference usernames and source spelling. `src/data/identity-review.json` reports unmatched speaker identities with name-based candidates; review those rather than merging automatically. GitHub usernames are matched case-insensitively. Preserve source IDs when editing people. To resolve a new match, map the source ID to the canonical slug in `identity-aliases.json`, then sync again.
 
-Missing or failed portraits display initials in bold Host Grotesk. Replace `avatarUrl` in the relevant person record as portraits become available. Existing local portraits are reused. `npm run avatars:refresh` refreshes the original Stars portraits. `npm run avatars:refresh:wgs` refreshes all working-group attendees through their canonical GitHub identities and updates their person records. Run `npm run people:sync` afterward to refresh the directory.
+Missing or failed portraits display initials in bold Host Grotesk. Replace `avatarUrl` in the relevant person record as portraits become available. Existing local portraits are reused. `npm run avatars:refresh` refreshes the original Stars portraits. `npm run avatars:refresh:wgs` refreshes all working-group attendees through their canonical GitHub identities and updates their person records. Run `npm run directory:build` afterward to refresh the directory.
 
 ### Activity and ordering
 
 TSC and ambassadors use explicit `emeriti` status. Working group participation is active when the last meeting is within the preceding two calendar years (calculated during the build); unknown dates remain active. Stars recognition, stories, and speaking appearances do not expire. On aggregate pages, one active participation makes the person active in that context. Rebuild to advance the activity cutoff.
 
-WG directories order by attendance (summed on the WG overview). TSC places the chair first, followed by names. Stars shuffle once per build so server rendering and client hydration agree. Stories order by newest publication date. Other directories order by name.
+Directory entries use a shared build-time shuffle so server rendering and client hydration agree. Article view on the Stories and Everyone pages sorts by newest publication date. Page configuration does not control ordering.
 
 ### Stories
 
@@ -96,3 +96,9 @@ Optional contribution images live at `public/stars/<year>/<github-username>.png`
 Native cross-document View Transitions animate avatars with the same person identity between pages in supporting browsers. Other browsers navigate normally. Reduced-motion preferences disable these transitions. Avatars link to full profile pages.
 
 CSS Modules live beside their components. Use `npx prettier --write .` to format the project; generated output, dependencies, and the package lock are ignored. Prettier's Astro plugin is configured in `.prettierrc.json`.
+
+### Directory page configuration
+
+Edit `src/config/directory-pages.mjs` for directory titles, descriptions, navigation actions and default views. It also contains annual Stars/conference page templates and working-group names. Breadcrumbs use these page titles through `breadcrumbsFor()` in `src/lib/directory.ts`.
+
+`scripts/build-directory.mjs` assembles people and memberships from local sources and writes `src/data/directory.json`; do not edit that generated file directly. Run `npm run directory:build` to refresh it. The old `npm run people:sync` command remains an alias. Page configuration changes also rebuild the directory while the dev server is running.
