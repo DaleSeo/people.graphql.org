@@ -6,27 +6,14 @@
   flex-direction: column;
   align-items: stretch;
   gap: 24px;
-  border-bottom: 1px solid var(--line);
   background: var(--paper);
   color: var(--ink);
 }
 
-.navigation {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px 28px;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.navigation [aria-current="page"] {
-  color: var(--pink);
-}
-
 .footer {
   border-top: 1px solid var(--line);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
   font-size: 0.8125rem;
   background: var(--paper);
@@ -34,6 +21,24 @@
   padding: 32px 56px;
   margin: 0;
   gap: 24px;
+}
+.footer > button {
+  justify-self: start;
+}
+.footer > span {
+  text-align: right;
+}
+.foundationLink {
+  text-align: center;
+}
+@media (max-width: 1000px) {
+  .footer {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .footer > span {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
 }
 
 .skip {
@@ -67,14 +72,7 @@
     gap: 24px;
   }
 
-  .navigation {
-    gap: 16px 22px;
-    font-size: 13px;
-    width: 100%;
-  }
-
   .footer {
-    flex-wrap: wrap;
     gap: 20px;
     margin: 0;
     padding: 28px 20px;

@@ -18,6 +18,14 @@ interface Props {
   entries: Entry[];
   categories: { sub: DirectoryPage[] };
 }
+const navigation = [
+  { label: "Everyone", slug: "" },
+  { label: "Stories", slug: "stories" },
+  { label: "Stars", slug: "stars" },
+  { label: "Working groups", slug: "wg" },
+  { label: "Ambassadors", slug: "ambassadors" },
+  { label: "Speakers", slug: "speakers" },
+];
 const labels: Record<string, string> = {
   stories: "Stories",
   stars: "Stars",
@@ -87,8 +95,7 @@ export default function PeopleDirectory({
   const query = search.trim().toLocaleLowerCase();
   const visible = entries.filter(
     (p) =>
-      (mode !== "article" || p.articles.length > 0) &&
-      matchesSearch(p, query),
+      (mode !== "article" || p.articles.length > 0) && matchesSearch(p, query),
   );
   if (mode === "article" && (isStories || page.slug === "")) {
     const latestPublication = (person: Entry) =>
@@ -381,8 +388,28 @@ export default function PeopleDirectory({
   }
   return (
     <div className={styles.directory}>
-      <div className={styles.toolbar}>
-        <div className={styles.filters}>
+      <div className={styles.filters}>
+        <div className={styles.secondaryNavigation}>
+          <nav className={styles.navigation} aria-label="Main navigation">
+            {navigation.map((item) => (
+              <a
+                key={item.slug}
+                href={filterHref(item.slug)}
+                aria-current={
+                  (
+                    item.slug
+                      ? page.slug === item.slug ||
+                        page.slug.startsWith(`${item.slug}/`)
+                      : page.slug === ""
+                  )
+                    ? "page"
+                    : undefined
+                }
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
           {categories.sub.length > 0 && (
             <nav
               className={styles.subcategories}
@@ -409,6 +436,17 @@ export default function PeopleDirectory({
               ))}
             </nav>
           )}
+          <h1 className={styles.pageHeading}>
+            {page.heading ? (
+              <>
+                {page.heading.firstLine}
+                <br />
+                <em>{page.heading.secondLine}</em>
+              </>
+            ) : (
+              page.title
+            )}
+          </h1>
         </div>
         <div className={styles.controls}>
           <div className={styles.modes} role="group" aria-label="Display mode">

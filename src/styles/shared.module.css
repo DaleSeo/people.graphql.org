@@ -22,18 +22,18 @@
 
 .button {
   display: inline-flex;
-  gap: 44px;
-  border: 1px solid #ff99df;
-  padding: 15px 19px;
-  margin-top: 15px;
-  color: #ff99df;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border: 1px solid var(--pink);
+  padding: 14px 18px;
+  color: var(--pink);
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 0.8125rem;
 }
 
 .button:hover {
-  background: #ffd6f2;
-  color: var(--night);
+  background: color-mix(in srgb, var(--pink) 10%, var(--paper));
 }
 
 .pageIntro {

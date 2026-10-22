@@ -8,8 +8,13 @@ import styles from "./about.module.css";
   title="About Stories · People of GraphQL"
   description="Personal stories from the people behind GraphQL."
 >
-  <section class:list={[shared.wrap, shared.pageIntro]}>
-    <h1>Every face has a story.</h1>
+  <section class:list={[shared.wrap, shared.pageIntro, styles.storiesAboutIntro]}>
+    <a class={styles.back} href="/stories/">← Read the Stories</a>
+    <h1>
+      Every face
+      <br />
+      <em>has a story.</em>
+    </h1>
   </section>
   <div class:list={[shared.articleBody, styles.aboutCopy]}>
     <p>
@@ -26,19 +31,18 @@ import styles from "./about.module.css";
       person's contributions and involvement around the community.
     </p>
     <section aria-labelledby="nominate-title">
-      <h2 id="nominate-title">Nominate a GraphQL person</h2>
+      <h2 id="nominate-title">Whose story do you want to read?</h2>
       <p>
         We’re always on the lookout for inspiring people who are passionate
         about GraphQL. Know somebody whose story deserves to be told? Let us
         know, and they could end up being featured on The People of GraphQL
         Stories Project.
       </p>
-      <a class={shared.button} href="/stories/about/">
-        Nominate someone
-      </a>
+      <div class={styles.nominateAction}>
+        <a class={shared.button} href="mailto:operations@graphql.org">
+          Nominate someone
+        </a>
+      </div>
     </section>
-    <a class={shared.back} href="/stories/">
-      Explore the stories
-    </a>
   </div>
 </Layout>

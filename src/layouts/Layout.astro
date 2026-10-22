@@ -11,15 +11,6 @@ const {
   title = "People of GraphQL",
   description = "The people, ideas, and stories behind GraphQL.",
 } = Astro.props;
-const path = Astro.url.pathname;
-const navigation = [
-  { label: "Everyone", href: "/" },
-  { label: "Stories", href: "/stories/" },
-  { label: "Stars", href: "/stars/" },
-  { label: "Working groups", href: "/wg/" },
-  { label: "Ambassadors", href: "/ambassadors/" },
-  { label: "Speakers", href: "/speakers/" },
-];
 ---
 
 <!doctype html>
@@ -51,21 +42,6 @@ const navigation = [
           <a href="/stories/about/">About Stories</a>
         </nav>
       </div>
-      <nav class={styles.navigation} aria-label="Main navigation">
-        {navigation.map((item) => (
-          <a
-            href={item.href}
-            data-directory-link
-            aria-current={
-              (item.href === "/" ? path === "/" : path.startsWith(item.href))
-                ? "page"
-                : undefined
-            }
-          >
-            {item.label}
-          </a>
-        ))}
-      </nav>
     </header>
     <main id="main">
       <slot />
@@ -110,6 +86,14 @@ const navigation = [
           Dark
         </span>
       </button>
+      <a
+        class={styles.foundationLink}
+        href="https://graphql.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        A GraphQL Foundation project
+      </a>
       <span>Copyright © 2026 The GraphQL Foundation. All rights reserved.</span>
     </footer>
   </body>

@@ -27,17 +27,6 @@ const entries = entriesFor(page);
       client:load
     >
       <section class={styles.intro}>
-        <h1>
-          {page.heading ? (
-            <>
-              {page.heading.firstLine}
-              <br />
-              <em>{page.heading.secondLine}</em>
-            </>
-          ) : (
-            page.title
-          )}
-        </h1>
         <div class={styles.about}>
           <p>{page.description}</p>
           <a

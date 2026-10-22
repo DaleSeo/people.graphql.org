@@ -1,7 +1,7 @@
 .directory {
   padding-bottom: 80px;
 }
-.toolbar {
+.filters {
   border-top: 1px solid var(--line);
   padding: 26px 0 0;
   display: grid;
@@ -9,9 +9,9 @@
   gap: 32px;
   align-items: start;
 }
-.filters {
+.secondaryNavigation {
   min-width: 0;
-  margin-bottom: 26px;
+  margin-bottom: 16px;
 }
 .subcategories {
   display: flex;
@@ -47,6 +47,8 @@
   color: inherit;
 }
 .controls {
+  align-self: end;
+  margin-bottom: 26px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -229,7 +231,7 @@
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 24px;
   }
-  .toolbar {
+  .filters {
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;
   }
@@ -395,6 +397,7 @@
 
 @media (max-width: 1000px) {
   .controls {
+    margin-bottom: 0;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
@@ -406,4 +409,21 @@
   .modes {
     align-self: center;
   }
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.75rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.navigation [aria-current="page"] {
+  color: var(--pink);
+}
+
+.pageHeading {
+  max-width: 1000px;
+  margin-top: 1.5rem;
 }

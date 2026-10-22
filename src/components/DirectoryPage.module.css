@@ -1,9 +1,6 @@
 .intro {
   padding-bottom: 45px;
 }
-.intro h1 {
-  max-width: 1000px;
-}
 .about {
   display: grid;
   grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
@@ -18,19 +15,8 @@
   color: var(--muted);
 }
 .action {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  border: 1px solid var(--pink);
-  border-radius: 6px;
-  padding: 14px 18px;
-  color: var(--pink);
-  font-size: 13px;
+  composes: button from "../styles/shared.module.css";
   justify-self: end;
-}
-.action:hover {
-  background: color-mix(in srgb, var(--pink) 10%, var(--paper));
 }
 @media (max-width: 850px) {
   .about {

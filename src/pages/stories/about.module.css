@@ -1,3 +1,13 @@
+.storiesAboutIntro {
+  padding-top: 24px;
+}
+.back {
+  composes: back from "../../styles/shared.module.css";
+  margin-bottom: 36px;
+}
 .aboutCopy {
   padding-bottom: 80px;
+}
+.nominateAction {
+  text-align: center;
 }
