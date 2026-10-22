@@ -89,7 +89,7 @@
 .storyReadingLayout > [data-story-photo] figcaption {
   margin-top: 14px;
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: var(--text-small);
   line-height: 1.6;
   text-wrap: pretty;
 }
@@ -167,7 +167,7 @@
   grid-column: 1;
   grid-row: 1 / span 3;
   align-self: start;
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1.65;
 }
 .storyProjectCopy {
@@ -175,7 +175,7 @@
   border-top: 3px solid var(--pink);
 }
 .storyProjectNote h2 {
-  font-size: 25px;
+  font-size: 1.5625rem;
   line-height: 1.2;
   font-weight: 650;
   letter-spacing: -0.015em;
@@ -190,7 +190,7 @@
   margin: 32px 0 56px;
   padding: 38px 0 0;
   color: var(--pink);
-  font-size: clamp(32px, 4vw, 56px);
+  font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 1.12;
   letter-spacing: -0.02em;
   font-family: "Rubik", var(--font-sans);
@@ -233,7 +233,7 @@
     grid-template-columns: minmax(0, 1fr);
     max-width: 700px;
     margin: auto;
-    font-size: 19px;
+    font-size: 1.1875rem;
   }
   .storyReadingLayout > *,
   .storyReadingLayout > blockquote,
@@ -259,7 +259,7 @@
     margin-top: 36px;
   }
   .storyFeatureHeader h1 {
-    font-size: clamp(44px, 11vw, 66px);
+    font-size: clamp(2.75rem, 11vw, 4.125rem);
     margin-bottom: 32px;
   }
   .storyIntroduction {

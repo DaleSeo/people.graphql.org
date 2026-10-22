@@ -35,6 +35,10 @@
   color-scheme: light;
   --font-sans: "Host Grotesk", Arial, sans-serif;
   --font-mono: "Commit Mono", monospace;
+  /* Labels, supporting copy and controls; respect the reader's root font size. */
+  --text-label: 0.75rem;
+  --text-small: 0.875rem;
+  --text-control: 1rem;
   --ink: hsl(75 15% 5%);
   --paper: hsl(0 0% 100%);
   --night: hsl(75 15% 5%);
@@ -64,6 +68,7 @@ a {
 
 button,
 input {
+  font: inherit;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -94,7 +99,7 @@ h1 {
   margin-bottom: 27px;
   font-weight: 500;
   text-wrap: balance;
-  font-size: clamp(50px, 6.5vw, 88px);
+  font-size: clamp(3.125rem, 6.5vw, 5.5rem);
   line-height: 1.08;
   letter-spacing: -0.03em;
 }
@@ -142,7 +147,7 @@ html[data-theme="dark"] {
 @media (max-width: 600px) {
   h1 {
     letter-spacing: -0.03em;
-    font-size: clamp(40px, 9.7vw, 58px);
+    font-size: clamp(2.5rem, 9.7vw, 3.625rem);
   }
 }
 

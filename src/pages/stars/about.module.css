@@ -41,18 +41,18 @@
 }
 
 .starsVideoCaption h2 {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 8px;
 }
 
 .starsVideoCaption p {
-  font-size: 13px;
+  font-size: var(--text-small);
   color: var(--muted);
   margin-bottom: 0;
 }
 
 .starsVideoCaption a {
-  font-size: 13px;
+  font-size: var(--text-small);
   flex-shrink: 0;
   text-decoration: underline;
   text-underline-offset: 4px;

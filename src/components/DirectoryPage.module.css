@@ -15,7 +15,6 @@
   color: var(--muted);
 }
 .action {
-  composes: button from "../styles/shared.module.css";
   justify-self: end;
 }
 @media (max-width: 850px) {

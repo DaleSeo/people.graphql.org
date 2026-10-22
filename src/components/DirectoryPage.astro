@@ -30,7 +30,7 @@ const entries = entriesFor(page);
         <div class={styles.about}>
           <p>{page.description}</p>
           <a
-            class={styles.action}
+            class:list={[shared.button, styles.action]}
             href={page.action.href}
             target={
               /^(https?:)?\/\//i.test(page.action.href) ? "_blank" : undefined

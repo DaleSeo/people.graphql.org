@@ -21,7 +21,7 @@
 .subcategories a {
   padding: 10px 0;
   border-bottom: 3px solid transparent;
-  font-size: 14px;
+  font-size: var(--text-small);
   white-space: nowrap;
 }
 .subcategories a[aria-current] {
@@ -30,8 +30,9 @@
 .subcategories a {
   color: var(--muted);
 }
+.subcategories a:hover,
 .subcategories a[aria-current] {
-  color: inherit;
+  color: var(--pink);
 }
 .searchGroup {
   min-width: 0;
@@ -42,7 +43,8 @@
   border-radius: 6px;
   padding: 12px 14px;
   font: inherit;
-  font-size: 13px;
+  font-size: var(--text-control);
+  line-height: 1.4;
   background: transparent;
   color: inherit;
 }
@@ -58,6 +60,8 @@
 .modes {
   align-self: flex-end;
   display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
   border: 1px solid var(--line);
   border-radius: 6px;
   padding: 4px;
@@ -69,7 +73,8 @@
   background: transparent;
   color: var(--muted);
   font: inherit;
-  font-size: 12px;
+  font-size: var(--text-control);
+  line-height: 1.4;
   padding: 7px 10px;
   border-radius: 3px;
 }
@@ -81,7 +86,7 @@
   outline: 3px solid var(--pink);
 }
 .sectionTitle {
-  font: 12px var(--font-mono);
+  font: var(--text-label) var(--font-mono);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   display: flex;
@@ -160,16 +165,16 @@
 }
 .identity h3 {
   margin: 0;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 .username {
-  font: 12px var(--font-mono);
+  font: var(--text-label) var(--font-mono);
   color: var(--muted);
   overflow-wrap: anywhere;
 }
 .location,
 .context {
-  font-size: 14px;
+  font-size: var(--text-small);
   line-height: 1.6;
   margin: 5px 0;
   color: var(--muted);
@@ -178,12 +183,12 @@
   color: inherit;
 }
 .talk {
-  font-size: 15px;
+  font-size: 0.9375rem;
   margin: 14px 0;
 }
 .profileLink {
   display: inline-block;
-  font-size: 13px;
+  font-size: var(--text-small);
   margin-top: 12px;
   color: var(--pink);
 }
@@ -192,7 +197,7 @@
   max-width: 800px;
 }
 .article h2 {
-  font-size: clamp(26px, 3vw, 38px);
+  font-size: clamp(1.625rem, 3vw, 2.375rem);
   line-height: 1.15;
   margin-bottom: 15px;
 }
@@ -201,7 +206,7 @@
   color: var(--muted);
 }
 .date {
-  font: 11px var(--font-mono);
+  font: var(--text-label) var(--font-mono);
   color: var(--muted);
 }
 .previous {
@@ -211,7 +216,7 @@
 }
 .previousIntro {
   color: var(--muted);
-  font-size: 14px;
+  font-size: var(--text-small);
   margin-bottom: 28px;
 }
 .empty {
@@ -253,10 +258,10 @@
     gap: 20px;
   }
   .identity h3 {
-    font-size: 21px;
+    font-size: 1.3125rem;
   }
   .article h2 {
-    font-size: 27px;
+    font-size: 1.6875rem;
   }
 }
 @media (max-width: 380px) {
@@ -296,7 +301,7 @@
   border-radius: 50%;
   background: var(--paper);
   color: inherit;
-  font-size: 26px;
+  font-size: 1.625rem;
   cursor: pointer;
 }
 .dialogClose:focus-visible {
@@ -308,18 +313,18 @@
 }
 .dialogHeading h2 {
   margin: 0;
-  font-size: clamp(24px, 4vw, 36px);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
 }
 .dialogHeading a {
   color: var(--pink);
-  font-size: 14px;
+  font-size: var(--text-small);
 }
 .dialogProfileLinks {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem 1rem;
-  font-size: 0.875rem;
+  font-size: var(--text-small);
 }
 .starCard {
   margin: 24px 0;
@@ -341,7 +346,7 @@
   align-items: baseline;
   gap: 8px 20px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: var(--text-small);
   line-height: 1.6;
 }
 .memberMeta a {
@@ -360,7 +365,7 @@
   padding: 5px 10px;
   border: 1px solid var(--line);
   border-radius: 20px;
-  font-size: 12px;
+  font-size: var(--text-small);
 }
 .groupLinks a:hover {
   border-color: var(--pink);
@@ -377,7 +382,7 @@
   margin: 10px 0;
   padding: 0;
   list-style: none;
-  font-size: 14px;
+  font-size: var(--text-small);
   line-height: 1.6;
 }
 .ambassadorRoles li + li::before {
@@ -387,7 +392,7 @@
 }
 
 .featuredStory {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
   margin: 8px 0;
 }
@@ -416,11 +421,17 @@
   flex-wrap: wrap;
   gap: 1rem 1.75rem;
   margin-bottom: 1rem;
-  font-size: 0.875rem;
-  font-weight: 700;
+  font-size: var(--text-control);
+  font-weight: 400;
+}
+.navigation a {
+  padding: 10px 0;
+  border-bottom: 3px solid transparent;
 }
 .navigation [aria-current="page"] {
   color: var(--pink);
+  font-weight: 700;
+  border-bottom-color: var(--pink);
 }
 
 .pageHeading {

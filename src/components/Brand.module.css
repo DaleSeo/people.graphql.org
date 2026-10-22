@@ -1,14 +1,14 @@
 .brand {
   display: flex;
   align-items: center;
-  font-size: 19px;
+  font-size: 1.1875rem;
   gap: 18px;
   letter-spacing: normal;
   flex-shrink: 0;
 }
 
 .brandPrefix {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 400;
   white-space: nowrap;
 }
@@ -26,11 +26,11 @@
 
 @media (max-width: 600px) {
   .brand {
-    font-size: 18px;
+    font-size: 1.125rem;
     gap: 18px;
   }
 
   .brandPrefix {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }

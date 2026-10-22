@@ -22,12 +22,12 @@
   height: auto;
 }
 .header h1 {
-  font-size: clamp(36px, 6vw, 72px);
+  font-size: clamp(2.25rem, 6vw, 4.5rem);
   margin-bottom: 18px;
 }
 .event {
   color: var(--pink);
-  font-size: 14px;
+  font-size: var(--text-small);
 }
 .location {
   margin: 14px 0 0;
@@ -40,7 +40,7 @@
   border-top: 1px solid var(--line);
 }
 .section > h2 {
-  font-size: 30px;
+  font-size: 1.875rem;
   margin-bottom: 28px;
 }
 .appearances {
@@ -59,11 +59,11 @@
   display: flex;
   justify-content: space-between;
   gap: 16px;
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 12px;
 }
 .appearances p {
-  font-size: 13px;
+  font-size: var(--text-small);
   color: var(--muted);
   line-height: 1.6;
   margin: 6px 0 0;
@@ -82,7 +82,7 @@
 }
 .story h3,
 .talk h3 {
-  font-size: 26px;
+  font-size: 1.625rem;
   margin: 12px 0;
 }
 .talk h3 {
@@ -94,7 +94,7 @@
 }
 .story span {
   color: var(--pink);
-  font-size: 13px;
+  font-size: var(--text-small);
 }
 .talk {
   margin-bottom: 40px;
@@ -127,7 +127,7 @@
   gap: 24px;
   padding: 0;
   list-style: none;
-  font-size: 14px;
+  font-size: var(--text-small);
 }
 @media (max-width: 800px) {
   .appearances {
@@ -161,7 +161,7 @@
 }
 
 .tileTitle {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   margin: 0 0 12px;
 }
