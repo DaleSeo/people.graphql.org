@@ -96,8 +96,8 @@ At the same time, I had published a proposal outlining changes I already wanted 
 Igor’s initial design reflected Yelp’s codebase and migration needs. As we worked through the API and even the names of individual pieces, we found ways to support Yelp while making the design useful to other Code Gen users. The collaboration became a large part of Client v6 - the release I had been so nervous to push - and made the result broader than the one I had originally planned.
 
 <figure data-story-photo>
-  <img src="/stories/eddy-nguyen/guild-booth.jpg" alt="An open notebook, laptop, and coffee on a wooden desk." width="1800" height="1200" loading="lazy" decoding="async" />
-  <figcaption>Eddy discussing Codegen with developers at The Guild’s booth at GraphQL Conf.</figcaption>
+  <img src="/stories/eddy-nguyen/park-photography.JPG" alt="Eddy enjoying time away from the computer." width="1800" height="1200" loading="lazy" decoding="async" />
+  <figcaption>Eddy enjoying time away from the computer.</figcaption>
 </figure>
 
 ## Public by default

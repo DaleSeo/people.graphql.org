@@ -60,8 +60,8 @@ I’ve always been drawn to problems that feel fundamental. Building a product f
 I think of it as having access to a giant lever. Because Relay underpins so many product surfaces, even a small improvement to the framework can have a large impact. That was what drew me to the work. The problems were larger than any one feature, and the understanding I developed by working on them felt durable.
 
 <figure data-story-photo>
-  <img src="/stories/jordan-eldredge/opera.jpg" alt="An open notebook, laptop, and coffee on a wooden desk." width="1800" height="1200" loading="lazy" decoding="async" />
-  <figcaption>Jordan performing in [production], [year/location]. Music and performance remain an important part of his life outside software.</figcaption>
+  <img src="/stories/jordan-eldredge/opera.jpg" alt="Jordan performing as Sir Despard in a 2013 production of Gilbert & Sullivan's Ruddigore" width="1800" height="1200" loading="lazy" decoding="async" />
+  <figcaption>Jordan performing as Sir Despard in a 2013 production of Gilbert & Sullivan's Ruddigore, put on by Lyric Theatre San Jose. Music and performance remain an important part of his life outside software.</figcaption>
 </figure>
 
 ## Playing in the same sandbox

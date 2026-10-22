@@ -100,7 +100,7 @@ There is a small group at its core, supported by many others who contribute thei
 That reality creates a real need for more people to join in and move GraphQL in the directions they care about. You might be surprised by how small the core operation is, but you might also be delighted by how much difference somebody can make with only a few hours of their time each month.
 
 <figure data-story-photo>
-  <img src="/stories/jeff-auriemma/all-hands.jpg" alt="An open notebook, laptop, and coffee on a wooden desk." width="1800" height="1200" loading="lazy" decoding="async" />
+  <img src="/stories/jeff-auriemma/all-hands.jpg" alt="Jeff on stage at the 2025 GraphQL All Hands" width="1800" height="1200" loading="lazy" decoding="async" />
   <figcaption>Jeff inviting community members to join the GraphQL working groups at the GraphQL Foundation All Hands 2025.</figcaption>
 </figure>
 
