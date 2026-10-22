@@ -1,14 +1,21 @@
 import Avatar from "./Avatar";
-import { useEffect, useState, useRef, type CSSProperties } from "react";
+import {
+  useEffect,
+  useState,
+  useRef,
+  type ReactNode,
+  type CSSProperties,
+} from "react";
 import type { DirectoryPage, Entry, Mode } from "../lib/directory";
 import { memberships } from "../lib/directory";
 import styles from "./PeopleDirectory.module.css";
 import starCardStyles from "./star-card.module.css";
 
 interface Props {
+  children?: ReactNode;
   page: DirectoryPage;
   entries: Entry[];
-  categories: { top: DirectoryPage[]; sub: DirectoryPage[] };
+  categories: { sub: DirectoryPage[] };
 }
 const labels: Record<string, string> = {
   stories: "Stories",
@@ -18,7 +25,12 @@ const labels: Record<string, string> = {
   speakers: "Speakers",
 };
 const url = (slug: string) => (slug ? `/${slug}/` : "/");
-export default function PeopleDirectory({ page, entries, categories }: Props) {
+export default function PeopleDirectory({
+  page,
+  entries,
+  categories,
+  children,
+}: Props) {
   const [mode, setMode] = useState<Mode>(page.mode);
   const [search, setSearch] = useState("");
   const [explicitMode, setExplicitMode] = useState(false);
@@ -408,42 +420,43 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
             </nav>
           )}
         </div>
-        <div className={styles.searchGroup}>
-          <label>
-            <span className={styles.srOnly}>Search people</span>
-            <input
-              type="search"
-              placeholder="Find a name or username…"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-          </label>
+        <div className={styles.controls}>
+          <div className={styles.modes} role="group" aria-label="Display mode">
+            {(
+              [
+                "grid",
+                ...(!isStories ? ["list"] : []),
+                ...(hasArticles ? ["article"] : []),
+              ] as Mode[]
+            ).map((value) => (
+              <button
+                type="button"
+                key={value}
+                aria-pressed={mode === value}
+                onClick={() => changeMode(value)}
+              >
+                {value === "grid"
+                  ? "▦ Grid"
+                  : value === "list"
+                    ? "☰ List"
+                    : "Articles"}
+              </button>
+            ))}
+          </div>
+          <div className={styles.searchGroup}>
+            <label>
+              <span className={styles.srOnly}>Search people</span>
+              <input
+                type="search"
+                placeholder="Find a name or username…"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
+            </label>
+          </div>
         </div>
       </div>
-      <div className={styles.viewToolbar}>
-        <div className={styles.modes} role="group" aria-label="Display mode">
-          {(
-            [
-              "grid",
-              ...(!isStories ? ["list"] : []),
-              ...(hasArticles ? ["article"] : []),
-            ] as Mode[]
-          ).map((value) => (
-            <button
-              type="button"
-              key={value}
-              aria-pressed={mode === value}
-              onClick={() => changeMode(value)}
-            >
-              {value === "grid"
-                ? "▦ Grid"
-                : value === "list"
-                  ? "☰ List"
-                  : "Articles"}
-            </button>
-          ))}
-        </div>
-      </div>
+      {children}
       <div data-view={mode} className={styles.results}>
         <section aria-label="Active people">
           <h2 className={styles.sectionTitle} aria-live="polite">
@@ -516,25 +529,28 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
             <>
               <div className={styles.dialogHeading}>
                 <p className={styles.date}>
-                  GRAPHQL STARS · {selectedMembership?.label}
+                  {memberships
+                    .filter(
+                      (m) =>
+                        m.person === selectedStar.slug &&
+                        m.page.startsWith("stars/"),
+                    )
+                    .toSorted((a, b) => b.page.localeCompare(a.page))
+                    .map((m) => m.label)
+                    .join(" · ")}
                 </p>
                 <div className={styles.identity}>
                   <h2 id="star-dialog-name">{selectedStar.name}</h2>
-                  {selectedStar.githubUsername && (
-                    <a
-                      href={`https://github.com/${selectedStar.githubUsername}`}
-                    >
-                      @{selectedStar.githubUsername} ↗
+                  <div className={styles.dialogProfileLinks}>
+                    {selectedStar.githubUsername && (
+                      <span>@{selectedStar.githubUsername}</span>
+                    )}
+                    <a href={`/profiles/${selectedStar.slug}/`}>
+                      View full profile
                     </a>
-                  )}
+                  </div>
                 </div>
               </div>
-              <a
-                className={styles.profileLink}
-                href={`/profiles/${selectedStar.slug}/`}
-              >
-                View full profile <span aria-hidden="true">↗</span>
-              </a>
               <p>
                 Thank you {selectedStar.githubUsername ?? selectedStar.name} for
                 being a Star in {selectedMembership?.page.split("/")[1]}!

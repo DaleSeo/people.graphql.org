@@ -13,8 +13,7 @@
     "directory:build": "node scripts/build-directory.mjs",
     "test": "node --experimental-strip-types --test tests/directory.test.ts tests/talk-title.test.mjs",
     "test:site": "node scripts/check-site.mjs",
-    "avatars:refresh:wgs": "node scripts/refresh-wg-avatars.mjs",
-    "people:sync": "npm run directory:build"
+    "avatars:refresh:wgs": "node scripts/refresh-wg-avatars.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^7.0.1",

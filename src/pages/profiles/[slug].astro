@@ -1,4 +1,6 @@
 ---
+import SocialLink from "../../components/SocialLink.astro";
+import { socialIcons } from "../../lib/social-links";
 import Avatar from "../../components/Avatar";
 import Layout from "../../layouts/Layout.astro";
 import {
@@ -42,6 +44,53 @@ const links = [
       .map((l) => [l.url, l]),
   ).values(),
 ];
+
+const profileLinks = [
+  ...(person.githubUsername
+    ? [{ label: "GitHub", url: `https://github.com/${person.githubUsername}` }]
+    : []),
+  ...links,
+]
+  .filter((link, index, all) => {
+    const normalize = (url: string) => url.replace(/\/$/, "").toLowerCase();
+    return (
+      all.findIndex(
+        (candidate) => normalize(candidate.url) === normalize(link.url),
+      ) === index
+    );
+  })
+  .map((link) => {
+    const url = new URL(link.url);
+    const host = url.hostname.replace(/^www\./, "");
+    const parts = url.pathname.split("/").filter(Boolean);
+    const platform =
+      (
+        {
+          "github.com": "github",
+          "linkedin.com": "linkedin",
+          "x.com": "twitter",
+          "twitter.com": "twitter",
+          "bsky.app": "bluesky",
+          "threads.net": "threads",
+          "threads.com": "threads",
+          "youtube.com": "youtube",
+          "youtu.be": "youtube",
+        } as Record<string, string>
+      )[host] ?? link.label.toLowerCase();
+    const handle = parts.at(-1)?.replace(/^@/, "");
+    const text =
+      platform === "linkedin"
+        ? person.name
+        : ["github", "twitter", "bluesky", "threads"].includes(platform) &&
+            handle
+          ? `@${handle}`
+          : platform === "youtube" && parts[0]?.startsWith("@")
+            ? parts[0]
+            : platform === "website"
+              ? host
+              : link.label;
+    return { ...link, text, icon: socialIcons[platform] ?? "globe" };
+  });
 ---
 
 <Layout
@@ -49,11 +98,6 @@ const links = [
   description={`Discover ${person.name}'s participation in the GraphQL community.`}
 >
   <article class:list={[shared.wrap, styles.profile]}>
-    <nav class={styles.breadcrumbs} aria-label="Breadcrumbs">
-      <a href="/">People</a>
-      <span aria-hidden="true">/</span>
-      <span aria-current="page">{person.name}</span>
-    </nav>
     <header class={styles.header}>
       <Avatar
         client:load
@@ -69,20 +113,27 @@ const links = [
         src={person.avatarUrl}
         style={{
           viewTransitionName: transitionName(slug),
-          height: "auto",
-          aspectRatio: "1",
         }}
       />
       <div>
-        <p class={shared.eyebrow}>PEOPLE OF GRAPHQL</p>
         <h1>{person.name}</h1>
-        {person.githubUsername && (
-          <a
-            class={styles.github}
-            href={`https://github.com/${person.githubUsername}`}
+        {profileLinks.length > 0 && (
+          <ul
+            class={styles.links}
+            aria-label={`${person.name}'s online profiles`}
           >
-            @{person.githubUsername} ↗
-          </a>
+            {profileLinks.map((link) => (
+              <li>
+                <SocialLink
+                  url={link.url}
+                  label={link.label}
+                  text={link.text}
+                  icon={link.icon}
+                  appearance="profile"
+                />
+              </li>
+            ))}
+          </ul>
         )}
         {person.location && <p class={styles.location}>{person.location}</p>}
         {interests.length > 0 && (
@@ -152,7 +203,7 @@ const links = [
           })}
           {localGroups.map((local) => (
             <li>
-              <a href={local.url}>
+              <a href={local.url} target="_blank" rel="noopener noreferrer">
                 <span>{local.name}</span>
                 <span aria-hidden="true">↗</span>
               </a>
@@ -225,18 +276,6 @@ const links = [
             )}
           </article>
         ))}
-      </section>
-    )}
-    {links.length > 0 && (
-      <section class={styles.section} aria-labelledby="links-title">
-        <h2 id="links-title">Find {person.name} online</h2>
-        <ul class={styles.links}>
-          {links.map((link) => (
-            <li>
-              <a href={link.url}>{link.label} ↗</a>
-            </li>
-          ))}
-        </ul>
       </section>
     )}
   </article>

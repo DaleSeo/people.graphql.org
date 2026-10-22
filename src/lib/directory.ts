@@ -41,7 +41,6 @@ export interface Membership {
 export type Mode = "grid" | "list" | "article";
 export interface DirectoryPage {
   heading?: { firstLine: string; secondLine: string };
-  breadcrumb: string;
   slug: string;
   title: string;
   description: string;
@@ -58,7 +57,6 @@ export interface Entry extends Person {
   localNames: string[];
   memberships: Membership[];
   count: number;
-  chair: boolean;
   articles: Article[];
   featuredStories: Article[];
   transitionName: string;
@@ -127,7 +125,6 @@ export function entriesFor(page: DirectoryPage): Entry[] {
     localNames: localsForPerson(slug).map((local) => local.name),
     memberships: ms,
     count: ms.reduce((n, m) => n + (m.count ?? 0), 0),
-    chair: ms.some((m) => m.chair),
     featuredStories: memberships
       .filter((m) => m.person === slug)
       .flatMap((m) => (m.article ? [m.article] : [])),
@@ -144,18 +141,6 @@ export function entriesFor(page: DirectoryPage): Entry[] {
 export function categoriesFor(slug: string) {
   const root = slug.split("/")[0];
   return {
-    top: pages.filter((p) => p.slug && !p.parent),
     sub: pages.filter((p) => p.parent === root && p.parent !== ""),
   };
-}
-export function breadcrumbsFor(page: DirectoryPage) {
-  return [
-    { label: pageFor("").breadcrumb, href: "/" },
-    ...(page.parent
-      ? [{ label: pageFor(page.parent).breadcrumb, href: hrefFor(page.parent) }]
-      : []),
-    ...(page.slug
-      ? [{ label: page.breadcrumb, href: hrefFor(page.slug) }]
-      : []),
-  ];
 }

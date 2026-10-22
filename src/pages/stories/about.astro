@@ -1,7 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import shared from "../../styles/shared.module.css";
-import directory from "../../components/DirectoryPage.module.css";
 import styles from "../about.module.css";
 ---
 
@@ -10,21 +9,6 @@ import styles from "../about.module.css";
   description="Personal stories from the people behind GraphQL."
 >
   <section class:list={[shared.wrap, shared.pageIntro]}>
-    <nav class={directory.breadcrumbs} aria-label="Breadcrumbs">
-      <ol>
-        <li>
-          <a href="/">People</a>
-        </li>
-        <li>
-          <a href="/stories/">Stories</a>
-        </li>
-        <li>
-          <a href="/stories/about/" aria-current="page">
-            About
-          </a>
-        </li>
-      </ol>
-    </nav>
     <p class={shared.eyebrow}>GRAPHQL STORIES</p>
     <h1>Every face has a story.</h1>
   </section>

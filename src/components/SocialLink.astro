@@ -1,0 +1,28 @@
+---
+import styles from "./SocialLink.module.css";
+interface Props {
+  url: string;
+  label: string;
+  text: string;
+  icon?: string;
+  appearance?: "story" | "profile";
+}
+const { url, label, text, icon, appearance = "story" } = Astro.props;
+---
+
+<a
+  class:list={[styles.link, styles[appearance]]}
+  href={url}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={`${label}: ${text}`}
+>
+  {icon && (
+    <span
+      class={styles.icon}
+      aria-hidden="true"
+      style={`--social-icon: url("/icons/${icon}.svg")`}
+    />
+  )}
+  <span>{text}</span>
+</a>

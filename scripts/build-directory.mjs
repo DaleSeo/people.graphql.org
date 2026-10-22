@@ -66,7 +66,7 @@ function indexName(name, slug) {
   knownNames.set(key, values);
 }
 for (const [slug, p] of people) indexName(p.name, slug);
-async function personFor({ name, github, location, org, sourceId, avatarUrl }) {
+async function personFor({ name, github, location, org, sourceId }) {
   github = github?.trim().replace(/^@/, "").toLowerCase();
   let slug = identityAliases[sourceId] ?? identities.get(sourceId);
   if (identityAliases[sourceId] && github) github = identityAliases[sourceId];

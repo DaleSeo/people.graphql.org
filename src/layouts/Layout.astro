@@ -1,16 +1,15 @@
 ---
 import styles from "./Layout.module.css";
 import "../styles/global.css";
+import themeScript from "../scripts/theme.js?raw";
 import Brand from "../components/Brand.astro";
 interface Props {
   title?: string;
   description?: string;
-  dark?: boolean;
 }
 const {
   title = "People of GraphQL",
   description = "The people, ideas, and stories behind GraphQL.",
-  dark = false,
 } = Astro.props;
 const path = Astro.url.pathname;
 const navigation = [
@@ -30,6 +29,7 @@ const navigation = [
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <title>{title}</title>
+    <script is:inline set:html={themeScript} />
     <link
       rel="preload"
       href="/fonts/host-grotesk.woff2"
@@ -39,11 +39,18 @@ const navigation = [
     />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
-  <body data-theme={dark ? "dark" : undefined}>
+  <body>
     <a class={styles.skip} href="#main">
       Skip to content
     </a>
     <header class={styles.siteHeader}>
+      <div class={styles.topBar}>
+        <Brand />
+        <nav class={styles.aboutLinks} aria-label="About the projects">
+          <a href="/stars/about/">About Stars</a>
+          <a href="/stories/about/">About Stories</a>
+        </nav>
+      </div>
       <nav class={styles.navigation} aria-label="Main navigation">
         {navigation.map((item) => (
           <a
@@ -59,15 +66,51 @@ const navigation = [
           </a>
         ))}
       </nav>
-      <Brand />
     </header>
     <main id="main">
       <slot />
     </main>
+    <script>
+      import "../scripts/external-links";
+    </script>
     <footer class={styles.footer}>
-      <Brand />
-      <span>A GraphQL Foundation project.</span>
-      <a href="/about/">About this project</a>
+      <button
+        type="button"
+        class={styles.themeToggle}
+        data-theme-toggle
+        aria-label="Switch color theme"
+      >
+        <span class={styles.lightLabel}>
+          <svg
+            aria-hidden="true"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" />
+          </svg>
+          Light
+        </span>
+        <span class={styles.darkLabel}>
+          <svg
+            aria-hidden="true"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M20.5 14a9 9 0 0 1-10.5-10.5A9 9 0 1 0 20.5 14Z" />
+          </svg>
+          Dark
+        </span>
+      </button>
+      <span>Copyright © 2026 The GraphQL Foundation. All rights reserved.</span>
     </footer>
   </body>
 </html>

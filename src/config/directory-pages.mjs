@@ -5,7 +5,6 @@ const action = (label, href) => ({ label, href });
 export const directoryPages = [
   {
     slug: "",
-    breadcrumb: "People",
     title: "The people behind GraphQL.",
     heading: { firstLine: "The people behind", secondLine: "GraphQL." },
     description:
@@ -19,7 +18,6 @@ export const directoryPages = [
   },
   {
     slug: "stories",
-    breadcrumb: "Stories",
     title: "In their own words.",
     heading: { firstLine: "In their", secondLine: "own words." },
     description:
@@ -33,7 +31,6 @@ export const directoryPages = [
   },
   {
     slug: "stars",
-    breadcrumb: "Stars",
     title: "A universe shaped by contributors.",
     heading: { firstLine: "A universe shaped", secondLine: "by contributors." },
     description:
@@ -47,7 +44,6 @@ export const directoryPages = [
   },
   {
     slug: "wg",
-    breadcrumb: "Working groups",
     title: "Building GraphQL together.",
     heading: { firstLine: "Building GraphQL", secondLine: "together." },
     description:
@@ -61,7 +57,6 @@ export const directoryPages = [
   },
   {
     slug: "ambassadors",
-    breadcrumb: "Ambassadors",
     title: "Helping others get involved.",
     heading: { firstLine: "Helping others", secondLine: "get involved." },
     description:
@@ -75,7 +70,6 @@ export const directoryPages = [
   },
   {
     slug: "speakers",
-    breadcrumb: "Speakers",
     title: "Taking the stage.",
     heading: { firstLine: "Taking", secondLine: "the stage." },
     description:
@@ -91,7 +85,6 @@ export const directoryPages = [
 
 export const starsPage = (year) => ({
   slug: `stars/${year}`,
-  breadcrumb: String(year),
   title: `Class of ${year}`,
   heading: { firstLine: "Class of", secondLine: String(year) },
   description: `Celebrate the GraphQL Stars class of ${year} and their contributions to GraphQL.`,
@@ -101,7 +94,6 @@ export const starsPage = (year) => ({
 });
 export const tscPage = {
   slug: "wg/tsc",
-  breadcrumb: "TSC",
   title: "Technical Steering Committee",
   heading: { firstLine: "Technical Steering", secondLine: "Committee" },
   description:
@@ -115,7 +107,6 @@ export const tscPage = {
 };
 export const workingGroupPage = ({ slug, name, description, action }) => ({
   slug: `wg/${slug}`,
-  breadcrumb: name,
   title: `${name} Working Group`,
   heading: { firstLine: name, secondLine: "Working Group" },
   description,
@@ -125,7 +116,6 @@ export const workingGroupPage = ({ slug, name, description, action }) => ({
 });
 export const conferencePage = (year) => ({
   slug: `speakers/graphqlconf-${year}`,
-  breadcrumb: `GraphQLConf ${year}`,
   title: `GraphQLConf ${year}`,
   heading: { firstLine: "GraphQLConf", secondLine: String(year) },
   description: `Meet the speakers and explore talks from GraphQLConf ${year}.`,

@@ -2,7 +2,6 @@
   "pages": [
     {
       "slug": "",
-      "breadcrumb": "People",
       "title": "The people behind GraphQL.",
       "heading": {
         "firstLine": "The people behind",
@@ -18,7 +17,6 @@
     },
     {
       "slug": "stories",
-      "breadcrumb": "Stories",
       "title": "In their own words.",
       "heading": {
         "firstLine": "In their",
@@ -34,7 +32,6 @@
     },
     {
       "slug": "stars",
-      "breadcrumb": "Stars",
       "title": "A universe shaped by contributors.",
       "heading": {
         "firstLine": "A universe shaped",
@@ -50,7 +47,6 @@
     },
     {
       "slug": "wg",
-      "breadcrumb": "Working groups",
       "title": "Building GraphQL together.",
       "heading": {
         "firstLine": "Building GraphQL",
@@ -66,7 +62,6 @@
     },
     {
       "slug": "ambassadors",
-      "breadcrumb": "Ambassadors",
       "title": "Helping others get involved.",
       "heading": {
         "firstLine": "Helping others",
@@ -82,7 +77,6 @@
     },
     {
       "slug": "speakers",
-      "breadcrumb": "Speakers",
       "title": "Taking the stage.",
       "heading": {
         "firstLine": "Taking",
@@ -98,7 +92,6 @@
     },
     {
       "slug": "stars/2026",
-      "breadcrumb": "2026",
       "title": "Class of 2026",
       "heading": {
         "firstLine": "Class of",
@@ -114,7 +107,6 @@
     },
     {
       "slug": "stars/2025",
-      "breadcrumb": "2025",
       "title": "Class of 2025",
       "heading": {
         "firstLine": "Class of",
@@ -130,7 +122,6 @@
     },
     {
       "slug": "stars/2024",
-      "breadcrumb": "2024",
       "title": "Class of 2024",
       "heading": {
         "firstLine": "Class of",
@@ -146,7 +137,6 @@
     },
     {
       "slug": "wg/tsc",
-      "breadcrumb": "TSC",
       "title": "Technical Steering Committee",
       "heading": {
         "firstLine": "Technical Steering",
@@ -162,7 +152,6 @@
     },
     {
       "slug": "wg/spec",
-      "breadcrumb": "GraphQL Specification",
       "title": "GraphQL Specification Working Group",
       "heading": {
         "firstLine": "GraphQL Specification",
@@ -178,7 +167,6 @@
     },
     {
       "slug": "wg/ai",
-      "breadcrumb": "AI",
       "title": "AI Working Group",
       "heading": {
         "firstLine": "AI",
@@ -194,7 +182,6 @@
     },
     {
       "slug": "wg/federation",
-      "breadcrumb": "Federation",
       "title": "Federation Working Group",
       "heading": {
         "firstLine": "Federation",
@@ -210,7 +197,6 @@
     },
     {
       "slug": "wg/golden-path",
-      "breadcrumb": "Golden Path",
       "title": "Golden Path Working Group",
       "heading": {
         "firstLine": "Golden Path",
@@ -226,7 +212,6 @@
     },
     {
       "slug": "wg/graphql-js",
-      "breadcrumb": "GraphQL.js",
       "title": "GraphQL.js Working Group",
       "heading": {
         "firstLine": "GraphQL.js",
@@ -242,7 +227,6 @@
     },
     {
       "slug": "wg/graphiql",
-      "breadcrumb": "GraphiQL",
       "title": "GraphiQL Working Group",
       "heading": {
         "firstLine": "GraphiQL",
@@ -258,7 +242,6 @@
     },
     {
       "slug": "wg/http",
-      "breadcrumb": "GraphQL over HTTP",
       "title": "GraphQL over HTTP Working Group",
       "heading": {
         "firstLine": "GraphQL over HTTP",
@@ -274,7 +257,6 @@
     },
     {
       "slug": "wg/otel",
-      "breadcrumb": "OpenTelemetry",
       "title": "OpenTelemetry Working Group",
       "heading": {
         "firstLine": "OpenTelemetry",
@@ -290,7 +272,6 @@
     },
     {
       "slug": "wg/defer-stream",
-      "breadcrumb": "Defer & Stream",
       "title": "Defer & Stream Working Group",
       "heading": {
         "firstLine": "Defer & Stream",
@@ -306,7 +287,6 @@
     },
     {
       "slug": "wg/nullability",
-      "breadcrumb": "Nullability",
       "title": "Nullability Working Group",
       "heading": {
         "firstLine": "Nullability",
@@ -322,7 +302,6 @@
     },
     {
       "slug": "wg/community",
-      "breadcrumb": "Community",
       "title": "Community Working Group",
       "heading": {
         "firstLine": "Community",
@@ -338,7 +317,6 @@
     },
     {
       "slug": "speakers/graphqlconf-2026",
-      "breadcrumb": "GraphQLConf 2026",
       "title": "GraphQLConf 2026",
       "heading": {
         "firstLine": "GraphQLConf",
@@ -354,7 +332,6 @@
     },
     {
       "slug": "speakers/graphqlconf-2025",
-      "breadcrumb": "GraphQLConf 2025",
       "title": "GraphQLConf 2025",
       "heading": {
         "firstLine": "GraphQLConf",
@@ -370,7 +347,6 @@
     },
     {
       "slug": "speakers/graphqlconf-2024",
-      "breadcrumb": "GraphQLConf 2024",
       "title": "GraphQLConf 2024",
       "heading": {
         "firstLine": "GraphQLConf",
@@ -386,7 +362,6 @@
     },
     {
       "slug": "speakers/graphqlconf-2023",
-      "breadcrumb": "GraphQLConf 2023",
       "title": "GraphQLConf 2023",
       "heading": {
         "firstLine": "GraphQLConf",

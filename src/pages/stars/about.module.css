@@ -1,15 +1,19 @@
-@value back as sharedBack from "../../styles/shared.module.css";
-@value standfirst as sharedStandfirst from "../../styles/shared.module.css";
+.back {
+  composes: back from "../../styles/shared.module.css";
+}
+.standfirst {
+  composes: standfirst from "../../styles/shared.module.css";
+}
 
 .starsAboutIntro {
   padding-top: 24px;
 }
 
-.starsAboutIntro :global(.sharedBack) {
+.starsAboutIntro .back {
   margin-bottom: 36px;
 }
 
-.starsAboutIntro :global(.sharedStandfirst) {
+.starsAboutIntro .standfirst {
   max-width: 660px;
   color: var(--muted);
 }

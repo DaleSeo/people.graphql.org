@@ -7,10 +7,9 @@ import Layout from "../../layouts/Layout.astro";
 <Layout
   title="About GraphQL Stars"
   description="GraphQL Stars celebrates 52 people each year whose work across the GraphQL GitHub repositories moves the project forward."
-  dark
 >
   <section class:list={[shared.wrap, shared.pageIntro, styles.starsAboutIntro]}>
-    <a class={shared.back} href="/stars/">
+    <a class={styles.back} href="/stars/">
       ← Meet the GraphQL Stars
     </a>
     <p class={shared.eyebrow}>ABOUT GRAPHQL STARS</p>
@@ -19,7 +18,7 @@ import Layout from "../../layouts/Layout.astro";
       <br />
       <em>by contributors.</em>
     </h1>
-    <p class={shared.standfirst}>
+    <p class={styles.standfirst}>
       GraphQL Stars celebrates 52 people each year whose work across the GraphQL
       GitHub repositories moves the project forward.
     </p>
@@ -46,7 +45,11 @@ import Layout from "../../layouts/Layout.astro";
 
     <p>
       Benjie introduced GraphQL Stars at GraphQLConf 2024 during his keynote,{" "}
-      <a href="https://graphql.org/conf/2024/schedule/5245297ed1f7b82885c742d77f209bda/?name=Keynote%3A%20You%27re%20Our%20Universe%3A%20GraphQL%20Community%20Update%202024">
+      <a
+        href="https://graphql.org/conf/2024/schedule/5245297ed1f7b82885c742d77f209bda/?name=Keynote%3A%20You%27re%20Our%20Universe%3A%20GraphQL%20Community%20Update%202024"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <cite>You’re Our Universe: GraphQL Community Update 2024</cite>
       </a>
       . Looking back over a year of work across the project, he celebrated some
@@ -77,7 +80,11 @@ import Layout from "../../layouts/Layout.astro";
         </h2>
         <p>Benjie Gillam · Community Gardener · GraphQLConf 2024</p>
       </div>
-      <a href="https://www.youtube.com/watch?v=bCBZTNib0mA">
+      <a
+        href="https://www.youtube.com/watch?v=bCBZTNib0mA"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Watch on YouTube ↗
       </a>
     </div>

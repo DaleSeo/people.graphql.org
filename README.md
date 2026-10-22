@@ -18,7 +18,7 @@ Open http://localhost:4321. `npm run check` validates Astro and TypeScript; `npm
 ## Pages
 
 - `/`: all people, deduplicated, with active and previously active sections.
-- `/stories/`: people with published stories. Switch to Articles for story summaries.
+- `/stories/`: people with published stories. Article view shows story summaries by default.
 - `/stories/[id]/`: existing Markdown articles; filenames define the URL.
 - `/stars/`: all Stars classes combined.
 - `/stars/2024/`, `/stars/2025/`, `/stars/2026/`: individual classes.
@@ -32,7 +32,7 @@ Open http://localhost:4321. `npm run check` validates Astro and TypeScript; `npm
 - `/profiles/[slug]/`: a person's participation, stories, talks, available YouTube embeds, and Stars contribution cards.
 - `/about/`: project background.
 
-All directories share breadcrumbs, introductory copy and an action, category navigation, search, counts, and grid/list modes. Articles mode appears where stories are available. `?view=list` and `?view=article` are shareable; explicit grid/list choices are carried between category links. Search matches names, usernames, locations, organizations, participation labels, and story titles. Counts count people, not appearances.
+All directories share introductory copy and an action, category navigation, search, counts, and grid/list modes. Articles mode appears where stories are available. `?view=list` and `?view=article` are shareable; explicit grid/list choices are carried between category links. Search matches names, usernames, locations, organizations, participation labels, and story titles. Counts count people, not appearances.
 
 ## Identity and content
 
@@ -85,7 +85,7 @@ Optional contribution images live at `public/stars/<year>/<github-username>.png`
 
 ## Layout and styling
 
-- `src/components/DirectoryPage.astro`: shared directory shell, breadcrumbs, introduction and action.
+- `src/components/DirectoryPage.astro`: shared directory shell, introduction and action.
 - `src/components/PeopleDirectory.tsx`: React filters, modes, search, counts, and people sections.
 - `src/pages/[...directory].astro`: static category and subcategory routes.
 - `src/lib/directory.ts`: contextual grouping, activity, ordering and navigation.
@@ -99,6 +99,12 @@ CSS Modules live beside their components. Use `npx prettier --write .` to format
 
 ### Directory page configuration
 
-Edit `src/config/directory-pages.mjs` for directory titles, descriptions, navigation actions and default views. It also contains annual Stars/conference page templates and working-group names. Breadcrumbs use these page titles through `breadcrumbsFor()` in `src/lib/directory.ts`.
+Edit `src/config/directory-pages.mjs` for directory titles, descriptions, navigation actions and default views. It also contains annual Stars/conference page templates and working-group names.
 
-`scripts/build-directory.mjs` assembles people and memberships from local sources and writes `src/data/directory.json`; do not edit that generated file directly. Run `npm run directory:build` to refresh it. The old `npm run people:sync` command remains an alias. Page configuration changes also rebuild the directory while the dev server is running.
+`scripts/build-directory.mjs` assembles people and memberships from local sources and writes `src/data/directory.json`; do not edit that generated file directly. Run `npm run directory:build` to refresh it. Page configuration changes also rebuild the directory while the dev server is running.
+
+### Styling and browser behavior
+
+Component and page styling lives in colocated `*.module.css` files. `src/styles/global.css` contains fonts, theme tokens, element defaults and document-wide transitions; `shared.module.css` contains reusable layout and typography classes. Dynamic inline styles are limited to image masks and person-specific view-transition names.
+
+`src/components/SocialLink.astro` and its CSS module render social links for both stories and profiles; `src/lib/social-links.ts` maps platforms to supplied icons. `src/scripts/theme.js` is inlined in the document head to apply the saved or system theme before painting. `src/scripts/external-links.ts` handles external links rendered from Markdown or inserted by interactive components.

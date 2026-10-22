@@ -21,7 +21,7 @@
 }
 
 .brand:hover .brandPrefix {
-  color: #b8007d;
+  color: var(--pink);
 }
 
 @media (max-width: 600px) {

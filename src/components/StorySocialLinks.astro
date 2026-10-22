@@ -1,40 +1,21 @@
 ---
-import styles from "../pages/stories/article.module.css";
+import SocialLink from "./SocialLink.astro";
+import { socialIcons } from "../lib/social-links";
 interface Props {
   links: { label: string; url: string; username?: string }[];
 }
 const { links } = Astro.props;
-const socialIcons: Record<string, string> = {
-  github: "github",
-  linkedin: "linkedin",
-  x: "twitter",
-  twitter: "twitter",
-  bluesky: "bluesky",
-  threads: "threads",
-  youtube: "youtube",
-  website: "globe",
-};
 ---
 
 <ul>
   {links.map((link) => (
     <li>
-      <a
-        class={styles.storySocialLink}
-        href={link.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={`${link.label}: ${link.username ?? link.label}`}
-      >
-        {socialIcons[link.label.toLowerCase()] && (
-          <span
-            class={styles.storySocialIcon}
-            aria-hidden="true"
-            style={`--social-icon: url("/icons/${socialIcons[link.label.toLowerCase()]}.svg")`}
-          />
-        )}
-        <span>{link.username ?? link.label}</span>
-      </a>
+      <SocialLink
+        url={link.url}
+        label={link.label}
+        text={link.username ?? link.label}
+        icon={socialIcons[link.label.toLowerCase()]}
+      />
     </li>
   ))}
 </ul>
