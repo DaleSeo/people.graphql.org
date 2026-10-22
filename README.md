@@ -1,6 +1,6 @@
 # People of GraphQL
 
-A showcase of the people involved in GraphQL, built with Astro and a shared React people directory.
+A static site showcasing the GraphQL community, built with Astro and a shared React people directory.
 
 ## Run locally
 
@@ -11,61 +11,77 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:4321. `npm run check` validates Astro and TypeScript; `npm run build` generates the static site in `dist/`; `npm run preview` serves it locally. `npm test` checks identity and activity rules; after building, `npm run test:site` checks all directory/profile links, anchors, and local assets.
+Open http://localhost:4321. The dev server rebuilds the directory when content, identity aliases or page configuration changes.
 
-`npm run dev` and `npm run build` first run `directory:build`. While the dev server is running, changes to `src/content/` and the identity aliases automatically refresh the directory. Sync only writes changed files to avoid unnecessary reloads. If a refresh fails, the terminal shows the error; fix the source file and save it again.
+| Command                   | Purpose                                                              |
+| ------------------------- | -------------------------------------------------------------------- |
+| `npm run check`           | Check Astro and TypeScript                                           |
+| `npm test`                | Test directory rules and talk titles                                 |
+| `npm run build`           | Build the static site into `dist/`                                   |
+| `npm run test:site`       | Check the built site's links, anchors and assets; run after building |
+| `npm run preview`         | Serve the built site locally                                         |
+| `npm run directory:build` | Rebuild the directory data from local sources                        |
 
-## Pages
+Both `dev` and `build` rebuild the directory first. Builds use local data and do not fetch content from the network.
 
-- `/`: all people, deduplicated, with active and previously active sections.
-- `/stories/`: people with published stories. Article view shows story summaries by default.
-- `/stories/[id]/`: existing Markdown articles; filenames define the URL.
-- `/stars/`: all Stars classes combined.
-- `/stars/2024/`, `/stars/2025/`, `/stars/2026/`: individual classes.
-- `/stars/about/`: background on GraphQL Stars.
-- `/wg/`: working group participants and the Technical Steering Committee.
-- `/wg/tsc/`: current and emeritus TSC members.
-- `/wg/spec/`, `/wg/ai/`, `/wg/federation/`, `/wg/golden-path/`, `/wg/graphql-js/`, `/wg/graphiql/`, `/wg/http/`, `/wg/community/`, `/wg/otel/`, `/wg/nullability/`, `/wg/defer-stream/`: working group directories. Federation uses the composite schemas WG dataset.
+## Site structure
+
+- `/`: everyone, grouped into active and previously active participants.
+- `/stories/`: people with stories; `/stories/<id>/` displays each article, and `/stories/about/` explains the series.
+- `/stars/`: all Stars, with annual directories at `/stars/<year>/` and background at `/stars/about/`.
+- `/wg/`: working-group participants and the TSC, with directories for each group and `/wg/tsc/` for current and emeritus TSC members.
 - `/ambassadors/`: current and emeritus ambassadors.
-- `/speakers/`: GraphQLConf speakers across all imported events.
-- `/speakers/graphqlconf-2023/` through `/speakers/graphqlconf-2026/`: speakers by event.
-- `/profiles/[slug]/`: a person's participation, stories, talks, available YouTube embeds, and Stars contribution cards.
+- `/speakers/`: GraphQLConf speakers, with event directories at `/speakers/graphqlconf-<year>/`.
+- `/profiles/<slug>/`: a person's participation, stories, talks and available Stars cards.
 
-All directories share introductory copy and an action, category navigation, search, counts, and grid/list modes. Articles mode appears where stories are available. `?view=list` and `?view=article` are shareable; explicit grid/list choices are carried between category links. Search matches names, usernames, locations, organizations, participation labels, and story titles. Counts count people, not appearances.
+Directories share search, navigation and grid/list views. Article view is available where there are stories and is the default for `/stories/`. Use `?view=list` or `?view=article` to link to a view; explicit grid/list choices carry across category links. Search covers names, usernames, locations, organizations, participation labels and story titles. Counts represent people, not appearances.
 
-## Identity and content
+## Content and identities
 
-`src/content/people/<slug>.json` is the canonical identity record. The filename is a stable profile URL; prefer a GitHub username for the initial slug, otherwise a URL-safe name. Records contain a name, optional GitHub username, avatar URL, optional location and organization, and `sourceIds` tying together source records. Existing identity fields are preserved on subsequent imports, so they can be curated independently of the datasets.
+Edit a person's public identity in `src/content/people/<slug>.json`. The filename determines their stable profile URL; use a GitHub username or URL-safe name for new slugs. Records hold the name, optional GitHub username, portrait, location and organization, plus `sourceIds` linking their source records.
 
-`npm run directory:build` reads the following local datasets:
+The directory builder combines these identities with:
 
-- `src/content/stars/<year>/*.json`: annual Stars entries. Historical `tsc` flags belong to that class, not today's TSC roster.
-- `src/content/stories/*.md`: story frontmatter and article links.
-- `src/content/wgs/*.json`: GitHub identity, attendance count, and `lastMeeting`.
-- `src/content/tsc/members.json`: membership, terms, historical affiliations, chair and `emeriti` status.
-- `src/content/ambassadors/members.json`: cohorts, interests, links and `emeriti` status.
-- `src/content/talks/graphqlconf/`: speaker records, explicit speaker aliases, and schedules. Only events with speakers are imported; cancelled events are excluded. Video embeds appear only where a supported YouTube URL exists.
+| Source                                 | Content                                         |
+| -------------------------------------- | ----------------------------------------------- |
+| `src/content/stars/<year>/*.json`      | Annual Stars recognition                        |
+| `src/content/stories/*.md`             | Stories and article metadata                    |
+| `src/content/wgs/*.json`               | Working-group attendance and last meeting dates |
+| `src/content/tsc/members.json`         | TSC membership and terms                        |
+| `src/content/ambassadors/members.json` | Ambassador cohorts and profiles                 |
+| `src/content/talks/graphqlconf/`       | Conference speakers, aliases and schedules      |
 
-The importer writes `src/data/directory.json`, the build-time participation index, and seeds new person files. No network calls are needed for import or builds. `src/data/identity-aliases.json` records explicit cross-source identity mappings, including differences in conference usernames and source spelling. `src/data/identity-review.json` reports unmatched speaker identities with name-based candidates; review those rather than merging automatically. GitHub usernames are matched case-insensitively. Preserve source IDs when editing people. To resolve a new match, map the source ID to the canonical slug in `identity-aliases.json`, then sync again.
+It creates new person records, preserves existing curated identity fields, fills missing location/organization fields and updates source IDs. Only people represented in these sources appear in directories.
 
-Missing or failed portraits display initials in bold Host Grotesk. Replace `avatarUrl` in the relevant person record as portraits become available. Existing local portraits are reused. `npm run avatars:refresh` refreshes the original Stars portraits. `npm run avatars:refresh:wgs` refreshes all working-group attendees through their canonical GitHub identities and updates their person records. Run `npm run directory:build` afterward to refresh the directory.
+**Do not edit `src/data/directory.json` directly:** it is generated. Preserve `sourceIds` when editing people. To resolve duplicate identities, map the source ID to the canonical slug in `src/data/identity-aliases.json`, then run `npm run directory:build`. GitHub usernames match case-insensitively; review suggested speaker matches in the generated `src/data/identity-review.json` before merging.
+
+### Refreshing sources and portraits
+
+These commands access the network:
+
+- `npm run wgs:sync`: clone or update working-group repositories in `repos/` and regenerate attendance data.
+- `npm run avatars:refresh`: refresh Stars portraits.
+- `npm run avatars:refresh:wgs`: refresh working-group portraits using canonical GitHub identities and update person records. Resolve identities with `directory:build` first.
+
+Run `npm run directory:build` after refreshing sources or portraits. You can also edit a person's `avatarUrl` directly; missing or failed portraits fall back to initials.
 
 ### Activity and ordering
 
-TSC and ambassadors use explicit `emeriti` status. Working group participation is active when the last meeting is within the preceding two calendar years (calculated during the build); unknown dates remain active. Stars recognition, stories, and speaking appearances do not expire. On aggregate pages, one active participation makes the person active in that context. Rebuild to advance the activity cutoff.
+TSC and ambassador activity follows their explicit `emeriti` status. Working-group participants are active if their last meeting falls within the preceding two years; unknown dates remain active. Stars recognition, stories and speaking appearances do not expire. One active participation makes a person active within the directory being viewed. Rebuild the site to update the activity cutoff.
 
-Directory entries use a shared build-time shuffle so server rendering and client hydration agree. Article view on the Stories and Everyone pages sorts by newest publication date. Page configuration does not control ordering.
+Directories are shuffled at build time, with the resulting order preserved during hydration. Article view on Everyone and Stories sorts by newest publication date.
 
-### Stories
+### Adding a story
+
+Create `src/content/stories/<id>.md`; its filename becomes `/stories/<id>/`.
 
 ```yaml
 ---
 title: A story headline
 name: Interview subject
-github: github-username
 description: A short introduction
 publishedAt: 2026-09-16
-location: London, UK
+github: github-username
 links:
   - label: Personal website
     url: https://example.com
@@ -76,34 +92,30 @@ hero:
 ---
 ```
 
-Location, links, GitHub username, and hero are optional. The directory uses avatars; articles and profile story cards use hero photographs. Existing article bodies still contain sample content. Article rendering and typography remain in `src/pages/stories/[id].astro` and `article.module.css`.
+Write the article in Markdown below the frontmatter. `github`, `links` and `hero` are optional. Put photographs in `public/stories/`; the directory uses portraits, while articles and profile story cards use hero photographs. Optional `sidebar` and `relatedLinks` fields are defined in `src/content.config.ts`; existing stories provide examples.
 
-### Stars cards
+### Stars cards and conference talks
 
-Optional contribution images live at `public/stars/<year>/<github-username>.png`. Profiles show only the matching year's card when the file exists; images are not shared between classes. Annual Stars JSON continues to support name, initials, year, GitHub username, avatar, contribution text, and TSC flag.
+Place optional Stars contribution cards at `public/stars/<year>/<github-username>.png`. Profiles show cards only for the matching year. Historical Stars `tsc` flags describe that class, not the current TSC roster.
 
-## Layout and styling
+Conference imports exclude cancelled events and events without speakers. Talks display video embeds only when a supported YouTube URL is available.
 
-- `src/components/DirectoryPage.astro`: shared directory shell, introduction and action.
-- `src/components/PeopleDirectory.tsx`: React filters, modes, search, counts, and people sections.
-- `src/pages/[...directory].astro`: static category and subcategory routes.
-- `src/lib/directory.ts`: contextual grouping, activity, ordering and navigation.
-- `src/pages/profiles/[slug].astro`: profiles and participation links with person anchors.
-- `src/layouts/Layout.astro`: document shell, navigation and footer.
-- `src/styles/global.css` and `shared.module.css`: fonts, tokens and shared spacing.
+## Where to make changes
 
-Native cross-document View Transitions animate avatars with the same person identity between pages in supporting browsers. Other browsers navigate normally. Reduced-motion preferences disable these transitions. Avatars link to full profile pages.
+| File                                 | Responsibility                                         |
+| ------------------------------------ | ------------------------------------------------------ |
+| `src/config/directory-pages.mjs`     | Directory copy, actions, default views and group names |
+| `scripts/build-directory.mjs`        | Import local sources and resolve identities            |
+| `src/lib/directory.ts`               | Grouping, activity, ordering and navigation            |
+| `src/components/DirectoryPage.astro` | Directory shell, introduction and action               |
+| `src/components/PeopleDirectory.tsx` | Search, view controls and people sections              |
+| `src/pages/[...directory].astro`     | Directory routes                                       |
+| `src/pages/profiles/[slug].astro`    | Profile pages                                          |
+| `src/pages/stories/[id].astro`       | Story rendering                                        |
+| `src/layouts/Layout.astro`           | Document shell, header and footer                      |
+| `src/styles/global.css`              | Fonts, theme tokens and element defaults               |
+| `src/styles/shared.module.css`       | Shared layout and typography                           |
 
-CSS Modules live beside their components. Use `npx prettier --write .` to format the project; generated output, dependencies, and the package lock are ignored. Prettier's Astro plugin is configured in `.prettierrc.json`.
+Component and page styles live in adjacent `*.module.css` files. Shared font sizes use rem-based tokens. Format the project with `npx prettier --write .`; generated build output, dependencies and the package lock are excluded.
 
-### Directory page configuration
-
-Edit `src/config/directory-pages.mjs` for directory titles, descriptions, navigation actions and default views. It also contains annual Stars/conference page templates and working-group names.
-
-`scripts/build-directory.mjs` assembles people and memberships from local sources and writes `src/data/directory.json`; do not edit that generated file directly. Run `npm run directory:build` to refresh it. Page configuration changes also rebuild the directory while the dev server is running.
-
-### Styling and browser behavior
-
-Component and page styling lives in colocated `*.module.css` files. `src/styles/global.css` contains fonts, theme tokens, element defaults and document-wide transitions; `shared.module.css` contains reusable layout and typography classes. Dynamic inline styles are limited to image masks and person-specific view-transition names.
-
-`src/components/SocialLink.astro` and its CSS module render social links for both stories and profiles; `src/lib/social-links.ts` maps platforms to supplied icons. `src/scripts/theme.js` is inlined in the document head to apply the saved or system theme before painting. `src/scripts/external-links.ts` handles external links rendered from Markdown or inserted by interactive components.
+The site supports light/dark themes and reduced-motion preferences. In supporting browsers, cross-document view transitions animate portraits between pages. Social links share `SocialLink.astro` and `src/lib/social-links.ts`; `src/scripts/external-links.ts` handles external links from Markdown and interactive components.
