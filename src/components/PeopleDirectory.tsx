@@ -8,6 +8,7 @@ import {
 } from "react";
 import type { DirectoryPage, Entry, Mode } from "../lib/directory";
 import { memberships } from "../lib/directory";
+import { matchesSearch } from "../lib/search";
 import styles from "./PeopleDirectory.module.css";
 import starCardStyles from "./star-card.module.css";
 
@@ -87,18 +88,7 @@ export default function PeopleDirectory({
   const visible = entries.filter(
     (p) =>
       (mode !== "article" || p.articles.length > 0) &&
-      [
-        p.name,
-        p.githubUsername,
-        p.location,
-        p.organization,
-        ...p.memberships.map((m) => m.label),
-        ...p.articles.map((a) => a.title),
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .toLocaleLowerCase()
-        .includes(query),
+      matchesSearch(p, query),
   );
   if (mode === "article" && (isStories || page.slug === "")) {
     const latestPublication = (person: Entry) =>

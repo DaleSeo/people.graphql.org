@@ -3,7 +3,7 @@
 }
 .toolbar {
   border-top: 1px solid var(--line);
-  padding: 26px 0;
+  padding: 26px 0 0;
   display: grid;
   grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
   gap: 32px;
@@ -11,6 +11,7 @@
 }
 .filters {
   min-width: 0;
+  margin-bottom: 26px;
 }
 .subcategories {
   display: flex;

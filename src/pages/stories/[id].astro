@@ -45,23 +45,13 @@ const { Content } = await render(story);
         <div>
           <p class={styles.storyDeck}>{story.data.description}</p>
         </div>
-        {(story.data.location || links.length > 0) && (
+        {links.length > 0 && (
           <aside
             class={styles.storyPersonDetails}
             aria-label="About the contributor"
           >
-            {story.data.location && (
-              <>
-                <p class={styles.storyEyebrow}>Based in</p>
-                <p>{story.data.location}</p>
-              </>
-            )}
-            {links.length > 0 && (
-              <>
-                <p class={styles.storyEyebrow}>Find {firstName} online</p>
-                <StorySocialLinks links={links} />
-              </>
-            )}
+            <p class={styles.storyEyebrow}>Find {firstName} online</p>
+            <StorySocialLinks links={links} />
           </aside>
         )}
       </div>

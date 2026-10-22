@@ -27,7 +27,6 @@ const stories = defineCollection({
       .string()
       .regex(/^[a-zA-Z0-9-]+$/)
       .optional(),
-    location: z.string().optional(),
     links: z
       .array(
         z.object({

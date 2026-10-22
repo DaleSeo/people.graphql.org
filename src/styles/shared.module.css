@@ -41,21 +41,8 @@
   padding-bottom: 45px;
 }
 
-.pageIntro > .eyebrow {
-  margin-bottom: 25px;
-}
-
-.pageIntro > p:not(.eyebrow) {
+.pageIntro > p {
   line-height: 1.7;
-}
-
-.notice {
-  font-size: 12px !important;
-  line-height: 1.6;
-  background: #f4f5f0;
-  padding: 13px 17px;
-  color: #55594b;
-  border-left: 2px solid #e10098;
 }
 
 .back {
@@ -85,7 +72,6 @@
   font-size: 32px;
 }
 
-.articleBody .notice,
 .articleBody .back {
   font-family: var(--font-sans);
 }

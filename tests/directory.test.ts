@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { existsSync, readdirSync } from "node:fs";
+import { matchesSearch } from "../src/lib/search.ts";
 import {
   isActive,
   entriesFor,
@@ -11,6 +12,60 @@ import {
 } from "../src/lib/directory.ts";
 const now = new Date("2026-10-08T12:00:00Z");
 const base = { person: "example", page: "wg/spec", label: "Specification WG" };
+
+test("search matches username substrings and word beginnings in other fields", () => {
+  const jem = entriesFor(pageFor("")).find(
+    (person) => person.slug === "jemgillam",
+  )!;
+  assert.equal(matchesSearch(jem, "phi"), false);
+  assert.equal(matchesSearch(jem, "gill"), true);
+  const example = {
+    ...jem,
+    name: "Élodie Smith-Jones",
+    githubUsername: "example",
+    location: "Philadelphia",
+    organization: "Graphile",
+    memberships: [
+      { person: "example", page: "wg/spec", label: "Specification WG" },
+    ],
+    articles: [
+      {
+        title: "Building GraphQL Together",
+        description: "",
+        href: "/story/",
+        publishedAt: "2026-01-01",
+      },
+    ],
+  };
+  assert.equal(matchesSearch(example, "smith phi"), true);
+  assert.equal(matchesSearch(example, "ample\t spec\nÉlo"), true);
+  assert.equal(matchesSearch(example, "together building"), true);
+  assert.equal(matchesSearch(example, "smith phile"), false);
+  assert.equal(matchesSearch(example, "smith missing"), false);
+  for (const query of [
+    "Élo",
+    "smith-j",
+    "jones",
+    "phi",
+    "graph",
+    " spec",
+    "together",
+    "building graph",
+    "ample",
+    "",
+  ])
+    assert.equal(matchesSearch(example, query), true, query);
+  for (const query of [
+    "lodie",
+    "mith",
+    "adelphia",
+    "phile",
+    "ification",
+    "ogether",
+    "[",
+  ])
+    assert.equal(matchesSearch(example, query), false, query);
+});
 
 test("Stars cards match their person's GitHub username and class year", () => {
   for (const year of ["2024", "2025", "2026"]) {

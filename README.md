@@ -30,7 +30,6 @@ Open http://localhost:4321. `npm run check` validates Astro and TypeScript; `npm
 - `/speakers/`: GraphQLConf speakers across all imported events.
 - `/speakers/graphqlconf-2023/` through `/speakers/graphqlconf-2026/`: speakers by event.
 - `/profiles/[slug]/`: a person's participation, stories, talks, available YouTube embeds, and Stars contribution cards.
-- `/about/`: project background.
 
 All directories share introductory copy and an action, category navigation, search, counts, and grid/list modes. Articles mode appears where stories are available. `?view=list` and `?view=article` are shareable; explicit grid/list choices are carried between category links. Search matches names, usernames, locations, organizations, participation labels, and story titles. Counts count people, not appearances.
 
