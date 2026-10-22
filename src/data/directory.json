@@ -4,6 +4,10 @@
       "slug": "",
       "breadcrumb": "People",
       "title": "The people behind GraphQL.",
+      "heading": {
+        "firstLine": "The people behind",
+        "secondLine": "GraphQL."
+      },
       "description": "Meet the people building GraphQL, sharing what they know, and helping others find their place in the community.",
       "action": {
         "label": "Find your working group",
@@ -16,6 +20,10 @@
       "slug": "stories",
       "breadcrumb": "Stories",
       "title": "In their own words.",
+      "heading": {
+        "firstLine": "In their",
+        "secondLine": "own words."
+      },
       "description": "How people found their way into GraphQL, what they’re working on, and what they’ve learned along the way.",
       "action": {
         "label": "About GraphQL Stories",
@@ -28,6 +36,10 @@
       "slug": "stars",
       "breadcrumb": "Stars",
       "title": "A universe shaped by contributors.",
+      "heading": {
+        "firstLine": "A universe shaped",
+        "secondLine": "by contributors."
+      },
       "description": "Celebrating the people recognized each year for their contributions to GraphQL’s open-source projects and specifications.",
       "action": {
         "label": "About GraphQL Stars",
@@ -40,6 +52,10 @@
       "slug": "wg",
       "breadcrumb": "Working groups",
       "title": "Building GraphQL together.",
+      "heading": {
+        "firstLine": "Building GraphQL",
+        "secondLine": "together."
+      },
       "description": "Meet the people taking part in GraphQL’s working groups, discussing proposals and bringing different experiences to the decisions ahead.",
       "action": {
         "label": "How to join a working group",
@@ -52,10 +68,14 @@
       "slug": "ambassadors",
       "breadcrumb": "Ambassadors",
       "title": "Helping others get involved.",
-      "description": "Helping others get involved.",
+      "heading": {
+        "firstLine": "Helping others",
+        "secondLine": "get involved."
+      },
+      "description": "Meet the GraphQL Ambassadors, trusted go-to community leaders sharing their knowledge, and nurturing the GraphQL community through collaboration, education and outreach.",
       "action": {
-        "label": "Find a working group",
-        "href": "/wg/"
+        "label": "Apply to be an Ambassador",
+        "href": "https://graphql.org/community/ambassadors/apply/"
       },
       "parent": "",
       "mode": "grid"
@@ -64,6 +84,10 @@
       "slug": "speakers",
       "breadcrumb": "Speakers",
       "title": "Taking the stage.",
+      "heading": {
+        "firstLine": "Taking",
+        "secondLine": "the stage."
+      },
       "description": "Meet the GraphQLConf speakers sharing what they’ve built, what they’ve learned, and the questions they’re still working on.",
       "action": {
         "label": "Explore GraphQLConf talks",
@@ -76,6 +100,10 @@
       "slug": "stars/2026",
       "breadcrumb": "2026",
       "title": "Class of 2026",
+      "heading": {
+        "firstLine": "Class of",
+        "secondLine": "2026"
+      },
       "description": "Celebrate the GraphQL Stars class of 2026 and their contributions to GraphQL.",
       "action": {
         "label": "About GraphQL Stars",
@@ -88,6 +116,10 @@
       "slug": "stars/2025",
       "breadcrumb": "2025",
       "title": "Class of 2025",
+      "heading": {
+        "firstLine": "Class of",
+        "secondLine": "2025"
+      },
       "description": "Celebrate the GraphQL Stars class of 2025 and their contributions to GraphQL.",
       "action": {
         "label": "About GraphQL Stars",
@@ -100,6 +132,10 @@
       "slug": "stars/2024",
       "breadcrumb": "2024",
       "title": "Class of 2024",
+      "heading": {
+        "firstLine": "Class of",
+        "secondLine": "2024"
+      },
       "description": "Celebrate the GraphQL Stars class of 2024 and their contributions to GraphQL.",
       "action": {
         "label": "About GraphQL Stars",
@@ -112,6 +148,10 @@
       "slug": "wg/tsc",
       "breadcrumb": "TSC",
       "title": "Technical Steering Committee",
+      "heading": {
+        "firstLine": "Technical Steering",
+        "secondLine": "Committee"
+      },
       "description": "Meet the current and emeritus members of the GraphQL Technical Steering Committee.",
       "action": {
         "label": "Apply to be a TSC member",
@@ -124,6 +164,10 @@
       "slug": "wg/spec",
       "breadcrumb": "GraphQL Specification",
       "title": "GraphQL Specification Working Group",
+      "heading": {
+        "firstLine": "GraphQL Specification",
+        "secondLine": "Working Group"
+      },
       "description": "Meet the people helping shape the GraphQL Specification.",
       "action": {
         "label": "Join the GraphQL WG",
@@ -136,6 +180,10 @@
       "slug": "wg/ai",
       "breadcrumb": "AI",
       "title": "AI Working Group",
+      "heading": {
+        "firstLine": "AI",
+        "secondLine": "Working Group"
+      },
       "description": "Meet the people helping to explore how GraphQL can best support the growing needs of artificial intelligence and machine learning in the GraphQL AI Working Group.",
       "action": {
         "label": "Join the AI WG",
@@ -148,6 +196,10 @@
       "slug": "wg/federation",
       "breadcrumb": "Federation",
       "title": "Federation Working Group",
+      "heading": {
+        "firstLine": "Federation",
+        "secondLine": "Working Group"
+      },
       "description": "Meet the people helping shape the GraphQL Federation Specification through the GraphQL Federation Spec working group.",
       "action": {
         "label": "Join the Federation WG",
@@ -160,6 +212,10 @@
       "slug": "wg/golden-path",
       "breadcrumb": "Golden Path",
       "title": "Golden Path Working Group",
+      "heading": {
+        "firstLine": "Golden Path",
+        "secondLine": "Working Group"
+      },
       "description": "Meet the people helping to define and document an opinionated set of practices believed to give new users of GraphQL the greatest chance of success with the technology through the Golden Path working group.",
       "action": {
         "label": "Join the Golden Path WG",
@@ -172,6 +228,10 @@
       "slug": "wg/graphql-js",
       "breadcrumb": "GraphQL.js",
       "title": "GraphQL.js Working Group",
+      "heading": {
+        "firstLine": "GraphQL.js",
+        "secondLine": "Working Group"
+      },
       "description": "Meet the people discussing and agreeing upon proposed changes to the GraphQL-JS library and other related foundation libraries.",
       "action": {
         "label": "Join the GraphQL.js WG",
@@ -184,6 +244,10 @@
       "slug": "wg/graphiql",
       "breadcrumb": "GraphiQL",
       "title": "GraphiQL Working Group",
+      "heading": {
+        "firstLine": "GraphiQL",
+        "secondLine": "Working Group"
+      },
       "description": "Meet the people helping shape GraphiQL through the GraphiQL working group.",
       "action": {
         "label": "Join the GraphiQL WG",
@@ -196,6 +260,10 @@
       "slug": "wg/http",
       "breadcrumb": "GraphQL over HTTP",
       "title": "GraphQL over HTTP Working Group",
+      "heading": {
+        "firstLine": "GraphQL over HTTP",
+        "secondLine": "Working Group"
+      },
       "description": "Meet the people helping shape the GraphQL over HTTP Specification.",
       "action": {
         "label": "Join the GraphQL over HTTP WG",
@@ -208,6 +276,10 @@
       "slug": "wg/otel",
       "breadcrumb": "OpenTelemetry",
       "title": "OpenTelemetry Working Group",
+      "heading": {
+        "firstLine": "OpenTelemetry",
+        "secondLine": "Working Group"
+      },
       "description": "Meet the people defining the best practices and semantic conventions for using OpenTelemetry with GraphQL.",
       "action": {
         "label": "Join the OTel WG",
@@ -220,6 +292,10 @@
       "slug": "wg/defer-stream",
       "breadcrumb": "Defer & Stream",
       "title": "Defer & Stream Working Group",
+      "heading": {
+        "firstLine": "Defer & Stream",
+        "secondLine": "Working Group"
+      },
       "description": "Meet the people designing and drafting an \"incremental delivery\" enhancement to the GraphQL specification.",
       "action": {
         "label": "Join the Incremental Delivery WG",
@@ -232,6 +308,10 @@
       "slug": "wg/nullability",
       "breadcrumb": "Nullability",
       "title": "Nullability Working Group",
+      "heading": {
+        "firstLine": "Nullability",
+        "secondLine": "Working Group"
+      },
       "description": "Meet the people who gave clients a way to influence or override nullability checks within queries. The nullability implementation has been merged into the main Specification and the group was archived on February 5, 2026.",
       "action": {
         "label": "Join the Specification WG",
@@ -244,10 +324,14 @@
       "slug": "wg/community",
       "breadcrumb": "Community",
       "title": "Community Working Group",
-      "description": "Meet the people developing and executing strategic initiatives that reinforce GraphQL's value proposition while fostering an engaged, educated, and expanding community. The Community WG does not meet and instead uses Issues, Pull Requests and Discussions in the GitHub repository.",
+      "heading": {
+        "firstLine": "Community",
+        "secondLine": "Working Group"
+      },
+      "description": "Meet the people developing and executing strategic initiatives that reinforce GraphQL's value proposition while fostering an engaged, educated, and expanding community. The Community WG is merging with the Foundation's Monday working sessions.",
       "action": {
-        "label": "Visit the Community WG repo",
-        "href": "https://github.com/graphql/community-wg"
+        "label": "Visit the Community Working Session repo",
+        "href": "https://github.com/graphql/community-working-sessions/issues?"
       },
       "parent": "wg",
       "mode": "grid"
@@ -256,6 +340,10 @@
       "slug": "speakers/graphqlconf-2026",
       "breadcrumb": "GraphQLConf 2026",
       "title": "GraphQLConf 2026",
+      "heading": {
+        "firstLine": "GraphQLConf",
+        "secondLine": "2026"
+      },
       "description": "Meet the speakers and explore talks from GraphQLConf 2026.",
       "action": {
         "label": "Browse talks",
@@ -268,6 +356,10 @@
       "slug": "speakers/graphqlconf-2025",
       "breadcrumb": "GraphQLConf 2025",
       "title": "GraphQLConf 2025",
+      "heading": {
+        "firstLine": "GraphQLConf",
+        "secondLine": "2025"
+      },
       "description": "Meet the speakers and explore talks from GraphQLConf 2025.",
       "action": {
         "label": "Browse talks",
@@ -280,6 +372,10 @@
       "slug": "speakers/graphqlconf-2024",
       "breadcrumb": "GraphQLConf 2024",
       "title": "GraphQLConf 2024",
+      "heading": {
+        "firstLine": "GraphQLConf",
+        "secondLine": "2024"
+      },
       "description": "Meet the speakers and explore talks from GraphQLConf 2024.",
       "action": {
         "label": "Browse talks",
@@ -292,6 +388,10 @@
       "slug": "speakers/graphqlconf-2023",
       "breadcrumb": "GraphQLConf 2023",
       "title": "GraphQLConf 2023",
+      "heading": {
+        "firstLine": "GraphQLConf",
+        "secondLine": "2023"
+      },
       "description": "Meet the speakers and explore talks from GraphQLConf 2023.",
       "action": {
         "label": "Browse talks",

@@ -459,10 +459,23 @@ export default function PeopleDirectory({ page, entries, categories }: Props) {
             className={styles.previous}
           >
             <h2 className={styles.sectionTitle}>{previousTitle}</h2>
-            <p className={styles.previousIntro}>
-              Recognizing the people whose participation helped shape this
-              community.
-            </p>
+            {page.slug === "wg/tsc" && (
+              <p className={styles.previousIntro}>
+                We thank these former TSC members for their technical leadership
+                and stewardship of GraphQL. Their work reviewing proposals,
+                guiding technical decisions, and shaping the GraphQL
+                specification has helped the language evolve for the whole
+                community.
+              </p>
+            )}
+            {page.slug === "ambassadors" && (
+              <p className={styles.previousIntro}>
+                We celebrate and thank these former GraphQL Ambassadors for the
+                time, experience, and care they have shared with the program and
+                the wider GraphQL community. Their contributions have helped
+                make GraphQL stronger, more welcoming, and more connected.
+              </p>
+            )}
             <ul className={styles.people}>{previous.map(renderPerson)}</ul>
           </section>
         )}

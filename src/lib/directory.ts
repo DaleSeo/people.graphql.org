@@ -40,6 +40,7 @@ export interface Membership {
 }
 export type Mode = "grid" | "list" | "article";
 export interface DirectoryPage {
+  heading?: { firstLine: string; secondLine: string };
   breadcrumb: string;
   slug: string;
   title: string;

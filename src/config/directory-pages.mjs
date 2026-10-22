@@ -7,6 +7,7 @@ export const directoryPages = [
     slug: "",
     breadcrumb: "People",
     title: "The people behind GraphQL.",
+    heading: { firstLine: "The people behind", secondLine: "GraphQL." },
     description:
       "Meet the people building GraphQL, sharing what they know, and helping others find their place in the community.",
     action: {
@@ -20,6 +21,7 @@ export const directoryPages = [
     slug: "stories",
     breadcrumb: "Stories",
     title: "In their own words.",
+    heading: { firstLine: "In their", secondLine: "own words." },
     description:
       "How people found their way into GraphQL, what they’re working on, and what they’ve learned along the way.",
     action: {
@@ -33,6 +35,7 @@ export const directoryPages = [
     slug: "stars",
     breadcrumb: "Stars",
     title: "A universe shaped by contributors.",
+    heading: { firstLine: "A universe shaped", secondLine: "by contributors." },
     description:
       "Celebrating the people recognized each year for their contributions to GraphQL’s open-source projects and specifications.",
     action: {
@@ -46,6 +49,7 @@ export const directoryPages = [
     slug: "wg",
     breadcrumb: "Working groups",
     title: "Building GraphQL together.",
+    heading: { firstLine: "Building GraphQL", secondLine: "together." },
     description:
       "Meet the people taking part in GraphQL’s working groups, discussing proposals and bringing different experiences to the decisions ahead.",
     action: {
@@ -59,10 +63,12 @@ export const directoryPages = [
     slug: "ambassadors",
     breadcrumb: "Ambassadors",
     title: "Helping others get involved.",
-    description: "Helping others get involved.",
+    heading: { firstLine: "Helping others", secondLine: "get involved." },
+    description:
+      "Meet the GraphQL Ambassadors, trusted go-to community leaders sharing their knowledge, and nurturing the GraphQL community through collaboration, education and outreach.",
     action: {
-      label: "Find a working group",
-      href: "/wg/",
+      label: "Apply to be an Ambassador",
+      href: "https://graphql.org/community/ambassadors/apply/",
     },
     parent: "",
     mode: "grid",
@@ -71,6 +77,7 @@ export const directoryPages = [
     slug: "speakers",
     breadcrumb: "Speakers",
     title: "Taking the stage.",
+    heading: { firstLine: "Taking", secondLine: "the stage." },
     description:
       "Meet the GraphQLConf speakers sharing what they’ve built, what they’ve learned, and the questions they’re still working on.",
     action: {
@@ -86,6 +93,7 @@ export const starsPage = (year) => ({
   slug: `stars/${year}`,
   breadcrumb: String(year),
   title: `Class of ${year}`,
+  heading: { firstLine: "Class of", secondLine: String(year) },
   description: `Celebrate the GraphQL Stars class of ${year} and their contributions to GraphQL.`,
   action: action("About GraphQL Stars", "/stars/about/"),
   parent: "stars",
@@ -95,6 +103,7 @@ export const tscPage = {
   slug: "wg/tsc",
   breadcrumb: "TSC",
   title: "Technical Steering Committee",
+  heading: { firstLine: "Technical Steering", secondLine: "Committee" },
   description:
     "Meet the current and emeritus members of the GraphQL Technical Steering Committee.",
   action: action(
@@ -108,6 +117,7 @@ export const workingGroupPage = ({ slug, name, description, action }) => ({
   slug: `wg/${slug}`,
   breadcrumb: name,
   title: `${name} Working Group`,
+  heading: { firstLine: name, secondLine: "Working Group" },
   description,
   action,
   parent: "wg",
@@ -117,6 +127,7 @@ export const conferencePage = (year) => ({
   slug: `speakers/graphqlconf-${year}`,
   breadcrumb: `GraphQLConf ${year}`,
   title: `GraphQLConf ${year}`,
+  heading: { firstLine: "GraphQLConf", secondLine: String(year) },
   description: `Meet the speakers and explore talks from GraphQLConf ${year}.`,
   action: action("Browse talks", `/speakers/graphqlconf-${year}/?view=list`),
   parent: "speakers",
@@ -227,10 +238,10 @@ export const workingGroups = {
     slug: "community",
     name: "Community",
     description:
-      "Meet the people developing and executing strategic initiatives that reinforce GraphQL's value proposition while fostering an engaged, educated, and expanding community. The Community WG does not meet and instead uses Issues, Pull Requests and Discussions in the GitHub repository.",
+      "Meet the people developing and executing strategic initiatives that reinforce GraphQL's value proposition while fostering an engaged, educated, and expanding community. The Community WG is merging with the Foundation's Monday working sessions.",
     action: {
-      label: "Visit the Community WG repo",
-      href: "https://github.com/graphql/community-wg",
+      label: "Visit the Community Working Session repo",
+      href: "https://github.com/graphql/community-working-sessions/issues?",
     },
   },
 };
