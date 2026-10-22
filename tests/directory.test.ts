@@ -34,6 +34,7 @@ test("search matches username substrings and word beginnings in other fields", (
         description: "",
         href: "/story/",
         publishedAt: "2026-01-01",
+        recordedAt: "2025-12-01",
       },
     ],
   };

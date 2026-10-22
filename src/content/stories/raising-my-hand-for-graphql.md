@@ -5,7 +5,9 @@ sidebar:
   role: "GraphQL Foundation Governing Board Chair and GraphQL Ambassador"
   introduction: "Jeff manages GraphQL engineering teams at Apollo and helps guide the wider GraphQL community through his work with the Foundation."
 description: "Jeff Auriemma is an engineering leader at Apollo, chair of the GraphQL Foundation’s Governing Board and a GraphQL Ambassador. Here, he tells the story of discovering GraphQL late at night while raising a young family, designing software around the people who use it, and helping more people shape GraphQL’s future."
-publishedAt: 2026-09-16
+publishedAt: 2026-10-22
+recordedAt: 2026-07-20
+interviewer: "Jem Gillam"
 relatedLinks:
   title: "Raise your hand"
   items:

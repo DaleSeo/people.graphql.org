@@ -19,6 +19,20 @@ const profile = Object.entries(people).find(
     person.githubUsername?.toLowerCase() === story.data.github.toLowerCase(),
 );
 const { Content } = await render(story);
+const formatDate = (date: Date) => {
+  const day = date.getUTCDate();
+  const suffix =
+    day >= 11 && day <= 13
+      ? "th"
+      : (({ 1: "st", 2: "nd", 3: "rd" } as Record<number, string>)[day % 10] ??
+        "th");
+  const monthAndYear = date.toLocaleDateString("en-GB", {
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+  return `${day}${suffix} ${monthAndYear}`;
+};
 ---
 
 <Layout
@@ -30,16 +44,6 @@ const { Content } = await render(story);
       ← All stories
     </a>
     <header class={styles.storyFeatureHeader}>
-      <p class={styles.storyEyebrow}>
-        <time datetime={story.data.publishedAt.toISOString().slice(0, 10)}>
-          {story.data.publishedAt.toLocaleDateString("en-GB", {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-            timeZone: "UTC",
-          })}
-        </time>
-      </p>
       <h1>{story.data.title}</h1>
       <div class={styles.storyIntroduction}>
         <div>
@@ -90,6 +94,17 @@ const { Content } = await render(story);
         </div>
       </aside>
       <Content />
+      <p class={styles.storyCredit}>
+        Interview with {story.data.name} recorded on{" "}
+        <time datetime={story.data.recordedAt.toISOString().slice(0, 10)}>
+          {formatDate(story.data.recordedAt)}
+        </time>{" "}
+        and published by {story.data.interviewer} on{" "}
+        <time datetime={story.data.publishedAt.toISOString().slice(0, 10)}>
+          {formatDate(story.data.publishedAt)}
+        </time>
+        .
+      </p>
       {(story.data.relatedLinks || links.length > 0) && (
         <section class={styles.storyMoreLinks} aria-label="Explore further">
           {story.data.relatedLinks && (

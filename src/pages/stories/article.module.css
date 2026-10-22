@@ -17,9 +17,6 @@
 .storyFeatureHeader {
   margin: 60px 0 48px;
 }
-.storyFeatureHeader > .storyEyebrow {
-  color: var(--pink);
-}
 .storyFeatureHeader h1 {
   max-width: 1250px;
   margin-bottom: 48px;
@@ -101,41 +98,11 @@
   aspect-ratio: 16 / 9;
 }
 .storyHeroImage {
-  --hero-corner-mask: radial-gradient(
-    ellipse at top left,
-    black 0%,
-    black 5%,
-    transparent 38%,
-    transparent 72%,
-    black 100%
-  );
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
+  composes: image from "../../components/story-photo.module.css";
 }
 .storyHeroStripes {
-  --stripe-width: clamp(5px, 0.9vw, 12px);
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  -webkit-mask-image: repeating-linear-gradient(
-    90deg,
-    black 0 var(--stripe-width),
-    transparent var(--stripe-width) calc(var(--stripe-width) * 2)
-  );
-  mask-image: repeating-linear-gradient(
-    90deg,
-    black 0 var(--stripe-width),
-    transparent var(--stripe-width) calc(var(--stripe-width) * 2)
-  );
-}
-.storyHeroStripes::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(155deg, var(--story-accent), hsl(79 90% 65%));
-  -webkit-mask-image: var(--hero-corner-mask);
-  mask-image: var(--hero-corner-mask);
+  composes: stripes from "../../components/story-photo.module.css";
+  opacity: 0.5;
 }
 
 /* Reading column, pink sidebar divider and pull quotes. */
@@ -274,6 +241,19 @@
 }
 
 /* End-of-story contextual links and contributor socials. */
+.storyReadingLayout > .storyCredit {
+  grid-column: 1 / -1;
+  margin: 3rem 0 1.5rem;
+  color: var(--muted);
+  font-size: var(--text-small);
+  font-style: italic;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+.storyReadingLayout > .storyCredit + .storyMoreLinks {
+  margin-top: 0;
+}
+
 .storyReadingLayout > .storyMoreLinks {
   grid-column: 1 / -1;
   display: grid;

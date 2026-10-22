@@ -157,6 +157,7 @@ for (const file of (await readdir(path.join(root, "src/content/stories")))
       description: s.description,
       href: `/stories/${file.slice(0, -3)}/`,
       publishedAt: String(s.publishedAt),
+      recordedAt: String(s.recordedAt),
       ...(s.hero ? { image: s.hero.src, imageAlt: s.hero.alt } : {}),
     },
   });

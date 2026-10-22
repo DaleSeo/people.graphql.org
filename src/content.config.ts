@@ -11,6 +11,8 @@ const stories = defineCollection({
       .object({ role: z.string(), introduction: z.string() })
       .optional(),
     publishedAt: z.coerce.date(),
+    recordedAt: z.coerce.date(),
+    interviewer: z.string(),
     relatedLinks: z
       .object({
         title: z.string(),
