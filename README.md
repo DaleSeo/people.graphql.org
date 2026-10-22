@@ -24,6 +24,10 @@ Open http://localhost:4321. The dev server rebuilds the directory when content, 
 
 Both `dev` and `build` rebuild the directory first. Builds use local data and do not fetch content from the network.
 
+## Deploy to GitHub Pages
+
+The workflow in `.github/workflows/deploy-pages.yml` builds and checks the site with Node.js 24, then publishes `dist/` on every push to `main`. You can also run it manually from the Actions tab on `main`.
+
 ## Site structure
 
 - `/`: everyone, grouped into active and previously active participants.
