@@ -5,5 +5,9 @@ export default defineConfig({
   site: "https://people.graphql.org",
   vite: { plugins: [directoryDev()] },
   integrations: [react()],
-  redirects: { "/profiles/zeljko-kozina/": "/profiles/zkozina/" },
+  redirects: {
+    "/profiles/zeljko-kozina/": "/profiles/zkozina/",
+    "/stories/designing-graphql-for-the-people/":
+      "/stories/raising-my-hand-for-graphql/",
+  },
 });
