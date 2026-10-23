@@ -5,7 +5,9 @@ sidebar:
   role: "Maintainer of GraphQL Code Generator and GraphQL Ambassador"
   introduction: "Through his work with The Guild, Eddy helps shape the tooling that developers rely on to build with GraphQL."
 description: "Eddy’s first open-source contribution was a one- or two-line fix to GraphQL Code Generator (Codegen). He now maintains the project, developing ideas with the people who use and contribute to it while sharing the questions, mistakes, and learning that shape his work."
-publishedAt: 2026-09-18
+publishedAt: 2026-10-22
+recordedAt: 2026-08-14
+interviewer: "Jem Gillam"
 relatedLinks:
   title: "Work it out together"
   items:

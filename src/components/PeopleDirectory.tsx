@@ -6,7 +6,7 @@ import {
   type ReactNode,
   type CSSProperties,
 } from "react";
-import type { DirectoryPage, Entry, Mode } from "../lib/directory";
+import type { Article, DirectoryPage, Entry, Mode } from "../lib/directory";
 import { memberships } from "../lib/directory";
 import { matchesSearch } from "../lib/search";
 import styles from "./PeopleDirectory.module.css";
@@ -34,6 +34,10 @@ const labels: Record<string, string> = {
   speakers: "Speakers",
 };
 const url = (slug: string) => (slug ? `/${slug}/` : "/");
+const compareArticles = (a: Article, b: Article) =>
+  Date.parse(b.publishedAt) - Date.parse(a.publishedAt) ||
+  Date.parse(b.recordedAt) - Date.parse(a.recordedAt);
+
 export default function PeopleDirectory({
   page,
   entries,
@@ -98,13 +102,11 @@ export default function PeopleDirectory({
       (mode !== "article" || p.articles.length > 0) && matchesSearch(p, query),
   );
   if (mode === "article" && (isStories || page.slug === "")) {
-    const latestPublication = (person: Entry) =>
-      Math.max(
-        ...person.articles.map((article) => Date.parse(article.publishedAt)),
-      );
+    const latestArticle = (person: Entry) =>
+      [...person.articles].sort(compareArticles)[0];
     visible.sort(
       (a, b) =>
-        latestPublication(b) - latestPublication(a) ||
+        compareArticles(latestArticle(a), latestArticle(b)) ||
         a.name.localeCompare(b.name, "en"),
     );
   }
@@ -143,6 +145,54 @@ export default function PeopleDirectory({
     );
   }
   const isWorkingGroup = page.slug === "wg" || page.slug.startsWith("wg/");
+  function renderArticles(p: Entry) {
+    const profile = `/profiles/${p.slug}/`;
+    return [...p.articles].sort(compareArticles).map((a, index) => (
+      <li
+        key={a.href}
+        id={index === 0 ? p.anchor : undefined}
+        className={styles.person}
+      >
+        {a.image && (
+          <a href={a.href} className={styles.storyImage}>
+            <img
+              src={a.image}
+              alt={a.imageAlt ?? ""}
+              loading="lazy"
+              decoding="async"
+            />
+            <span className={styles.storyImageStripes} aria-hidden="true" />
+          </a>
+        )}
+        <div className={styles.storyDetails}>
+          <div className={styles.article}>
+            <h2>
+              <a href={a.href}>{a.title}</a>
+            </h2>
+            <div className={`${styles.identity} ${styles.storyIdentity}`}>
+              <a
+                href={profile}
+                className={`${styles.avatar} ${styles.authorAvatar} ${p.currentTsc ? styles.gold : p.currentAmbassador ? styles.ambassador : ""}`}
+                aria-label={`Meet ${p.name}`}
+              >
+                <Avatar name={p.name} src={p.avatarUrl} />
+              </a>
+              <h3>
+                <a href={profile}>{p.name}</a>
+              </h3>
+              {p.githubUsername && (
+                <span className={styles.username}>@{p.githubUsername}</span>
+              )}
+            </div>
+            <p>{a.description}</p>
+            <a className={styles.profileLink} href={a.href}>
+              Read the story <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </li>
+    ));
+  }
   function renderPerson(p: Entry) {
     const profile = `/profiles/${p.slug}/`;
     const ambassadorList = page.slug === "ambassadors" && mode === "list";
@@ -356,32 +406,6 @@ export default function PeopleDirectory({
               </a>
             </>
           )}
-          {mode === "article" &&
-            [...p.articles]
-              .sort(
-                (a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt),
-              )
-              .map((a) => (
-                <div className={styles.article} key={a.href}>
-                  <p className={styles.date}>
-                    <time dateTime={a.publishedAt}>
-                      {new Date(a.publishedAt).toLocaleDateString("en-GB", {
-                        day: "numeric",
-                        month: "long",
-                        year: "numeric",
-                        timeZone: "UTC",
-                      })}
-                    </time>
-                  </p>
-                  <h2>
-                    <a href={a.href}>{a.title}</a>
-                  </h2>
-                  <p>{a.description}</p>
-                  <a className={styles.profileLink} href={a.href}>
-                    Read the story <span aria-hidden="true">↗</span>
-                  </a>
-                </div>
-              ))}
         </div>
       </li>
     );
@@ -491,7 +515,11 @@ export default function PeopleDirectory({
             {activeTitle}
           </h2>
           {active.length > 0 && (
-            <ul className={styles.people}>{active.map(renderPerson)}</ul>
+            <ul className={styles.people}>
+              {active.map((p) =>
+                mode === "article" ? renderArticles(p) : renderPerson(p),
+              )}
+            </ul>
           )}
         </section>
         {previous.length > 0 && (
@@ -517,7 +545,11 @@ export default function PeopleDirectory({
                 make GraphQL stronger, more welcoming, and more connected.
               </p>
             )}
-            <ul className={styles.people}>{previous.map(renderPerson)}</ul>
+            <ul className={styles.people}>
+              {previous.map((p) =>
+                mode === "article" ? renderArticles(p) : renderPerson(p),
+              )}
+            </ul>
           </section>
         )}
         {visible.length === 0 && (

@@ -1,0 +1,41 @@
+.image {
+  --hero-corner-mask: radial-gradient(
+    ellipse at top left,
+    black 0%,
+    black 5%,
+    transparent 38%,
+    transparent 72%,
+    black 100%
+  );
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.stripes {
+  --stripe-width: var(--story-stripe-width, clamp(5px, 0.9vw, 12px));
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  -webkit-mask-image: repeating-linear-gradient(
+    90deg,
+    black 0 var(--stripe-width),
+    transparent var(--stripe-width) calc(var(--stripe-width) * 2)
+  );
+  mask-image: repeating-linear-gradient(
+    90deg,
+    black 0 var(--stripe-width),
+    transparent var(--stripe-width) calc(var(--stripe-width) * 2)
+  );
+}
+.stripes::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    155deg,
+    var(--story-accent, hsl(79 98% 37%)),
+    hsl(79 90% 65%)
+  );
+  -webkit-mask-image: var(--hero-corner-mask);
+  mask-image: var(--hero-corner-mask);
+}

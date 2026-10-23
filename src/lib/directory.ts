@@ -13,6 +13,7 @@ export interface Article {
   description: string;
   href: string;
   publishedAt: string;
+  recordedAt: string;
   image?: string;
   imageAlt?: string;
 }

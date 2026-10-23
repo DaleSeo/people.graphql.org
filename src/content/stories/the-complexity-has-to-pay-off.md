@@ -5,7 +5,9 @@ sidebar:
   role: "Engineer at Meta and open source maintainer"
   introduction: "Jordan works on Relay and GraphQL tooling at Meta, exploring ways to make GraphQL more approachable and practical for developers."
 description: "Jordan Eldredge is a software engineer at Meta, where he works on Relay, and the creator of Grats, which brings implementation-first GraphQL to TypeScript. After joining Facebook with little GraphQL experience, he initially found the technology baffling before discovering ideas in Relay that changed how he thought about data fetching. Here, Jordan explains why GraphQL’s complexity has to pay off - and what fragments, semantic nullability, and better server tooling can give developers in return."
-publishedAt: 2026-09-16
+publishedAt: 2026-10-22
+recordedAt: 2026-08-04
+interviewer: "Jem Gillam"
 relatedLinks:
   title: "See the ideas in practice"
   items:

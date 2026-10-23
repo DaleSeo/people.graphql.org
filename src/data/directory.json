@@ -4820,7 +4820,8 @@
         "title": "Raising my hand for GraphQL",
         "description": "Jeff Auriemma is an engineering leader at Apollo, chair of the GraphQL Foundation’s Governing Board and a GraphQL Ambassador. Here, he tells the story of discovering GraphQL late at night while raising a young family, designing software around the people who use it, and helping more people shape GraphQL’s future.",
         "href": "/stories/raising-my-hand-for-graphql/",
-        "publishedAt": "2026-09-16",
+        "publishedAt": "2026-10-22",
+        "recordedAt": "2026-07-20",
         "image": "/stories/jeff-auriemma/graphql-conf.jpg",
         "imageAlt": "A bright shared workspace with long tables, chairs, and plants."
       }
@@ -4833,7 +4834,8 @@
         "title": "The Complexity Has to Pay Off",
         "description": "Jordan Eldredge is a software engineer at Meta, where he works on Relay, and the creator of Grats, which brings implementation-first GraphQL to TypeScript. After joining Facebook with little GraphQL experience, he initially found the technology baffling before discovering ideas in Relay that changed how he thought about data fetching. Here, Jordan explains why GraphQL’s complexity has to pay off - and what fragments, semantic nullability, and better server tooling can give developers in return.",
         "href": "/stories/the-complexity-has-to-pay-off/",
-        "publishedAt": "2026-09-16",
+        "publishedAt": "2026-10-22",
+        "recordedAt": "2026-08-04",
         "image": "/stories/jordan-eldredge/graphql-conf.jpg",
         "imageAlt": "A bright shared workspace with long tables, chairs, and plants."
       }
@@ -4846,7 +4848,8 @@
         "title": "Working it out in public",
         "description": "Eddy’s first open-source contribution was a one- or two-line fix to GraphQL Code Generator (Codegen). He now maintains the project, developing ideas with the people who use and contribute to it while sharing the questions, mistakes, and learning that shape his work.",
         "href": "/stories/working-it-out-in-public/",
-        "publishedAt": "2026-09-18",
+        "publishedAt": "2026-10-22",
+        "recordedAt": "2026-08-14",
         "image": "/stories/eddy-nguyen/graphql-conf.jpg",
         "imageAlt": "A bright shared workspace with long tables, chairs, and plants."
       }
