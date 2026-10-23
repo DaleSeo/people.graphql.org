@@ -35,6 +35,7 @@ const projects = [
 const articles = appearances.flatMap((m) => (m.article ? [m.article] : []));
 const talks = appearances.filter((m) => m.talk);
 const interests = [...new Set(appearances.flatMap((m) => m.interests ?? []))];
+const bio = appearances.find((m) => m.about);
 const anchor = person.githubUsername ?? slug;
 const links = [
   ...new Map(
@@ -52,7 +53,13 @@ const profileLinks = [
   ...links,
 ]
   .filter((link, index, all) => {
-    const normalize = (url: string) => url.replace(/\/$/, "").toLowerCase();
+    const normalize = (value: string) => {
+      const url = new URL(value);
+      const host = url.hostname.replace(/^www\./, "").replace(/^x\.com$/, "twitter.com");
+      for (const key of [...url.searchParams.keys()])
+        if (key.startsWith("utm_")) url.searchParams.delete(key);
+      return `${host}${url.pathname.replace(/\/$/, "")}${url.search}`.toLowerCase();
+    };
     return (
       all.findIndex(
         (candidate) => normalize(candidate.url) === normalize(link.url),
@@ -67,6 +74,8 @@ const profileLinks = [
       (
         {
           "github.com": "github",
+          "facebook.com": "facebook",
+          "instagram.com": "instagram",
           "linkedin.com": "linkedin",
           "x.com": "twitter",
           "twitter.com": "twitter",
@@ -89,7 +98,18 @@ const profileLinks = [
             : platform === "website"
               ? host
               : link.label;
-    return { ...link, text, icon: socialIcons[platform] ?? "globe" };
+    return { ...link, text, platform, host, icon: socialIcons[platform] ?? "globe" };
+  })
+  .sort((a, b) => {
+    const rank = (platform: string) =>
+      platform === "github" ? 0 : platform === "website" ? 2 : 1;
+    return (
+      rank(a.platform) - rank(b.platform) ||
+      (a.platform === "website" ? a.host : a.platform).localeCompare(
+        b.platform === "website" ? b.host : b.platform,
+      ) ||
+      a.url.localeCompare(b.url)
+    );
   });
 ---
 
@@ -136,8 +156,20 @@ const profileLinks = [
           </ul>
         )}
         {person.location && <p class={styles.location}>{person.location}</p>}
-        {interests.length > 0 && (
+        {interests.length > 0 && !bio && (
           <p class={styles.location}>Ask me about {interests.join(", ")}.</p>
+        )}
+        {bio && (
+          <figure class={styles.bioQuote}>
+            <blockquote class={styles.bio}>
+              <span class={styles.quoteMark} aria-hidden="true">“</span>
+              {bio.about}
+              <span class={styles.quoteMark} aria-hidden="true">”</span>
+            </blockquote>
+            <figcaption class={styles.bioAttribution}>
+              <em>— taken from {person.name.trim().split(/\s+/)[0]}'s GraphQLConf{bio.aboutYear ? ` ${bio.aboutYear}` : ""} speaker profile</em>
+            </figcaption>
+          </figure>
         )}
       </div>
     </header>

@@ -45,6 +45,13 @@ const people = new Map();
 const identities = new Map();
 const identityAliases = await read("src/data/identity-aliases.json");
 const memberships = [];
+const publicLocations = new Map();
+function recordPublicLocation(slug, location) {
+  if (!location?.trim()) return;
+  const values = publicLocations.get(slug) ?? new Set();
+  values.add(location.trim());
+  publicLocations.set(slug, values);
+}
 const pages = [...directoryPages];
 
 // Existing registry entries own their public identity and stable URL.
@@ -186,6 +193,7 @@ for (const [repo, group] of Object.entries(workingGroups)) {
       ...m,
       sourceId: `github:${m.github.toLowerCase()}`,
     });
+    recordPublicLocation(id, m.location);
     join(id, `wg/${slug}`, {
       label: `${name} WG`,
       count: m.count,
@@ -201,6 +209,7 @@ for (const m of (await read("src/content/ambassadors/members.json")).members) {
       ? `github:${m.github.toLowerCase()}`
       : `ambassador:${slugify(m.name)}`,
   });
+  recordPublicLocation(id, m.location?.name);
   join(id, "ambassadors", {
     label: "GraphQL Ambassador",
     emeriti: m.emeriti,
@@ -217,6 +226,46 @@ const aliases = new Map();
 for (const group of speakerData.equal)
   for (const username of group) aliases.set(username, group[0]);
 const speakerIds = new Map();
+const speakerLinks = new Map();
+const speakerBios = new Map();
+for (const speaker of speakerData.speakers) {
+  const username = aliases.get(speaker.username) ?? speaker.username;
+  const about = speaker.about?.replace(/<\/?b\s*>/gi, "").trim();
+  if (
+    about &&
+    !/^(?:tbd|tbc|todo|n\/?a|none|placeholder|coming soon|to be (?:announced|determined|confirmed|added|updated)|bio coming soon|lorem ipsum)[.!\s]*$/i.test(about) &&
+    !speakerBios.has(username)
+  )
+    speakerBios.set(username, {
+      about,
+      ...(speaker._years?.length
+        ? { aboutYear: Math.max(...speaker._years) }
+        : {}),
+    });
+  const links = speakerLinks.get(username) ?? [];
+  for (const link of [
+    ...(speaker.socialurls ?? []).map(({ service, url }) => ({
+      label: service || "Website",
+      url,
+    })),
+    ...(speaker.url ? [{ label: "Website", url: speaker.url }] : []),
+  ]) {
+    try {
+      const value = link.url.trim();
+      const url = new URL(
+        /^[\w.-]+\.[a-z]{2,}(?:[/?#]|$)/i.test(value)
+          ? `https://${value}`
+          : value,
+      );
+      if (!["http:", "https:"].includes(url.protocol)) continue;
+      if (!links.some((existing) => existing.url === url.href))
+        links.push({ ...link, url: url.href });
+    } catch {
+      // Ignore malformed source links rather than breaking profile rendering.
+    }
+  }
+  speakerLinks.set(username, links);
+}
 const possibleMatches = [];
 for (const s of speakerData.speakers) {
   const username = aliases.get(s.username) ?? s.username;
@@ -231,7 +280,6 @@ for (const s of speakerData.speakers) {
   const id = await personFor({
     name: s.name,
     github,
-    location: s.location,
     org: s.company,
     sourceId: `speaker:${username}`,
   });
@@ -260,7 +308,7 @@ for (const file of (
   const page = `speakers/graphqlconf-${year}`;
   pages.push(conferencePage(year));
   for (const event of await read(`src/content/talks/graphqlconf/${file}`)) {
-    if (event.active === "N") continue;
+    if (event.active === "N" || /^\s*cancel(?:led|ed)\b/i.test(event.name)) continue;
     for (const speaker of event.speakers ?? []) {
       const username = aliases.get(speaker.username) ?? speaker.username;
       const id =
@@ -280,6 +328,10 @@ for (const file of (
       } catch {}
       join(id, page, {
         label: `GraphQLConf ${year}`,
+        ...(speakerBios.get(username) ?? {}),
+        ...(speakerLinks.get(username)?.length
+          ? { links: speakerLinks.get(username) }
+          : {}),
         talk: {
           title: talkTitle(event.name, event.speakers),
           id: event.id,
@@ -294,6 +346,14 @@ const used = new Set(memberships.map((m) => m.person));
 for (const [slug, person] of [...people].sort(([a], [b]) =>
   a.localeCompare(b),
 )) {
+  // A GitHub identity alone does not establish the source of a location.
+  // Keep only locations supplied by WG GitHub data or ambassador records.
+  const locations = publicLocations.get(slug);
+  if (locations?.size) {
+    if (!locations.has(person.location)) person.location = [...locations][0];
+  } else {
+    delete person.location;
+  }
   await writeIfChanged(
     path.join(root, `src/content/people/${slug}.json`),
     JSON.stringify(person, null, 2) + "\n",

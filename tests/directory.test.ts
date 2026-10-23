@@ -13,6 +13,39 @@ import {
 const now = new Date("2026-10-08T12:00:00Z");
 const base = { person: "example", page: "wg/spec", label: "Specification WG" };
 
+test("cancelled conference sessions are excluded even when marked active", () => {
+  const cancelledIds = new Set([
+    "bc5623fa38b3e2a58b357b35d3209023",
+    "9485641416d5be1d5846b846ee2c7666",
+    "c550128f032ccbaa02e723360ed92f97",
+  ]);
+  assert.ok(!memberships.some((m) => m.talk && cancelledIds.has(m.talk.id)));
+  assert.ok(!memberships.some((m) => m.talk && /^\s*cancel(?:led|ed)\b/i.test(m.talk.title)));
+});
+
+test("locations require GitHub or ambassador source data, not just a GitHub identity", () => {
+  assert.equal(people["serhii-korin"].location, undefined);
+  assert.equal(people["yassineldeeb"].location, undefined);
+  assert.equal(people["ardatan"].location, "Istanbul, TR");
+  assert.equal(people["juiceppe"].location, "Copenhagen, DK");
+  assert.equal(people["aexol"].location, "Poland");
+});
+
+test("speaker links reach canonical profiles without replacing ambassador links", () => {
+  const linksFor = (person: string, speaker: boolean) =>
+    memberships
+      .filter((m) => m.person === person && Boolean(m.talk) === speaker)
+      .flatMap((m) => m.links ?? [])
+      .map((link) => link.url);
+  assert.ok(linksFor("dan-adajian", true).includes("https://github.com/danadajian/"));
+  assert.ok(linksFor("ardatan", true).includes("https://www.linkedin.com/in/ardatan/"));
+  assert.ok(linksFor("jemgillam", true).includes("https://www.linkedin.com/in/jemgillam/"));
+  assert.ok(linksFor("jemgillam", false).includes("https://www.linkedin.com/in/jemgillam/"));
+  for (const membership of memberships.filter((m) => m.talk))
+    for (const link of membership.links ?? [])
+      assert.ok(["http:", "https:"].includes(new URL(link.url).protocol));
+});
+
 test("search matches username substrings and word beginnings in other fields", () => {
   const jem = entriesFor(pageFor("")).find(
     (person) => person.slug === "jemgillam",
@@ -97,8 +130,8 @@ test("the 2026 Stars roster exactly matches the definitive card list", () => {
 
 test("Yassin's Stars and talks share his canonical profile and correct GitHub username", () => {
   assert.equal(people["yassineeldeeb"], undefined);
-  assert.equal(people["yassin-eldeeb"].githubUsername, "YassinEldeeb");
-  const records = memberships.filter((m) => m.person === "yassin-eldeeb");
+  assert.equal(people["yassineldeeb"].githubUsername, "YassinEldeeb");
+  const records = memberships.filter((m) => m.person === "yassineldeeb");
   for (const year of ["2024", "2025"])
     assert.equal(
       records.find((m) => m.page === `stars/${year}`)?.image,

@@ -39,6 +39,27 @@
   margin-top: 40px;
   border-top: 1px solid var(--line);
 }
+.bioQuote {
+  margin: 20px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.bio {
+  margin: 0;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+.quoteMark {
+  color: var(--pink);
+  font-family: Georgia, serif;
+  font-size: 2em;
+  line-height: 0;
+  vertical-align: -0.15em;
+}
+.bioAttribution {
+  margin-top: 10px;
+  font-size: var(--text-small);
+}
 .section > h2 {
   font-size: 1.875rem;
   margin-bottom: 28px;

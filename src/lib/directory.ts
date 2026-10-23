@@ -32,6 +32,8 @@ export interface Membership {
   cohort?: string;
   term?: string;
   interests?: string[];
+  about?: string;
+  aboutYear?: number;
   maintainerProjects?: string[];
   graphqlLocals?: string[];
   links?: { label: string; url: string }[];
