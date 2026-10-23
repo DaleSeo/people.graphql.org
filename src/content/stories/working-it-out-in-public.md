@@ -38,8 +38,8 @@ links:
     username: "@eddeee888"
 hero:
   src: "/stories/eddy-nguyen/graphql-conf.jpg"
-  alt: "A bright shared workspace with long tables, chairs, and plants."
-  caption: "Space to come together. Stock photography from Unsplash; illustrative, not the interview subject’s workspace."
+  alt: "Eddy presenting slides about CodeGen."
+  caption: 'Eddy presenting "Building the ideal GraphQL server workflow featuring GraphQL Code Generator" at GraphQL Conf 2025.'
 github: eddeee888
 ---
 
