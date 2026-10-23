@@ -97,8 +97,8 @@ test("the 2026 Stars roster exactly matches the definitive card list", () => {
 
 test("Yassin's Stars and talks share his canonical profile and correct GitHub username", () => {
   assert.equal(people["yassineeldeeb"], undefined);
-  assert.equal(people["yassin-eldeeb"].githubUsername, "YassinEldeeb");
-  const records = memberships.filter((m) => m.person === "yassin-eldeeb");
+  assert.equal(people["yassineldeeb"].githubUsername, "YassinEldeeb");
+  const records = memberships.filter((m) => m.person === "yassineldeeb");
   for (const year of ["2024", "2025"])
     assert.equal(
       records.find((m) => m.page === `stars/${year}`)?.image,

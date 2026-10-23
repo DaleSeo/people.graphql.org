@@ -1,9 +1,10 @@
 {
-  "name": "Arda TANRIKULU",
+  "name": "Arda Tanrıkulu",
   "githubUsername": "ardatan",
   "avatarUrl": "/avatars/ardatan.png",
   "sourceIds": [
-    "github:ardatan"
+    "github:ardatan",
+    "speaker:ardatanrikulu"
   ],
   "location": "Istanbul, TR",
   "organization": "The Guild"

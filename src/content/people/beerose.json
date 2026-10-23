@@ -1,8 +1,10 @@
 {
-  "name": "Aleksandra",
+  "name": "Aleksandra Sikora",
   "githubUsername": "beerose",
   "avatarUrl": "/avatars/beerose.png",
   "sourceIds": [
-    "github:beerose"
-  ]
+    "github:beerose",
+    "speaker:alexsandra.sikora"
+  ],
+  "organization": "The Guild"
 }

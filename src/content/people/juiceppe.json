@@ -1,10 +1,11 @@
 {
   "name": "Giuseppe Abrignani",
-  "githubUsername": "juiceppe",
-  "avatarUrl": "/avatars/juiceppe.png",
+  "avatarUrl": "/avatars/giuseppe-abrignani.jpg",
   "location": "Copenhagen, DK",
-  "organization": "the LEGO Group",
   "sourceIds": [
+    "ambassador:giuseppe-abrignani",
     "github:juiceppe"
-  ]
+  ],
+  "githubUsername": "juiceppe",
+  "organization": "the LEGO Group"
 }

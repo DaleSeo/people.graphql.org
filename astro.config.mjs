@@ -6,6 +6,10 @@ export default defineConfig({
   vite: { plugins: [directoryDev()] },
   integrations: [react()],
   redirects: {
+    "/profiles/yassin-eldeeb/": "/profiles/yassineldeeb/",
+    "/profiles/giuseppe-abrignani/": "/profiles/juiceppe/",
+    "/profiles/aleksandra-sikora/": "/profiles/beerose/",
+    "/profiles/arda-tanr-kulu/": "/profiles/ardatan/",
     "/profiles/zeljko-kozina/": "/profiles/zkozina/",
     "/stories/designing-graphql-for-the-people/":
       "/stories/raising-my-hand-for-graphql/",
