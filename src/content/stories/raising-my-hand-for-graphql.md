@@ -38,7 +38,7 @@ links:
     username: "jdauriemma.com"
 hero:
   src: "/stories/jeff-auriemma/graphql-conf.jpg"
-  alt: "A bright shared workspace with long tables, chairs, and plants."
+  alt: "Jeff on stage with a microphone."
   caption: 'Jeff presenting "What Is the GraphQL Foundation?" at GraphQL Conf 2025.'
 github: bignimbus
 ---

@@ -38,7 +38,7 @@ links:
     username: "jordaneldredge.com"
 hero:
   src: "/stories/jordan-eldredge/graphql-conf.jpg"
-  alt: "A bright shared workspace with long tables, chairs, and plants."
+  alt: "Jordan on stage with a slide showing his love of implementation first GraphQL shown behind him."
   caption: "Jordan presents his implementation first idea while introducing the GraphQL Conf audience to Grats"
 github: captbaritone
 ---
