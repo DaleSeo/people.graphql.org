@@ -3,3 +3,4 @@ dist/
 .astro/
 .DS_Store
 /repos/
+/public/stars/*/montage.png
