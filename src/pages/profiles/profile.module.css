@@ -137,6 +137,10 @@
 .cards img {
   width: 100%;
 }
+.share {
+  margin-top: 24px;
+  font-size: var(--text-small);
+}
 @media (min-width: 801px) {
   .cards:has(> :nth-child(3)) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
