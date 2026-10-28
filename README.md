@@ -21,8 +21,9 @@ Open http://localhost:4321. The dev server rebuilds the directory when content, 
 | `npm run test:site`       | Check the built site's links, anchors and assets; run after building |
 | `npm run preview`         | Serve the built site locally                                         |
 | `npm run directory:build` | Rebuild the directory data from local sources                        |
+| `npm run montages:build`  | Compose each year's Stars cards into one social preview image        |
 
-Both `dev` and `build` rebuild the directory first. Builds use local data and do not fetch content from the network.
+Both `dev` and `build` rebuild the directory and the Stars montages (`public/stars/<year>/montage.png`, used as the social preview image for Stars directories) first. Builds use local data and do not fetch content from the network.
 
 ## Deploy to GitHub Pages
 

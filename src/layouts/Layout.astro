@@ -13,6 +13,14 @@ const {
   description = "The people, ideas, and stories behind GraphQL.",
   image,
 } = Astro.props;
+const pageUrl = new URL(Astro.url.pathname, Astro.site);
+const fallbackImage = new URL("https://graphql.org/og/");
+fallbackImage.search = new URLSearchParams({
+  v: "3",
+  path: Astro.url.pathname,
+  title,
+}).toString();
+const socialImage = image ? new URL(image, Astro.site) : fallbackImage;
 ---
 
 <!doctype html>
@@ -25,12 +33,9 @@ const {
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
-    {image && <meta property="og:image" content={new URL(image, Astro.site)} />}
-    <meta
-      name="twitter:card"
-      content={image ? "summary_large_image" : "summary"}
-    />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:image" content={socialImage} />
+    <meta name="twitter:card" content="summary_large_image" />
     <script is:inline set:html={themeScript} />
     <link
       rel="preload"

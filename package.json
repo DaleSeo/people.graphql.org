@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node scripts/build-directory.mjs && astro dev --force",
-    "build": "node scripts/build-directory.mjs && astro build",
+    "dev": "node scripts/build-directory.mjs && node scripts/build-star-montages.mjs && astro dev --force",
+    "build": "node scripts/build-directory.mjs && node scripts/build-star-montages.mjs && astro build",
     "preview": "astro preview",
     "check": "astro check",
     "avatars:refresh": "node scripts/refresh-avatars.mjs",
@@ -13,7 +13,8 @@
     "directory:build": "node scripts/build-directory.mjs",
     "test": "node --experimental-strip-types --test tests/directory.test.ts tests/talk-title.test.mjs",
     "test:site": "node scripts/check-site.mjs",
-    "avatars:refresh:wgs": "node scripts/refresh-wg-avatars.mjs"
+    "avatars:refresh:wgs": "node scripts/refresh-wg-avatars.mjs",
+    "montages:build": "node scripts/build-star-montages.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^7.0.1",

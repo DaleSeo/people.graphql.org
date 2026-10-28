@@ -92,6 +92,15 @@ export const isCurrentAmbassador = (slug: string) =>
   currentAmbassadors.has(slug);
 export const hrefFor = (slug: string) => (slug ? `/${slug}/` : "/");
 export const pageFor = (slug: string) => pages.find((p) => p.slug === slug)!;
+const starYears = pages
+  .map((p) => p.slug.match(/^stars\/(\d{4})$/)?.[1])
+  .filter((y): y is string => !!y)
+  .sort();
+export const montageFor = (slug: string) => {
+  const year =
+    slug === "stars" ? starYears.at(-1) : slug.match(/^stars\/(\d{4})$/)?.[1];
+  return year && `/stars/${year}/montage.png`;
+};
 export const transitionName = (slug: string) => `person-${slug}`;
 export function isActive(m: Membership, now = new Date()) {
   if (m.emeriti !== undefined) return !m.emeriti;

@@ -38,6 +38,7 @@ const formatDate = (date: Date) => {
 <Layout
   title={`${story.data.title} · People of GraphQL`}
   description={story.data.description}
+  image={story.data.hero?.src}
 >
   <article class={styles.storyFeature}>
     <a class={styles.storyBack} href="/stories/">
