@@ -6,10 +6,12 @@ import Brand from "../components/Brand.astro";
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
 }
 const {
   title = "People of GraphQL",
   description = "The people, ideas, and stories behind GraphQL.",
+  image,
 } = Astro.props;
 ---
 
@@ -20,6 +22,15 @@ const {
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <title>{title}</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
+    {image && <meta property="og:image" content={new URL(image, Astro.site)} />}
+    <meta
+      name="twitter:card"
+      content={image ? "summary_large_image" : "summary"}
+    />
     <script is:inline set:html={themeScript} />
     <link
       rel="preload"

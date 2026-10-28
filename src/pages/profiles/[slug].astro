@@ -37,6 +37,8 @@ const talks = appearances.filter((m) => m.talk);
 const interests = [...new Set(appearances.flatMap((m) => m.interests ?? []))];
 const bio = appearances.find((m) => m.about);
 const anchor = person.githubUsername ?? slug;
+const cardImage = appearances.findLast((m) => m.image)?.image;
+const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(new URL(Astro.url.pathname, Astro.site).href)}`;
 const links = [
   ...new Map(
     appearances
@@ -116,6 +118,7 @@ const profileLinks = [
 <Layout
   title={`${person.name} · People of GraphQL`}
   description={`Discover ${person.name}'s participation in the GraphQL community.`}
+  image={cardImage}
 >
   <article class:list={[shared.wrap, styles.profile]}>
     <header class={styles.header}>
@@ -268,6 +271,15 @@ const profileLinks = [
               </a>
             ))}
         </div>
+        <p class={styles.share}>
+          <SocialLink
+            url={linkedInShareUrl}
+            label="Share on LinkedIn"
+            text="Share on LinkedIn"
+            icon={socialIcons.linkedin}
+            appearance="profile"
+          />
+        </p>
       </section>
     )}
     {articles.length > 0 && (
