@@ -1,11 +1,16 @@
 ---
-import SocialLink from "../../../components/SocialLink.astro";
-import { socialIcons } from "../../../lib/social-links";
-import Layout from "../../../layouts/Layout.astro";
-import { people, memberships, hrefFor, pageFor } from "../../../lib/directory";
-import shared from "../../../styles/shared.module.css";
+import SocialLink from "../../../../components/SocialLink.astro";
+import { socialIcons } from "../../../../lib/social-links";
+import Layout from "../../../../layouts/Layout.astro";
+import {
+  people,
+  memberships,
+  hrefFor,
+  pageFor,
+} from "../../../../lib/directory";
+import shared from "../../../../styles/shared.module.css";
 import styles from "./card.module.css";
-import starCardStyles from "../../../components/star-card.module.css";
+import starCardStyles from "../../../../components/star-card.module.css";
 export function getStaticPaths() {
   return memberships.flatMap((m) => {
     const match = m.image?.match(/^\/stars\/(\d{4})\/(.+)\.png$/);
