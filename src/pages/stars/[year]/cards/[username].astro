@@ -6,7 +6,6 @@ import {
   people,
   memberships,
   hrefFor,
-  pageFor,
 } from "../../../../lib/directory";
 import shared from "../../../../styles/shared.module.css";
 import styles from "./card.module.css";
@@ -44,16 +43,13 @@ const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${
       />
     </a>
     <div>
-      <p class={styles.eyebrow}>GraphQL Star · {membership.label}</p>
+      <h2>
+        GraphQL Star · <a class={styles.classLink} href={hrefFor(membership.page)}>{membership.label}</a>
+      </h2>
       <h1 class={styles.name}>{person.name}</h1>
       <ul class={styles.links} aria-label="Card links">
         <li>
           <a href={`/profiles/${slug}/`}>View profile ↗</a>
-        </li>
-        <li>
-          <a href={hrefFor(membership.page)}>
-            {pageFor(membership.page).title} ↗
-          </a>
         </li>
         <li>
           <SocialLink
